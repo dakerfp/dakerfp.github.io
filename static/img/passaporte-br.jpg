@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Rádio Auri Verde</title><meta property="og:title" content="R&aacute;dio Auri Verde" />
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+<meta name="description" content="Às vésperas de completar 60 anos, a Rádio Auriverde alia tradição e modernidade ao apresentar sua nova programação." /><link href="http://cdn.securebox.com.br/custom/cache/radioauriverde-com-br/940808a5a12e9b035e09b18522023d80.css" rel="stylesheet" type="text/css" /><script type="text/javascript" src="http://cdn.securebox.com.br/custom/cache/radioauriverde-com-br/ca3f5966e55c511dd8c784d969a55730.js"></script><script type="text/javascript">
+    //<![CDATA[
+var BASE_URL = "";
+var responsivo = true;
+    //]]>
+</script><script type="text/javascript">
+var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-55638861-21']);
+		  _gaq.push(['_trackPageview']);
+ (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+</script>		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+				</head>
+	<body class="">
+
+		<div class="barra-topo">
+	<div class="container">
+	<div class="icones-topo">
+			<div class="socialtopo hidden-phone" >
+<a href="/banner/click/?id=38&amp;url=https%3A%2F%2Fwww.facebook.com%2FRadioAuriVerde" title="Facebook" target="_blank" onclick="_gaq.push(['_trackEvent', 'Banner', 'Click', '#38 Facebook', 1.00,true])" ><img src="http://cdn.securebox.com.br/custom/411/uploads/banner/banner_54cbcc7220292.png"  style="border:none" width="26" height="26" alt="Facebook"  title="Facebook"  onload="_gaq.push(['_trackEvent', 'Banner', 'View', '#38 Facebook', 1.00,true])"  /></a>
+
+</div>
+
+<div class="socialtopo hidden-phone" >
+<a href="/banner/click/?id=39&amp;url=https%3A%2F%2Finstagram.com%2Fradioauriverde%2F" title="Instagram" target="_blank" onclick="_gaq.push(['_trackEvent', 'Banner', 'Click', '#39 Instagram', 1.00,true])" ><img src="http://cdn.securebox.com.br/custom/411/uploads/banner/banner_54cbcc9b8956e.png"  style="border:none" width="26" height="26" alt="Instagram"  title="Instagram"  onload="_gaq.push(['_trackEvent', 'Banner', 'View', '#39 Instagram', 1.00,true])"  /></a>
+
+</div>
+		</div>
+		<div class="contatos-topo">
+			<div class="fone-topo">(14) 3104-0760</div>
+			<div class="whats-topo">(14) 98804-0760</div>
+		</div>
+	</div>
+</div>
+<div class="topo">
+	<div class="container">
+		<div class="row-fluid">
+			<div class="span3 logo"><a href="/site"><img src="http://cdn.securebox.com.br/custom/411/uploads/header/topo_54c7d5c4c7755.png" border="0" width="249" height="84" alt="Rádio Auri Verde"  title="Rádio Auri Verde" /></a></div>
+			<div class="span6">
+				<form class="form-search" id="formBusca" action="/site/conteudo/buscar/" method="get">
+					<div class="input-append">
+						<input type="text" placeholder="Pesquisar no site" class="span12" id="input-busca" name="q">
+						<button class="btn" type="submit"><i class="icon-search icon-white"></i></button>
+					</div>
+				</form>
+			</div>
+			<div class="span3 bt-radio" >
+<a href="/banner/click/?id=18&amp;url=%2Fplayer%3Fidradio%3D9902%26nomeradio%3DR%E1dio%2BAo%2BVivo" title="Esgute agora - Rádio Auri Verde Bauru" target="_blank" onclick="_gaq.push(['_trackEvent', 'Banner', 'Click', '#18 Esgute agora - Rádio Auri Verde Bauru', 1.00,true])" ><img src="http://cdn.securebox.com.br/custom/411/uploads/banner/banner_553005ae8fe55.png"  style="border:none" width="245" height="40" alt="Esgute agora - Rádio Auri Verde Bauru"  title="Esgute agora - Rádio Auri Verde Bauru"  onload="_gaq.push(['_trackEvent', 'Banner', 'View', '#18 Esgute agora - Rádio Auri Verde Bauru', 1.00,true])"  /></a>
+
+</div>
+		</div>
+	</div>
+</div>
+<div class="menu-topo">
+	<div class="container">
+		<div class="navbar">
+			<div class="navbar-inner">
+				<a class="brand visible-phone" href="/">Menu</a>
+			<!-- Botao para abrir o menu em menos de 940px -->
+				<a class="btn btn-navbar" data-toggle="collapse" data-target="#topNavBar">
+					<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+				</a>
+				<div class="nav-collapse collapse" id="topNavBar">
+					<ul class="nav nav-pills">
+						
+		<li class="menu-noticias"><a href="/site/conteudo/noticias?menu_id=88" target="_self">Notícias</a></li>
+			<li class="menu-programas"><a href="/site/conteudo/programas?menu_id=89" target="_self">Programas</a></li>
+			<li class="menu-musicas"><a href="/site/conteudo/musicas?menu_id=90" target="_self">Músicas</a></li>
+			<li class="menu-colunistas"><a href="/site/conteudo/colunistas?menu_id=91" target="_self">Colunistas</a></li>
+			<li class="menu-social"><a href="/site/conteudo/auri-verde-social?menu_id=119" target="_self">Social</a></li>
+			<li class="menu-sobre-a-radio"><a href="/site/conteudo/sobre-a-radio?menu_id=118" target="_self">Sobre a rádio</a></li>
+			<li class="menu-trabalhe-conosco"><a href="/web/trabalheconosco?menu_id=92" target="_self">Trabalhe conosco</a></li>
+			<li class="menu-contato"><a href="/site/contato?menu_id=93" target="_self">Contato</a></li>
+	
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+		<div class="wrapper">
+							<div class="row-fluid banner-home">
+	<div class="banner-principal">
+	<div id="myCarousel" class="carousel slide">
+		<!-- Itens de carousel -->
+		<div class="container carousel-inner">
+							<div class="item active">
+					<img src="http://cdn.securebox.com.br/custom/411/uploads/banner/banner_55bf508927354.jpg"  onload="_gaq.push(['_trackEvent', 'Banner', 'View', '#194 Rádio Auriverde - 60 anos', 1.00,true])"  />
+					<div class="wrapper">
+						<div class="carousel-caption ">
+							<div class="container">
+								<h4>Rádio Auriverde - 60 anos</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+							<div class="item ">
+					<img src="http://cdn.securebox.com.br/custom/411/uploads/banner/banner_550347a080925.jpg"  onload="_gaq.push(['_trackEvent', 'Banner', 'View', '#93 NOTÍCIAS, ESPORTE, DIVERSÃO E AGORA MUITA MÚSICA E', 1.00,true])"  />
+					<div class="wrapper">
+						<div class="carousel-caption ">
+							<div class="container">
+								<h4>NOTÍCIAS, ESPORTE, DIVERSÃO E AGORA MUITA MÚSICA E</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+							<div class="item ">
+					<img src="http://cdn.securebox.com.br/custom/411/uploads/banner/banner_5621472e2f8d2.jpg"  onload="_gaq.push(['_trackEvent', 'Banner', 'View', '#195 Transamérica', 1.00,true])"  />
+					<div class="wrapper">
+						<div class="carousel-caption ">
+							<div class="container">
+								<h4>Transamérica</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+					</div>
+		<!-- Navegador do carousel -->
+					<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+			<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+			</div>
+</div>
+<script>
+$(document).ready(function(){
+	$('.carousel').carousel({
+		interval: 7000
+	});
+});
+</script></div>
+<div class="manchetes">
+<div class="container">
+<div class="relogio-manchete">
+<script language="JavaScript" type="text/javascript">
+function horas(){
+var now = new Date();
+var hours = now.getHours();
+var minutes = now.getMinutes();
+var seconds = now.getSeconds()
+if (hours <=9)
+hours="0"+hours;
+if (minutes<=9)
+minutes="0"+minutes;
+if (seconds<=9)
+seconds="0"+seconds;
+var cdate="<strong>"+hours+":"+minutes+":"+seconds+" "+"" 
+clock.innerHTML= cdate;
+setTimeout("horas()",1000);
+}
+</script>
+<span id="clock" class="pull-left" ></span> <script>setTimeout("horas()",1000);</script>
+</div>
+<ul id="js-news" class="js-hidden"><div>
+<li class="news-item">Governo revisa projeção de queda do PIB deste ano para 3,1%</li>
+</div>
+</ul><ul id="js-news" class="js-hidden"><div>
+<li class="news-item">Repasse de R$ 63 bilhões do BNDES ao governo federal preocupou TCU</li>
+</div>
+</ul><ul id="js-news" class="js-hidden"><div>
+<li class="news-item">Lama de Samarco chega ao oceano</li>
+</div>
+</ul><ul id="js-news" class="js-hidden"><div>
+<li class="news-item">Brasil é o segundo pior país em diferença de salários entre homens e mulheres</li>
+</div>
+</ul><ul id="js-news" class="js-hidden"><div>
+<li class="news-item">Cunha perdeu condição de presidir a Câmara, diz STF</li>
+</div>
+</ul><ul id="js-news" class="js-hidden"><div>
+<li class="news-item">Odebrecht põe à venda negócios de R$ 4 bilhões e tenta renegociar dívidas</li>
+</div>
+</ul></div>
+<script type="text/javascript">
+$(function () {
+$('#js-news').ticker({
+speed: 0.10,
+fadeInSpeed: 600,
+titleText: ' - Últimas notícias:'
+});
+});
+</script>
+</div>
+
+<div class="programas-rotation">
+	<div class="container">
+		<div class="row-fluid">
+			<div class="span2 titulo-progs">Conheça os programas</div>
+			<div class="span9">
+				    <div class="row-fluid">
+				        <div class="carousel slide" id="myCarouselProgramas">
+				          <div class="carousel-inner carousel-infinity">
+				                								<!-- Itens de carousel -->
+								<div class="item active" style="text-align:center;">
+											<div class="imgs span3"><a class="bg-link-blog" href="http://radioauriverde.com.br/site/conteudo/68-show-da-madrugada.html">
+												<img src="http://cdn.securebox.com.br/custom/411/uploads/programas/logotipo/showdamadrugada.png" width="80%"/></a>
+											</div>
+										</div><div class="item " style="text-align:center;">
+											<div class="imgs span3"><a class="bg-link-blog" href="http://radioauriverde.com.br/site/conteudo/63-alo-bauru.html">
+												<img src="http://cdn.securebox.com.br/custom/411/uploads/programas/logotipo/alobauru.png" width="80%"/></a>
+											</div>
+										</div><div class="item " style="text-align:center;">
+											<div class="imgs span3"><a class="bg-link-blog" href="http://radioauriverde.com.br/site/conteudo/69-super-manha.html">
+												<img src="http://cdn.securebox.com.br/custom/411/uploads/programas/logotipo/supermanha.png" width="80%"/></a>
+											</div>
+										</div><div class="item " style="text-align:center;">
+											<div class="imgs span3"><a class="bg-link-blog" href="http://radioauriverde.com.br/site/conteudo/66-bauru-agora.html">
+												<img src="http://cdn.securebox.com.br/custom/411/uploads/programas/logotipo/bauruagora.png" width="80%"/></a>
+											</div>
+										</div><div class="item " style="text-align:center;">
+											<div class="imgs span3"><a class="bg-link-blog" href="http://radioauriverde.com.br/site/conteudo/64-auriverde-e-voce.html">
+												<img src="http://cdn.securebox.com.br/custom/411/uploads/programas/logotipo/auriverdeevoce.png" width="80%"/></a>
+											</div>
+										</div><div class="item " style="text-align:center;">
+											<div class="imgs span3"><a class="bg-link-blog" href="http://radioauriverde.com.br/site/conteudo/3138-classificados-auri-verde.html">
+												<img src="http://cdn.securebox.com.br/custom/411/uploads/programas/logotipo/classificados.png" width="80%"/></a>
+											</div>
+										</div><div class="item " style="text-align:center;">
+											<div class="imgs span3"><a class="bg-link-blog" href="http://radioauriverde.com.br/site/conteudo/70-super-tarde.html">
+												<img src="http://cdn.securebox.com.br/custom/411/uploads/programas/logotipo/supertarde.png" width="80%"/></a>
+											</div>
+										</div><div class="item " style="text-align:center;">
+											<div class="imgs span3"><a class="bg-link-blog" href="http://radioauriverde.com.br/site/conteudo/78-jornal-da-auri-verde.html">
+												<img src="http://cdn.securebox.com.br/custom/411/uploads/programas/logotipo/jornal-da-auriverde.png" width="80%"/></a>
+											</div>
+										</div><div class="item " style="text-align:center;">
+											<div class="imgs span3"><a class="bg-link-blog" href="http://radioauriverde.com.br/site/conteudo/67-jornada-esportiva.html">
+												<img src="http://cdn.securebox.com.br/custom/411/uploads/programas/logotipo/jornadaesportiva.png" width="80%"/></a>
+											</div>
+										</div><div class="item " style="text-align:center;">
+											<div class="imgs span3"><a class="bg-link-blog" href="http://radioauriverde.com.br/site/conteudo/77-radio-alegre.html">
+												<img src="http://cdn.securebox.com.br/custom/411/uploads/programas/logotipo/radio-alegre.png" width="80%"/></a>
+											</div>
+										</div><div class="item " style="text-align:center;">
+											<div class="imgs span3"><a class="bg-link-blog" href="http://radioauriverde.com.br/site/conteudo/9715-resumo-esportivo.html">
+												<img src="http://cdn.securebox.com.br/custom/411/uploads/programas/logotipo/resumo.png" width="80%"/></a>
+											</div>
+										</div><div class="item " style="text-align:center;">
+											<div class="imgs span3"><a class="bg-link-blog" href="http://radioauriverde.com.br/site/conteudo/9716-discoteca-auri-verde.html">
+												<img src="http://cdn.securebox.com.br/custom/411/uploads/programas/logotipo/Discoteca.png" width="80%"/></a>
+											</div>
+										</div><div class="item " style="text-align:center;">
+											<div class="imgs span3"><a class="bg-link-blog" href="http://radioauriverde.com.br/site/conteudo/9717-primeira-pagina.html">
+												<img src="http://cdn.securebox.com.br/custom/411/uploads/programas/logotipo/Prim_pagina.png" width="80%"/></a>
+											</div>
+										</div>				          </div>
+				        </div>
+				    </div>
+				<script>
+				$('#myCarouselProgramas').carousel({interval:6000});
+				$('#myCarouselProgramas .item').each(function(){
+					  var next = $(this).next();
+					  if (!next.length) {
+					    next = $(this).siblings(':first');
+					  }
+					  next.children(':first-child').clone().appendTo($(this));
+
+					  var next = next.next();
+					  if (!next.length) next = $(this).siblings(':first');
+					  next.children(':first-child').clone().appendTo($(this));
+
+					  if (next.next().length>0) {
+					    var nx = next.next();
+					    nx.children(':first-child').clone().appendTo($(this)).addClass('rightest');
+					  }
+					  else {
+					      $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+					  }
+				});
+				</script>
+			</div>
+			<div class="span1">
+				<!-- Navegador do carousel -->
+				<div class="setas-car">
+					<a class="carousel-control-quadrado right" href="#myCarouselProgramas" data-slide="next">&rsaquo;</a>
+					<a class="carousel-control-quadrado left" href="#myCarouselProgramas" data-slide="prev">&lsaquo;</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+</script>
+
+
+
+
+						<div class="wrapper conteudo">
+			
+
+				<style>
+#slider-thumbs .thumbnails .bt-img:first-child{
+	display:none;
+}
+</style>
+
+
+<div class="container" style="position:relative;z-index:2;">
+	<div class="row-fluid">
+		<div class="span2 lateral-esquerda hidden-phone">
+			<div>
+<a href="/banner/click/?id=22&amp;url=%2Fsite%2Fconteudo%2Fsobre-a-radio" title="Conheça a Rádio" target="_self" onclick="_gaq.push(['_trackEvent', 'Banner', 'Click', '#22 Conheça a Rádio', 1.00,true])" ><img src="http://cdn.securebox.com.br/custom/411/uploads/banner/banner_552ec87e883bb.jpg"  style="border:none" width="170" height="46" alt="Conheça a Rádio"  title="Conheça a Rádio"  onload="_gaq.push(['_trackEvent', 'Banner', 'View', '#22 Conheça a Rádio', 1.00,true])"  /></a>
+
+</div>
+			<div class="menu">
+				<ul class="nav nav-tabs nav-stacked">
+					
+		<li class="menu-noticias"><a href="/site/conteudo/noticias?menu_id=95" target="_self">Notícias</a></li>
+			<li class="menu-programas"><a href="/site/conteudo/programas?menu_id=96" target="_self">Programas</a></li>
+			<li class="menu-musica"><a href="/site/conteudo/musicas?menu_id=97" target="_self">Música</a></li>
+			<li class="menu-colunistas"><a href="/site/conteudo/colunistas?menu_id=98" target="_self">Colunistas</a></li>
+	
+				</ul>
+			</div>
+			<div class="banner-locutor">
+				<div>
+<a href="/banner/click/?id=115&amp;url=%2Fsite%2Fconteudo%2F69-super-manh.html%3Fmenu_id%3D89" title="Super Manhã" target="_self" onclick="_gaq.push(['_trackEvent', 'Banner', 'Click', '#115 Super Manhã', 1.00,true])" ><img src="http://cdn.securebox.com.br/custom/411/uploads/banner/banner_556db66276b9d.jpg"  style="border:none" width="170" height="349" alt="Super Manhã"  title="Super Manhã"  onload="_gaq.push(['_trackEvent', 'Banner', 'View', '#115 Super Manhã', 1.00,true])"  /></a>
+
+</div>
+			</div>
+		</div>
+		<script>
+		$(document).ready(function(){
+			setInterval(loadLocutor,60000*1); //frequencia de atualizacao dos banners / em minutos
+		});
+		function loadLocutor(){
+			console.log('loading locutor...');
+			$('.banner-locutor').block();
+			$('.banner-locutor').load('/web/custom/bannerlocutor',function(){
+				$('.banner-locutor').unblock();
+			});
+		}
+		</script>
+
+		<div class="span7">
+			<h2 class="laranja">Notícias <a href="/site/conteudo/noticias" class="ver-todos-bt">+ Ver todos</a></h2>
+			<div class="row-fluid">
+
+        <!-- Slider -->
+        <div class="span8 meio-noticias">
+            <div id="slider">
+            <!-- Top part of the slider -->
+                    <div class="destaques" id="carousel-bounding-box">
+                        <div class="carousel slide" id="myCarouselbox">
+                        <!-- Carousel items -->
+                            <div class="carousel-inner">
+                                                                    <div class="active item" data-slide-number="0">
+                                        <div class="avatar-noticia"><a href="http://radioauriverde.com.br/site/conteudo/9723-tauste-inicia-venda-do-panetone-solidario.html" title="Tauste inicia venda do Panetone Solidário"><img src="http://cdn.securebox.com.br/custom/411/uploads/noticias/bauru_e_regiao/2015/novembro/logo_taustepanetyone.jpg" alt="Tauste inicia venda do Panetone Solidário"></a></div>
+                                        <div class="resumos">
+                                            <a class="titulos" href="http://radioauriverde.com.br/site/conteudo/9723-tauste-inicia-venda-do-panetone-solidario.html" title="Tauste inicia venda do Panetone Solidário">Tauste inicia venda do Panetone Solidário</a>
+                                                                                        <span class="content-date">22/11/2015 10:38</span>
+                                            <p> O Supermercado Tauste deu in&iacute;cio na &uacute;ltima ter&ccedil;a-feira, 17 de novembro, as vendas da oitava edi&ccedil;&atilde;o bauruense do j&aacute; tradicional...</p>
+                                        </div>
+                                    </div>
+                                                                    <div class=" item" data-slide-number="1">
+                                        <div class="avatar-noticia"><a href="http://radioauriverde.com.br/site/conteudo/9710-dois-jovens-sao-presos-em-flagrante-apos-sequ.html" title="Dois jovens são presos em flagrante após sequência de roubos em Bauru"><img src="http://cdn.securebox.com.br/custom/411/uploads/noticias/policia/2015/novembro/00pm-_roubo.JPG" alt="Dois jovens são presos em flagrante após sequência de roubos em Bauru"></a></div>
+                                        <div class="resumos">
+                                            <a class="titulos" href="http://radioauriverde.com.br/site/conteudo/9710-dois-jovens-sao-presos-em-flagrante-apos-sequ.html" title="Dois jovens são presos em flagrante após sequência de roubos em Bauru">Dois jovens são presos em flagrante após sequência de roubos em Bauru</a>
+                                                                                        <span class="content-date">20/11/2015 14:17</span>
+                                            <p> Ap&oacute;s dois assaltos a pedestres, na noite desta quinta-feira (19/11), dois homens foram presos, em Bauru, na regi&atilde;o do Parque Vit&oacute;ria...</p>
+                                        </div>
+                                    </div>
+                                                                    <div class=" item" data-slide-number="2">
+                                        <div class="avatar-noticia"><a href="http://radioauriverde.com.br/site/conteudo/9720-apesar-da-crise-economica-rodrigo-agostinho-g.html" title="Apesar da crise econômica, Rodrigo Agostinho garante 13º aos servidores"><img src="http://cdn.securebox.com.br/custom/411/uploads/noticias/bauru_e_regiao/2015/novembro/12240007_936528726421198_7162923691209957833_n.jpg" alt="Apesar da crise econômica, Rodrigo Agostinho garante 13º aos servidores"></a></div>
+                                        <div class="resumos">
+                                            <a class="titulos" href="http://radioauriverde.com.br/site/conteudo/9720-apesar-da-crise-economica-rodrigo-agostinho-g.html" title="Apesar da crise econômica, Rodrigo Agostinho garante 13º aos servidores">Apesar da crise econômica, Rodrigo Agostinho garante 13º aos servidores</a>
+                                                                                        <span class="content-date">20/11/2015 17:01</span>
+                                            <p> Apesar da crise financeira que atravessa a Prefeitura, Rodrigo Agostinho garante o pagamento do 13&ordm; sal&aacute;rio aos servidores municipais. 
+A reportagem...</p>
+                                        </div>
+                                    </div>
+                                                                    <div class=" item" data-slide-number="3">
+                                        <div class="avatar-noticia"><a href="http://radioauriverde.com.br/site/conteudo/9741-volei-bauru-supera-dificuldades-e-vence-valin.html" title="Vôlei Bauru supera dificuldades e vence Valinhos por 3 sets a 0"><img src="http://cdn.securebox.com.br/custom/411/uploads/noticias/esportes/2015/novembro/000BAURU_X_VALINHOS.png" alt="Vôlei Bauru supera dificuldades e vence Valinhos por 3 sets a 0"></a></div>
+                                        <div class="resumos">
+                                            <a class="titulos" href="http://radioauriverde.com.br/site/conteudo/9741-volei-bauru-supera-dificuldades-e-vence-valin.html" title="Vôlei Bauru supera dificuldades e vence Valinhos por 3 sets a 0">Vôlei Bauru supera dificuldades e vence Valinhos por 3 sets a 0</a>
+                                                                                        <span class="content-date">22/11/2015 10:59</span>
+                                            <p> Apesar do placar de 3 sets a 0, o V&ocirc;lei Bauru n&atilde;o teve tarefa f&aacute;cil na noite deste s&aacute;bado (21/11), no gin&aacute;sio Panela de Press&atilde;o,...</p>
+                                        </div>
+                                    </div>
+                                                            </div>
+                            <script>$('#myCarouselbox').carousel({
+                                interval: 15000
+                            });</script>
+                        </div>
+                    </div>
+
+
+            </div>
+        </div><!--/Slider-->
+
+        <div class="span4 hidden-phone hidden-tablet" id="slider-thumbs">
+            <!-- Bottom switcher of slider -->
+                <div class="thumbnails">
+                                            <div class="bt-img active" id="thumb-0">
+                            <a id="carousel-selector-0" class="thumb-avatar" title="Tauste inicia venda do Panetone Solidário" style="background:url(/custom/411/uploads/noticias/bauru_e_regiao/2015/novembro/logo_taustepanetyone.jpg) no-repeat center center;"></a>
+                            <a id="carousel-selector-0" class="thumb-title" title="Tauste inicia venda do Panetone Solidário" >Tauste inicia venda do Panetone Solidário</a>
+                        </div>
+                                            <div class="bt-img " id="thumb-1">
+                            <a id="carousel-selector-1" class="thumb-avatar" title="Dois jovens são presos em flagrante após sequência de roubos em Bauru" style="background:url(/custom/411/uploads/noticias/policia/2015/novembro/00pm-_roubo.JPG) no-repeat center center;"></a>
+                            <a id="carousel-selector-1" class="thumb-title" title="Dois jovens são presos em flagrante após sequência de roubos em Bauru" > Dois jovens são presos em flagrante após sequência de...</a>
+                        </div>
+                                            <div class="bt-img " id="thumb-2">
+                            <a id="carousel-selector-2" class="thumb-avatar" title="Apesar da crise econômica, Rodrigo Agostinho garante 13º aos servidores" style="background:url(/custom/411/uploads/noticias/bauru_e_regiao/2015/novembro/12240007_936528726421198_7162923691209957833_n.jpg) no-repeat center center;"></a>
+                            <a id="carousel-selector-2" class="thumb-title" title="Apesar da crise econômica, Rodrigo Agostinho garante 13º aos servidores" > Apesar da crise econômica, Rodrigo Agostinho garante 13º...</a>
+                        </div>
+                                            <div class="bt-img " id="thumb-3">
+                            <a id="carousel-selector-3" class="thumb-avatar" title="Vôlei Bauru supera dificuldades e vence Valinhos por 3 sets a 0" style="background:url(/custom/411/uploads/noticias/esportes/2015/novembro/000BAURU_X_VALINHOS.png) no-repeat center center;"></a>
+                            <a id="carousel-selector-3" class="thumb-title" title="Vôlei Bauru supera dificuldades e vence Valinhos por 3 sets a 0" > Vôlei Bauru supera dificuldades e vence Valinhos por 3 sets...</a>
+                        </div>
+                                    </div>
+        </div>
+<script>
+jQuery(document).ready(function($) {
+
+        $('#carousel-text').html($('#slide-content-0').html());
+ 
+        //Handles the carousel thumbnails
+        $('[id^=carousel-selector-]').click( function(){
+                var id_selector = $(this).attr("id");
+                var id = id_selector.substr(id_selector.length -1);
+                var id = parseInt(id);
+                $('#myCarouselbox').carousel(id);
+        });
+ 
+ 
+        // When the carousel slides, auto update the text
+        $('#myCarouselbox').on('slid', function (e) {
+                var id = $(this).find('.item.active').data('slideNumber');
+                $('#carousel-text').html($('#slide-content-'+id).html());
+                $('#thumb-'+id).fadeOut(function(){
+                   $('[id^=thumb-]').not($(this)).fadeIn();
+                });
+        });
+});
+</script>
+
+			</div>
+		</div>
+
+
+		<div class="span3 hidden-phone"><div class="radio-sidebar">
+<div class="progs linkss" >
+<div class="banner-codigo" style="width:270px;height:300px;"><h2 class="verde">Rádios online</h2>
+<a href="/site/conteudo/musicas">
+<h5>ESCOLHA A PROGRAMAÇÃO MUSICAL QUE VOCÊ MAIS GOSTA!</h5>
+<img src="http://cdn.securebox.com.br/custom/411/uploads/layout/icon-readio.png" />
+<span>clique aqui e navegue pelas rádios</span>
+</a></div>
+<script type="text/javascript"> _gaq.push(['_trackEvent', 'Banner', 'View', '#19 Rádio lateral', 1.00,true]) </script>
+
+</div>
+</div>
+<div class="social-sidebar">
+<h2 class="laranja-f">Redes sociais</h2>
+<div class="redes-lateral" >
+<a href="/banner/click/?id=20&amp;url=https%3A%2F%2Fwww.facebook.com%2FRadioAuriVerde" title="Facebook" target="_blank" onclick="_gaq.push(['_trackEvent', 'Banner', 'Click', '#20 Facebook', 1.00,true])" ><img src="http://cdn.securebox.com.br/custom/411/uploads/banner/banner_555b8c0556f6d.jpg"  style="border:none" width="270" height="112" alt="Facebook"  title="Facebook"  onload="_gaq.push(['_trackEvent', 'Banner', 'View', '#20 Facebook', 1.00,true])"  /></a>
+
+</div>
+
+<div class="redes-lateral" >
+<a href="/banner/click/?id=21&amp;url=http%3A%2F%2Finstagram.com%2Fradioauriverde%2F" title="Instagram" target="_blank" onclick="_gaq.push(['_trackEvent', 'Banner', 'Click', '#21 Instagram', 1.00,true])" ><img src="http://cdn.securebox.com.br/custom/411/uploads/banner/banner_555b8bd57c276.jpg"  style="border:none" width="270" height="112" alt="Instagram"  title="Instagram"  onload="_gaq.push(['_trackEvent', 'Banner', 'View', '#21 Instagram', 1.00,true])"  /></a>
+
+</div>
+</div></div>
+        
+
+	</div>
+    <hr>
+    <div class="row-fluid hidden-tablet">
+        <div class="span2 hidden-phone">
+            <h2 class="cinza">Enquete</h2>
+             <div>
+<div class="banner-codigo" style="width:170px;height:310px;"><script type="text/javascript" src="https://fluidsurveys.com/media/static/embed-helper.js">{"url":"//fluidsurveys.com/api/v3/embeds/"}</script><div class="fs-embed" data-token="eyJ1c2VyIjoyMTI3NTU0NTg5LCJpZCI6NzU3OX0._fCWYU6nl8CeXFUctpBHmu4pMKQ"></div></div>
+<script type="text/javascript"> _gaq.push(['_trackEvent', 'Banner', 'View', '#100 Enquete', 1.00,true]) </script>
+
+</div>
+        </div>
+        <div class="span7">
+            <h2 class="verde-f">Colunistas</h2>
+            <div class="box-colunistas">
+                    
+                    <div  class="blog">
+                        <!-- Itens de carousel -->
+                        <div class="row-fluid">
+                            <div class="item active"><div class="span3">
+                                <p class="cat"></p>
+                                <div class="imgs"><a class="bg-link-blog" href="http://radioauriverde.com.br/site/conteudo/1343-gregorio-lima-de-souza.html" title="Gregório Lima de Souza"><img src="http://cdn.securebox.com.br/custom/411/uploads/colunistas/Saude_em_dia_-_Gregorio_Souza.jpg" alt="Gregório Lima de Souza"/></a></div>
+                                <a class="titulo" href="http://radioauriverde.com.br/site/conteudo/1343-gregorio-lima-de-souza.html" title="Gregório Lima de Souza"><h4>Gregório Lima de Souza</h4></a>
+                                </div><div class="span3">
+                                <p class="cat"></p>
+                                <div class="imgs"><a class="bg-link-blog" href="http://radioauriverde.com.br/site/conteudo/1104-giancarlo-fellipe.html" title="Giancarlo Fellipe"><img src="http://cdn.securebox.com.br/layouts/site/auriverde/images/auriverde-avatar.jpg" alt="Giancarlo Fellipe"/></a></div>
+                                <a class="titulo" href="http://radioauriverde.com.br/site/conteudo/1104-giancarlo-fellipe.html" title="Giancarlo Fellipe"><h4>Giancarlo Fellipe</h4></a>
+                                </div><div class="span3">
+                                <p class="cat">Patrulha do Povo</p>
+                                <div class="imgs"><a class="bg-link-blog" href="http://radioauriverde.com.br/site/conteudo/113-marcus-de-andrade.html" title="Marcus de Andrade"><img src="http://cdn.securebox.com.br/custom/411/uploads/colunistas/Marcus_de_Andrade.jpg" alt="Marcus de Andrade"/></a></div>
+                                <a class="titulo" href="http://radioauriverde.com.br/site/conteudo/113-marcus-de-andrade.html" title="Marcus de Andrade"><h4>Marcus de Andrade</h4></a>
+                                </div>                                <div class="span3 link-col">
+                                <a href="/site/conteudo/colunistas" title="Ver todos Colunistas">Ver todos <br><strong>Colunistas</strong> <span>+</span></a>
+                                	
+                                </div>
+                            </div>                        </div>
+                        
+                </div>
+                
+                </div>
+        </div>
+        <div class="span3">
+            
+                <h2 class="azul">Aniversariantes do dia</h2>
+                <div class="row-fluid box-aniversario">
+                <div class="span2 datas"><strong>DIA</strong><strong class="data-aniversario">23</strong><strong class="mes-aniversario">NOV</strong></div>
+                <div class="span10 box-aniversariante">
+                                            <div class="nomes">bruno henrique murcia </div>
+                                            <div class="nomes">lenita filetti honório nunes</div>
+                                            <div class="nomes">pedro lucas fernandes de moraes</div>
+                                            <div class="nomes">tatiana aparecida da silva ribeiro </div>
+                                            <div class="nomes">tatiana aparecida silva ribeiro </div>
+                                        <div class="nomes links"><a href="/site/conteudo/promocoes">Ver todos [ + ]</a></div>
+                </div>
+                </div>
+            <div class="box-aniversariante-link">
+    <a href="/site/conteudo/promocoes" class="Participe e concorra a uma super festa">Participe e concorra a uma super festa <strong>Clique aqui</strong></a>
+</div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="parallax2 hidden-phone">
+    <video autoplay loop poster="images/torres.jpg" class="bg_video">
+        <source src="http://cdn.securebox.com.br/custom/411/uploads/layout/radios.webm" type="video/webm">
+        <source src="http://cdn.securebox.com.br/custom/411/uploads/layout/radios.mp4" type="video/mp4">
+    </video>  
+    <div class="container">
+        <div class="title-radios">
+            <h3>Rádios online</h3>
+            <a href="/site/conteudo/musicas">Listar todas</a>
+        </div>
+        <div class="row listas-radios">
+            <div class="span4" >
+<a href="/banner/click/?id=49&amp;url=%2Fplayer%3Fidradio%3D9884%26nomeradio%3DClassic%252090" title="Classic 90" target="_blank" onclick="_gaq.push(['_trackEvent', 'Banner', 'Click', '#49 Classic 90', 1.00,true])" ><img src="http://cdn.securebox.com.br/custom/411/uploads/banner/banner_55300117d1c1d.jpg"  style="border:none" width="370" height="63" alt="Classic 90"  title="Classic 90"  onload="_gaq.push(['_trackEvent', 'Banner', 'View', '#49 Classic 90', 1.00,true])"  /></a>
+
+</div>
+
+<div class="span4" >
+<a href="/banner/click/?id=58&amp;url=%2Fplayer%3Fidradio%3D16202%26nomeradio%3DGospel" title="Gospel" target="_blank" onclick="_gaq.push(['_trackEvent', 'Banner', 'Click', '#58 Gospel', 1.00,true])" ><img src="http://cdn.securebox.com.br/custom/411/uploads/banner/banner_5530008ec08e2.jpg"  style="border:none" width="370" height="63" alt="Gospel"  title="Gospel"  onload="_gaq.push(['_trackEvent', 'Banner', 'View', '#58 Gospel', 1.00,true])"  /></a>
+
+</div>
+
+<div class="span4" >
+<a href="/banner/click/?id=59&amp;url=%2Fplayer%3Fidradio%3D8568%26nomeradio%3DHits" title="Hits" target="_blank" onclick="_gaq.push(['_trackEvent', 'Banner', 'Click', '#59 Hits', 1.00,true])" ><img src="http://cdn.securebox.com.br/custom/411/uploads/banner/banner_5530007c6c6ae.jpg"  style="border:none" width="370" height="63" alt="Hits"  title="Hits"  onload="_gaq.push(['_trackEvent', 'Banner', 'View', '#59 Hits', 1.00,true])"  /></a>
+
+</div>
+
+<div class="span4" >
+<a href="/banner/click/?id=62&amp;url=%2Fplayer%3Fidradio%3D11656%26nomeradio%3DLight" title="Light" target="_blank" onclick="_gaq.push(['_trackEvent', 'Banner', 'Click', '#62 Light', 1.00,true])" ><img src="http://cdn.securebox.com.br/custom/411/uploads/banner/banner_5530004db896f.jpg"  style="border:none" width="370" height="63" alt="Light"  title="Light"  onload="_gaq.push(['_trackEvent', 'Banner', 'View', '#62 Light', 1.00,true])"  /></a>
+
+</div>
+
+<div class="span4" >
+<a href="/banner/click/?id=64&amp;url=%2Fplayer%3Fidradio%3D17840%26nomeradio%3DLove" title="Love" target="_blank" onclick="_gaq.push(['_trackEvent', 'Banner', 'Click', '#64 Love', 1.00,true])" ><img src="http://cdn.securebox.com.br/custom/411/uploads/banner/banner_552fffe8ac463.jpg"  style="border:none" width="370" height="63" alt="Love"  title="Love"  onload="_gaq.push(['_trackEvent', 'Banner', 'View', '#64 Love', 1.00,true])"  /></a>
+
+</div>
+
+<div class="span4" >
+<a href="/banner/click/?id=68&amp;url=%2Fplayer%3Fidradio%3D18962%26nomeradio%3DMPB%25202%25AA%2520gera%25E7%25E3o" title="MPB Segunda Geração" target="_blank" onclick="_gaq.push(['_trackEvent', 'Banner', 'Click', '#68 MPB Segunda Geração', 1.00,true])" ><img src="http://cdn.securebox.com.br/custom/411/uploads/banner/banner_552fffacb5cbb.jpg"  style="border:none" width="370" height="63" alt="MPB Segunda Geração"  title="MPB Segunda Geração"  onload="_gaq.push(['_trackEvent', 'Banner', 'View', '#68 MPB Segunda Geração', 1.00,true])"  /></a>
+
+</div>
+
+<div class="span4" >
+<a href="/banner/click/?id=73&amp;url=%2Fplayer%3Fidradio%3D18972%26nomeradio%3DPagode" title="Pagóde" target="_blank" onclick="_gaq.push(['_trackEvent', 'Banner', 'Click', '#73 Pagóde', 1.00,true])" ><img src="http://cdn.securebox.com.br/custom/411/uploads/banner/banner_552ffe9ce58d5.jpg"  style="border:none" width="370" height="63" alt="Pagóde"  title="Pagóde"  onload="_gaq.push(['_trackEvent', 'Banner', 'View', '#73 Pagóde', 1.00,true])"  /></a>
+
+</div>
+
+<div class="span4" >
+<a href="/banner/click/?id=87&amp;url=%2Fplayer%3Fidradio%3D10168%26nomeradio%3DSert%25E3o%2520Raiz" title="Sertão Raiz" target="_blank" onclick="_gaq.push(['_trackEvent', 'Banner', 'Click', '#87 Sertão Raiz', 1.00,true])" ><img src="http://cdn.securebox.com.br/custom/411/uploads/banner/banner_552fff1f508a0.jpg"  style="border:none" width="370" height="63" alt="Sertão Raiz"  title="Sertão Raiz"  onload="_gaq.push(['_trackEvent', 'Banner', 'View', '#87 Sertão Raiz', 1.00,true])"  /></a>
+
+</div>
+
+<div class="span4" >
+<a href="/banner/click/?id=90&amp;url=%2Fplayer%3Fidradio%3D19004%26nomeradio%3DSertanejo%2520Universit%25E1rio" title="Sertanejo universitário" target="_blank" onclick="_gaq.push(['_trackEvent', 'Banner', 'Click', '#90 Sertanejo universitário', 1.00,true])" ><img src="http://cdn.securebox.com.br/custom/411/uploads/banner/banner_552ffe4e50e1a.jpg"  style="border:none" width="370" height="63" alt="Sertanejo universitário"  title="Sertanejo universitário"  onload="_gaq.push(['_trackEvent', 'Banner', 'View', '#90 Sertanejo universitário', 1.00,true])"  /></a>
+
+</div>
+        </div>
+    </div>  
+</div>
+
+<div class="instagram-box hidden-phone">
+    <div class="container">
+    <h2 class="azul-f">Instagram
+    <style>.ig-b- { display: inline-block; }
+.ig-b- img { visibility: hidden; }
+.ig-b-:hover { background-position: 0 -60px; } .ig-b-:active { background-position: 0 -120px; }
+.ig-b-v-24 { width: 137px; height: 24px; background: url(//badges.instagram.com/static/images/ig-badge-view-sprite-24.png) no-repeat 0 0; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+.ig-b-v-24 { background-image: url(//badges.instagram.com/static/images/ig-badge-view-sprite-24@2x.png); background-size: 160px 178px; } }</style>
+<a href="http://instagram.com/radioauriverde" class="ig-b- ig-b-v-24 pull-right" target="_blank" style="
+    margin-top: 6px;
+"><img src="https://badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram" /></a></h2>
+        <div class="row-fluid">
+        	<style type="text/css">
+.footer-instagram {margin:20px 0;}
+</style>
+<div class="footer-instagram" style="display:none">
+<div class="container">
+<div class="row-fluid">
+<div class="span12">
+<div class="footer-instagram-feed">
+	<a target="_blank" href="" class="span3">
+		<img src="" alt="" width="100%" height="auto" >
+		<span class="text-insta"></span>
+	</a>
+</div>
+</div>
+</div>
+</div> 
+</div>
+<script>
+var listCount = 4
+$.getJSON("/banner/getinstagramfeed", {}, function(r) {
+	if (r.meta.code != 200) console.log('instagramfeed: error');
+	var tplHTML = $(".footer-instagram-feed a").clone(true, true);
+	$(".footer-instagram-feed a").remove();
+	var _listCount = 0;
+	var imageSize = "low_resolution";
+	$(r.data).each(function() {
+		if (listCount <= _listCount) return false;
+		var htmlBuffer = $(tplHTML).clone(true, true);
+		$(htmlBuffer).attr('href', this.link);
+		$(htmlBuffer).attr('title', this.caption.text);
+		$(htmlBuffer).find('img').attr('alt', this.caption.text);
+		$(htmlBuffer).find('span').html(this.caption.text);
+		$(htmlBuffer).find('img').attr('src', this.images[imageSize].url);
+		$(htmlBuffer).find('img').attr('style', "max-width:"+this.images[imageSize].width+"px;max-height:"+this.images[imageSize].height+"px");
+		$(htmlBuffer).appendTo(".footer-instagram-feed");
+		_listCount++;
+	});
+	if (_listCount) $(".footer-instagram").show();
+});
+
+</script>
+        </div>
+    </div>
+</div>
+			</div>
+		</div>		
+
+		<div class="container hidden-phone">
+<div class="facebook-home" >
+<div class="banner-codigo" style="width:1170px;height:250px;"><div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&appId=373968576011845&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-like-box" data-href="https://www.facebook.com/RadioAuriVerde" data-width="1170" data-height="200" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="true"></div></div>
+<script type="text/javascript"> _gaq.push(['_trackEvent', 'Banner', 'View', '#182 Facebook Home', 1.00,true]) </script>
+
+</div>
+</div>
+
+<div class="map-local">
+	<div class="container">
+		<div class="row-fluid">
+			<div class="span4">
+				<div class="txt end">
+					<i>endereço auriverde</i>
+					<strong>Rua Virgílio Malta, 6-78 <br />
+CEP: 17015-220 - Bauru - SP</strong>
+				</div>
+			</div>
+			<div class="span4">
+				<div class="txt whats">
+					<i>whatsapp - denuncia - auriverde</i>
+					<strong><span>(14)</span> 98804-0760</strong>
+				</div>
+			</div>
+			<div class="span4">
+				<div class="txt fone">
+					<i>telefone auriverde</i>
+					<strong>(14) 3104-0760</strong>
+				</div>
+			</div>
+		</div>
+	</div>
+	<a href="/site/conteudo/localizacao" class="mapa-links"></a>
+</div>
+<div class="wrapper rodape">
+	<div class="container">
+		<div class="row-fluid">
+			<div class="span6"><h5>Faça parte dessa história</h5><p></p><div class="social-rodape" >
+<a href="/banner/click/?id=35&amp;url=https%3A%2F%2Fwww.facebook.com%2FRadioAuriVerde" title="Facebook" target="_blank" onclick="_gaq.push(['_trackEvent', 'Banner', 'Click', '#35 Facebook', 1.00,true])" ><img src="http://cdn.securebox.com.br/custom/411/uploads/banner/banner_54cbbdc7355f5.jpg"  style="border:none" width="45" height="45" alt="Facebook"  title="Facebook"  onload="_gaq.push(['_trackEvent', 'Banner', 'View', '#35 Facebook', 1.00,true])"  /></a>
+
+</div>
+
+<div class="social-rodape" >
+<a href="/banner/click/?id=36&amp;url=https%3A%2F%2Finstagram.com%2Fradioauriverde%2F" title="Instagram" target="_blank" onclick="_gaq.push(['_trackEvent', 'Banner', 'Click', '#36 Instagram', 1.00,true])" ><img src="http://cdn.securebox.com.br/custom/411/uploads/banner/banner_54cbbdd247944.jpg"  style="border:none" width="45" height="45" alt="Instagram"  title="Instagram"  onload="_gaq.push(['_trackEvent', 'Banner', 'View', '#36 Instagram', 1.00,true])"  /></a>
+
+</div>
+
+<div class="social-rodape" >
+<a href="/banner/click/?id=37&amp;url=%2Fsite%2Fcontato" title="Contato" target="_self" onclick="_gaq.push(['_trackEvent', 'Banner', 'Click', '#37 Contato', 1.00,true])" ><img src="http://cdn.securebox.com.br/custom/411/uploads/banner/banner_54cbbddbd5fe2.jpg"  style="border:none" width="45" height="45" alt="Contato"  title="Contato"  onload="_gaq.push(['_trackEvent', 'Banner', 'View', '#37 Contato', 1.00,true])"  /></a>
+
+</div>
+</div>
+			<div class="span2">
+				<ul class="nav nav-list">
+					<h5>Menu do Site</h5>
+					
+		<li class="menu-pagina-inicial"><a href="/site?menu_id=102" target="_self"><i class="icon-chevron-right"></i>Página inicial</a></li>
+			<li class="menu-sobre-a-auri-verde"><a href="/site/conteudo/sobre-a-radio?menu_id=103" target="_self"><i class="icon-chevron-right"></i>Sobre a Auri Verde</a></li>
+			<li class="menu-localizacao"><a href="/site/conteudo/localizacao?menu_id=104" target="_self"><i class="icon-chevron-right"></i>Localização</a></li>
+			<li class="menu-trabalhe-conosco"><a href="/web/trabalheconosco?menu_id=106" target="_self"><i class="icon-chevron-right"></i>Trabalhe conosco</a></li>
+			<li class="menu-entre-em-contato"><a href="/site/contato?menu_id=107" target="_self"><i class="icon-chevron-right"></i>Entre em contato</a></li>
+	
+				</ul>
+			</div>
+			<div class="span2">
+				<ul class="nav nav-list">
+					<br/>
+					
+		<li class="menu-programas"><a href="/site/conteudo/programas?menu_id=108" target="_self"><i class="icon-chevron-right"></i>Programas</a></li>
+			<li class="menu-noticias"><a href="/site/conteudo/noticias?menu_id=109" target="_self"><i class="icon-chevron-right"></i>Notícias</a></li>
+			<li class="menu-colunistas"><a href="/site/conteudo/colunistas?menu_id=110" target="_self"><i class="icon-chevron-right"></i>Colunistas</a></li>
+			<li class="menu-auri-verde-social"><a href="/site/conteudo/auri-verde-social?menu_id=111" target="_self"><i class="icon-chevron-right"></i>Auri Verde Social</a></li>
+			<li class="menu-aniversariantes-do-dia"><a href="/site/conteudo/promocoes?menu_id=112" target="_self"><i class="icon-chevron-right"></i>Aniversariantes do dia</a></li>
+	
+				</ul>
+			</div>
+			<div class="span2">
+				<ul class="nav nav-list radios-footer">
+					<h5>Rádios Online</h5>
+					
+		<li class="menu-classica"><a href="/player?menu_id=113&idradio=9976&nomeradio=Cl%E1ssica" target="_blank"><i class="icon-chevron-right"></i>Clássica</a></li>
+			<li class="menu-axe"><a href="/player?menu_id=114&idradio=9800&nomeradio=Ax%E9" target="_blank"><i class="icon-chevron-right"></i>Axé</a></li>
+			<li class="menu-hits"><a href="/player?menu_id=115&idradio=10078&nomeradio=Hits" target="_blank"><i class="icon-chevron-right"></i>Hits</a></li>
+			<li class="menu-rock-nacional"><a href="/player?menu_id=116&idradio=10156&nomeradio=Rock+Nacional" target="_blank"><i class="icon-chevron-right"></i>Rock Nacional</a></li>
+			<li class="menu--ver-todos"><a href="/conteudo/musicas?menu_id=117" target="_self"><i class="icon-chevron-right"></i>+ Ver Todos</a></li>
+	
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<span id="mostrard" class="top" style="display:none" title="ir para o topo">Ir para o topo</span>
+<script type="text/javascript">
+	$(window).scroll(function () { 
+		if ($(this).scrollTop() > 10) { 
+			$('.topo').addClass("navbar-fixed-top"); 
+				} else { 
+			$('.topo').removeClass("navbar-fixed-top"); 
+		} 
+	});
+	$(window).scroll(function () { 
+		if ($(this).scrollTop() > 50) { 
+		$('#mostrard').addClass("mostrar"); 
+			} else { 
+		$('#mostrard').removeClass("mostrar"); 
+		} 
+	}); 
+ 
+		$('.top').click(function(){
+		$('html,body').animate({scrollTop: 0},'slow');
+		
+	});
+		 $('.progs').click(function(){
+        $('html,body').animate({scrollTop: 1450},'slow');
+    });
+
+	$(".radios-footer a, .lista-radios div a, .listas-radios div a, .topo .span3.bt-radio a").not(':last').popupWindow({centerBrowser:1, width: 760, height: 435, windowName: 'radiosonline', scrollbars: 0});
+
+</script>
+
+		<div class="row-fluid assinatura">
+			<div class="container ">
+				<div class="row-fluid">
+					<div class="span8"><img src="http://cdn.securebox.com.br/layouts/site/auriverde/images/icon-rodape.png"> Auriverde © 2015 - Todos os direitos reservados</div>
+					<div class="span4">
+						<p class=" pull-right">  Desenvolvimento e Hospedagem <a href="http://www.2rs.com.br" title="2RS - Soluções em TI" target="_blank"> <img src="http://cdn.securebox.com.br/layouts/site/auriverde/images/logo-2rs.png"></a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+		$('a.dropdown-toggle, .dropdown-menu a').on('touchstart', function(e) {
+		  e.stopPropagation();
+		});
+		</script>
+			</body>
+</html>
+
