@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Daker Pinheiro</title>
-    <link>http://dakerfp.github.io/</link>
+    <link>https://dakerfp.github.io/</link>
     <description>Recent content on Daker Pinheiro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
     <lastBuildDate>Thu, 07 Jul 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://dakerfp.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://dakerfp.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Singletons using std::weak_ptr</title>
-      <link>http://dakerfp.github.io/post/weak_ptr_singleton/</link>
+      <link>https://dakerfp.github.io/post/weak_ptr_singleton/</link>
       <pubDate>Thu, 07 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://dakerfp.github.io/post/weak_ptr_singleton/</guid>
+      <guid>https://dakerfp.github.io/post/weak_ptr_singleton/</guid>
       <description>&lt;p&gt;A common issue is how a resource and initialize it only when needed.
 A common C++ pattern to solve this is using the Resource Acquisition Is Initialization aka RAII.
 That&amp;rsquo;s what smart pointers do when created and get out of scope.
@@ -62,20 +62,20 @@ but does not prevents its release, when all returned shared_ptr release the reso
     
     <item>
       <title>libpong</title>
-      <link>http://dakerfp.github.io/project/libpong/</link>
+      <link>https://dakerfp.github.io/project/libpong/</link>
       <pubDate>Sun, 03 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://dakerfp.github.io/project/libpong/</guid>
+      <guid>https://dakerfp.github.io/project/libpong/</guid>
       <description>&lt;p&gt;A minimalistic portable C library to implement Pong game.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>libpong bynary size</title>
-      <link>http://dakerfp.github.io/post/binary-size/</link>
+      <link>https://dakerfp.github.io/post/binary-size/</link>
       <pubDate>Mon, 27 Jun 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://dakerfp.github.io/post/binary-size/</guid>
+      <guid>https://dakerfp.github.io/post/binary-size/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve recently created a very small library to
 make hello world in IoT more interesting than
 a simple blinking LED.&lt;/p&gt;
@@ -96,10 +96,10 @@ want.&lt;/p&gt;
     
     <item>
       <title>about</title>
-      <link>http://dakerfp.github.io/home/about/</link>
+      <link>https://dakerfp.github.io/home/about/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://dakerfp.github.io/home/about/</guid>
+      <guid>https://dakerfp.github.io/home/about/</guid>
       <description>
 
 &lt;h1 id=&#34;biography&#34;&gt;Biography&lt;/h1&gt;
@@ -110,10 +110,10 @@ want.&lt;/p&gt;
     
     <item>
       <title>Python cookbook: argmin &amp; argmax</title>
-      <link>http://dakerfp.github.io/post/python-argmin-argmax/</link>
+      <link>https://dakerfp.github.io/post/python-argmin-argmax/</link>
       <pubDate>Tue, 01 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://dakerfp.github.io/post/python-argmin-argmax/</guid>
+      <guid>https://dakerfp.github.io/post/python-argmin-argmax/</guid>
       <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def argmin(iter, function):
     return min((f(x), x) for x in iter)[1]
 
@@ -133,10 +133,10 @@ def argmax(iter, function):
     
     <item>
       <title>PIL -&gt; Pillow</title>
-      <link>http://dakerfp.github.io/post/pil-pillow/</link>
+      <link>https://dakerfp.github.io/post/pil-pillow/</link>
       <pubDate>Thu, 16 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://dakerfp.github.io/post/pil-pillow/</guid>
+      <guid>https://dakerfp.github.io/post/pil-pillow/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://pillow.readthedocs.org/en/latest/index.html&#34;&gt;Pillow&lt;/a&gt; is a
 &lt;a href=&#34;http://pythonware.com/products/pil/&#34;&gt;PIL&lt;/a&gt; fork created to add new
 features. setuptools support was also added. A more frequent release
@@ -155,10 +155,10 @@ to change your current PIL related code. 0 migration overhead.&lt;/p&gt;
     
     <item>
       <title>Reload and unload modules in Python</title>
-      <link>http://dakerfp.github.io/post/reload-and-unload-modules-in-python/</link>
+      <link>https://dakerfp.github.io/post/reload-and-unload-modules-in-python/</link>
       <pubDate>Mon, 13 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://dakerfp.github.io/post/reload-and-unload-modules-in-python/</guid>
+      <guid>https://dakerfp.github.io/post/reload-and-unload-modules-in-python/</guid>
       <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# python 2.7
 import math
 
@@ -178,10 +178,10 @@ del(math) # remove module
     
     <item>
       <title>Python cookbook: get the file dir path</title>
-      <link>http://dakerfp.github.io/post/python-cookbook-get-file-dir-path/</link>
+      <link>https://dakerfp.github.io/post/python-cookbook-get-file-dir-path/</link>
       <pubDate>Thu, 09 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://dakerfp.github.io/post/python-cookbook-get-file-dir-path/</guid>
+      <guid>https://dakerfp.github.io/post/python-cookbook-get-file-dir-path/</guid>
       <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import os
 os.path.dirname(os.path.abspath(__file__))
 &lt;/code&gt;&lt;/pre&gt;
@@ -190,10 +190,10 @@ os.path.dirname(os.path.abspath(__file__))
     
     <item>
       <title>Regex like operators for DCG</title>
-      <link>http://dakerfp.github.io/post/regex-like-operators-for-dcg/</link>
+      <link>https://dakerfp.github.io/post/regex-like-operators-for-dcg/</link>
       <pubDate>Tue, 07 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://dakerfp.github.io/post/regex-like-operators-for-dcg/</guid>
+      <guid>https://dakerfp.github.io/post/regex-like-operators-for-dcg/</guid>
       <description>&lt;p&gt;Today I was trying to create a simple parser to count syllables in latin
 words with Prolog. I usually use DCGs in Prolog for parsing. Their
 semantic is very similar to
@@ -286,10 +286,10 @@ definition through a library):&lt;/p&gt;
     
     <item>
       <title>Improve your lazy debugging in C&#43;&#43;</title>
-      <link>http://dakerfp.github.io/post/improve-your-lazy-debugging-in-c/</link>
+      <link>https://dakerfp.github.io/post/improve-your-lazy-debugging-in-c/</link>
       <pubDate>Fri, 27 Dec 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://dakerfp.github.io/post/improve-your-lazy-debugging-in-c/</guid>
+      <guid>https://dakerfp.github.io/post/improve-your-lazy-debugging-in-c/</guid>
       <description>&lt;p&gt;Are you too lazy to learn your debugger? When debugging, I usually want
 to know if some code section is reached.&lt;/p&gt;
 
@@ -342,10 +342,10 @@ void foobar() {
     
     <item>
       <title>How to set a X window visible or invisible using Xlib</title>
-      <link>http://dakerfp.github.io/post/how-to-set-x-window-visible-or-invisible/</link>
+      <link>https://dakerfp.github.io/post/how-to-set-x-window-visible-or-invisible/</link>
       <pubDate>Thu, 19 Dec 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://dakerfp.github.io/post/how-to-set-x-window-visible-or-invisible/</guid>
+      <guid>https://dakerfp.github.io/post/how-to-set-x-window-visible-or-invisible/</guid>
       <description>&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;bool m_visible;
 Display* m_display;
 Window m_window;
@@ -368,10 +368,10 @@ void setVisible(bool visible)
     
     <item>
       <title>Functional Pattern Matching with Python</title>
-      <link>http://dakerfp.github.io/post/functional-pattern-matching-with-python/</link>
+      <link>https://dakerfp.github.io/post/functional-pattern-matching-with-python/</link>
       <pubDate>Thu, 03 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://dakerfp.github.io/post/functional-pattern-matching-with-python/</guid>
+      <guid>https://dakerfp.github.io/post/functional-pattern-matching-with-python/</guid>
       <description>&lt;p&gt;This talk as given at Python Brasil 2013, at Brasília.&lt;/p&gt;
 
 &lt;p&gt;&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/Ivn9fHPiXO31Kc&#34; width=&#34;595&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; &lt;div style=&#34;margin-bottom:5px&#34;&gt; &lt;strong&gt; &lt;a href=&#34;//www.slideshare.net/dakerfp/functional-pattern-matching&#34; title=&#34;Functional Pattern Matching on Python&#34; target=&#34;_blank&#34;&gt;Functional Pattern Matching on Python&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href=&#34;//www.slideshare.net/dakerfp&#34; target=&#34;_blank&#34;&gt;Daker Fernandes&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;&lt;/p&gt;
@@ -380,20 +380,20 @@ void setVisible(bool visible)
     
     <item>
       <title>Yet another day at INDT</title>
-      <link>http://dakerfp.github.io/post/yet-another-day-at-indt/</link>
+      <link>https://dakerfp.github.io/post/yet-another-day-at-indt/</link>
       <pubDate>Fri, 23 Aug 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://dakerfp.github.io/post/yet-another-day-at-indt/</guid>
+      <guid>https://dakerfp.github.io/post/yet-another-day-at-indt/</guid>
       <description>&lt;iframe width=&#34;640&#34; height=&#34;360&#34; src=&#34;https://www.youtube.com/embed/Z-QcJU5lyJw&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
 </description>
     </item>
     
     <item>
       <title>Nix</title>
-      <link>http://dakerfp.github.io/post/nix/</link>
+      <link>https://dakerfp.github.io/post/nix/</link>
       <pubDate>Tue, 11 Jun 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://dakerfp.github.io/post/nix/</guid>
+      <guid>https://dakerfp.github.io/post/nix/</guid>
       <description>
 
 &lt;p&gt;For the last few months my team (OpenBossa) at INDT (Instituto Nokia de
@@ -422,7 +422,7 @@ which should also be ported to the target platform.&lt;/p&gt;
 context. So it is possible to add new APIs, to handle application
 specific features.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/nix.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/nix.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;how-did-it-started&#34;&gt;How did it started?&lt;/h2&gt;
 
@@ -451,7 +451,7 @@ you can run the MiniBrowser to test it:&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;$ $WEBKITOUTPUTDIR/Release/bin/MiniBrowser http://maps.nokia.com&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/nix-map.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/nix-map.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/WebKitNix/webkitnix/tree/master/Tools/MiniBrowser/nix&#34;&gt;MiniBrowser code&lt;/a&gt;&lt;/p&gt;
 
@@ -463,7 +463,7 @@ based browser and minimal Python bindings for Nix:
 ES 2 working on the Raspberry Pi. To compile this demo, you will need
 our &lt;a href=&#34;https://github.com/WebKitNix/nix-rpi-sdk&#34;&gt;RaspberryPi SDK&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/nix-rpi2.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/nix-rpi2.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;There is even a browser with its UI written in HTML:
 &lt;a href=&#34;https://github.com/WebKitNix/drowser&#34;&gt;Drowser&lt;/a&gt;&lt;/p&gt;
@@ -480,10 +480,10 @@ features, such as WebRTC.&lt;/p&gt;
     
     <item>
       <title>The ePassport Standard and it&#39;s Cryptographic Scheme</title>
-      <link>http://dakerfp.github.io/post/the-epassport-standard-and-its-cryptographic-scheme/</link>
+      <link>https://dakerfp.github.io/post/the-epassport-standard-and-its-cryptographic-scheme/</link>
       <pubDate>Thu, 30 May 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://dakerfp.github.io/post/the-epassport-standard-and-its-cryptographic-scheme/</guid>
+      <guid>https://dakerfp.github.io/post/the-epassport-standard-and-its-cryptographic-scheme/</guid>
       <description>&lt;p&gt;ePassport is the name given for the new passport specification
 standardized by the &lt;a href=&#34;http://www.icao.int/&#34;&gt;International Civil Aviation Organization&lt;/a&gt; (ICAO).
 It was created to speed up and standardize the immigration procedures.
@@ -495,7 +495,7 @@ and iris information. To keep this important data protected, an
 interesting cryptographic layer was added in addition to the usual
 document falsification mechanisms such as watermarks.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/passaporte-br.jpg&#34; alt=&#34;Brazilian ePassport. One of few which has full compatibility with the ICAO specification.&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/passaporte-br.jpg&#34; alt=&#34;Brazilian ePassport. One of few which has full compatibility with the ICAO specification.&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The name, nationality, birth date and other personal information as well
 as the biometric informations are held on a contactless chip inside the
@@ -506,7 +506,7 @@ process. As the embedded chip has low processing power, the biometric
 data is transmitted to a reader so it can be checked against the porter
 of the passport.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/epass.jpg&#34; alt=&#34;Anatomy of an ePassport&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/epass.jpg&#34; alt=&#34;Anatomy of an ePassport&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;As the physical communication layer of the ePassport broadcasts the
 messages, even with the low range (less than a meter) RFID
@@ -543,7 +543,7 @@ note that the BAC security entirely relies on the physical access to the
 passport. The BAC is inside the ICAO standard but doesn&amp;rsquo;t obligates it&amp;rsquo;s
 support.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/bac.png&#34; alt=&#34;BAC happy path&#39;s sequence diagram&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/bac.png&#34; alt=&#34;BAC happy path&#39;s sequence diagram&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The ICAO also standardizes a authentication for readers called
 &lt;strong&gt;Extended Access Control (EAC)&lt;/strong&gt;. It consists of sets of signatures of
@@ -553,7 +553,7 @@ avoid keys stolen from equipments being used for much time. Some MRZ
 sensitive data, such as iris and fingerprint, are just transmitted to
 readers if it is EAC authenticated. Other informations are optional.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/eac.png&#34; alt=&#34;EAC happy path&#39;s sequence diagram&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/eac.png&#34; alt=&#34;EAC happy path&#39;s sequence diagram&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The &lt;strong&gt;Passive Authentication (PA)&lt;/strong&gt; is a cryptographic mechanism  to
 ensure the data in the passport is valid by the authority emitting the
@@ -577,7 +577,7 @@ digital data a really hard computational problem, and ensures with
 negligible chance of failure that the data is valid. All the MRZ data is
 signed using such process. Using PA is mandatory by ICAO standards.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/pa.png&#34; alt=&#34;PA happy path&#39;s sequence diagram&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/pa.png&#34; alt=&#34;PA happy path&#39;s sequence diagram&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The &lt;strong&gt;Active Authentication (AA)&lt;/strong&gt; is a kind of
 &lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Challenge-response_authentication&#34;&gt;challenge response authentication&lt;/a&gt;
@@ -594,7 +594,7 @@ concept of challenge is the same concept behind
 &lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/CAPTCHA&#34;&gt;CAPTCHAs&lt;/a&gt; and
 the &lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Turing_test&#34;&gt;Turing Test&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/aa.png&#34; alt=&#34;AA hapy path&#39;s sequence diagram&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/aa.png&#34; alt=&#34;AA hapy path&#39;s sequence diagram&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     

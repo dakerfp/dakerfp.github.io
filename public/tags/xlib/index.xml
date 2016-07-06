@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Xlib on Daker Pinheiro</title>
-    <link>http://dakerfp.github.io/tags/xlib/</link>
+    <link>https://dakerfp.github.io/tags/xlib/</link>
     <description>Recent content in Xlib on Daker Pinheiro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
     <lastBuildDate>Thu, 19 Dec 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://dakerfp.github.io/tags/xlib/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://dakerfp.github.io/tags/xlib/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>How to set a X window visible or invisible using Xlib</title>
-      <link>http://dakerfp.github.io/post/how-to-set-x-window-visible-or-invisible/</link>
+      <link>https://dakerfp.github.io/post/how-to-set-x-window-visible-or-invisible/</link>
       <pubDate>Thu, 19 Dec 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://dakerfp.github.io/post/how-to-set-x-window-visible-or-invisible/</guid>
+      <guid>https://dakerfp.github.io/post/how-to-set-x-window-visible-or-invisible/</guid>
       <description>&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;bool m_visible;
 Display* m_display;
 Window m_window;

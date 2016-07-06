@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Argmin on Daker Pinheiro</title>
-    <link>http://dakerfp.github.io/tags/argmin/</link>
+    <link>https://dakerfp.github.io/tags/argmin/</link>
     <description>Recent content in Argmin on Daker Pinheiro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
     <lastBuildDate>Tue, 01 Dec 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://dakerfp.github.io/tags/argmin/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://dakerfp.github.io/tags/argmin/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Python cookbook: argmin &amp; argmax</title>
-      <link>http://dakerfp.github.io/post/python-argmin-argmax/</link>
+      <link>https://dakerfp.github.io/post/python-argmin-argmax/</link>
       <pubDate>Tue, 01 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://dakerfp.github.io/post/python-argmin-argmax/</guid>
+      <guid>https://dakerfp.github.io/post/python-argmin-argmax/</guid>
       <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def argmin(iter, function):
     return min((f(x), x) for x in iter)[1]
 

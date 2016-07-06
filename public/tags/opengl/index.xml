@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Opengl on Daker Pinheiro</title>
-    <link>http://dakerfp.github.io/tags/opengl/</link>
+    <link>https://dakerfp.github.io/tags/opengl/</link>
     <description>Recent content in Opengl on Daker Pinheiro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
     <lastBuildDate>Wed, 12 Dec 2012 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://dakerfp.github.io/tags/opengl/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://dakerfp.github.io/tags/opengl/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>OpenGL Lesson 02 - Drawing with OpenGL</title>
-      <link>http://dakerfp.github.io/post/opengl-lesson-02-drawing-with-opengl/</link>
+      <link>https://dakerfp.github.io/post/opengl-lesson-02-drawing-with-opengl/</link>
       <pubDate>Wed, 12 Dec 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://dakerfp.github.io/post/opengl-lesson-02-drawing-with-opengl/</guid>
+      <guid>https://dakerfp.github.io/post/opengl-lesson-02-drawing-with-opengl/</guid>
       <description>
 
 &lt;p&gt;OpenGL is a primarily an C API, for drawing graphics. Implementations
@@ -37,7 +37,7 @@ card can mean a huge cost. On others platforms, such as the mobile, its
 common that GPUs uses the same memory as the CPU. However, the
 programmer still needs to handle this memory efficiently.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/arch.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/arch.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;For this new range of devices, the Khronos (group responsible for
 standardizing OpenGL API) released an OpengGL specification focused on
@@ -63,7 +63,7 @@ for this post:&lt;/p&gt;
 
 &lt;h2 id=&#34;hello-triangle&#34;&gt;Hello Triangle!&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/hello.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/hello.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Enough talking, show me the code! I wrote the following code using GLUT
 and OpenGL 1. GLUT is a simple toolkit to create simple OpenGL
@@ -114,14 +114,14 @@ to top, as pictured below. By default everything between (-1, -1) and
 &lt;a href=&#34;http://www.songho.ca/opengl/gl_transform.html&#34;&gt;tutorial&lt;/a&gt; for
 understanding OpengGL coordinate system and camera deeper.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/gles-cam.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/gles-cam.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;You also need to assert what kind of primitive you are passing to
 OpenGL. It accepts the primitives illustrated below with their
 correspondent constants. OpenGL ES does not support polygon or quads,
 you will need to assemble them yourself.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/primitives.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/primitives.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Interleaved with the vertex position, you can add other information such
 as colors, texture coordinates, normal direction. You can define other
@@ -213,7 +213,7 @@ glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
 
 &lt;p&gt;This gives us the following result:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/hello2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/hello2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Notice that the colors for each vertex stands as the ones we gave, but
 all the region in between has the color calculated as the interpolation

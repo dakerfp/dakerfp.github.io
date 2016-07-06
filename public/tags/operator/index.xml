@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Operator on Daker Pinheiro</title>
-    <link>http://dakerfp.github.io/tags/operator/</link>
+    <link>https://dakerfp.github.io/tags/operator/</link>
     <description>Recent content in Operator on Daker Pinheiro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
     <lastBuildDate>Tue, 07 Jan 2014 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://dakerfp.github.io/tags/operator/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://dakerfp.github.io/tags/operator/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Regex like operators for DCG</title>
-      <link>http://dakerfp.github.io/post/regex-like-operators-for-dcg/</link>
+      <link>https://dakerfp.github.io/post/regex-like-operators-for-dcg/</link>
       <pubDate>Tue, 07 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://dakerfp.github.io/post/regex-like-operators-for-dcg/</guid>
+      <guid>https://dakerfp.github.io/post/regex-like-operators-for-dcg/</guid>
       <description>&lt;p&gt;Today I was trying to create a simple parser to count syllables in latin
 words with Prolog. I usually use DCGs in Prolog for parsing. Their
 semantic is very similar to
@@ -108,10 +108,10 @@ definition through a library):&lt;/p&gt;
     
     <item>
       <title>DiagnostiCar (2) - Knowledge Representation Language</title>
-      <link>http://dakerfp.github.io/post/diagnosticar-2-knowledge-representation-language/</link>
+      <link>https://dakerfp.github.io/post/diagnosticar-2-knowledge-representation-language/</link>
       <pubDate>Sun, 11 Apr 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://dakerfp.github.io/post/diagnosticar-2-knowledge-representation-language/</guid>
+      <guid>https://dakerfp.github.io/post/diagnosticar-2-knowledge-representation-language/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m giving sequence to the last post about the DiagnostiCar expert
 system. Today I&amp;rsquo;m going to specify the predicates to represent some
 domain specific knowledge.&lt;/p&gt;
