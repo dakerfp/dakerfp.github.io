@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme" content="hugo-academic">
+    <meta name="generator" content="Hugo 0.16" />
+    <meta name="author" content="Daker Fernandes Pinheiro">
+    <meta name="description" content="Software Engineer &amp; MS Candidate for Computer Graphics">
+
+    <link rel="stylesheet" href="http://dakerfp.github.io/css/highlight.min.css">
+    <link rel="stylesheet" href="http://dakerfp.github.io/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://dakerfp.github.io/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://dakerfp.github.io/css/academicons.min.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
+    <link rel="stylesheet" href="http://dakerfp.github.io/css/hugo-academic.css">
+    
+
+
+    <link rel="shortcut icon" href="http://dakerfp.github.io/img/favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="http://dakerfp.github.io/post/qml-themingstyling/">
+
+    <title>QML Theming/Styling | Daker Pinheiro</title>
+
+</head>
+<body id="top">
+
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+    <div class="container">
+
+        
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://dakerfp.github.io/">Daker Pinheiro</a>
+        </div>
+
+        
+        <div class="collapse navbar-collapse" id="#navbar-collapse-1">
+
+            
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#top">Home</a></li>
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#publications">Publications</a></li>
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#posts">Posts</a></li>
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#projects">Projects</a></li>
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#experience">Experience</a></li>
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#contact">Contact</a></li>
+                
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <article class="article" itemscope itemtype="http://schema.org/Article">
+
+        
+
+        <h1 itemprop="name">QML Theming/Styling</h1>
+
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2012-04-15 00:00:00 &#43;0000 UTC" itemprop="datePublished">Sun, Apr 15, 2012</time>
+    </span>
+
+    
+
+    
+        
+<div class="share-box">
+    <ul class="share">
+        <li>
+            <a class="facebook" href="https://www.facebook.com/sharer.php?u=http%3a%2f%2fdakerfp.github.io%2fpost%2fqml-themingstyling%2f" target="_blank">
+                <i class="fa fa-facebook"></i>
+            </a>
+        </li>
+        <li>
+            <a class="twitter" href="https://twitter.com/intent/tweet?text=QML%20Theming%2fStyling&amp;url=http%3a%2f%2fdakerfp.github.io%2fpost%2fqml-themingstyling%2f" target="_blank">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        <li>
+            <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fdakerfp.github.io%2fpost%2fqml-themingstyling%2f&amp;title=QML%20Theming%2fStyling" target="_blank">
+                <i class="fa fa-linkedin"></i>
+            </a>
+        </li>
+        <li>
+            <a class="weibo" href="http://service.weibo.com/share/share.php?url=http%3a%2f%2fdakerfp.github.io%2fpost%2fqml-themingstyling%2f&amp;title=QML%20Theming%2fStyling" target="_blank">
+                <i class="fa fa-weibo"></i>
+            </a>
+        </li>
+        <li>
+            <a class="email" href="mailto:?subject=QML%20Theming%2fStyling&amp;body=http%3a%2f%2fdakerfp.github.io%2fpost%2fqml-themingstyling%2f">
+                <i class="fa fa-envelope"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+    
+
+</div>
+
+
+        <div class="article-style" itemprop="articleBody">
+            
+
+<h2 id="intro">Intro</h2>
+
+<p>As I mentioned in my last post, I and my team in INdT are researching
+on how to improve the Styling  new way of creating styled QML widgets
+components (Button, Sliders, ComboBox, etc.). We&rsquo;ve been involved for
+such a long time in the development of Qt Components for the Harmattan,
+and me personally worked on the Plasma Components widget set.</p>
+
+<p>We also did a some big desktop and mobile applications (such as
+<a href="http://snowshoe.qtlabs.org.br/">Snowshoe</a> and
+<a href="http://conversations.nokia.com/2012/04/13/making-mobile-payments-in-brazil-with-nfc/">PagSeguro NFC Payment</a>)
+which required us to create lots of custom widgets. Obviously there&rsquo;s a
+lot of redundant code between the applications that could belong to a
+common code base.</p>
+
+<p>Besides the existence of the <a href="https://qt.gitorious.org/qt-components/">Qt Components</a>,
+the styling of widgets is an issue it doesn&rsquo;t solves as well. Nowadays if you want a
+new style, you&rsquo;ll have to create a set of QML components from scratch or
+to base on an existing widget set, which would increase the development
+and code fragmentation. One way to style your widgets is to rely on the
+old and confusing QStyle classes, and there is no easy way to it purely
+in QML.</p>
+
+<h2 id="issues-and-requirements">Issues and Requirements</h2>
+
+<p>Recently, lots of discussions about a new styles API happened on the Qt
+development mailing list. Some of the issues as we considered were
+summarized by Alan Alpert in a
+<a href="http://qt-project.org/forums/viewthread/16341">thread</a> on Qt Project&rsquo;s
+forum. Here are some of the points he collected from the discussion in
+the mailing list:</p>
+
+<ul>
+<li>One source, multiple target platforms</li>
+<li>Change the appearance of standard controls in my application</li>
+<li>Style QWidget and QQuickItem UIs with the same code</li>
+<li>Inside QML items, draw native controls without using QML</li>
+</ul>
+
+<p>In addition to those concerns, based on our experience on desktop and
+mobile applications we have a few other important issues to guide us:</p>
+
+<ul>
+<li>Configure current theme/style from the QML</li>
+<li>Use QML for configure new Styles for widgets</li>
+<li>Minimize code size for application developers</li>
+<li>Wisely use SceneGraph to improve performance</li>
+<li>Don&rsquo;t need to link with the old QtWidgets module</li>
+</ul>
+
+<p>The current implementation of the custom components in the <a href="https://qt.gitorious.org/qt-components/desktop">Desktop
+Components</a> solves a few
+of these problems. However one of the biggest problem is depending on
+QtWidgets, not having an easy style change support and not properly
+using the SceneGraph for painting the widgets.</p>
+
+<h2 id="qtquickstyles">QtQuickStyles</h2>
+
+<p>To research how to solve these issues we&rsquo;ve decided to create the
+QtQuickStyles module. The general idea for this module is to provide a
+simple way of styling QML widgets (think of Qt Components). The current
+research is about creating an API to allow proper platform look and feel
+integration without depending on QtWidgets, and easily theme your whole
+application with your custom style, if you want another theme besides
+the underneath platform look and feel. We want that the developers be
+able to do it all purely in QML. All the collected issues are being
+considered for the API.</p>
+
+<p>The current work is available here:</p>
+
+<p><code>git clone git://code.openbossa.org/projects/qtquickstyles.git</code></p>
+
+<p>Now, our focus is to adapt the existing code base, from QStyle, for
+painting elements in QML as a short term target so we can have working
+code faster, and supporting all the same platforms and styles that
+QtWidgets does.</p>
+
+<h2 id="qstyle">QStyle</h2>
+
+<p>Today, on Qt code, each style knows how to paint all the control
+elements, and they all follow an interface (defined by QStyle class). If
+you want a new style you will have to implement a new QStyle subclass.
+The following scheme may clear up your mind:</p>
+
+<p><img src="/img/qstyles.png" alt="Current QStyle architecture" /></p>
+
+<p>Additionally, if you take a look at the QStyle code, you can see a
+bunch of mixed code, taking care of drawing all type of widgets. Almost
+all the methods have a huge switch case, each taking care of an specific
+action of an specific widget. When someone put the eyes on it for the
+first time, thinks it is too complicated to understand and very messy
+(and indeed it is). Additionally, a code like this leads to a huge
+complexity to maintain and understand it.</p>
+
+<p>So, why can’t each widget take care of its own features and painting?
+Why we could not have an interface that would define how a button is
+painted, for instance? Doing it this way, if we have some work to be
+done on the button (again the button example), it would only be done on
+this button class. Furthermore, if we have modifications on how the
+button with the plastique style, for instance, is painted, we have only
+to do it on the plastique button class. This approach leads to more
+understanding on the overall code and also makes it easy to maintain,
+isolating the problems that can appear, to the widget itself.</p>
+
+<p>To do this, a component must be a control or composed of sub controls
+(such as the Slider&rsquo;s groove, handle and tickmarks) and for each control
+it&rsquo;ll use a QQuickItem that reads the widget&rsquo;s state and &ldquo;paints&rdquo; itself
+with as it is the style.</p>
+
+<h2 id="qtquickstyles-in-use">QtQuickStyles in use</h2>
+
+<p>We&rsquo;ve done a few brainstorm for defining the current API to use the
+style in the components. The following code is the example of how
+our API was thought to be used:</p>
+
+<pre><code class="language-qml">// Regular Button having the underneath platform look and feel
+import QtQuick 2.0
+import QtUiComponents 1.0
+Button {
+    width: 140
+    height: 40
+    text: &quot;Native Button&quot;
+}
+</code></pre>
+
+<p>We are going to explain later how the style resolves the current
+platform being used.</p>
+
+<p>Override platforms style:</p>
+
+<pre><code class="language-qml">// Regular Button having the plastique look and feel
+import QtQuick 2.0
+import QtUiComponents 1.0
+import QtUiStyles 1.0
+Button {
+    width: 140
+    height: 40
+    text: &quot;Plastique Button&quot;
+    // This use case is not implemented exported yet, but it will be
+    style: PlastiqueButtonStyle { }
+}
+</code></pre>
+
+<p>Using a user defined style:</p>
+
+<pre><code class="language-qml">// Regular Button
+import QtQuick 2.0
+import QtUiComponents 1.0
+Button {
+    width: 140
+    height: 40
+    text: &quot;User-defined Button&quot;
+    // Accepts a QML Component
+    style: Rectangle {
+        color: &quot;gray&quot;
+        Text {
+            anchors.centerIn: parent
+            text: button.text // button reference is injected when the internal Loader loads it
+        }
+    }
+}
+</code></pre>
+
+<p>We can see, by the examples above that we can easily uses a Button
+component and gives it the look and feel that we want, by only playing
+around with the style property. In order to follow a well discussed and
+already implemented Component&rsquo;s API, we&rsquo;re using the
+<a href="https://bugreports.qt.nokia.com//browse/QTCOMPONENTS-200">Qt Components Common API</a>
+specification for creating the components in the repository.</p>
+
+<h2 id="custom-styles">Custom Styles</h2>
+
+<p>To solve the issue of being easy to create a new style, we are also
+adding component helpers that exports properties that commonly changes
+from one application to another. These configurable properties were
+selected based on our experience of creating QML components.</p>
+
+<p>The custom style API defined for the Button and Style can be found
+<a href="http://wiki.qtlabs.org.br/projects/qtquickstyles/customstyleapi">here</a>.</p>
+
+<pre><code class="language-qml">// Regular Button
+import QtQuick 2.0
+import QtUiComponents 1.0
+import QtUiStyles 1.0
+Button {
+    width: 140
+    height: 40
+    text: &quot;Custom Style Button&quot;
+    style: CustomButtonStyle {
+        background: &quot;myButton.png&quot;
+        pressedBackground: &quot;myPressedButton.png&quot;
+    }
+}
+</code></pre>
+
+<h2 id="applicationstyle-api">ApplicationStyle API</h2>
+
+<p>As listed in the issues list, it&rsquo;s interesting that we had an easy way
+of setting the application theme/style in QML. We came to an API that
+let the developer change the style of all the components in the
+application that uses the default style. The example below shows how to
+play around with the application theme/style:</p>
+
+<pre><code class="language-qml">import QtQuick 2.0
+import QtUiStyles 1.0
+Item {
+    ApplicationStyle {
+        id: appStyle
+        buttonStyle: CustomButtonStyle {
+            background: &quot;myButton.png&quot;
+            pressedBackground: &quot;myPressedButton.png&quot;
+        }
+    }
+
+    Button {
+        text: &quot;Button with custom Style&quot;
+    }
+
+    Button {
+        text: &quot;Button with plastique Style&quot;
+        // Theme changes doesn't affect when style property is set
+        style: PlastiqueButtonStyle { }
+    }
+
+    Button {
+        text: &quot;Button with appStyle&quot;
+        style: appStyle.buttonStyle // Explicitly binds button style with a style
+    }
+}
+</code></pre>
+
+<h2 id="implementation-details">Implementation Details</h2>
+
+<p>We have a global class, called QUiStyle, which (practically) has
+getters for each widget style who defines how it is painted. So, we
+would have some methods like: buttonStyle(), checkBoxStyle(),
+radioButtonStyle() and so on. Each specific style, e.g. Plastique,
+Cleanlooks, Widows, etc, will inherits from this base class and set the
+members that will be returned by the getters, to its specific widget
+style class, for instance, on the QUiPlastiqueStyle class, we will set
+buttonStyle member to an instance of QUiPlastiqueButton. So, it is easy
+for a developer to add its own Style (if he desires to make it on C++),
+he only has to define his new style class, inheriting from QUiStyle, and
+set the style widget members of QUiStyle to its own style widgets.</p>
+
+<p>The following diagram can ease your understanding of the current code
+structure:</p>
+
+<p><img src="/img/quistyles.png" alt="Proposal for a new QStyle modular architecture" /></p>
+
+<p>For each type of widget we will have a class that calls the correct
+style class to paint it. For example, for the button, we have a class
+called QUiButtonStyle, which will ask for the QUiStyle a reference for
+the platform button style (calling the buttonStyle() method). Then, it
+will be drawn with the current platform look and feel. All the other
+widgets follows the same workflow.</p>
+
+<p><img src="/img/quicomponentstyle.png" alt="Current implementation for the style components" /></p>
+
+<p>In order to theme your application, we have a global object called
+appStyle and a QML component, called ApplicationStyle (presented in the
+QML example above). The ApplicationStyle component as a style property
+for each type of widget, e.g. buttonStyle, checkBoxStyle,
+radioButtonStyle, etc. These properties binds to the appStyle object
+analogue properties. So, if you want all your buttons of your
+application to have a CustomButtonStyle, you can simply do it as the
+example.</p>
+
+<h2 id="development-status">Development Status</h2>
+
+<p>Currently, we are focusing on creating a good set of working widgets
+for the Plastique style, but we are planning to implement another style
+parallelly, the CleanLooks is the favourite candidate.</p>
+
+<p>Now, if you take a look at our repository, you will find the following
+widgets:</p>
+
+<ul>
+<li>Button</li>
+<li>CheckBox</li>
+<li>RadioButton</li>
+<li>Slider</li>
+</ul>
+
+<p>Besides this, we have a CustomStyle for each one, e.g.
+CustomButtonStyle, CustomCheckBoxStyle, etc. If a user does not want to
+use the platform look and feel or create a style from scratch, he can
+use this Custom API to easily create his own styles.</p>
+
+<p>The next widget that is planned to be developed is the ComboBox, also
+with his Custom Style.</p>
+
+<h2 id="remarks">Remarks</h2>
+
+<p>This first release was done using the QPainter to paint the widgets,
+instead of using the new SceneGraph. This was done in order to speed up
+our development and have a nice set of widgets working as fast as
+possible. In the future (close future) we will get rid of all QPainter
+based classes and replace them to use SceneGraph. The current custom
+styles already does that, but we would like to have them working for the
+platform styles as well, and we are already researching it.</p>
+
+<p>The code in repository is mess because we are still doing a lot of
+changes, but we need to make it make it more stable and follow the Qt
+addons repository architecture until the end of the month. If you have
+any opinion, doubt or suggestion, please let us know.</p>
+
+        </div>
+
+    </article>
+
+    <nav>
+    <ul class="pager">
+        
+        <li class="previous"><a href="http://dakerfp.github.io/post/qt-kde-akademy-2012-event-guide/"><span aria-hidden="true">&larr;</span> Qt, KDE &amp; Akademy 2012 Event Guide Application</a></li>
+        
+
+        
+        <li class="next"><a href="http://dakerfp.github.io/post/qml-themingstyling-update/">QML Theming/Styling (Update) <span aria-hidden="true">&rarr;</span></a></li>
+        
+    </ul>
+</nav>
+
+    
+<section id="comments">
+    <div id="disqus_thread">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'dakerfp';
+    var disqus_identifier = 'http:\/\/dakerfp.github.io\/post\/qml-themingstyling\/';
+    var disqus_title = 'QML Theming\/Styling';
+    var disqus_url = 'http:\/\/dakerfp.github.io\/post\/qml-themingstyling\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+</section>
+
+
+
+</div>
+<footer class="site-footer">
+    <div class="container">
+        <p class="powered-by">
+
+            &copy; 2016 Daker Fernandes Pinheiro &middot; 
+
+            Powered by the <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+            <span class="pull-right"><a href="#" id="back_to_top"><span class="button_icon"><i class="fa fa-chevron-up fa-2x" aria-hidden="true"></i></span></a></span>
+
+        </p>
+    </div>
+</footer>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+        <script src="http://dakerfp.github.io/js/jquery-1.12.3.min.js"></script>
+        <script src="http://dakerfp.github.io/js/bootstrap.min.js"></script>
+        <script src="http://dakerfp.github.io/js/hugo-academic.js"></script>
+        
+
+        
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-80351639-1', 'auto');
+            ga('send', 'pageview');
+
+             
+            var links = document.querySelectorAll('a');
+            Array.prototype.map.call(links, function(item) {
+                if (item.host != document.location.host) {
+                    item.addEventListener('click', function() {
+                        var action = item.getAttribute('data-action') || 'follow';
+                        ga('send', 'event', 'outbound', action, item.href);
+                    });
+                }
+            });
+        </script>
+        
+
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
+        
+        
+
+    </body>
+</html>
+

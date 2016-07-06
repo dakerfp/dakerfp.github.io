@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme" content="hugo-academic">
+    <meta name="generator" content="Hugo 0.16" />
+    <meta name="author" content="Daker Fernandes Pinheiro">
+    <meta name="description" content="Software Engineer &amp; MS Candidate for Computer Graphics">
+
+    <link rel="stylesheet" href="http://dakerfp.github.io/css/highlight.min.css">
+    <link rel="stylesheet" href="http://dakerfp.github.io/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://dakerfp.github.io/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://dakerfp.github.io/css/academicons.min.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
+    <link rel="stylesheet" href="http://dakerfp.github.io/css/hugo-academic.css">
+    
+
+
+    <link rel="shortcut icon" href="http://dakerfp.github.io/img/favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="http://dakerfp.github.io/post/protein_profile_with_hmm/">
+
+    <title>Protein Profile with HMM | Daker Pinheiro</title>
+
+</head>
+<body id="top">
+
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+    <div class="container">
+
+        
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://dakerfp.github.io/">Daker Pinheiro</a>
+        </div>
+
+        
+        <div class="collapse navbar-collapse" id="#navbar-collapse-1">
+
+            
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#top">Home</a></li>
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#publications">Publications</a></li>
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#posts">Posts</a></li>
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#projects">Projects</a></li>
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#experience">Experience</a></li>
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#contact">Contact</a></li>
+                
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <article class="article" itemscope itemtype="http://schema.org/Article">
+
+        
+
+        <h1 itemprop="name">Protein Profile with HMM</h1>
+
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2011-07-07 00:00:00 &#43;0000 UTC" itemprop="datePublished">Thu, Jul 7, 2011</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="http://dakerfp.github.io/tags/machine-learning">machine learning</a>, 
+        
+        <a class="article-tag-link" href="http://dakerfp.github.io/tags/bio">bio</a>, 
+        
+        <a class="article-tag-link" href="http://dakerfp.github.io/tags/classification">classification</a>, 
+        
+        <a class="article-tag-link" href="http://dakerfp.github.io/tags/ghmm">ghmm</a>, 
+        
+        <a class="article-tag-link" href="http://dakerfp.github.io/tags/hmm">hmm</a>, 
+        
+        <a class="article-tag-link" href="http://dakerfp.github.io/tags/markov">markov</a>, 
+        
+        <a class="article-tag-link" href="http://dakerfp.github.io/tags/protein">protein</a>, 
+        
+        <a class="article-tag-link" href="http://dakerfp.github.io/tags/profile">profile</a>, 
+        
+        <a class="article-tag-link" href="http://dakerfp.github.io/tags/likelihood">likelihood</a>, 
+        
+        <a class="article-tag-link" href="http://dakerfp.github.io/tags/python">python</a>
+        
+    </span>
+    
+    
+
+    
+        
+<div class="share-box">
+    <ul class="share">
+        <li>
+            <a class="facebook" href="https://www.facebook.com/sharer.php?u=http%3a%2f%2fdakerfp.github.io%2fpost%2fprotein_profile_with_hmm%2f" target="_blank">
+                <i class="fa fa-facebook"></i>
+            </a>
+        </li>
+        <li>
+            <a class="twitter" href="https://twitter.com/intent/tweet?text=Protein%20Profile%20with%20HMM&amp;url=http%3a%2f%2fdakerfp.github.io%2fpost%2fprotein_profile_with_hmm%2f" target="_blank">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        <li>
+            <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fdakerfp.github.io%2fpost%2fprotein_profile_with_hmm%2f&amp;title=Protein%20Profile%20with%20HMM" target="_blank">
+                <i class="fa fa-linkedin"></i>
+            </a>
+        </li>
+        <li>
+            <a class="weibo" href="http://service.weibo.com/share/share.php?url=http%3a%2f%2fdakerfp.github.io%2fpost%2fprotein_profile_with_hmm%2f&amp;title=Protein%20Profile%20with%20HMM" target="_blank">
+                <i class="fa fa-weibo"></i>
+            </a>
+        </li>
+        <li>
+            <a class="email" href="mailto:?subject=Protein%20Profile%20with%20HMM&amp;body=http%3a%2f%2fdakerfp.github.io%2fpost%2fprotein_profile_with_hmm%2f">
+                <i class="fa fa-envelope"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+    
+
+</div>
+
+
+        <div class="article-style" itemprop="articleBody">
+            <p>Profinling is the action of summarizing a set of data in a smaller mathematical
+model. One of the practical usages of profiling techniques is the
+classification of sequences. With a data set profile, you may calculate
+the distance of an instance to the model, and classify the instance
+trough this value.</p>
+
+<p>Profiling proteins is a more specific case of profiling sequences. As we
+know from the previous post about <a href="http://codecereal.blogspot.com/2011/05/hidden-markov-models.html">Hidden Markov
+Models</a>
+(HMMs) is a very robust mathematical model to represent
+probabilistically sequences. This post will detail how to profile sets
+of proteins with a HMM model.</p>
+
+<p>The HMM model for this problem must be a HMM which when we calculate a
+probability of generation of a protein by the model, must give higher
+probabilities for proteins similar for the ones used to create the
+profile against the others.</p>
+
+<p>To build the model, I&rsquo;ve started with a <a href="https://secure.wikimedia.org/wikipedia/en/wiki/Multiple_sequence_alignment">multiple sequence
+alignment</a>
+to see how is the structure of the sequences. That means that our HMM
+will be a probabilistic representation of a multiple alignment. With the
+alignment we see that some columns are complete and some are almost, and
+the others have few data. These most common matches can be used as a
+common matches for our model and the deletions and insertions can be
+modelled as other states. Here is an example of a few sequences aligned
+and the core columns of the alignment (marked with an *):</p>
+
+<p><code>AC----ATGTCAACTATCACAC--AGCAGA---ATCACCG--ATC</code></p>
+
+<p>With this sample of alignment we have examples of insertions and
+deletions between the core alignments, which may have a state on the HMM
+to represent them. Note that insertions may occur on arbitrary times
+between the matching states. And the deletion states always replaces
+some matching. One possible HMM template for building the model is
+presented in the following picture:</p>
+
+<p><img src="/img/profile_hmm.png" alt="HMM protein profile model" /></p>
+
+<p>Each matching state (M~j~) is related to the matching on the j^th^ core
+alignment. The same applies for deletion state (D~j~). The insertion is
+slightly different, because it represents the insertions between the
+core alignments, that&rsquo;s why it has one extra state, and this enable to
+represent states before the first and after the last alignment.</p>
+
+<p>Our model will be like the one in the picture with the same length as
+the core alignments of a multiple alignment for a given set of
+sequences. However we should use <a href="https://secure.wikimedia.org/wikipedia/en/wiki/Maximum_likelihood">maximum likelihood</a>
+to estimate the transitions and emission for each state. The easiest way
+to count the total emissions/transitions, is to thread each sequence to
+be profiled in the model. For each symbol in the aligned sequence you
+must check if the symbol is in the core alignment. If it is, then
+increment the count of that state to the next match state, otherwise,
+you go to the insertion state. If it is a deletion, go to the deletion
+state and increment the transition. Finally, to calculate the
+probability for the transitions, just divide the count of each
+transition and divide it by all the states leaving the same state. It&rsquo;s
+important to notice that we have a stopping state, and this is a special
+state that has no transitions.</p>
+
+<p>Note that is important to initialize the model with pseudo counts at
+each possible transitions. Adding this pseudo count, we let our model
+less rigid and avoid overfitting to the train set. Otherwise we could
+have some zero probabilities for some sequences.</p>
+
+<p>To create the emissions probabilities, at each match state, you also
+have to count which symbol was emitted and then increment them. To
+calculate the probability, just divide it by the total symbols matched
+in the threading process. </p>
+
+<p>The similar process could be done with the insertion. However, the
+insertion states are characterized by having a low occurrence rate and
+this may lead us directly to a overfitting problem because the number of
+emissions must be too small. To avoid this we should use the background
+distribution as the emissions probabilities of each insertion state. The
+background distribution is the probability of the occurrence of a given
+amino acid in the entire protein set. To calculate this, count each
+amino acid type for all the train set sequence and then divided by the
+total count.</p>
+
+<p>For the deletion states, it&rsquo;s important to notice that it is a silent
+state. It doesn&rsquo;t emit any symbol at all. To signalize it in ghmm, just
+let all the emissions probabilities with 0. Note that the end state is
+also a silent state once we have no emission associated to it.</p>
+
+<p><strong>ALERT</strong>: the loglikelihood is the only function in the ghmm library which
+handles silent states correctly.</p>
+
+<p>At this point, the model is ready for use. However we have a problem of
+how to classify a new protein sequence. A threshold could be used to
+divide the two classes. However, the most common alternative is to use a
+null model to compare with it. The null model is a model which aims
+represents any protein with similar probability as any other. With this
+two models we could take a sequence and compare if it is more similar to
+a general definition of a protein or to a specific family. This model
+should model a sequence with average size equal to the aligned sequences
+being handled, and should emit any kind of symbol at each position. A
+common alternative for creating the null model, is using a single
+insertion state, which goes to a stopping state with probability of 1
+divided by the average length of  sequences in the train set. For the
+emissions probability, we should use the background distribution,
+because this is related to the general amino acid distribution. At the
+end, the model should be like this:</p>
+
+<p><img src="/img/null_model.png" alt="Null Model" /></p>
+
+<p>For testing the proposed model, I used a set of 100
+<a href="https://secure.wikimedia.org/wikipedia/en/wiki/Globin">globin</a> proteins
+from the <a href="http://www.ncbi.nlm.nih.gov/">NCBI</a> protein repository as a
+train set to build a profile model, and used
+<a href="http://ghmm.sourceforge.net/">ghmm</a> to build and test the model.</p>
+
+<p>To test if our model corresponds to our expectations, 100 globins
+different from the ones in the trains set were used with 1800 other
+random proteins with similar length. The loglikelihood function from the
+ghmm library to calculate the similarity index. The classification of
+the globins versus non globins, was a comparison between the likelihood
+of the protein with the globins profile hmm, and the null model. This
+test gave us 100% of accuracy! To display this result graph, each
+sequence was pointed out in a graph where the horizontal axis displays
+the length of the sequence and the vertical the log of globins / null
+models likelihood (or globins - null model loglikelihood). The globins
+are plotted in red an the others in blue. Proteins over the zero line
+are classified as globins, and below means they aren&rsquo;t globins. The
+graphs show us a clear distinction between the classes, and that our
+model is very precise for this problem.</p>
+
+<p>![Length x log(Globin&rsquo;s Profile Model Likelihood/Null Model Likelihood)</p>
+
+        </div>
+
+    </article>
+
+    <nav>
+    <ul class="pager">
+        
+        <li class="previous"><a href="http://dakerfp.github.io/post/encrypted-tweets/"><span aria-hidden="true">&larr;</span> Encrypted Tweets</a></li>
+        
+
+        
+        <li class="next"><a href="http://dakerfp.github.io/post/pyside_at_citi/">PySide at CITi <span aria-hidden="true">&rarr;</span></a></li>
+        
+    </ul>
+</nav>
+
+    
+<section id="comments">
+    <div id="disqus_thread">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'dakerfp';
+    var disqus_identifier = 'http:\/\/dakerfp.github.io\/post\/protein_profile_with_hmm\/';
+    var disqus_title = 'Protein Profile with HMM';
+    var disqus_url = 'http:\/\/dakerfp.github.io\/post\/protein_profile_with_hmm\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+</section>
+
+
+
+</div>
+<footer class="site-footer">
+    <div class="container">
+        <p class="powered-by">
+
+            &copy; 2016 Daker Fernandes Pinheiro &middot; 
+
+            Powered by the <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+            <span class="pull-right"><a href="#" id="back_to_top"><span class="button_icon"><i class="fa fa-chevron-up fa-2x" aria-hidden="true"></i></span></a></span>
+
+        </p>
+    </div>
+</footer>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+        <script src="http://dakerfp.github.io/js/jquery-1.12.3.min.js"></script>
+        <script src="http://dakerfp.github.io/js/bootstrap.min.js"></script>
+        <script src="http://dakerfp.github.io/js/hugo-academic.js"></script>
+        
+
+        
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-80351639-1', 'auto');
+            ga('send', 'pageview');
+
+             
+            var links = document.querySelectorAll('a');
+            Array.prototype.map.call(links, function(item) {
+                if (item.host != document.location.host) {
+                    item.addEventListener('click', function() {
+                        var action = item.getAttribute('data-action') || 'follow';
+                        ga('send', 'event', 'outbound', action, item.href);
+                    });
+                }
+            });
+        </script>
+        
+
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
+        
+        
+
+    </body>
+</html>
+

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme" content="hugo-academic">
+    <meta name="generator" content="Hugo 0.16" />
+    <meta name="author" content="Daker Fernandes Pinheiro">
+    <meta name="description" content="Software Engineer &amp; MS Candidate for Computer Graphics">
+
+    <link rel="stylesheet" href="http://dakerfp.github.io/css/highlight.min.css">
+    <link rel="stylesheet" href="http://dakerfp.github.io/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://dakerfp.github.io/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://dakerfp.github.io/css/academicons.min.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
+    <link rel="stylesheet" href="http://dakerfp.github.io/css/hugo-academic.css">
+    
+
+
+    <link rel="shortcut icon" href="http://dakerfp.github.io/img/favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="http://dakerfp.github.io/post/cpg-islands-model-evaluation-1/">
+
+    <title>CpG Islands (1) - Problem Motivation &amp; Definitions | Daker Pinheiro</title>
+
+</head>
+<body id="top">
+
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+    <div class="container">
+
+        
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://dakerfp.github.io/">Daker Pinheiro</a>
+        </div>
+
+        
+        <div class="collapse navbar-collapse" id="#navbar-collapse-1">
+
+            
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#top">Home</a></li>
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#publications">Publications</a></li>
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#posts">Posts</a></li>
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#projects">Projects</a></li>
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#experience">Experience</a></li>
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#contact">Contact</a></li>
+                
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <article class="article" itemscope itemtype="http://schema.org/Article">
+
+        
+
+        <h1 itemprop="name">CpG Islands (1) - Problem Motivation &amp; Definitions</h1>
+
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2011-05-29 00:00:00 &#43;0000 UTC" itemprop="datePublished">Sun, May 29, 2011</time>
+    </span>
+
+    
+
+    
+        
+<div class="share-box">
+    <ul class="share">
+        <li>
+            <a class="facebook" href="https://www.facebook.com/sharer.php?u=http%3a%2f%2fdakerfp.github.io%2fpost%2fcpg-islands-model-evaluation-1%2f" target="_blank">
+                <i class="fa fa-facebook"></i>
+            </a>
+        </li>
+        <li>
+            <a class="twitter" href="https://twitter.com/intent/tweet?text=CpG%20Islands%20%281%29%20-%20Problem%20Motivation%20%26%20Definitions&amp;url=http%3a%2f%2fdakerfp.github.io%2fpost%2fcpg-islands-model-evaluation-1%2f" target="_blank">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        <li>
+            <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fdakerfp.github.io%2fpost%2fcpg-islands-model-evaluation-1%2f&amp;title=CpG%20Islands%20%281%29%20-%20Problem%20Motivation%20%26%20Definitions" target="_blank">
+                <i class="fa fa-linkedin"></i>
+            </a>
+        </li>
+        <li>
+            <a class="weibo" href="http://service.weibo.com/share/share.php?url=http%3a%2f%2fdakerfp.github.io%2fpost%2fcpg-islands-model-evaluation-1%2f&amp;title=CpG%20Islands%20%281%29%20-%20Problem%20Motivation%20%26%20Definitions" target="_blank">
+                <i class="fa fa-weibo"></i>
+            </a>
+        </li>
+        <li>
+            <a class="email" href="mailto:?subject=CpG%20Islands%20%281%29%20-%20Problem%20Motivation%20%26%20Definitions&amp;body=http%3a%2f%2fdakerfp.github.io%2fpost%2fcpg-islands-model-evaluation-1%2f">
+                <i class="fa fa-envelope"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+    
+
+</div>
+
+
+        <div class="article-style" itemprop="articleBody">
+            <p>This semester I&rsquo;m attending the course
+<a href="http://www.cin.ufpe.br/%7Eigcf/wiki/pmwiki.php?n=Disciplinas.ProcessamentoDeCadeias2011">Processing of Sequences and Methods and Algorithm in Computational Biology</a>
+(basically DNA and proteins). One of the focus of it is the use of the
+Hidden Markov Models to solve many of it&rsquo;s problems. One well studied
+problems is how to find codifying sequences (snippets that can be
+translated into proteins) in a given sequence of DNA, which has both
+codifying and non codifying regions. One of the most used techniques is
+called CpG islands.</p>
+
+<p>In a random DNA sequence we have a lower frequency of two ((G)uanine and
+&copy;ytosine) than the other two nucleotide types ((A)denine and
+(T)hymine) due to a phenomenon called
+<a href="https://secure.wikimedia.org/wikipedia/en/wiki/Dna_methylation">DNA methylation</a>.
+Due to this methylation, it&rsquo;s more probable to occur a deletion of a C
+and G nucleotides than with A or T</p>
+
+<p><img src="/img/dna_model.jpg" alt="DNA double helix structure" /></p>
+
+<p>In the species evolution, occurs that genes which are essential for it&rsquo;s
+survival cannot mutate much, otherwise the organism can&rsquo;t live and
+reproduce to transmit it&rsquo;s gene to their descendants. Because of this,
+is very unlikely that even with lots of generations, those genes doesn&rsquo;t
+suffer much alteration. It&rsquo;s important to notice that non codifying
+regions can mutate without affecting the organism because it doesn&rsquo;t
+affect a vital part of the genetic code.</p>
+
+<p>With these two facts in hand we can see that mutation of the DNA can
+occur more frequently on non codifying regions. As the methylation of C
+is a very common mutation cause, we can observe that non codifying
+regions will have less C and G due to the methylation which it doesn&rsquo;t
+interfere (much) in the organism. The opposite occurs with codifying
+regions because it has less frequent mutations.</p>
+
+<p><img src="/img/exon1_CpG.gif" alt="CpG island around an important human DNA regulation site" /></p>
+
+<p>With this information in our hands we can use it to discover regions
+which are likely to be a codifying region. The sites which contains
+greater concentrations of C-phosphate-G (called CpG islands) are a
+strong indicator that it hasn&rsquo;t suffered much mutations through the
+generations. So it&rsquo;s very probable to be an area of interest for
+biologists. I&rsquo;ll describe in the next posts how can we identify these
+CpG using HMM and the ghmm python library.</p>
+
+        </div>
+
+    </article>
+
+    <nav>
+    <ul class="pager">
+        
+        <li class="previous"><a href="http://dakerfp.github.io/post/qtquick-wsl-ii/"><span aria-hidden="true">&larr;</span> QtQuick - WSL II</a></li>
+        
+
+        
+        <li class="next"><a href="http://dakerfp.github.io/post/hidden-markov-models/">Hidden Markov Models <span aria-hidden="true">&rarr;</span></a></li>
+        
+    </ul>
+</nav>
+
+    
+<section id="comments">
+    <div id="disqus_thread">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'dakerfp';
+    var disqus_identifier = 'http:\/\/dakerfp.github.io\/post\/cpg-islands-model-evaluation-1\/';
+    var disqus_title = 'CpG Islands (1) - Problem Motivation \x26 Definitions';
+    var disqus_url = 'http:\/\/dakerfp.github.io\/post\/cpg-islands-model-evaluation-1\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+</section>
+
+
+
+</div>
+<footer class="site-footer">
+    <div class="container">
+        <p class="powered-by">
+
+            &copy; 2016 Daker Fernandes Pinheiro &middot; 
+
+            Powered by the <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+            <span class="pull-right"><a href="#" id="back_to_top"><span class="button_icon"><i class="fa fa-chevron-up fa-2x" aria-hidden="true"></i></span></a></span>
+
+        </p>
+    </div>
+</footer>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+        <script src="http://dakerfp.github.io/js/jquery-1.12.3.min.js"></script>
+        <script src="http://dakerfp.github.io/js/bootstrap.min.js"></script>
+        <script src="http://dakerfp.github.io/js/hugo-academic.js"></script>
+        
+
+        
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-80351639-1', 'auto');
+            ga('send', 'pageview');
+
+             
+            var links = document.querySelectorAll('a');
+            Array.prototype.map.call(links, function(item) {
+                if (item.host != document.location.host) {
+                    item.addEventListener('click', function() {
+                        var action = item.getAttribute('data-action') || 'follow';
+                        ga('send', 'event', 'outbound', action, item.href);
+                    });
+                }
+            });
+        </script>
+        
+
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
+        
+        
+
+    </body>
+</html>
+

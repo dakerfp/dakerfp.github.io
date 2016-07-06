@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Plasma on Daker Pinheiro</title>
+    <link>http://dakerfp.github.io/tags/plasma/</link>
+    <description>Recent content in Plasma on Daker Pinheiro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
+    <lastBuildDate>Mon, 13 Aug 2012 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://dakerfp.github.io/tags/plasma/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Qt &amp; KDE in FISL 13</title>
+      <link>http://dakerfp.github.io/post/qt-kde-in-fisl-13/</link>
+      <pubDate>Mon, 13 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://dakerfp.github.io/post/qt-kde-in-fisl-13/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/fisl.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It was a great to see again some friends from KDE Brazil and met some
+new ones. The Konqui&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/kdenofisl.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I also gave some talks and workshop about Qt, KDE and game development.&lt;/p&gt;
+
+&lt;h2 id=&#34;workshop-developing-applications-for-multiple-devices-using-plasma-technologies&#34;&gt;Workshop: Developing applications for multiple devices using Plasma technologies&lt;/h2&gt;
+
+&lt;p&gt;This workshop was idealized and given by &lt;a href=&#34;http://vizzion.org&#34;&gt;Sebas&lt;/a&gt;,
+and I was there to help him. In the workshop, QML was introduced
+together with KDE libs and what they can add to the applications.&lt;/p&gt;
+
+&lt;p&gt;Was good to show the current state of the Plasmate and how easily is
+creating and deploying a new Plasmoid. It was interesting to see how
+people were amazed about how easy is to start hacking and deploying a
+project.&lt;/p&gt;
+
+&lt;h2 id=&#34;talk-games-with-qt&#34;&gt;Talk: Games with Qt&lt;/h2&gt;
+
+&lt;p&gt;In this talk I gave an overview about what Qt is and which tool are
+available for creating games with it.&lt;/p&gt;
+
+&lt;p&gt;&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/aqBOtKXwKCfdoC&#34; width=&#34;595&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; &lt;div style=&#34;margin-bottom:5px&#34;&gt; &lt;strong&gt; &lt;a href=&#34;//www.slideshare.net/dakerfp/jogos-em-qt&#34; title=&#34;Jogos em Qt&#34; target=&#34;_blank&#34;&gt;Jogos em Qt&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href=&#34;//www.slideshare.net/dakerfp&#34; target=&#34;_blank&#34;&gt;Daker Fernandes&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;workshop-games-with-qt&#34;&gt;Workshop: Games with Qt&lt;/h2&gt;
+
+&lt;p&gt;On the third day I gave a 3 hours hands-on workshop about game
+development using only QtQuick. During the workshop, I&amp;rsquo;ve presented
+basic QtQuick and some basic game concepts such as the game loop,
+collisions and physics. I also tried to apply to explain how these
+concepts match with the QML development.&lt;/p&gt;
+
+&lt;p&gt;I created a simple click game
+&lt;a href=&#34;https://github.com/dakerfp/Monera-Game&#34;&gt;Monera&lt;/a&gt; as an example to the
+attendees. The code was written step by step and used itself as example
+and introduction to QtQuick. It was possible for everyone to write the
+code on their own computers and test.&lt;/p&gt;
+
+&lt;p&gt;In the end also gave them a overview about how to install the QML-Box2D
+and how to use it&amp;rsquo;s API.&lt;/p&gt;
+
+&lt;p&gt;The code used as case is available on GitHub:
+&lt;a href=&#34;https://github.com/dakerfp/Monera-Game&#34;&gt;https://github.com/dakerfp/Monera-Game&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Unfortunately I didn&amp;rsquo;t used git to keep the history of steps,
+modularization and refactoring I did during the workshop. I think that
+would be a plus to understand the code and how we came to it.&lt;/p&gt;
+
+&lt;p&gt;This was my first time on FISL and it was great! And I expect that won&amp;rsquo;t
+be my last.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Qt, KDE &amp; Akademy 2012 Event Guide Application</title>
+      <link>http://dakerfp.github.io/post/qt-kde-akademy-2012-event-guide/</link>
+      <pubDate>Thu, 08 Mar 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://dakerfp.github.io/post/qt-kde-akademy-2012-event-guide/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve been away from KDE activities from a time, because I was organizing
+a lot of stuff in my life. Happily I&amp;rsquo;ve finally arranged some time to
+hack more on the weekends. I&amp;rsquo;ll try to keep up the work with the Plasma
+Components &lt;a href=&#34;http://api.kde.org/4.x-api/plasma-qml-apidocs/&#34;&gt;documentation&lt;/a&gt;,
+because I think it can be improved a lot. I will also try to come up with
+a few examples inside the documentation, to make easier for plasmoid
+developers.&lt;/p&gt;
+
+&lt;p&gt;Another long term goal for this year, which I already started to
+investigate, is how to optimize  Qt Components for more about the Qt QML
+Components, beyond Plasma, and I&amp;rsquo;m already investigating how can we do
+proper styling for Qt5.&lt;/p&gt;
+
+&lt;p&gt;In another thread, I&amp;rsquo;m also having a great experience by working with
+&lt;a href=&#34;http://pinheiro-kde.blogspot.com/&#34;&gt;Nuno&lt;/a&gt; in an application for the
+&lt;a href=&#34;http://akademy.kde.org/&#34;&gt;Akademy 2012&lt;/a&gt;, at Tallinn, Estonia. The
+application it&amp;rsquo;s basically a guide for the event, with essential
+information about it. It will also include a programme which will alert
+you about the presentations you want to attend to. And it&amp;rsquo;s being such a
+great experience to share ideas with him!&lt;/p&gt;
+
+&lt;p&gt;Here are some snapshots of the app:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/akademy-app.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If you want to check it yourself, just clone the git repo:
+git@git.kde.org:scratch/pinheiro/akademy2012&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Back to Plasma Components</title>
+      <link>http://dakerfp.github.io/post/back_to_plasma_components/</link>
+      <pubDate>Mon, 18 Jul 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://dakerfp.github.io/post/back_to_plasma_components/</guid>
+      <description>
+
+&lt;p&gt;This last month I&amp;rsquo;ve been working slowly on my GSoC project due to the
+university activities (due to Brazilian academic calendar). And my
+thesis, which I shall talk in other post. But at least now I&amp;rsquo;m
+undergraduated!&lt;/p&gt;
+
+&lt;p&gt;As I explained in my last post about [Plasma Components],
+my GSoC project. I&amp;rsquo;m building graphics components for developers to
+build plasmoids in QML using non trivial common components such as
+Sliders, ScrollBars and RadioButtons. After the break I&amp;rsquo;ve done these
+components following the &lt;a href=&#34;http://bugreports.qt.nokia.com/browse/QTCOMPONENTS-200&#34;&gt;Qt Components common
+API&lt;/a&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Switch&lt;/li&gt;
+&lt;li&gt;ButtonRow&lt;/li&gt;
+&lt;li&gt;ButtonColumn&lt;/li&gt;
+&lt;li&gt;ScrollBar&lt;/li&gt;
+&lt;li&gt;ScrollDecorator&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Keyboard event handling and focus policy for the new and old components
+were added in this sprint. I also spent a lot of time refactoring some
+components. I think their code is much better now.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m also adding more complex use cases at the components gallery (at
+kde-runtime/plasma/declarativeimports/test/gallery). By the way, this is
+screenshot of the new gallery:&lt;/p&gt;
+
+&lt;p&gt;![](/img/gsoc-gallery.png]&lt;/p&gt;
+
+&lt;h2 id=&#34;plasma-components-gallery&#34;&gt;Plasma Components Gallery&lt;/h2&gt;
+
+&lt;p&gt;Part of the work was just straightforward, but there are some doubts I
+would like to ask which you think is the best, because some of the
+components behaviour are not defined.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Should ScrollDecorator appear only when it&amp;rsquo;s flickableItem is
+flicked, like in the mobile use case?&lt;/li&gt;
+&lt;li&gt;ScrollDecorator must should look like ScrollBar or have it&amp;rsquo;s own
+appearence?&lt;/li&gt;
+&lt;li&gt;There are no SVG graphics for CheckBox, RadioButton and Switch.
+Currently there are placeholders. What can I do?&lt;/li&gt;
+&lt;li&gt;Currently, when you click a component, it gains the focus. This
+logic must be in the components as it is? Or should left it external
+to the button.&lt;/li&gt;
+&lt;li&gt;The Qt Components doesn&amp;rsquo;t define any enabled property, for any
+components. I think it&amp;rsquo;s important to have such a property in all
+interactive components. What do you think about it?&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Any suggestion is highly appreciated.&lt;/p&gt;
+
+&lt;p&gt;I expect to give other update as soon as I have something more to
+report.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Plasma Components</title>
+      <link>http://dakerfp.github.io/post/plasma-components/</link>
+      <pubDate>Thu, 19 May 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://dakerfp.github.io/post/plasma-components/</guid>
+      <description>&lt;p&gt;Hi,&lt;/p&gt;
+
+&lt;p&gt;I will talk about my GSoC project (\m/), the plasma components.
+As you may know, QML is a declarative language to build rich interfaces
+introduced in Qt 4.7 by providing simple primitives. As it is a powerful
+way to develop interfaces and it&amp;rsquo;s the future of UI development for Qt
+was necessary to make the plasma support it.&lt;/p&gt;
+
+&lt;p&gt;Create interfaces in QML is really easy and fast but sometimes we need
+common widgets and may be boring to reimplement and replicate them in
+every application we create (e.g. Button, Slider, ScrollBar). For avoid
+this code replication, the Qt Components project was created to unify an
+API for a set of components.&lt;/p&gt;
+
+&lt;p&gt;The current (often updated) defined components and it&amp;rsquo;s API can be
+found at
+&lt;a href=&#34;http://bugreports.qt.nokia.com/browse/QTCOMPONENTS-200&#34;&gt;QTCOMPONENTS-200&lt;/a&gt;.
+The Qt Components intends to be a cross platform, but sometimes we need
+to have a closer integration of the component and the platform. In
+plasma desktop we want to show tooltips or use the theme svg images for
+example. The common API defines a set of properties a component must
+have, but doesn&amp;rsquo;t disallow to have extra properties and functionalities
+(suggestions ?). Creating the plasma components with the theme
+integration and adding plasma behaviour is what my GSoC project is about
+:-).&lt;/p&gt;
+
+&lt;p&gt;I already started working on the plasma components. They can be found
+in the kde-runtime repository at the plasma/declarative branch. And more
+speciffically in the plasma/declarativeimports/plasmacomponents
+directory. The components which already there are not yet done, they
+lack of tooltips, keyboard events handling, focus policy, and some
+(CheckBox and RadioButton) hasn&amp;rsquo;t images yet. However they&amp;rsquo;re fully
+functional and they cover all the properties and behaviours defined in
+the common API. Here is the list of the components in this state
+mentioned above (until this post publication):&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;BusyIndicator&lt;/li&gt;
+&lt;li&gt;Button&lt;/li&gt;
+&lt;li&gt;CheckBox&lt;/li&gt;
+&lt;li&gt;RadioButton&lt;/li&gt;
+&lt;li&gt;Slider&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These are components not present in the common API but they&amp;rsquo;re highly
+wanted in plasma:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ScrollBar&lt;/li&gt;
+&lt;li&gt;ListItem&lt;/li&gt;
+&lt;li&gt;ListItemView&lt;/li&gt;
+&lt;li&gt;ListHighlight&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To test these components, its also kept a components gallery
+(plasma/declarativeimports/test/Gallery.qml) that you may view it with
+qmlviewer (after installing the components).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/gallery.png&#34; alt=&#34;Gallery screenshot&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Feedback is highly appreciated. ;-)&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

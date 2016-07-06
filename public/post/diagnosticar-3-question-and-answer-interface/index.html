@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme" content="hugo-academic">
+    <meta name="generator" content="Hugo 0.16" />
+    <meta name="author" content="Daker Fernandes Pinheiro">
+    <meta name="description" content="Software Engineer &amp; MS Candidate for Computer Graphics">
+
+    <link rel="stylesheet" href="http://dakerfp.github.io/css/highlight.min.css">
+    <link rel="stylesheet" href="http://dakerfp.github.io/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://dakerfp.github.io/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://dakerfp.github.io/css/academicons.min.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
+    <link rel="stylesheet" href="http://dakerfp.github.io/css/hugo-academic.css">
+    
+
+
+    <link rel="shortcut icon" href="http://dakerfp.github.io/img/favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="http://dakerfp.github.io/post/diagnosticar-3-question-and-answer-interface/">
+
+    <title>DiagnostiCar (3) - Question &amp; Answer Interface | Daker Pinheiro</title>
+
+</head>
+<body id="top">
+
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+    <div class="container">
+
+        
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://dakerfp.github.io/">Daker Pinheiro</a>
+        </div>
+
+        
+        <div class="collapse navbar-collapse" id="#navbar-collapse-1">
+
+            
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#top">Home</a></li>
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#publications">Publications</a></li>
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#posts">Posts</a></li>
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#projects">Projects</a></li>
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#experience">Experience</a></li>
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#contact">Contact</a></li>
+                
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <article class="article" itemscope itemtype="http://schema.org/Article">
+
+        
+
+        <h1 itemprop="name">DiagnostiCar (3) - Question &amp; Answer Interface</h1>
+
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2010-04-11 00:00:00 &#43;0000 UTC" itemprop="datePublished">Sun, Apr 11, 2010</time>
+    </span>
+
+    
+
+    
+        
+<div class="share-box">
+    <ul class="share">
+        <li>
+            <a class="facebook" href="https://www.facebook.com/sharer.php?u=http%3a%2f%2fdakerfp.github.io%2fpost%2fdiagnosticar-3-question-and-answer-interface%2f" target="_blank">
+                <i class="fa fa-facebook"></i>
+            </a>
+        </li>
+        <li>
+            <a class="twitter" href="https://twitter.com/intent/tweet?text=DiagnostiCar%20%283%29%20-%20Question%20%26%20Answer%20Interface&amp;url=http%3a%2f%2fdakerfp.github.io%2fpost%2fdiagnosticar-3-question-and-answer-interface%2f" target="_blank">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        <li>
+            <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fdakerfp.github.io%2fpost%2fdiagnosticar-3-question-and-answer-interface%2f&amp;title=DiagnostiCar%20%283%29%20-%20Question%20%26%20Answer%20Interface" target="_blank">
+                <i class="fa fa-linkedin"></i>
+            </a>
+        </li>
+        <li>
+            <a class="weibo" href="http://service.weibo.com/share/share.php?url=http%3a%2f%2fdakerfp.github.io%2fpost%2fdiagnosticar-3-question-and-answer-interface%2f&amp;title=DiagnostiCar%20%283%29%20-%20Question%20%26%20Answer%20Interface" target="_blank">
+                <i class="fa fa-weibo"></i>
+            </a>
+        </li>
+        <li>
+            <a class="email" href="mailto:?subject=DiagnostiCar%20%283%29%20-%20Question%20%26%20Answer%20Interface&amp;body=http%3a%2f%2fdakerfp.github.io%2fpost%2fdiagnosticar-3-question-and-answer-interface%2f">
+                <i class="fa fa-envelope"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+    
+
+</div>
+
+
+        <div class="article-style" itemprop="articleBody">
+            <p>This post aims to explain how to create an interactive shell so that
+users may answer questions when the reasoning system need user
+information. The reasoning engine will access the ask engine by an
+predicate (I will call it <code>ask</code>). An naive implementation of the
+<code>ask</code> predicate could be:</p>
+
+<pre><code class="language-prolog">ask(X) :-
+    write(X), write(' is true?'), nl,
+    read(yes).
+</code></pre>
+
+<p>It works, but askable predicates will be asked every time the reasoner
+will need an information, even if it was previously answered. Another
+specific problem from DiagnostiCar constraints, was how to separate
+which information is from which user, considering we&rsquo;re at an web
+application environment. The simultaneous users access to the reasoning
+engine couldn&rsquo;t simply be locked while an user was giving an answer
+back, so we must find a smarter way to ask.</p>
+
+<p>To remember info in Prolog, we will need to use dynamic relations to
+store the asked questions, for those who don&rsquo;t know about dynamic
+relations I will give a short explanation. If you want to know more,
+read the <a href="http://www.amzi.com/ExpertSystemsInProlog/xsipfrtop.htm">&ldquo;Building Expert Systems in Prolog&rdquo;</a></p>
+
+<p>Dynamic relations works similarly as a relational table in a
+<a href="http://www.swi-prolog.org/pldoc/man?section=db">relational database</a>,
+but without a type scheme (although it&rsquo;s strongly recommended to make a
+convention). The informations required to create a dynamic relation are
+just it&rsquo;s name and arity. To declare a dynamic predicate you just need
+to run dynamic(Predicate). Once the relation is a dynamic one, you can
+store information (<code>assert/1</code> or <code>asserta/1</code>) or delete information
+(use <code>retract/1</code> and <code>retractall/1</code>) eg.: <code>assert(foo(bar))</code>. To
+query a dynamic predicate you just have to call it (it allows
+unification!) eg.: <code>?- foo(bar). -&gt; true</code>. I made the following
+basic but illustrative example about Prolog DB:</p>
+
+<pre><code class="language-prolog">create_account(Id, Ammount) :-
+    assert(account(Id, Ammount)).
+         
+deposit(Id, Ammount) :-
+    retract(account(Id, PrevAmmount)),
+    NewAmmount is Ammount + PrevAmmount,
+    assert(account(Id, NewAmmount)).
+         
+withdraw(Id, Ammount) :-
+    account(Id, PrevAmmount),
+    PrevAmmount &gt;= Ammount,
+    retract(account(Id, PrevAmmount)),
+    NewAmmount is PrevAmmount - Ammount,
+    assert(account(Id, NewAmmount)).
+</code></pre>
+
+<p>To test the predicates, do some queries:</p>
+
+<pre><code class="language-prolog">?- create_account(1, 1000).
+true.
+
+?- deposit(1, 200).
+true.
+
+?- account(Id, Ammount).
+Id = 1,
+Ammount = 1200.
+
+?- withdraw(1, 400).
+true.
+
+?- withdraw(1, 20000).
+false.
+
+?- account(Id, Ammount).
+Id = 1,
+Ammount = 800.
+</code></pre>
+
+<p>The best solution found, to solve the concurrence and the question
+tracking, was to create predicates to read and write, so the webapp
+could obtain such information from the expert system. To avoid repeating
+the same questions, we will have to maintain a table with questions
+made, one with the answered questions and another to keep the answers
+from the users. Note that each relation needs to keep an user id to know
+from which user each information belongs to. The expert system question
+interface is the following:</p>
+
+<pre><code class="language-prolog">% asked: UserId | Question
+:- dynamic asked/2.
+% asked: UserId | Question
+:- dynamic askfor/2.
+% known: UserId | Question | Fact
+:- dynamic known/3.
+
+% Predicate used by the expert system to ask.
+ask(Uid, Question, Answer) :-
+    known(Uid, Question, Answer).
+ask(Uid, Question, _ ) :-
+    not(asked(Uid,Question)),
+    not(askfor(Uid,Question)),
+    assert(askfor(Uid, Question)),
+    fail.
+
+% Predicate used by the web app to input users answers for a given qeustion.
+answer(Uid, Question, [Answer | Answers]) :-
+    assert(known(Uid, Question, Answer)),
+    answer(Uid, Question, Answers).
+answer(Uid, Question, []) :-
+    assert(asked(Uid, Question)),
+    retractall(askfor(Uid,Question)).
+
+% Routine called by the webapp to clean the data from a user whose 
+% session was expired.
+cleanup(Uid) :-
+    retractall(askfor(Uid,_)),
+    retractall(known(Uid,_,_)),
+    retractall(asked(Uid,_)).
+</code></pre>
+
+<p>Not that hard! I will try to tell all about the abductive reasoning on
+the next post.</p>
+
+        </div>
+
+    </article>
+
+    <nav>
+    <ul class="pager">
+        
+        <li class="previous"><a href="http://dakerfp.github.io/post/diagnosticar-1/"><span aria-hidden="true">&larr;</span> DiagnostiCar (1) - Introduction</a></li>
+        
+
+        
+        <li class="next"><a href="http://dakerfp.github.io/post/diagnosticar-2-knowledge-representation-language/">DiagnostiCar (2) - Knowledge Representation Language <span aria-hidden="true">&rarr;</span></a></li>
+        
+    </ul>
+</nav>
+
+    
+<section id="comments">
+    <div id="disqus_thread">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'dakerfp';
+    var disqus_identifier = 'http:\/\/dakerfp.github.io\/post\/diagnosticar-3-question-and-answer-interface\/';
+    var disqus_title = 'DiagnostiCar (3) - Question \x26 Answer Interface';
+    var disqus_url = 'http:\/\/dakerfp.github.io\/post\/diagnosticar-3-question-and-answer-interface\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+</section>
+
+
+
+</div>
+<footer class="site-footer">
+    <div class="container">
+        <p class="powered-by">
+
+            &copy; 2016 Daker Fernandes Pinheiro &middot; 
+
+            Powered by the <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+            <span class="pull-right"><a href="#" id="back_to_top"><span class="button_icon"><i class="fa fa-chevron-up fa-2x" aria-hidden="true"></i></span></a></span>
+
+        </p>
+    </div>
+</footer>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+        <script src="http://dakerfp.github.io/js/jquery-1.12.3.min.js"></script>
+        <script src="http://dakerfp.github.io/js/bootstrap.min.js"></script>
+        <script src="http://dakerfp.github.io/js/hugo-academic.js"></script>
+        
+
+        
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-80351639-1', 'auto');
+            ga('send', 'pageview');
+
+             
+            var links = document.querySelectorAll('a');
+            Array.prototype.map.call(links, function(item) {
+                if (item.host != document.location.host) {
+                    item.addEventListener('click', function() {
+                        var action = item.getAttribute('data-action') || 'follow';
+                        ga('send', 'event', 'outbound', action, item.href);
+                    });
+                }
+            });
+        </script>
+        
+
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
+        
+        
+
+    </body>
+</html>
+

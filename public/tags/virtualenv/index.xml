@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Virtualenv on Daker Pinheiro</title>
+    <link>http://dakerfp.github.io/tags/virtualenv/</link>
+    <description>Recent content in Virtualenv on Daker Pinheiro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
+    <lastBuildDate>Thu, 16 Jan 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://dakerfp.github.io/tags/virtualenv/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>PIL -&gt; Pillow</title>
+      <link>http://dakerfp.github.io/post/pil-pillow/</link>
+      <pubDate>Thu, 16 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://dakerfp.github.io/post/pil-pillow/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://pillow.readthedocs.org/en/latest/index.html&#34;&gt;Pillow&lt;/a&gt; is a
+&lt;a href=&#34;http://pythonware.com/products/pil/&#34;&gt;PIL&lt;/a&gt; fork created to add new
+features. setuptools support was also added. A more frequent release
+cycle was also promised. With Pillow you can have PIL as a package
+dependency in setuptools and virtualenv. That means less clutter and
+robustness for us.&lt;/p&gt;
+
+&lt;p&gt;Pillow allows you to continue to use &lt;code&gt;import PIL&lt;/code&gt;, so there is no need
+to change your current PIL related code. 0 migration overhead.&lt;/p&gt;
+
+&lt;p&gt;Archlinux already dropped support for PIL in favor of Pillow.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;TL;DR PIL &amp;gt; Pillow&lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

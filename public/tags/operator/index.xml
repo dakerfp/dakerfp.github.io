@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Operator on Daker Pinheiro</title>
+    <link>http://dakerfp.github.io/tags/operator/</link>
+    <description>Recent content in Operator on Daker Pinheiro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
+    <lastBuildDate>Tue, 07 Jan 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://dakerfp.github.io/tags/operator/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Regex like operators for DCG</title>
+      <link>http://dakerfp.github.io/post/regex-like-operators-for-dcg/</link>
+      <pubDate>Tue, 07 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://dakerfp.github.io/post/regex-like-operators-for-dcg/</guid>
+      <description>&lt;p&gt;Today I was trying to create a simple parser to count syllables in latin
+words with Prolog. I usually use DCGs in Prolog for parsing. Their
+semantic is very similar to
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_Form&#34;&gt;BNF&lt;/a&gt;. I love
+DCGs, but sometimes the verbosity in some cases annoys me. Take the
+following example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-prolog&#34;&gt;consonant --&amp;gt;
+    &amp;quot;b&amp;quot;; &amp;quot;c&amp;quot;; &amp;quot;d&amp;quot;; &amp;quot;f&amp;quot;; &amp;quot;g&amp;quot;; &amp;quot;h&amp;quot;; &amp;quot;l&amp;quot;; &amp;quot;j&amp;quot;; &amp;quot;k&amp;quot;; &amp;quot;m&amp;quot;;
+    &amp;quot;n&amp;quot;; &amp;quot;p&amp;quot;; &amp;quot;q&amp;quot;; &amp;quot;r&amp;quot;; &amp;quot;s&amp;quot;; &amp;quot;t&amp;quot;; &amp;quot;v&amp;quot;; &amp;quot;x&amp;quot;; &amp;quot;z&amp;quot;.
+consonants --&amp;gt;
+    [].
+consonants --&amp;gt;
+    consonant, consonants.
+
+vowel --&amp;gt;
+    &amp;quot;a&amp;quot;; &amp;quot;e&amp;quot;; &amp;quot;i&amp;quot;; &amp;quot;o&amp;quot;; &amp;quot;u&amp;quot;.
+vowels --&amp;gt;
+    vowel.
+vowels --&amp;gt;
+    vowel, vowels.
+
+syllable --&amp;gt;
+    vowels.
+syllable --&amp;gt;
+    consonants, vowels.
+
+syllables(0) --&amp;gt;
+    [].
+syllables(N) --&amp;gt;
+    syllable, syllables(N_1),
+    { N is N_1 + 1 }.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The vowels and consonant rules were created merely as helpers for the
+syllable predicate. That could be reduced if I had regex operators like
++, * or ?. Although there are modules for using regex in Prolog (
+swi-regex ), it is not suitable when using within in DCGs. So I wrote
+these regex like operators, with meta DCG predicates, for DCG (like EBNF
+operators):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-prolog&#34;&gt;% op statements let me use them without parenthesis
+:- op(100, xf, *).
+:- op(100, xf, +).
+:- op(100, xf, ?).
+
+*(_) --&amp;gt;
+    [].
+*(EXPR) --&amp;gt;
+    EXPR, *(EXPR).
+
++(EXPR) --&amp;gt;
+    EXPR.
++(EXPR) --&amp;gt;
+    EXPR, +(EXPR).
+
+?(EXPR) --&amp;gt;
+    [].
+?(EXPR) --&amp;gt;
+    EXPR.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;They allow me to modify the times a given rule will be matched. So, I
+can replace this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-prolog&#34;&gt;consonants --&amp;gt;
+    [].
+consonants --&amp;gt;
+    consonant, consonants.
+
+vowels --&amp;gt;
+    vowel.
+vowels --&amp;gt;
+    vowel, vowels.
+
+syllable --&amp;gt;
+    vowels.
+syllable --&amp;gt;
+    consonants, vowels.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;with a simpler version without intermediate rules (using the operators
+definition through a library):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-prolog&#34;&gt;syllable --&amp;gt;
+    *consonant, +vowel.
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>DiagnostiCar (2) - Knowledge Representation Language</title>
+      <link>http://dakerfp.github.io/post/diagnosticar-2-knowledge-representation-language/</link>
+      <pubDate>Sun, 11 Apr 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://dakerfp.github.io/post/diagnosticar-2-knowledge-representation-language/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m giving sequence to the last post about the DiagnostiCar expert
+system. Today I&amp;rsquo;m going to specify the predicates to represent some
+domain specific knowledge.&lt;/p&gt;
+
+&lt;p&gt;Prolog has a helpful and clean &lt;a href=&#34;http://www.csci.csusb.edu/dick/samples/prolog.syntax.html&#34;&gt;syntax&lt;/a&gt;, at least when you&amp;rsquo;re used to, and it&amp;rsquo;s easy to define new &lt;a href=&#34;http://www.swi-prolog.org/pldoc/man?section=operators&#34;&gt;operators&lt;/a&gt; syntax in SWI.
+Such feature improves the readability of the knowledge base or other DSL you want to create.&lt;/p&gt;
+
+&lt;p&gt;To make an abductive reasoning we will need at least the logic operators
+&amp;lsquo;and&amp;rsquo;,&amp;lsquo;or&amp;rsquo; and &amp;lsquo;implies&amp;rsquo; to represent knowledge and chain it.&lt;/p&gt;
+
+&lt;p&gt;Our simple language will have the following syntax:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;known X&lt;/code&gt;: Says that the sentence X must be true;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;X \&amp;lt;- Y - X&lt;/code&gt;: X is caused by Y;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;X &amp;amp; Y&lt;/code&gt;: Is true if X and Y are true;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;X v Y&lt;/code&gt;: Is true if X or Y are true (&amp;lsquo;|&amp;rsquo; is already used by
+Prolog);&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;assumable X&lt;/code&gt;: X can be assumed to prove something;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;askable X&lt;/code&gt;: X can be asked to the user;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Note that I&amp;rsquo;m not using the negation, because some dangerous
+particularities of Prolog negation as failure.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s interesting to stress the difference if we represented
+the knowledge base with the regular prefixed notation of
+Prolog predicades:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-prolog&#34;&gt;- known(X)
+- &amp;lt;-(X,Y)
+- &amp;amp;(X,Y)
+- v(X,Y)
+- assumable(X)
+- askable(X)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Defining opertors increases the readabilty of the knowledge
+representation significantly. To redefine operators we will use the SWI
+predicate &lt;code&gt;op/3&lt;/code&gt;.
+We can define this predicate this way:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-prolog&#34;&gt;:- op(910, xfy, &amp;amp;).
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &lt;code&gt;op/3&lt;/code&gt; predicate has three fields &lt;code&gt;op(+Precedence, +Type, :Name)&lt;/code&gt;.
+The first one says the precendence of the operator (a number between 0
+and 1200). The second is how the functor will be placed within it&amp;rsquo;s
+&amp;ldquo;children nodes&amp;rdquo;, for example: &lt;code&gt;xfy&lt;/code&gt; let the functor between the
+arguments while &lt;code&gt;xf&lt;/code&gt; let the functor after it&amp;rsquo;s argument (remembering
+that you can only create unary or binary operators). For our
+representation language we have:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-prolog&#34;&gt;:- discontiguous(     known/1 ). % The discontiguous predicate tells Prolog
+:- discontiguous( assumable/1 ). % that the given predicate can be declared
+:- discontiguous(   askable/1 ). % unsorted.
+
+:- op(910, xfy,      &amp;amp;    ). % a higher priority with an infix notation
+:- op(920, xfy,      v    ). % infix notation and lower priority than &amp;amp;
+:- op(930, xfy,     &amp;lt;-    ). % infix notation
+:- op(940,  fx,   known   ). % prefixed notation and lowest priority
+:- op(940,  fx, assumable ). % prefixed notation and lowest priority
+:- op(940,  fx,   askable ). % prefixed notation and lowest priority
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now let&amp;rsquo;s model the car problems knowledge into our language (remember
+that Upper names are variables):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-prolog&#34;&gt;%
+% DiagnostiCar - Knowledge Base
+%
+
+% Observe that implication is seen as the real sense of consequence &amp;lt;- cause.
+known problem(crank_case_damaged) &amp;lt;- crank_case_damaged.
+known problem(hydraulic_res_damaged) &amp;lt;- hydraulic_res_damaged.
+known problem(brakes_res_damaged) &amp;lt;- brakes_res_damaged.
+known problem(old_engine_oil) &amp;lt;- old_engine_oil &amp;amp; leak_color(black).
+
+known leak(engine_oil) &amp;lt;- crank_case_damaged.
+known leak(hydraulic_oil) &amp;lt;- hydraulic_res_damaged.
+known leak(brakes_oil) &amp;lt;- brakes_res_damaged.
+
+% Implications in false can be seen as constraints.
+known oil(Oil) &amp;lt;- exists_leak(true) &amp;amp; leak(Oil).
+known false &amp;lt;- oil(brakes_oil) &amp;amp; leak_color(Color) &amp;amp; Color \= green. 
+known false &amp;lt;- oil(engine_oil) &amp;amp; leak_color(Color) &amp;amp; Color \= brown &amp;amp; Color \= black.
+known false &amp;lt;- oil(hydraulic_oil) &amp;amp; leak_color(Color) &amp;amp; Color \= red.
+
+% The assumable predicate asserts what will be can be suposed 
+assumable crank_case_damaged.
+assumable hydraulic_res_damaged. % to prove something e else.
+assumable brakes_res_damaged.
+assumable old_engine_oil.
+
+askable leak_color(Color). % Askable predicate asserts which information will be asked for the user.
+askable exists_leak(TrueOrFalse). % The argument of the predicate will be unified with the answer.
+
+known goal(X) &amp;lt;- problem(X). % The goal predicate is what we want to prove with the expert system.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;That&amp;rsquo;s all for now. On the next post I will explain the question and
+answer interface using the dynamic Prolog predicates.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

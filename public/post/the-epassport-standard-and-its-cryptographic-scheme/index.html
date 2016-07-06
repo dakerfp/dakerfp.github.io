@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme" content="hugo-academic">
+    <meta name="generator" content="Hugo 0.16" />
+    <meta name="author" content="Daker Fernandes Pinheiro">
+    <meta name="description" content="Software Engineer &amp; MS Candidate for Computer Graphics">
+
+    <link rel="stylesheet" href="http://dakerfp.github.io/css/highlight.min.css">
+    <link rel="stylesheet" href="http://dakerfp.github.io/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://dakerfp.github.io/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://dakerfp.github.io/css/academicons.min.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
+    <link rel="stylesheet" href="http://dakerfp.github.io/css/hugo-academic.css">
+    
+
+
+    <link rel="shortcut icon" href="http://dakerfp.github.io/img/favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="http://dakerfp.github.io/post/the-epassport-standard-and-its-cryptographic-scheme/">
+
+    <title>The ePassport Standard and it&#39;s Cryptographic Scheme | Daker Pinheiro</title>
+
+</head>
+<body id="top">
+
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+    <div class="container">
+
+        
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://dakerfp.github.io/">Daker Pinheiro</a>
+        </div>
+
+        
+        <div class="collapse navbar-collapse" id="#navbar-collapse-1">
+
+            
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#top">Home</a></li>
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#publications">Publications</a></li>
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#posts">Posts</a></li>
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#projects">Projects</a></li>
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#experience">Experience</a></li>
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#contact">Contact</a></li>
+                
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <article class="article" itemscope itemtype="http://schema.org/Article">
+
+        
+
+        <h1 itemprop="name">The ePassport Standard and it&#39;s Cryptographic Scheme</h1>
+
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2013-05-30 00:00:00 &#43;0000 UTC" itemprop="datePublished">Thu, May 30, 2013</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="http://dakerfp.github.io/tags/epassport">epassport</a>, 
+        
+        <a class="article-tag-link" href="http://dakerfp.github.io/tags/cryptography">cryptography</a>
+        
+    </span>
+    
+    
+
+    
+        
+<div class="share-box">
+    <ul class="share">
+        <li>
+            <a class="facebook" href="https://www.facebook.com/sharer.php?u=http%3a%2f%2fdakerfp.github.io%2fpost%2fthe-epassport-standard-and-its-cryptographic-scheme%2f" target="_blank">
+                <i class="fa fa-facebook"></i>
+            </a>
+        </li>
+        <li>
+            <a class="twitter" href="https://twitter.com/intent/tweet?text=The%20ePassport%20Standard%20and%20it%27s%20Cryptographic%20Scheme&amp;url=http%3a%2f%2fdakerfp.github.io%2fpost%2fthe-epassport-standard-and-its-cryptographic-scheme%2f" target="_blank">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        <li>
+            <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fdakerfp.github.io%2fpost%2fthe-epassport-standard-and-its-cryptographic-scheme%2f&amp;title=The%20ePassport%20Standard%20and%20it%27s%20Cryptographic%20Scheme" target="_blank">
+                <i class="fa fa-linkedin"></i>
+            </a>
+        </li>
+        <li>
+            <a class="weibo" href="http://service.weibo.com/share/share.php?url=http%3a%2f%2fdakerfp.github.io%2fpost%2fthe-epassport-standard-and-its-cryptographic-scheme%2f&amp;title=The%20ePassport%20Standard%20and%20it%27s%20Cryptographic%20Scheme" target="_blank">
+                <i class="fa fa-weibo"></i>
+            </a>
+        </li>
+        <li>
+            <a class="email" href="mailto:?subject=The%20ePassport%20Standard%20and%20it%27s%20Cryptographic%20Scheme&amp;body=http%3a%2f%2fdakerfp.github.io%2fpost%2fthe-epassport-standard-and-its-cryptographic-scheme%2f">
+                <i class="fa fa-envelope"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+    
+
+</div>
+
+
+        <div class="article-style" itemprop="articleBody">
+            <p>ePassport is the name given for the new passport specification
+standardized by the <a href="http://www.icao.int/">International Civil Aviation Organization</a> (ICAO).
+It was created to speed up and standardize the immigration procedures.
+This standard specifies <a href="http://en.wikipedia.org/wiki/Radio-frequency_identification">RFID</a>
+as the communication channel between the passport and the reader. The main
+feature present on it is the insertion of biometric data into the
+passport for biometric checks, including facial recognition, fingerprint
+and iris information. To keep this important data protected, an
+interesting cryptographic layer was added in addition to the usual
+document falsification mechanisms such as watermarks.</p>
+
+<p><img src="/img/passaporte-br.jpg" alt="Brazilian ePassport. One of few which has full compatibility with the ICAO specification." /></p>
+
+<p>The name, nationality, birth date and other personal information as well
+as the biometric informations are held on a contactless chip inside the
+passport. This set of information are securely handled and is called the
+<strong>Machine Readable Zone</strong> (MRZ) and the chip asserts their security.
+These informations are transmitted to a ePassport reader at immigration
+process. As the embedded chip has low processing power, the biometric
+data is transmitted to a reader so it can be checked against the porter
+of the passport.</p>
+
+<p><img src="/img/epass.jpg" alt="Anatomy of an ePassport" /></p>
+
+<p>As the physical communication layer of the ePassport broadcasts the
+messages, even with the low range (less than a meter) RFID
+communication. But as we know an eavesdropper can be very determined to
+listen the communication ;-). I also has an electromagnetic shield on
+the passport cover, however it doesn&rsquo;t assure to block the communication
+between the chip and the outside world when it&rsquo;s closed, however it&rsquo;s an
+extra obstacle. Another issue to prevent is the passport and digital
+data forgery. Otherwise a falsary could get someone else passport and
+insert it&rsquo;s biometrics information and easily bypass the immigration. As
+we may see, the ePassport is a complete meal for cryptography
+specialists.</p>
+
+<p>Starring at this cryptographic layer we have: </p>
+
+<p>A <strong>unique id</strong> used as a private key. This key is hardcoded in the chip
+manufacturing process and it&rsquo;s non traceable. Doing
+<a href="https://secure.wikimedia.org/wikipedia/en/wiki/Reverse_engineering#Reverse_engineering_of_integrated_circuits/smart_cards">reverse engineering</a>
+on this kind of chip it&rsquo;s really difficult because the equipment to do
+it is extremely expensive and hard to obtain, it is only available to
+large chip manufacturers.</p>
+
+<p>An access control to prevent an attacker to force the ePassport to send
+information in the MRZ to readers unless the passport owner authorizes
+it. Otherwise an attacker could use a reader and simply request the
+biometric information to the passport. It uses a protocol called <strong>Basic
+Access Control (BAC)</strong> to give access for the reader. It consists on a
+<a href="https://secure.wikimedia.org/wikipedia/en/wiki/Optical_character_recognition">OCR</a>
+readable code inside the passport. With this code, the reader can say to
+the passport it is an authorized reader, and then transmit data to it.
+The BAC code is also used as key for the encrypted transmission of the
+data, making an eavesdropping attack more difficult. It&rsquo;s important to
+note that the BAC security entirely relies on the physical access to the
+passport. The BAC is inside the ICAO standard but doesn&rsquo;t obligates it&rsquo;s
+support.</p>
+
+<p><img src="/img/bac.png" alt="BAC happy path's sequence diagram" /></p>
+
+<p>The ICAO also standardizes a authentication for readers called
+<strong>Extended Access Control (EAC)</strong>. It consists of sets of signatures of
+terminals stored in the passport&rsquo;s chip. These signatures are changed
+periodically by the countries (which signs them) on the terminals to
+avoid keys stolen from equipments being used for much time. Some MRZ
+sensitive data, such as iris and fingerprint, are just transmitted to
+readers if it is EAC authenticated. Other informations are optional.</p>
+
+<p><img src="/img/eac.png" alt="EAC happy path's sequence diagram" /></p>
+
+<p>The <strong>Passive Authentication (PA)</strong> is a cryptographic mechanism  to
+ensure the data in the passport is valid by the authority emitting the
+passports. The PA is a kind of digital signature where the country who
+emits passports ensures the veracity of the data with a asymmetric
+Country Verification Certificate Authority (CVCA), a kind of
+<a href="https://secure.wikimedia.org/wikipedia/en/wiki/Message_authentication_code">message authentication code</a>
+(MAC). This process is known as
+<a href="https://secure.wikimedia.org/wikipedia/en/wiki/Asymmetric_cryptography">asymmetric cryptographic</a>
+hashing or <a href="https://secure.wikimedia.org/wikipedia/en/wiki/Digital_signature">digital signing</a>.
+The PA MAC is created by the country when emits a passport, which must
+keep a signing key safe, which is used to create the MAC code. Then it
+publish the public key (all readers must know the countries public keys)
+which can be used to check if the MAC is valid and it was really
+generated by the organization which possess the signing key. The PA
+scheme relies on mathematical functions which are easy to encrypt a MAC
+with the private key, but computationally hard without them. The public
+key can easily check if the MAC was generated by the ones who posses the
+private key, and detect forged data. This process makes the forgery of
+digital data a really hard computational problem, and ensures with
+negligible chance of failure that the data is valid. All the MRZ data is
+signed using such process. Using PA is mandatory by ICAO standards.</p>
+
+<p><img src="/img/pa.png" alt="PA happy path's sequence diagram" /></p>
+
+<p>The <strong>Active Authentication (AA)</strong> is a kind of
+<a href="https://secure.wikimedia.org/wikipedia/en/wiki/Challenge-response_authentication">challenge response authentication</a>
+mechanism to prevent the cloning of passports. It relies on the
+untraceable chip key. Cloning the MRZ data is a simple task to be done,
+however you can&rsquo;t get a passport private key due to the difficulty of
+doing reverse engineering to obtain it. The AA works as a challenge to
+the passport, so you can verify if it really is. The reader encrypts a
+random message that only him knows it&rsquo;s content with the passport&rsquo;s
+public key. The message is then sent to the passport and it must decrypt
+and response to the reader what was the original message. This process
+works because of the duality principle of asymmetric cryptography. This
+concept of challenge is the same concept behind
+<a href="https://secure.wikimedia.org/wikipedia/en/wiki/CAPTCHA">CAPTCHAs</a> and
+the <a href="https://secure.wikimedia.org/wikipedia/en/wiki/Turing_test">Turing Test</a>.</p>
+
+<p><img src="/img/aa.png" alt="AA hapy path's sequence diagram" /></p>
+
+        </div>
+
+    </article>
+
+    <nav>
+    <ul class="pager">
+        
+        <li class="previous"><a href="http://dakerfp.github.io/post/why-is-python-slow-python-nordeste-2013/"><span aria-hidden="true">&larr;</span> Why is Python slow? Python Nordeste 2013</a></li>
+        
+
+        
+        <li class="next"><a href="http://dakerfp.github.io/post/nix/">Nix <span aria-hidden="true">&rarr;</span></a></li>
+        
+    </ul>
+</nav>
+
+    
+<section id="comments">
+    <div id="disqus_thread">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'dakerfp';
+    var disqus_identifier = 'http:\/\/dakerfp.github.io\/post\/the-epassport-standard-and-its-cryptographic-scheme\/';
+    var disqus_title = 'The ePassport Standard and it\x27s Cryptographic Scheme';
+    var disqus_url = 'http:\/\/dakerfp.github.io\/post\/the-epassport-standard-and-its-cryptographic-scheme\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+</section>
+
+
+
+</div>
+<footer class="site-footer">
+    <div class="container">
+        <p class="powered-by">
+
+            &copy; 2016 Daker Fernandes Pinheiro &middot; 
+
+            Powered by the <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+            <span class="pull-right"><a href="#" id="back_to_top"><span class="button_icon"><i class="fa fa-chevron-up fa-2x" aria-hidden="true"></i></span></a></span>
+
+        </p>
+    </div>
+</footer>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+        <script src="http://dakerfp.github.io/js/jquery-1.12.3.min.js"></script>
+        <script src="http://dakerfp.github.io/js/bootstrap.min.js"></script>
+        <script src="http://dakerfp.github.io/js/hugo-academic.js"></script>
+        
+
+        
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-80351639-1', 'auto');
+            ga('send', 'pageview');
+
+             
+            var links = document.querySelectorAll('a');
+            Array.prototype.map.call(links, function(item) {
+                if (item.host != document.location.host) {
+                    item.addEventListener('click', function() {
+                        var action = item.getAttribute('data-action') || 'follow';
+                        ga('send', 'event', 'outbound', action, item.href);
+                    });
+                }
+            });
+        </script>
+        
+
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
+        
+        
+
+    </body>
+</html>
+

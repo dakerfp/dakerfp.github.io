@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme" content="hugo-academic">
+    <meta name="generator" content="Hugo 0.16" />
+    <meta name="author" content="Daker Fernandes Pinheiro">
+    <meta name="description" content="Software Engineer &amp; MS Candidate for Computer Graphics">
+
+    <link rel="stylesheet" href="http://dakerfp.github.io/css/highlight.min.css">
+    <link rel="stylesheet" href="http://dakerfp.github.io/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://dakerfp.github.io/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://dakerfp.github.io/css/academicons.min.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
+    <link rel="stylesheet" href="http://dakerfp.github.io/css/hugo-academic.css">
+    
+
+
+    <link rel="shortcut icon" href="http://dakerfp.github.io/img/favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="http://dakerfp.github.io/post/plasma-components/">
+
+    <title>Plasma Components | Daker Pinheiro</title>
+
+</head>
+<body id="top">
+
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+    <div class="container">
+
+        
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://dakerfp.github.io/">Daker Pinheiro</a>
+        </div>
+
+        
+        <div class="collapse navbar-collapse" id="#navbar-collapse-1">
+
+            
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#top">Home</a></li>
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#publications">Publications</a></li>
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#posts">Posts</a></li>
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#projects">Projects</a></li>
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#experience">Experience</a></li>
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#contact">Contact</a></li>
+                
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <article class="article" itemscope itemtype="http://schema.org/Article">
+
+        
+
+        <h1 itemprop="name">Plasma Components</h1>
+
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2011-05-19 00:00:00 &#43;0000 UTC" itemprop="datePublished">Thu, May 19, 2011</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="http://dakerfp.github.io/tags/gsoc">gsoc</a>, 
+        
+        <a class="article-tag-link" href="http://dakerfp.github.io/tags/kde">kde</a>, 
+        
+        <a class="article-tag-link" href="http://dakerfp.github.io/tags/plasma">plasma</a>, 
+        
+        <a class="article-tag-link" href="http://dakerfp.github.io/tags/qtcomponents">qtcomponents</a>, 
+        
+        <a class="article-tag-link" href="http://dakerfp.github.io/tags/qtquick">qtquick</a>
+        
+    </span>
+    
+    
+
+    
+        
+<div class="share-box">
+    <ul class="share">
+        <li>
+            <a class="facebook" href="https://www.facebook.com/sharer.php?u=http%3a%2f%2fdakerfp.github.io%2fpost%2fplasma-components%2f" target="_blank">
+                <i class="fa fa-facebook"></i>
+            </a>
+        </li>
+        <li>
+            <a class="twitter" href="https://twitter.com/intent/tweet?text=Plasma%20Components&amp;url=http%3a%2f%2fdakerfp.github.io%2fpost%2fplasma-components%2f" target="_blank">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        <li>
+            <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fdakerfp.github.io%2fpost%2fplasma-components%2f&amp;title=Plasma%20Components" target="_blank">
+                <i class="fa fa-linkedin"></i>
+            </a>
+        </li>
+        <li>
+            <a class="weibo" href="http://service.weibo.com/share/share.php?url=http%3a%2f%2fdakerfp.github.io%2fpost%2fplasma-components%2f&amp;title=Plasma%20Components" target="_blank">
+                <i class="fa fa-weibo"></i>
+            </a>
+        </li>
+        <li>
+            <a class="email" href="mailto:?subject=Plasma%20Components&amp;body=http%3a%2f%2fdakerfp.github.io%2fpost%2fplasma-components%2f">
+                <i class="fa fa-envelope"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+    
+
+</div>
+
+
+        <div class="article-style" itemprop="articleBody">
+            <p>Hi,</p>
+
+<p>I will talk about my GSoC project (\m/), the plasma components.
+As you may know, QML is a declarative language to build rich interfaces
+introduced in Qt 4.7 by providing simple primitives. As it is a powerful
+way to develop interfaces and it&rsquo;s the future of UI development for Qt
+was necessary to make the plasma support it.</p>
+
+<p>Create interfaces in QML is really easy and fast but sometimes we need
+common widgets and may be boring to reimplement and replicate them in
+every application we create (e.g. Button, Slider, ScrollBar). For avoid
+this code replication, the Qt Components project was created to unify an
+API for a set of components.</p>
+
+<p>The current (often updated) defined components and it&rsquo;s API can be
+found at
+<a href="http://bugreports.qt.nokia.com/browse/QTCOMPONENTS-200">QTCOMPONENTS-200</a>.
+The Qt Components intends to be a cross platform, but sometimes we need
+to have a closer integration of the component and the platform. In
+plasma desktop we want to show tooltips or use the theme svg images for
+example. The common API defines a set of properties a component must
+have, but doesn&rsquo;t disallow to have extra properties and functionalities
+(suggestions ?). Creating the plasma components with the theme
+integration and adding plasma behaviour is what my GSoC project is about
+:-).</p>
+
+<p>I already started working on the plasma components. They can be found
+in the kde-runtime repository at the plasma/declarative branch. And more
+speciffically in the plasma/declarativeimports/plasmacomponents
+directory. The components which already there are not yet done, they
+lack of tooltips, keyboard events handling, focus policy, and some
+(CheckBox and RadioButton) hasn&rsquo;t images yet. However they&rsquo;re fully
+functional and they cover all the properties and behaviours defined in
+the common API. Here is the list of the components in this state
+mentioned above (until this post publication):</p>
+
+<ul>
+<li>BusyIndicator</li>
+<li>Button</li>
+<li>CheckBox</li>
+<li>RadioButton</li>
+<li>Slider</li>
+</ul>
+
+<p>These are components not present in the common API but they&rsquo;re highly
+wanted in plasma:</p>
+
+<ul>
+<li>ScrollBar</li>
+<li>ListItem</li>
+<li>ListItemView</li>
+<li>ListHighlight</li>
+</ul>
+
+<p>To test these components, its also kept a components gallery
+(plasma/declarativeimports/test/Gallery.qml) that you may view it with
+qmlviewer (after installing the components).</p>
+
+<p><img src="/img/gallery.png" alt="Gallery screenshot" /></p>
+
+<p>Feedback is highly appreciated. ;-)</p>
+
+        </div>
+
+    </article>
+
+    <nav>
+    <ul class="pager">
+        
+        <li class="previous"><a href="http://dakerfp.github.io/post/mongodb-presentation/"><span aria-hidden="true">&larr;</span> MongoDB Presentation</a></li>
+        
+
+        
+        <li class="next"><a href="http://dakerfp.github.io/post/qtquick-wsl-ii/">QtQuick - WSL II <span aria-hidden="true">&rarr;</span></a></li>
+        
+    </ul>
+</nav>
+
+    
+<section id="comments">
+    <div id="disqus_thread">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'dakerfp';
+    var disqus_identifier = 'http:\/\/dakerfp.github.io\/post\/plasma-components\/';
+    var disqus_title = 'Plasma Components';
+    var disqus_url = 'http:\/\/dakerfp.github.io\/post\/plasma-components\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+</section>
+
+
+
+</div>
+<footer class="site-footer">
+    <div class="container">
+        <p class="powered-by">
+
+            &copy; 2016 Daker Fernandes Pinheiro &middot; 
+
+            Powered by the <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+            <span class="pull-right"><a href="#" id="back_to_top"><span class="button_icon"><i class="fa fa-chevron-up fa-2x" aria-hidden="true"></i></span></a></span>
+
+        </p>
+    </div>
+</footer>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+        <script src="http://dakerfp.github.io/js/jquery-1.12.3.min.js"></script>
+        <script src="http://dakerfp.github.io/js/bootstrap.min.js"></script>
+        <script src="http://dakerfp.github.io/js/hugo-academic.js"></script>
+        
+
+        
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-80351639-1', 'auto');
+            ga('send', 'pageview');
+
+             
+            var links = document.querySelectorAll('a');
+            Array.prototype.map.call(links, function(item) {
+                if (item.host != document.location.host) {
+                    item.addEventListener('click', function() {
+                        var action = item.getAttribute('data-action') || 'follow';
+                        ga('send', 'event', 'outbound', action, item.href);
+                    });
+                }
+            });
+        </script>
+        
+
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
+        
+        
+
+    </body>
+</html>
+

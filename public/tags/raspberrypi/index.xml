@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Raspberrypi on Daker Pinheiro</title>
+    <link>http://dakerfp.github.io/tags/raspberrypi/</link>
+    <description>Recent content in Raspberrypi on Daker Pinheiro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
+    <lastBuildDate>Fri, 23 Nov 2012 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://dakerfp.github.io/tags/raspberrypi/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Raspberry &#43; Python at Python Brasil [8]</title>
+      <link>http://dakerfp.github.io/post/raspberry-python-at-python-brasil-8/</link>
+      <pubDate>Fri, 23 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://dakerfp.github.io/post/raspberry-python-at-python-brasil-8/</guid>
+      <description>&lt;p&gt;This is the presentation given at Python Brasil [8], in Rio de Janeiro.
+I hope you like it.&lt;/p&gt;
+
+&lt;p&gt;&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/zwpaZJ3Fn95LAz&#34; width=&#34;595&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; &lt;div style=&#34;margin-bottom:5px&#34;&gt; &lt;strong&gt; &lt;a href=&#34;//www.slideshare.net/dakerfp/raspberry-pi-python&#34; title=&#34;Raspberry Pi + Python&#34; target=&#34;_blank&#34;&gt;Raspberry Pi + Python&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href=&#34;//www.slideshare.net/dakerfp&#34; target=&#34;_blank&#34;&gt;Daker Fernandes&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

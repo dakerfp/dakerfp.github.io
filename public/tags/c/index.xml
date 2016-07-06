@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C on Daker Pinheiro</title>
+    <link>http://dakerfp.github.io/tags/c/</link>
+    <description>Recent content in C on Daker Pinheiro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
+    <lastBuildDate>Fri, 27 Dec 2013 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://dakerfp.github.io/tags/c/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Improve your lazy debugging in C&#43;&#43;</title>
+      <link>http://dakerfp.github.io/post/improve-your-lazy-debugging-in-c/</link>
+      <pubDate>Fri, 27 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://dakerfp.github.io/post/improve-your-lazy-debugging-in-c/</guid>
+      <description>&lt;p&gt;Are you too lazy to learn your debugger? When debugging, I usually want
+to know if some code section is reached.&lt;/p&gt;
+
+&lt;p&gt;I can do this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;void foobar() {
+    printf(&amp;quot;foobar()\n&amp;quot;);
+    // ... do foobar
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;But I should use &lt;a href=&#34;http://stackoverflow.com/questions/2872543/printf-vs-cout-in-c&#34;&gt;&lt;code&gt;cout&lt;/code&gt; instead &lt;code&gt;printf&lt;/code&gt; in C++&lt;/a&gt;.
+&lt;a href=&#34;http://programming-designs.com/2009/02/c-speed-test-part-2-printf-vs-cout/&#34;&gt;&lt;code&gt;printf&lt;/code&gt; is faster&lt;/a&gt;,
+but in this case it should be irrelevant. So I have:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;void foobar() {
+    std::cout &amp;lt;&amp;lt; &amp;quot;foobar()&amp;quot; &amp;lt;&amp;lt; std::endl;
+    // ... do foobar
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I could also use &lt;a href=&#34;http://gcc.gnu.org/onlinedocs/gcc/Function-Names.html&#34;&gt;GCC&amp;rsquo;s function name macro &lt;code&gt;__PRETTY_FUNCTION__&lt;/code&gt;&lt;/a&gt;
+and &lt;a href=&#34;http://gcc.gnu.org/onlinedocs/cpp/Standard-Predefined-Macros.html&#34;&gt;&lt;code&gt;__LINE__&lt;/code&gt; macro&lt;/a&gt;
+to identify the reached code section easier.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;void foobar() {
+    std::cout &amp;lt;&amp;lt;  __PRETTY_FUNCTION__ &amp;lt;&amp;lt; &amp;quot; at line &amp;quot; &amp;lt;&amp;lt;  __LINE__ &amp;lt;&amp;lt; std::endl;
+    // ... do foobar
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Add that on a macro to reuse it:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#if DEBUG
+#include 
+#define REACH std::cout &amp;lt;&amp;lt;  __PRETTY_FUNCTION__ &amp;lt;&amp;lt; &amp;quot; at line &amp;quot; &amp;lt;&amp;lt;  __LINE__ &amp;lt;&amp;lt; std::endl;
+#endif
+
+void foobar() {
+    REACH
+    // ... do foobar
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And happy debugging!&lt;/p&gt;
+
+&lt;p&gt;Not.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How to set a X window visible or invisible using Xlib</title>
+      <link>http://dakerfp.github.io/post/how-to-set-x-window-visible-or-invisible/</link>
+      <pubDate>Thu, 19 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://dakerfp.github.io/post/how-to-set-x-window-visible-or-invisible/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;bool m_visible;
+Display* m_display;
+Window m_window;
+
+void setVisible(bool visible)
+{
+    if (visible == m_visible)
+        return;
+
+    if (visible)
+        XMapWindow(m_display, m_window);
+    else
+        XUnmapWindow(m_display, m_window);
+
+    m_visible = visible;
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>OpenGL Lesson 02 - Drawing with OpenGL</title>
+      <link>http://dakerfp.github.io/post/opengl-lesson-02-drawing-with-opengl/</link>
+      <pubDate>Wed, 12 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://dakerfp.github.io/post/opengl-lesson-02-drawing-with-opengl/</guid>
+      <description>
+
+&lt;p&gt;OpenGL is a primarily an C API, for drawing graphics. Implementations
+and bindings exists for several languages such as Java, Python, Ruby and
+Objective C. OpenGL became the standard drawing API supported by most
+modern device with graphics, independent from vendor, operational
+system, or if it is desktop or embedded. Of course the platform matters,
+but we can split the platform dependent code from pure OpenGL.&lt;/p&gt;
+
+&lt;p&gt;OpenGL became a standard mainly due to its rendering pipeline, which is
+trivially parallelized. This allowed the creation of specialized
+hardware, the well known graphics cards. These cards became very small
+and started to be practical shipping embedded devices with them. Now
+high performance graphics in these devices are a reality.&lt;/p&gt;
+
+&lt;p&gt;On traditional desktop platforms, the usual layout of graphics card
+stand as pictured below. In this scenario, moving data to and from the
+card can mean a huge cost. On others platforms, such as the mobile, its
+common that GPUs uses the same memory as the CPU. However, the
+programmer still needs to handle this memory efficiently.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/arch.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;For this new range of devices, the Khronos (group responsible for
+standardizing OpenGL API) released an OpengGL specification focused on
+embedded systems, the OpenGL ES.&lt;/p&gt;
+
+&lt;p&gt;In this post I would like to explain some key concepts about the OpenGL
+API:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;What are the best practices for it.&lt;/li&gt;
+&lt;li&gt;Differences between the &amp;ldquo;Desktop&amp;rdquo; version versus the ES version.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I want not to go deep in the API or its functionalities. You have other
+sources that covers them better. I recommend the ones used as reference
+for this post:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.glprogramming.com/red/index.html&#34;&gt;GL Programming&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.songho.ca/opengl/&#34;&gt;Song Ho Ahn&amp;rsquo;s Tutorials and Notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;OpenGL Programming Guide, 7th edition. (a.k.a. The Red Book) or a newer edition&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;hello-triangle&#34;&gt;Hello Triangle!&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/hello.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Enough talking, show me the code! I wrote the following code using GLUT
+and OpenGL 1. GLUT is a simple toolkit to create simple OpenGL
+applications. It basically opens an window with a GL context, and
+handles primitive mouse and keyboard events.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;
+#include &amp;lt;GL/gl.h&amp;gt;
+#include &amp;lt;GL/glut.h&amp;gt;
+
+void display()
+{
+    glClear(GL_COLOR_BUFFER_BIT); // Clean up the canvas
+
+    glBegin(GL_TRIANGLES);
+    glVertex2f(-1.0f, -1.0f);
+    glVertex2f( 0.0f,  1.0f);
+    glVertex2f( 1.0f, -1.0f);
+    glEnd();
+
+    glFlush(); // Forces previous GL commands to be send to the GPU
+}
+
+int main(int argc, char **argv)
+{
+    glutInit(&amp;amp;argc, argv);
+    glutInitWindowSize(480, 480);
+    glutCreateWindow(&amp;quot;Hello World&amp;quot;);
+
+    glutDisplayFunc(display);
+
+    glutMainLoop();
+
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;drawing-the-triagle&#34;&gt;Drawing the triagle&lt;/h2&gt;
+
+&lt;p&gt;In OpenGL 1 and 2, the easiest way for you to draw a triangle, is using
+some form of &lt;code&gt;glVertex*&lt;/code&gt;. These call must be enclosed between &lt;code&gt;glBegin&lt;/code&gt;
+and &lt;code&gt;glEnd&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;OpengGL uses a coordinate system where the origin is the center of the
+viewport, the X axis has left to right orientation and Y axis is bottom
+to top, as pictured below. By default everything between (-1, -1) and
+(1, 1) is what youll be shown in the viewport. Check this
+&lt;a href=&#34;http://www.songho.ca/opengl/gl_transform.html&#34;&gt;tutorial&lt;/a&gt; for
+understanding OpengGL coordinate system and camera deeper.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/gles-cam.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You also need to assert what kind of primitive you are passing to
+OpenGL. It accepts the primitives illustrated below with their
+correspondent constants. OpenGL ES does not support polygon or quads,
+you will need to assemble them yourself.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/primitives.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Interleaved with the vertex position, you can add other information such
+as colors, texture coordinates, normal direction. You can define other
+vertex attributes for richer shaders. Shader is a piece of code that
+defines how your primitives will be rendered. With them is possible to
+make a lot of effects such as normal mapping, adding shadows, particles
+and many more. When we choose a shading model we are using OpengGL
+default shaders. Standard OpengGL defines a large set of inputs and
+outputs a shader must have. OpenGL ES 2 and above does not defines what
+you must enter as input for the shaders. Is up to the programmer what
+will be the inputs vertex shader will have. The contract assumes that
+the vertex shader will return at least a position (search for
+gl_Position) and the fragment shader a color (gl_FragColor). Do not
+worry. This will be further detailed in a following post.&lt;/p&gt;
+
+&lt;h2 id=&#34;vertex-arrays&#34;&gt;Vertex Arrays&lt;/h2&gt;
+
+&lt;p&gt;Drawing with &lt;code&gt;glVertex*&lt;/code&gt; was deprecated from OpenGL 3 and beyond. In
+OpenGL ES we do not have them either. This drawing method overheads of
+one function call for each information entered in the pipeline. The
+OpengGL comittee also wanted to disencourage the usage of this kind of
+input mode. The interfere of this overhead is small for small objects,
+but is not true for large ones. Another reason, for removing them
+(specially on ES version), was the make OpenGL implementation lighter,
+by reducing the number of internal states.&lt;/p&gt;
+
+&lt;p&gt;Prefere to draw using vertex arrays. Vertex arrays are arrays that each
+element contains all the vertex information. The command to draw them is
+&lt;code&gt;glDrawArrays&lt;/code&gt;. Indexes can be specified to reuse the vertex
+definition by using &lt;code&gt;glDrawElements&lt;/code&gt;. A good reference for this subject
+is &lt;a href=&#34;http://www.songho.ca/opengl/gl_vertexarray.html&#34;&gt;this one&lt;/a&gt;. As this
+is the standard way when using OpenGL ES 2, I will give an example.&lt;/p&gt;
+
+&lt;h2 id=&#34;example-of-vertex-arrays&#34;&gt;Example of Vertex Arrays&lt;/h2&gt;
+
+&lt;p&gt;To draw a square you must first define the schema of each vertex. Here,
+each vertex has a position (3 floats) and a color (3 floats for R, G and
+B color channels). In C I like to define a struct to improve
+readability:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;struct vertex_t {
+    GLfloat position[3];
+    GLfloat color[3];
+};
+
+void display()
+{
+    struct vertex_t vertex_data[] = {
+         {{-1.0f, -1.0f, 0.0f}, {1.0f, 0.0f, 0.0f}}, // red bottom left
+         {{-1.0f,  1.0f, 0.0f}, {0.0f, 1.0f, 0.0f}}, // green top left 
+         {{ 1.0f, -1.0f, 0.0f}, {0.0f, 0.0f, 1.0f}}, // blue bottom right
+         {{ 1.0f,  1.0f, 0.0f}, {1.0f, 1.0f, 1.0f}}, // white top right
+    };
+    
+    // ...
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It is possible to have different arrays for color and position, but for
+speeding up the shader execution is recommended to keep information
+about the same vertex contiguous to use memory locality.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;glVertexAttribPointer(
+    position_attribute_location, // attribute description (depends on the shader)
+    3, // size of the information (3 coordinates in this case)
+    GL_FLOAT, // type of the information
+    GL_FALSE, // if the value will be normalized (for vectors)
+    sizeof(struct vertex_t), // stride of the memory vector
+    &amp;amp;vertex_data[0].position // initial address
+);
+// asserting that position will be used by the shader
+glEnableVertexAttribArray(position_attribute_location); 
+
+glVertexAttribPointer(
+    color_attribute_location,
+    3,
+    GL_FLOAT,
+    GL_FALSE,
+    sizeof(struct vertex_t),
+    &amp;amp;vertex_data[0].color
+);
+// asserting that color will be used by the shader
+glEnableVertexAttribArray(color_attribute_location);
+
+// Draw a triangle strip vertex from the current attribute pointers
+// starting on index 0 and using 4 elements
+glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This gives us the following result:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/hello2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Notice that the colors for each vertex stands as the ones we gave, but
+all the region in between has the color calculated as the interpolation
+of the vertex colors. The rasterizer is the responsible for doing this.&lt;/p&gt;
+
+&lt;p&gt;You could also use indexes to access the vertex. For bigger elements it
+may be a better solution, specially for 3D objects, because you can
+share vertex that appears in multiple polygons of an object. Using index
+would speed up the memory transfer and usage for these objects.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;GLubyte indices[] = {
+    0, 1, 2, // first triangle
+    1, 2, 3  // second triangle
+};
+
+glDrawElements(
+    GL_TRIANGLES, // not a strip in this case
+    6, // number of indexes
+    GL_UNSIGNED_BYTE, // type of the indexes
+    indices // a pointer to indexes themselves
+);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The previous code does it for a trivial shader set (called a program). I
+will not explain how to use it here because is out of the scope for this
+lesson. On regular OpenGL versions you could use &lt;code&gt;glVertexPointer&lt;/code&gt; and
+&lt;code&gt;glColorPointer&lt;/code&gt;. I will left it as an exercise for you.&lt;/p&gt;
+
+&lt;h2 id=&#34;vertex-buffer-objects&#34;&gt;Vertex Buffer Objects&lt;/h2&gt;
+
+&lt;p&gt;Buffers are objects that stores vertex information in GPU memory. It is
+a must for improving the performance when drawing large objects. In
+heavy application such as games or CADs, is good to remove the overhead
+of from sending vertex data from regular memory to graphics card memory
+by pre loading the vertex data in a buffer. The code below show how can
+you upload the vertex data to a buffer.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;GLuint bufferId;
+
+// here you get handlers for GPU buffers, in this case, only one
+glGenBuffers(1, &amp;amp;bufferId);
+
+// asserts that you are using the buffer represented by bufferId
+// as the current ARRAY_BUFFER
+glBindBuffer(GL_ARRAY_BUFFER, bufferId);
+
+glBufferData(
+    GL_ARRAY_BUFFER, // the data is uploaded to current array buffer
+    sizeof(vertex_data), // number of bytes of the total array
+    vertex_data, // the pointer to the data
+    GL_STATIC_DRAW, // hint of how the buffer will be used, in this case, data will not change
+)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To draw the buffer content, you must use &lt;code&gt;glVertexAttribPointer&lt;/code&gt; passing
+the buffer offset instead of the &lt;code&gt;vertex_data&lt;/code&gt; address. OpenGL will
+notice that a buffer is bound and will use it.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;glBindBuffer(GL_ARRAY_BUFFER, bufferId); // Bind whenever you will use it
+
+glVertexAttribPointer(
+    position_attribute_location, // attribute description (depends on the shader)
+    3, // size of the information (3 coordinates in this case)
+    GL_FLOAT, // type of the information
+    GL_FALSE, // if the value will be normalized (for vectors)
+    sizeof(struct vertex_t), // stride of the vertex buffer data
+    0 // offset at buffer
+);
+// asserting that position will be used by the shader
+glEnableVertexAttribArray(position_attribute_location); 
+
+glVertexAttribPointer(
+    color_attribute_location,
+    3,
+    GL_FLOAT,
+    GL_FALSE,
+    sizeof(struct vertex_t),
+    3 // offset at buffer
+);
+// asserting that color will be used by the shader
+glEnableVertexAttribArray(color_attribute_location);
+
+// Draw a triangle strip vertex from the current attribute pointers
+// starting on index 0 and using 4 elements
+glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+
+// Unbinds the buffer
+glBindBuffer(GL_ARRAY_BUFFER, 0);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;remarks-about-openggl-es-2&#34;&gt;Remarks about OpengGL ES 2&lt;/h2&gt;
+
+&lt;p&gt;OpenGL ES 2 does not have the model-view matrix, responsible for setting
+the camera view, nor the matrix stack. All you have is the X axis [-1.0,
+-1.0] to Y axis [1.0, 1.0] region which will be mapped to the viewport.
+If you need those features (you will for most 3d applications) you will
+have to handle them inside your application code. You will have to do it
+yourself by exporting a model-view in the vertex shader as an uniform
+variable. For a theorical background on it, check my &lt;a href=&#34;http://codecereal.blogspot.com.br/2012/11/opengl-lesson-01-pre-opengl.html&#34;&gt;previous
+lesson&lt;/a&gt;.
+A great tutorial on how to play with the camera, transformations and
+model coordinates is
+&lt;a href=&#34;http://www.songho.ca/opengl/gl_transform.html&#34;&gt;this&lt;/a&gt;. It explains a bit
+how it works under the hood for regular OpenGL. Its worthy to take a
+look.&lt;/p&gt;
+
+&lt;p&gt;While hacking some examples I have come to some weird behaviour in
+OpenGL ES 2.0 for the Raspberry Pi. It might be bugs or mine
+misinterpretation.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;glUniformMatrix4fv&lt;/code&gt; translate parameter &lt;em&gt;must&lt;/em&gt; be false. It simply
+does not work otherwise.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;glDrawElements&lt;/code&gt; did not worked with unsigned int.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Optimizing Functions with Python Caching Decorators</title>
+      <link>http://dakerfp.github.io/post/optimizing-functions-with-python-caching-decorators/</link>
+      <pubDate>Sat, 11 Jun 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://dakerfp.github.io/post/optimizing-functions-with-python-caching-decorators/</guid>
+      <description>&lt;p&gt;On these last months I&amp;rsquo;ve been solving some problems (such as some
+&lt;a href=&#34;http://en.wikipedia.org/wiki/Hidden_Markov_model&#34;&gt;HMMs&lt;/a&gt; algorithms)
+which the best solutions involves some kind of &lt;a href=&#34;http://en.wikipedia.org/wiki/Dynamic_programming&#34;&gt;dynamic
+programming&lt;/a&gt;. Some of
+them are quite simple to implement, but their recursive formulation are
+far more intuitive. The problem is that even in functional languages,
+the recursive functions aren&amp;rsquo;t well handled unless you some mechanism
+like &lt;a href=&#34;http://en.wikipedia.org/wiki/Tail_call&#34;&gt;tail call&lt;/a&gt;, which aren&amp;rsquo;t
+intuitive as we would like to. The simplest example that comes in my
+mind is the fibonacci function which is usually defined as:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;fib(0) = 1 fib(1) = 1 fib(n) = fib(n-1) + fib(n-2)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;As we know, almost all the languages compilers and interpreters use the
+&lt;a href=&#34;http://en.wikipedia.org/wiki/Call_stack&#34;&gt;call stack&lt;/a&gt; to call the
+recursives cases on functions being executed. We can analyze the
+following C fibonacci version:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;int fib(n) {
+	 if (n == 0 || n == 1)
+        return 1;
+    else
+        return fib(n-1) + fib(n-2);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It is really simple to understand when contrasted with the definition.
+But, if we make a trace of the the program (even with a small input
+value) we&amp;rsquo;ll have something like the following evaluation order:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;fib(6) = fib(5) + fib(4)
+fib(5) = fib(4) + fib(3)
+fib(4) = fib(3) + fib(2)
+fib(3) = fib(2) + fib(1)
+fib(2) = fib(1) + fib(0)
+fib(3) = fib(2) + fib(1)
+fib(2) = fib(1) + fib(0)
+fib(4) = fib(3) + fib(2)
+fib(3) = fib(2) + fib(1)
+fib(2) = fib(1) + fib(0)
+fib(3) = fib(2) + fib(1)
+fib(2) = fib(1) + fib(0)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;![Call stack for fib(6)&lt;/p&gt;
+
+&lt;p&gt;As we can see, there is a repetition of the calculation of fib 4 to 1,
+many times and is something we can avoid. In fact, the complexity of
+this solution has a exponencial computational complexity because for
+each n from input we branch it in 2 until it reachs 0 or 1 approximately
+n times, leading us into a O($2^n$) complexity. A simple way to avoid it,
+is converting into a interactive form:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;int fib(int n) {
+    int current = 1;
+    int previous = 1;
+    int i;
+    for (i = 1; i &amp;lt; n; i++) {
+        int temp = current; // XXX: nasty
+        current += previous;
+        previous = temp;
+    }
+    return current;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The same result is achieved by using
+&lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Tail_call&#34;&gt;tail call&lt;/a&gt;
+for functional languages.&lt;/p&gt;
+
+&lt;p&gt;As you can see, it obfuscates the intuitive definition given in as the
+recursive formulation. But we still have a problem whenever we calculate
+fib(n), we have to recalculate it&amp;rsquo;s previous results even if they was
+previously calculated. If this function is used many times in our
+program it will take a lot of processing re-computing many of the
+values. We can avoid this by using the dynamic programming, which keeps
+the record of previously calculated results. The drawback of this
+technique is the memory usage, which for large entries can become a
+bottleneck. However, processing usually is a more rare computer
+resource. A C implementation (not the most elegant) for it is:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;// XXX: kids, don&#39;t do this at home
+int fib_results[10000];
+int last_fib;
+int fib(int n) {
+    if (n &amp;lt;= last_fib)
+        return fib_results[n];
+   int current = fib_results[last_fib-1];
+   int previous = fib_results[last_fib-2];
+   for (; last_fib &amp;lt; n; last_fib++) {
+       int temp = current;
+       current += previous;
+       fib_results[last_fib] = current;
+       previous = temp;
+   }
+   return current;
+}
+
+int main()
+{
+    fib_results[0] = 1;
+    fib_results[1] = 1;
+    last_fib = 1;
+
+    // ... other stuff ...
+
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;As we can see, dynamic programming isn&amp;rsquo;t too hard to implement. On the
+other hand, reading a code it&amp;rsquo;s a though task to do unless you are
+already familiar with the algorithm.&lt;/p&gt;
+
+&lt;p&gt;If we extract what is dynamic programming fundamental concept, which is
+&amp;ldquo;store pre-computed results&amp;rdquo;, we find a regularity in every recursive
+function which we can be transformed into a dynamic programming one. One
+of the reasons I love python because it&amp;rsquo;s easy to use meta-programming
+concepts, and that&amp;rsquo;s what I will use to transform recursive functions
+into it&amp;rsquo;s dynamic form in a ridiculous easy way using function
+decorators.&lt;/p&gt;
+
+&lt;p&gt;Function decorators (or annotations in Java) are a form of
+meta-programming for functions. It extends functions with some
+functionalities, such as debugging, tracing, adding meta-data to the
+function, synchronization or
+&lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Memoization&#34;&gt;memoization&lt;/a&gt;
+(not memorization) of values, which is a great way of optimizing
+recursive functions by caching their results (if you have enough memory
+available). One possible implementation of memoitized decorator in
+python is the following:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def cached(function):
+    cache = {}
+    def wrapper(*args):
+        if args in cache:
+            return cache[args]
+        else:
+            result = function(*args)
+            cache[args] = result
+            return result 
+    return wrapper
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note that I&amp;rsquo;m not using kwargs because they&amp;rsquo;re not hashable, such as the
+tuple args, and will add a few complexity in the example. See also that
+we a have a function that returns another function, which uses a given
+one to calculate results and store them in a cache. To cache our fib
+function we may use the following code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;@cached
+def fib(n):
+     if n == 0 or n == 1:
+         return 1
+     else:
+         return fib(n-1) + fib(n-2)
+
+# or in a not so clear version:
+def normal_fib(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return fib(n-1) + fib(n-2)
+
+fib = cached(normal_fib)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This technique is really useful to improve your code performance in a
+really easy. On the other hand, it isn&amp;rsquo;t the best solution for almost
+all the cases. Many times code a dynamic programming method (if
+performance is crucial) will be necessary. Is also important to notice
+that I didn&amp;rsquo;t used any cache memory management policy, which is
+important to economize memory. Most appropriate cache data structures
+(such as numpy arrays for integer arguments) also are welcome. The
+python 3.2 version added the lru_cache decorator into the functools
+module to make this cache mechanism. If you are already using this
+version, it&amp;rsquo;s smarter to use it instead of implementing your one. Here
+is how it must be used:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Python &amp;gt; 3.2 import functools
+@functools.lru_cached(max_size=500) # uses a fixed size cache to avoid memory usage explosion
+def fib(n)
+     ...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This technique is very useful not only for economize the CPU resources
+but also network (such as caching SQL query results), other IO
+operations (such as disk reading) and even user interaction input in a
+straightforward way.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
