@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Akademy on Daker Pinheiro</title>
+    <link>http://dakerfp.github.io/tags/akademy/</link>
+    <description>Recent content in Akademy on Daker Pinheiro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
+    <lastBuildDate>Sat, 16 Jun 2012 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://dakerfp.github.io/tags/akademy/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Akademy 2012</title>
+      <link>http://dakerfp.github.io/post/akademy-2012/</link>
+      <pubDate>Sat, 16 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://dakerfp.github.io/post/akademy-2012/</guid>
+      <description>&lt;p&gt;Hey folks, I&amp;rsquo;m going to &lt;a href=&#34;http://akademy.kde.org/&#34;&gt;Akademy&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/akademy.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I and Thiago are going to present &lt;a href=&#34;http://akademy.kde.org/node/38&#34;&gt;Qt Components &amp;amp; Qt Styles in Qt5&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I hope to see you in Tallinn!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/tallinn.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Qt, KDE &amp; Akademy 2012 Event Guide Application</title>
+      <link>http://dakerfp.github.io/post/qt-kde-akademy-2012-event-guide/</link>
+      <pubDate>Thu, 08 Mar 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://dakerfp.github.io/post/qt-kde-akademy-2012-event-guide/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve been away from KDE activities from a time, because I was organizing
+a lot of stuff in my life. Happily I&amp;rsquo;ve finally arranged some time to
+hack more on the weekends. I&amp;rsquo;ll try to keep up the work with the Plasma
+Components &lt;a href=&#34;http://api.kde.org/4.x-api/plasma-qml-apidocs/&#34;&gt;documentation&lt;/a&gt;,
+because I think it can be improved a lot. I will also try to come up with
+a few examples inside the documentation, to make easier for plasmoid
+developers.&lt;/p&gt;
+
+&lt;p&gt;Another long term goal for this year, which I already started to
+investigate, is how to optimize  Qt Components for more about the Qt QML
+Components, beyond Plasma, and I&amp;rsquo;m already investigating how can we do
+proper styling for Qt5.&lt;/p&gt;
+
+&lt;p&gt;In another thread, I&amp;rsquo;m also having a great experience by working with
+&lt;a href=&#34;http://pinheiro-kde.blogspot.com/&#34;&gt;Nuno&lt;/a&gt; in an application for the
+&lt;a href=&#34;http://akademy.kde.org/&#34;&gt;Akademy 2012&lt;/a&gt;, at Tallinn, Estonia. The
+application it&amp;rsquo;s basically a guide for the event, with essential
+information about it. It will also include a programme which will alert
+you about the presentations you want to attend to. And it&amp;rsquo;s being such a
+great experience to share ideas with him!&lt;/p&gt;
+
+&lt;p&gt;Here are some snapshots of the app:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/akademy-app.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If you want to check it yourself, just clone the git repo:
+git@git.kde.org:scratch/pinheiro/akademy2012&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

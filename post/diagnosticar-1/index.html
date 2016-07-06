@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme" content="hugo-academic">
+    <meta name="generator" content="Hugo 0.16" />
+    <meta name="author" content="Daker Fernandes Pinheiro">
+    <meta name="description" content="Software Engineer &amp; MS Candidate for Computer Graphics">
+
+    <link rel="stylesheet" href="http://dakerfp.github.io/css/highlight.min.css">
+    <link rel="stylesheet" href="http://dakerfp.github.io/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://dakerfp.github.io/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://dakerfp.github.io/css/academicons.min.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
+    <link rel="stylesheet" href="http://dakerfp.github.io/css/hugo-academic.css">
+    
+
+
+    <link rel="shortcut icon" href="http://dakerfp.github.io/img/favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="http://dakerfp.github.io/post/diagnosticar-1/">
+
+    <title>DiagnostiCar (1) - Introduction | Daker Pinheiro</title>
+
+</head>
+<body id="top">
+
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+    <div class="container">
+
+        
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://dakerfp.github.io/">Daker Pinheiro</a>
+        </div>
+
+        
+        <div class="collapse navbar-collapse" id="#navbar-collapse-1">
+
+            
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#top">Home</a></li>
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#publications">Publications</a></li>
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#posts">Posts</a></li>
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#projects">Projects</a></li>
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#experience">Experience</a></li>
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#contact">Contact</a></li>
+                
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <article class="article" itemscope itemtype="http://schema.org/Article">
+
+        
+
+        <h1 itemprop="name">DiagnostiCar (1) - Introduction</h1>
+
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2010-04-07 00:00:00 &#43;0000 UTC" itemprop="datePublished">Wed, Apr 7, 2010</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="http://dakerfp.github.io/tags/abduction">abduction</a>, 
+        
+        <a class="article-tag-link" href="http://dakerfp.github.io/tags/diagnosticar">diagnosticar</a>, 
+        
+        <a class="article-tag-link" href="http://dakerfp.github.io/tags/logic">logic</a>, 
+        
+        <a class="article-tag-link" href="http://dakerfp.github.io/tags/prolog">prolog</a>, 
+        
+        <a class="article-tag-link" href="http://dakerfp.github.io/tags/reasoning">reasoning</a>, 
+        
+        <a class="article-tag-link" href="http://dakerfp.github.io/tags/swi">swi</a>
+        
+    </span>
+    
+    
+
+    
+        
+<div class="share-box">
+    <ul class="share">
+        <li>
+            <a class="facebook" href="https://www.facebook.com/sharer.php?u=http%3a%2f%2fdakerfp.github.io%2fpost%2fdiagnosticar-1%2f" target="_blank">
+                <i class="fa fa-facebook"></i>
+            </a>
+        </li>
+        <li>
+            <a class="twitter" href="https://twitter.com/intent/tweet?text=DiagnostiCar%20%281%29%20-%20Introduction&amp;url=http%3a%2f%2fdakerfp.github.io%2fpost%2fdiagnosticar-1%2f" target="_blank">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        <li>
+            <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fdakerfp.github.io%2fpost%2fdiagnosticar-1%2f&amp;title=DiagnostiCar%20%281%29%20-%20Introduction" target="_blank">
+                <i class="fa fa-linkedin"></i>
+            </a>
+        </li>
+        <li>
+            <a class="weibo" href="http://service.weibo.com/share/share.php?url=http%3a%2f%2fdakerfp.github.io%2fpost%2fdiagnosticar-1%2f&amp;title=DiagnostiCar%20%281%29%20-%20Introduction" target="_blank">
+                <i class="fa fa-weibo"></i>
+            </a>
+        </li>
+        <li>
+            <a class="email" href="mailto:?subject=DiagnostiCar%20%281%29%20-%20Introduction&amp;body=http%3a%2f%2fdakerfp.github.io%2fpost%2fdiagnosticar-1%2f">
+                <i class="fa fa-envelope"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+    
+
+</div>
+
+
+        <div class="article-style" itemprop="articleBody">
+            <p>I&rsquo;m here to tell my expirience with logic programming in a grad
+project: DiagnostiCar, an web expert system for car diagnosis.</p>
+
+<p><img src="/img/diagnosticar.jpg" alt="DiagnostiCar" /></p>
+
+<p>The DiagnostiCar core feature was an expert system for giving hints to
+laypeople about their cars symptoms and their causes and consequences to
+avoid being deceived by mechanics (an habit of the job). Communication
+between the system and the users was conceived to happen with multiple
+choice questions forms and at the end the system gives the possible
+causes for the observed car characteristics.</p>
+
+<p>This is a video of the DiagnostiCar expert system interface working:</p>
+
+<iframe width="640" height="360" src="https://www.youtube.com/embed/OxsAWwmGL88?feature=player_embedded" frameborder="0" allowfullscreen></iframe>
+
+<p>Although there are many other interesting aspects about the
+DiagnostiCar, let&rsquo;s focus on the shell system. The expert system
+reasoning system used was abductive reasoning which is a kind of
+reasoning that tries to find a plausible cause (or a set of them) for a
+given fact occurrence [1][2]. Find the causes for a given observation is
+exactly what we need for diagnose car problems (the cause of the
+observable symptoms).</p>
+
+<p>I choose to use Prolog not only because it&rsquo;s default support to
+first-order logic (although some logic limitations on negation [3]), but
+it has a nice support for pattern matching and syntax operator
+definition (most of the Prolog implementations). From the Prolog
+implementations I&rsquo;ve picked SWI Prolog due to it&rsquo;s multi-thread support
+(necessary for a system running on a multiple user environment),
+stability and speed (not as fast as the YAP) [4].</p>
+
+<p>To illustrate the process of development of the expert system we will
+restrict our diagnosis to the problems consisting of some oil leaks
+problem. Here are some of the knowledge about car diagnosis I will use
+as example in the next sections:</p>
+
+<ul>
+<li>A crank case, hydraulic oil reservoir and brakes fluid reservoir
+damaged are problems;</li>
+<li>The crank case damaged provokes leak of engine oil;</li>
+<li>The hydraulic reservoir damaged provokes leak of hydraulic system
+oil;</li>
+<li>The brakes fluid reservoir damaged provokes leak of engine oil; </li>
+<li>If an oil is leaking it dirts the garage&rsquo;s floor.</li>
+<li>The brakes fluid is green.</li>
+<li>The hydraulic oil is red.</li>
+<li>The engine oil is black or brown.</li>
+<li>If the engine oil is black, then it needs to be changed.</li>
+</ul>
+
+<p>For the next parts, it&rsquo;s good to know the basic about Prolog. A VERY
+good material about Prolog, it&rsquo;s a the book &ldquo;Building Expert Systems in
+Prolog&rdquo;[5] which guided through the realms of logic programming and the
+nasty api&rsquo;s documentations. It is also very pratical and full of
+examples to follow. It&rsquo;s also good see the SWI reference to check some
+SWI particularities [6].</p>
+
+<p>[1] <a href="http://en.wikipedia.org/wiki/Abductive_logic_programming">Abductive Logic Programming</a>
+[2] <a href="http://en.wikipedia.org/wiki/Abductive_reasoning">Abducive Reasoning</a>
+[3] <a href="http://en.wikipedia.org/wiki/Negation_as_failure">Prolog Negation as Failure</a>
+[4] <a href="http://www.david-reitter.com/compling/prolog/compare.html">Prologs Implementation Comparisons</a>
+[5] <a href="http://www.amzi.com/ExpertSystemsInProlog/xsipfrtop.htm">&ldquo;Building Expert Systems in Prolog&rdquo;</a>
+[6] <a href="http://www.swi-prolog.org/pldoc/refman/">SWI Manual</a></p>
+
+        </div>
+
+    </article>
+
+    <nav>
+    <ul class="pager">
+        
+
+        
+        <li class="next"><a href="http://dakerfp.github.io/post/diagnosticar-3-question-and-answer-interface/">DiagnostiCar (3) - Question &amp; Answer Interface <span aria-hidden="true">&rarr;</span></a></li>
+        
+    </ul>
+</nav>
+
+    
+<section id="comments">
+    <div id="disqus_thread">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'dakerfp';
+    var disqus_identifier = 'http:\/\/dakerfp.github.io\/post\/diagnosticar-1\/';
+    var disqus_title = 'DiagnostiCar (1) - Introduction';
+    var disqus_url = 'http:\/\/dakerfp.github.io\/post\/diagnosticar-1\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+</section>
+
+
+
+</div>
+<footer class="site-footer">
+    <div class="container">
+        <p class="powered-by">
+
+            &copy; 2016 Daker Fernandes Pinheiro &middot; 
+
+            Powered by the <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+            <span class="pull-right"><a href="#" id="back_to_top"><span class="button_icon"><i class="fa fa-chevron-up fa-2x" aria-hidden="true"></i></span></a></span>
+
+        </p>
+    </div>
+</footer>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+        <script src="http://dakerfp.github.io/js/jquery-1.12.3.min.js"></script>
+        <script src="http://dakerfp.github.io/js/bootstrap.min.js"></script>
+        <script src="http://dakerfp.github.io/js/hugo-academic.js"></script>
+        
+
+        
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-80351639-1', 'auto');
+            ga('send', 'pageview');
+
+             
+            var links = document.querySelectorAll('a');
+            Array.prototype.map.call(links, function(item) {
+                if (item.host != document.location.host) {
+                    item.addEventListener('click', function() {
+                        var action = item.getAttribute('data-action') || 'follow';
+                        ga('send', 'event', 'outbound', action, item.href);
+                    });
+                }
+            });
+        </script>
+        
+
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
+        
+        
+
+    </body>
+</html>
+

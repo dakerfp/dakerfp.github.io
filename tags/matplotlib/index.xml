@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Matplotlib on Daker Pinheiro</title>
+    <link>http://dakerfp.github.io/tags/matplotlib/</link>
+    <description>Recent content in Matplotlib on Daker Pinheiro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
+    <lastBuildDate>Sun, 05 Jun 2011 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://dakerfp.github.io/tags/matplotlib/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>CpG Islands (3) - Model Evaluation</title>
+      <link>http://dakerfp.github.io/post/cpg-islands-model-evaluation-3/</link>
+      <pubDate>Sun, 05 Jun 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://dakerfp.github.io/post/cpg-islands-model-evaluation-3/</guid>
+      <description>&lt;p&gt;Following the &lt;a href=&#34;http://codecereal.blogspot.com/2011/06/cpg-islands-2.html&#34;&gt;post&lt;/a&gt;
+we&amp;rsquo;ve built a Hidden Markov Model (HMM) for the &lt;a href=&#34;http://codecereal.blogspot.com/2011/05/cpg-islands-1.html&#34;&gt;CpG islands problem&lt;/a&gt;, using the training set.
+Now we should evaluate if our model is adequate to predict things about CpG islands.
+For evaluate we may use a tagged
+sequence and see if the HMM we built can predict the islands and what is
+it&amp;rsquo;s accuracy.&lt;/p&gt;
+
+&lt;p&gt;Using the viterbi path and a tagged sequence (out ouf the training set),
+enable us to compare if the estimative given by the model is coherent
+with the real data. Using the HMM and the training and test sets of the
+last post, we can compare the results using a &lt;a href=&#34;http://en.wikipedia.org/wiki/Confusion_matrix&#34;&gt;confusion
+matrix&lt;/a&gt;. For example, at
+the following snippet of the viterbi path paired with the tagged
+sequence:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[ ... 0,0,0,0,0,1,1,1,1,1, ... ]
+[ ... a t t g t c C G A C  ... ]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We may calculate the following confusion matrix:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;+--------------------------------------+ 
+|            |  Island    | Non Island |
++------------+------------+------------+
+| Island     |     4      |      0     |
++------------+------------+------------+
+| Non Island |     1      |      5     |
++------------+------------+------------+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note that the bigger are the main diagonal values, the more accurate our
+model is. Making this matrix with the experiment made (using
+&lt;a href=&#34;http://codecereal.blogspot.com/2011/06/cpg-islands-2.html&#34;&gt;HMM with maximum likelihood&lt;/a&gt;)
+I got the following matrix:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;+--------------------------------------+ 
+|            |  Island    | Non Island |
++------------+------------+------------+
+| Island     |   328815   |    61411   |
++------------+------------+------------+
+| Non Island |  1381515   |   1889819  |
++------------+------------+------------+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We may see that a good amount of islands was correctly predicted (84,26%
+of the islands), but 57,76% of the non islands regions was classified as
+islands, which is a bad indicator. A experiment with the HMM after
+running the Baum Welch was also evaluated. The results was better from
+the obtained by the maximum likelihood when predicting islands (96,56%
+of accuracy). But also obtained a higher miss rate (70,70%). Here is the
+confusion matrix for this HMM:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;+--------------------------------------+ 
+|            |  Island    | Non Island |
++------------+------------+------------+
+| Island     |   376839   |    13387   |
++------------+------------+------------+
+| Non Island |  2313138   |   958196   |
++------------+------------+------------+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/cpgs_labels.png&#34; alt=&#34;Matching of Real Sequence, Viterbi and Posterior results&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The result obtained was not very accurate. It may happened because we
+had few data to train and to evaluate our model. We could also build a
+HMM with other indicators that identify the CpG islands for model it
+better. Remember we simplified the CpG problem to the frequencies of
+occurring Cs and Gs, but a better model could also use the CG pairs.
+Using a more complicate HMM we could have more than 2 states and then
+associate a set of states to the CpG and non CpG islands sites. This
+would allow to use better the posterior result to classify the sequence.
+But I keep this as future work.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

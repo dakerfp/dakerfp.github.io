@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cryptography on Daker Pinheiro</title>
+    <link>http://dakerfp.github.io/tags/cryptography/</link>
+    <description>Recent content in Cryptography on Daker Pinheiro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
+    <lastBuildDate>Thu, 30 May 2013 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://dakerfp.github.io/tags/cryptography/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>The ePassport Standard and it&#39;s Cryptographic Scheme</title>
+      <link>http://dakerfp.github.io/post/the-epassport-standard-and-its-cryptographic-scheme/</link>
+      <pubDate>Thu, 30 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://dakerfp.github.io/post/the-epassport-standard-and-its-cryptographic-scheme/</guid>
+      <description>&lt;p&gt;ePassport is the name given for the new passport specification
+standardized by the &lt;a href=&#34;http://www.icao.int/&#34;&gt;International Civil Aviation Organization&lt;/a&gt; (ICAO).
+It was created to speed up and standardize the immigration procedures.
+This standard specifies &lt;a href=&#34;http://en.wikipedia.org/wiki/Radio-frequency_identification&#34;&gt;RFID&lt;/a&gt;
+as the communication channel between the passport and the reader. The main
+feature present on it is the insertion of biometric data into the
+passport for biometric checks, including facial recognition, fingerprint
+and iris information. To keep this important data protected, an
+interesting cryptographic layer was added in addition to the usual
+document falsification mechanisms such as watermarks.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/passaporte-br.jpg&#34; alt=&#34;Brazilian ePassport. One of few which has full compatibility with the ICAO specification.&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The name, nationality, birth date and other personal information as well
+as the biometric informations are held on a contactless chip inside the
+passport. This set of information are securely handled and is called the
+&lt;strong&gt;Machine Readable Zone&lt;/strong&gt; (MRZ) and the chip asserts their security.
+These informations are transmitted to a ePassport reader at immigration
+process. As the embedded chip has low processing power, the biometric
+data is transmitted to a reader so it can be checked against the porter
+of the passport.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/epass.jpg&#34; alt=&#34;Anatomy of an ePassport&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As the physical communication layer of the ePassport broadcasts the
+messages, even with the low range (less than a meter) RFID
+communication. But as we know an eavesdropper can be very determined to
+listen the communication ;-). I also has an electromagnetic shield on
+the passport cover, however it doesn&amp;rsquo;t assure to block the communication
+between the chip and the outside world when it&amp;rsquo;s closed, however it&amp;rsquo;s an
+extra obstacle. Another issue to prevent is the passport and digital
+data forgery. Otherwise a falsary could get someone else passport and
+insert it&amp;rsquo;s biometrics information and easily bypass the immigration. As
+we may see, the ePassport is a complete meal for cryptography
+specialists.&lt;/p&gt;
+
+&lt;p&gt;Starring at this cryptographic layer we have: &lt;/p&gt;
+
+&lt;p&gt;A &lt;strong&gt;unique id&lt;/strong&gt; used as a private key. This key is hardcoded in the chip
+manufacturing process and it&amp;rsquo;s non traceable. Doing
+&lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Reverse_engineering#Reverse_engineering_of_integrated_circuits/smart_cards&#34;&gt;reverse engineering&lt;/a&gt;
+on this kind of chip it&amp;rsquo;s really difficult because the equipment to do
+it is extremely expensive and hard to obtain, it is only available to
+large chip manufacturers.&lt;/p&gt;
+
+&lt;p&gt;An access control to prevent an attacker to force the ePassport to send
+information in the MRZ to readers unless the passport owner authorizes
+it. Otherwise an attacker could use a reader and simply request the
+biometric information to the passport. It uses a protocol called &lt;strong&gt;Basic
+Access Control (BAC)&lt;/strong&gt; to give access for the reader. It consists on a
+&lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Optical_character_recognition&#34;&gt;OCR&lt;/a&gt;
+readable code inside the passport. With this code, the reader can say to
+the passport it is an authorized reader, and then transmit data to it.
+The BAC code is also used as key for the encrypted transmission of the
+data, making an eavesdropping attack more difficult. It&amp;rsquo;s important to
+note that the BAC security entirely relies on the physical access to the
+passport. The BAC is inside the ICAO standard but doesn&amp;rsquo;t obligates it&amp;rsquo;s
+support.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/bac.png&#34; alt=&#34;BAC happy path&#39;s sequence diagram&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The ICAO also standardizes a authentication for readers called
+&lt;strong&gt;Extended Access Control (EAC)&lt;/strong&gt;. It consists of sets of signatures of
+terminals stored in the passport&amp;rsquo;s chip. These signatures are changed
+periodically by the countries (which signs them) on the terminals to
+avoid keys stolen from equipments being used for much time. Some MRZ
+sensitive data, such as iris and fingerprint, are just transmitted to
+readers if it is EAC authenticated. Other informations are optional.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/eac.png&#34; alt=&#34;EAC happy path&#39;s sequence diagram&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;Passive Authentication (PA)&lt;/strong&gt; is a cryptographic mechanism  to
+ensure the data in the passport is valid by the authority emitting the
+passports. The PA is a kind of digital signature where the country who
+emits passports ensures the veracity of the data with a asymmetric
+Country Verification Certificate Authority (CVCA), a kind of
+&lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Message_authentication_code&#34;&gt;message authentication code&lt;/a&gt;
+(MAC). This process is known as
+&lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Asymmetric_cryptography&#34;&gt;asymmetric cryptographic&lt;/a&gt;
+hashing or &lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Digital_signature&#34;&gt;digital signing&lt;/a&gt;.
+The PA MAC is created by the country when emits a passport, which must
+keep a signing key safe, which is used to create the MAC code. Then it
+publish the public key (all readers must know the countries public keys)
+which can be used to check if the MAC is valid and it was really
+generated by the organization which possess the signing key. The PA
+scheme relies on mathematical functions which are easy to encrypt a MAC
+with the private key, but computationally hard without them. The public
+key can easily check if the MAC was generated by the ones who posses the
+private key, and detect forged data. This process makes the forgery of
+digital data a really hard computational problem, and ensures with
+negligible chance of failure that the data is valid. All the MRZ data is
+signed using such process. Using PA is mandatory by ICAO standards.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/pa.png&#34; alt=&#34;PA happy path&#39;s sequence diagram&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;Active Authentication (AA)&lt;/strong&gt; is a kind of
+&lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Challenge-response_authentication&#34;&gt;challenge response authentication&lt;/a&gt;
+mechanism to prevent the cloning of passports. It relies on the
+untraceable chip key. Cloning the MRZ data is a simple task to be done,
+however you can&amp;rsquo;t get a passport private key due to the difficulty of
+doing reverse engineering to obtain it. The AA works as a challenge to
+the passport, so you can verify if it really is. The reader encrypts a
+random message that only him knows it&amp;rsquo;s content with the passport&amp;rsquo;s
+public key. The message is then sent to the passport and it must decrypt
+and response to the reader what was the original message. This process
+works because of the duality principle of asymmetric cryptography. This
+concept of challenge is the same concept behind
+&lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/CAPTCHA&#34;&gt;CAPTCHAs&lt;/a&gt; and
+the &lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Turing_test&#34;&gt;Turing Test&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/aa.png&#34; alt=&#34;AA hapy path&#39;s sequence diagram&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Encrypted Tweets</title>
+      <link>http://dakerfp.github.io/post/encrypted-tweets/</link>
+      <pubDate>Wed, 22 Jun 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://dakerfp.github.io/post/encrypted-tweets/</guid>
+      <description>
+
+&lt;p&gt;As a cryptography course project, me and
+&lt;a href=&#34;http://twitter.com/laissandrade&#34;&gt;@laisandrade&lt;/a&gt; developed a twitter
+extension which allows us to tweet in a way that only a group of
+followers can decrypt and understand my tweet. The goal is to secure
+broadcasting tweets to a group of followers and avoid anyone else to
+understand it&amp;rsquo;s content. This definition of security is safe against an
+&lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Eavesdropping&#34;&gt;eavesdropping attack&lt;/a&gt;,
+which is commonly considered secure for cryptography, what is not true.
+Another concerns emerges when we consider other attacks or ways of
+extracting informations from the cyphertext, as an example the
+&lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Known-plaintext_attack&#34;&gt;Known-Plaintext Attack&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/scheme.png&#34; alt=&#34;Configuration of the Encrypted Tweets problem - Alice securely broadcasting messages to a 
+specific group&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In this project we should also consider other security issues such as
+forgery attacks and secure information storage. The only real world
+problem outside the project&amp;rsquo;s scope was the private key distribution. We
+assume that the user who wants to share it&amp;rsquo;s keys to his followers could
+use other mechanisms such as a Diffie-Hellman key exchange or using a
+trusted key broker. The full project&amp;rsquo;s specification can be found
+&lt;a href=&#34;http://crypto.stanford.edu/%7Edabo/cs255/hw_and_proj/proj1.pdf&#34;&gt;here&lt;/a&gt;.
+For doing the task we used the
+&lt;a href=&#34;https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/&#34;&gt;Grease Monkey&lt;/a&gt;
+Firefox&amp;rsquo;s plugin. This plugin allow us to run custom javascript scripts
+in specifics web pages, so we can add functionalities to known web
+pages. In fact, we used a
+&lt;a href=&#34;http://crypto.stanford.edu/%7Edabo/cs255/hw_and_proj/cs255.user.js&#34;&gt;script stub&lt;/a&gt; for doing it.
+This script adds a encrypt tweet functionality as well as
+a key manager at password settings page. It also gives a function to
+store (unsafely) the user information. Was also our job to make it
+secure. We assumed that the script couldn&amp;rsquo;t be cracked, the focus where
+we were concerned was about the information safety outside the script
+execution memory.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/tweet.png&#34; alt=&#34;Encrypt button and Group selection close to Tweet button&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;encryption-specification&#34;&gt;Encryption Specification&lt;/h2&gt;
+
+&lt;p&gt;Encripted Message:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;+--------+-----+--------------------------------------+
+| &amp;quot;aes:&amp;quot; | Ctr | Extended-AES(Content, Ctr, GroupKey) |
++--------+-----+--------------------------------------+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The Ctr is the base counter for the CTR block chaining cypher.
+Every message picks a random Ctr.&lt;/li&gt;
+&lt;li&gt;The group key is the key to the group whom members are the only who should understand the
+message.&lt;/li&gt;
+&lt;li&gt;The Extended-AES function will be detailed after.&lt;/li&gt;
+&lt;li&gt;the &amp;ldquo;aes:&amp;rdquo; indicator is not a security threat due to Kerckhoffs&amp;rsquo;s Principle.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Content:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;+---------------+---------+
+| sha1(Message) | Message |
++---------------+---------+ 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;The sha1 cryptographic hash is used to check the integrity of the stored keys and avoid
+modifications on the massage bypass as a real message.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;The sha1 produces a 160 bits length message, which is convertes into a base64 string to send
+it over twitter.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;This Message Authentication Code (MAC) is necessary for Chosen Ciphertext Security
+(CCA Security).  Message: the original message&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For our Extended-AES implementation, we used a
+&lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Cipher_block_chaining&#34;&gt;Cypher Block Chaining&lt;/a&gt;
+to extend the &lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Advanced_Encryption_Standard&#34;&gt;AES&lt;/a&gt;
+block cypher, that we use as a
+&lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Block_cypher&#34;&gt;block cypher&lt;/a&gt;.
+To do this we used a Counter (CTR) chaining to extend the cypher.
+Note that the CTR mode uses a base counter (Ctr) as an
+&lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Initialization_vector&#34;&gt;Initialization Vector&lt;/a&gt;
+(IV) which also must be transmitted to enable to be decrypted. This IV
+is chosen at random by our
+&lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Pseudorandom_generator&#34;&gt;pseudorandom generator&lt;/a&gt;.
+If the IV is not truly random, an attacker may predict the IV sequence and get more
+information from the message.
+A real problem faced by pseudorandom generators are when the seed selection are not truly
+random. To handle this, the script stub creates a seed using the mouse
+positions at the first seconds of running (an entropy test is also used
+to check the randomness of the seed).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/crt_encryption&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;When someone receives an &amp;ldquo;aes:&amp;rdquo; tagged message, the script checks the
+author of the message and get the key provided by him. To decrypt, we
+also use the Extended-AES since it is symmetric (due to XOR
+reversibility property). At last the SHA-1 hash is confronted with the
+message to check if the key is correct or the message suffered a forgery
+attempt.&lt;/p&gt;
+
+&lt;p&gt;To store the groups keys we used the grease monkey&amp;rsquo;s key value storage
+(GM_setValue and GM_getValue functions). We store and recover the
+values from the key &lt;code&gt;&amp;quot;twit-key-&amp;quot; + login&lt;/code&gt;, which is stored as plaintext
+in the hard drive. To avoid the stealth of this information from other
+users, virus or worm we added an encryption layer over it. The stored
+data representation developed was this one:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/twitter2.png&#34; alt=&#34;Keys management screen&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;safe-storaging-specification&#34;&gt;Safe Storaging Specification&lt;/h2&gt;
+
+&lt;p&gt;Stored Data: AES(Data, MasterKey)
+MasterKey: User secret key to access all the other keys. This key requires user input every
+time it logs in.&lt;/p&gt;
+
+&lt;p&gt;Data:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;+---------------------+-----------------+
+|   sha1(GroupKeys)   |   Groups Keys   |
++---------------------+-----------------+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;This cryptographic hash is used to check the integrity of the stored keys.&lt;/li&gt;
+&lt;li&gt;A malicious agent may override the values on the keys and may set the keys he can decrypt.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Groups Keys:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;+----------+----------+----------+----------+---------+----------+----------+
+|   Item   |   &amp;quot;$$&amp;quot;   |   Item   |   &amp;quot;$$&amp;quot;   |   ...   |   &amp;quot;$$&amp;quot;   |   Item   |
++----------+----------+----------+----------+---------+----------+----------+ 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Item:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;+----------+---------+-----------+---------+---------+
+|   User   |   &amp;quot;$&amp;quot;   |   Group   |   &amp;quot;$&amp;quot;   |   Key   |
++----------+---------+-----------+---------+---------+ 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;User: base64 string Group: base64 string Key: base64 string&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s important to notice that we implemented the
+&lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Sha1&#34;&gt;SHA-1&lt;/a&gt; hashing
+algorithm to ensure the data wasn&amp;rsquo;t modified while stored or
+transmitted. We trust it wasn&amp;rsquo;t modified due to the difficulty to crack
+the AES cypher to forge a new MAC. And if the attacker try to change
+bits from the stored data, we trust that SHA-1 hash collision difficulty
+will be enough to ensure us that someone will be able to produce valid
+message, hash pairs without looking at the plaintext. If the pair is
+corrupted, then the user is alerted that someone modified his keys. By
+doing this, we may disable an attacker to modify bits from our keys and
+have better chances to crack the scheme. The SHA-1 also has some
+theoretical weakness, however, in practice it still is a very strong
+cryptographic hash function.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Circus on Daker Pinheiro</title>
+    <link>http://dakerfp.github.io/tags/circus/</link>
+    <description>Recent content in Circus on Daker Pinheiro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
+    <lastBuildDate>Mon, 13 Aug 2012 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://dakerfp.github.io/tags/circus/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Qt &amp; KDE in FISL 13</title>
+      <link>http://dakerfp.github.io/post/qt-kde-in-fisl-13/</link>
+      <pubDate>Mon, 13 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://dakerfp.github.io/post/qt-kde-in-fisl-13/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/fisl.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It was a great to see again some friends from KDE Brazil and met some
+new ones. The Konqui&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/kdenofisl.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I also gave some talks and workshop about Qt, KDE and game development.&lt;/p&gt;
+
+&lt;h2 id=&#34;workshop-developing-applications-for-multiple-devices-using-plasma-technologies&#34;&gt;Workshop: Developing applications for multiple devices using Plasma technologies&lt;/h2&gt;
+
+&lt;p&gt;This workshop was idealized and given by &lt;a href=&#34;http://vizzion.org&#34;&gt;Sebas&lt;/a&gt;,
+and I was there to help him. In the workshop, QML was introduced
+together with KDE libs and what they can add to the applications.&lt;/p&gt;
+
+&lt;p&gt;Was good to show the current state of the Plasmate and how easily is
+creating and deploying a new Plasmoid. It was interesting to see how
+people were amazed about how easy is to start hacking and deploying a
+project.&lt;/p&gt;
+
+&lt;h2 id=&#34;talk-games-with-qt&#34;&gt;Talk: Games with Qt&lt;/h2&gt;
+
+&lt;p&gt;In this talk I gave an overview about what Qt is and which tool are
+available for creating games with it.&lt;/p&gt;
+
+&lt;p&gt;&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/aqBOtKXwKCfdoC&#34; width=&#34;595&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; &lt;div style=&#34;margin-bottom:5px&#34;&gt; &lt;strong&gt; &lt;a href=&#34;//www.slideshare.net/dakerfp/jogos-em-qt&#34; title=&#34;Jogos em Qt&#34; target=&#34;_blank&#34;&gt;Jogos em Qt&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href=&#34;//www.slideshare.net/dakerfp&#34; target=&#34;_blank&#34;&gt;Daker Fernandes&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;workshop-games-with-qt&#34;&gt;Workshop: Games with Qt&lt;/h2&gt;
+
+&lt;p&gt;On the third day I gave a 3 hours hands-on workshop about game
+development using only QtQuick. During the workshop, I&amp;rsquo;ve presented
+basic QtQuick and some basic game concepts such as the game loop,
+collisions and physics. I also tried to apply to explain how these
+concepts match with the QML development.&lt;/p&gt;
+
+&lt;p&gt;I created a simple click game
+&lt;a href=&#34;https://github.com/dakerfp/Monera-Game&#34;&gt;Monera&lt;/a&gt; as an example to the
+attendees. The code was written step by step and used itself as example
+and introduction to QtQuick. It was possible for everyone to write the
+code on their own computers and test.&lt;/p&gt;
+
+&lt;p&gt;In the end also gave them a overview about how to install the QML-Box2D
+and how to use it&amp;rsquo;s API.&lt;/p&gt;
+
+&lt;p&gt;The code used as case is available on GitHub:
+&lt;a href=&#34;https://github.com/dakerfp/Monera-Game&#34;&gt;https://github.com/dakerfp/Monera-Game&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Unfortunately I didn&amp;rsquo;t used git to keep the history of steps,
+modularization and refactoring I did during the workshop. I think that
+would be a plus to understand the code and how we came to it.&lt;/p&gt;
+
+&lt;p&gt;This was my first time on FISL and it was great! And I expect that won&amp;rsquo;t
+be my last.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

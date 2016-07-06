@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Javascript on Daker Pinheiro</title>
+    <link>http://dakerfp.github.io/tags/javascript/</link>
+    <description>Recent content in Javascript on Daker Pinheiro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
+    <lastBuildDate>Wed, 22 Jun 2011 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://dakerfp.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Encrypted Tweets</title>
+      <link>http://dakerfp.github.io/post/encrypted-tweets/</link>
+      <pubDate>Wed, 22 Jun 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://dakerfp.github.io/post/encrypted-tweets/</guid>
+      <description>
+
+&lt;p&gt;As a cryptography course project, me and
+&lt;a href=&#34;http://twitter.com/laissandrade&#34;&gt;@laisandrade&lt;/a&gt; developed a twitter
+extension which allows us to tweet in a way that only a group of
+followers can decrypt and understand my tweet. The goal is to secure
+broadcasting tweets to a group of followers and avoid anyone else to
+understand it&amp;rsquo;s content. This definition of security is safe against an
+&lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Eavesdropping&#34;&gt;eavesdropping attack&lt;/a&gt;,
+which is commonly considered secure for cryptography, what is not true.
+Another concerns emerges when we consider other attacks or ways of
+extracting informations from the cyphertext, as an example the
+&lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Known-plaintext_attack&#34;&gt;Known-Plaintext Attack&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/scheme.png&#34; alt=&#34;Configuration of the Encrypted Tweets problem - Alice securely broadcasting messages to a 
+specific group&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In this project we should also consider other security issues such as
+forgery attacks and secure information storage. The only real world
+problem outside the project&amp;rsquo;s scope was the private key distribution. We
+assume that the user who wants to share it&amp;rsquo;s keys to his followers could
+use other mechanisms such as a Diffie-Hellman key exchange or using a
+trusted key broker. The full project&amp;rsquo;s specification can be found
+&lt;a href=&#34;http://crypto.stanford.edu/%7Edabo/cs255/hw_and_proj/proj1.pdf&#34;&gt;here&lt;/a&gt;.
+For doing the task we used the
+&lt;a href=&#34;https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/&#34;&gt;Grease Monkey&lt;/a&gt;
+Firefox&amp;rsquo;s plugin. This plugin allow us to run custom javascript scripts
+in specifics web pages, so we can add functionalities to known web
+pages. In fact, we used a
+&lt;a href=&#34;http://crypto.stanford.edu/%7Edabo/cs255/hw_and_proj/cs255.user.js&#34;&gt;script stub&lt;/a&gt; for doing it.
+This script adds a encrypt tweet functionality as well as
+a key manager at password settings page. It also gives a function to
+store (unsafely) the user information. Was also our job to make it
+secure. We assumed that the script couldn&amp;rsquo;t be cracked, the focus where
+we were concerned was about the information safety outside the script
+execution memory.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/tweet.png&#34; alt=&#34;Encrypt button and Group selection close to Tweet button&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;encryption-specification&#34;&gt;Encryption Specification&lt;/h2&gt;
+
+&lt;p&gt;Encripted Message:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;+--------+-----+--------------------------------------+
+| &amp;quot;aes:&amp;quot; | Ctr | Extended-AES(Content, Ctr, GroupKey) |
++--------+-----+--------------------------------------+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The Ctr is the base counter for the CTR block chaining cypher.
+Every message picks a random Ctr.&lt;/li&gt;
+&lt;li&gt;The group key is the key to the group whom members are the only who should understand the
+message.&lt;/li&gt;
+&lt;li&gt;The Extended-AES function will be detailed after.&lt;/li&gt;
+&lt;li&gt;the &amp;ldquo;aes:&amp;rdquo; indicator is not a security threat due to Kerckhoffs&amp;rsquo;s Principle.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Content:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;+---------------+---------+
+| sha1(Message) | Message |
++---------------+---------+ 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;The sha1 cryptographic hash is used to check the integrity of the stored keys and avoid
+modifications on the massage bypass as a real message.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;The sha1 produces a 160 bits length message, which is convertes into a base64 string to send
+it over twitter.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;This Message Authentication Code (MAC) is necessary for Chosen Ciphertext Security
+(CCA Security).  Message: the original message&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For our Extended-AES implementation, we used a
+&lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Cipher_block_chaining&#34;&gt;Cypher Block Chaining&lt;/a&gt;
+to extend the &lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Advanced_Encryption_Standard&#34;&gt;AES&lt;/a&gt;
+block cypher, that we use as a
+&lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Block_cypher&#34;&gt;block cypher&lt;/a&gt;.
+To do this we used a Counter (CTR) chaining to extend the cypher.
+Note that the CTR mode uses a base counter (Ctr) as an
+&lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Initialization_vector&#34;&gt;Initialization Vector&lt;/a&gt;
+(IV) which also must be transmitted to enable to be decrypted. This IV
+is chosen at random by our
+&lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Pseudorandom_generator&#34;&gt;pseudorandom generator&lt;/a&gt;.
+If the IV is not truly random, an attacker may predict the IV sequence and get more
+information from the message.
+A real problem faced by pseudorandom generators are when the seed selection are not truly
+random. To handle this, the script stub creates a seed using the mouse
+positions at the first seconds of running (an entropy test is also used
+to check the randomness of the seed).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/crt_encryption&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;When someone receives an &amp;ldquo;aes:&amp;rdquo; tagged message, the script checks the
+author of the message and get the key provided by him. To decrypt, we
+also use the Extended-AES since it is symmetric (due to XOR
+reversibility property). At last the SHA-1 hash is confronted with the
+message to check if the key is correct or the message suffered a forgery
+attempt.&lt;/p&gt;
+
+&lt;p&gt;To store the groups keys we used the grease monkey&amp;rsquo;s key value storage
+(GM_setValue and GM_getValue functions). We store and recover the
+values from the key &lt;code&gt;&amp;quot;twit-key-&amp;quot; + login&lt;/code&gt;, which is stored as plaintext
+in the hard drive. To avoid the stealth of this information from other
+users, virus or worm we added an encryption layer over it. The stored
+data representation developed was this one:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/twitter2.png&#34; alt=&#34;Keys management screen&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;safe-storaging-specification&#34;&gt;Safe Storaging Specification&lt;/h2&gt;
+
+&lt;p&gt;Stored Data: AES(Data, MasterKey)
+MasterKey: User secret key to access all the other keys. This key requires user input every
+time it logs in.&lt;/p&gt;
+
+&lt;p&gt;Data:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;+---------------------+-----------------+
+|   sha1(GroupKeys)   |   Groups Keys   |
++---------------------+-----------------+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;This cryptographic hash is used to check the integrity of the stored keys.&lt;/li&gt;
+&lt;li&gt;A malicious agent may override the values on the keys and may set the keys he can decrypt.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Groups Keys:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;+----------+----------+----------+----------+---------+----------+----------+
+|   Item   |   &amp;quot;$$&amp;quot;   |   Item   |   &amp;quot;$$&amp;quot;   |   ...   |   &amp;quot;$$&amp;quot;   |   Item   |
++----------+----------+----------+----------+---------+----------+----------+ 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Item:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;+----------+---------+-----------+---------+---------+
+|   User   |   &amp;quot;$&amp;quot;   |   Group   |   &amp;quot;$&amp;quot;   |   Key   |
++----------+---------+-----------+---------+---------+ 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;User: base64 string Group: base64 string Key: base64 string&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s important to notice that we implemented the
+&lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Sha1&#34;&gt;SHA-1&lt;/a&gt; hashing
+algorithm to ensure the data wasn&amp;rsquo;t modified while stored or
+transmitted. We trust it wasn&amp;rsquo;t modified due to the difficulty to crack
+the AES cypher to forge a new MAC. And if the attacker try to change
+bits from the stored data, we trust that SHA-1 hash collision difficulty
+will be enough to ensure us that someone will be able to produce valid
+message, hash pairs without looking at the plaintext. If the pair is
+corrupted, then the user is alerted that someone modified his keys. By
+doing this, we may disable an attacker to modify bits from our keys and
+have better chances to crack the scheme. The SHA-1 also has some
+theoretical weakness, however, in practice it still is a very strong
+cryptographic hash function.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

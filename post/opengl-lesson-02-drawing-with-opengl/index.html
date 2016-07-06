@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme" content="hugo-academic">
+    <meta name="generator" content="Hugo 0.16" />
+    <meta name="author" content="Daker Fernandes Pinheiro">
+    <meta name="description" content="Software Engineer &amp; MS Candidate for Computer Graphics">
+
+    <link rel="stylesheet" href="http://dakerfp.github.io/css/highlight.min.css">
+    <link rel="stylesheet" href="http://dakerfp.github.io/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://dakerfp.github.io/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://dakerfp.github.io/css/academicons.min.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
+    <link rel="stylesheet" href="http://dakerfp.github.io/css/hugo-academic.css">
+    
+
+
+    <link rel="shortcut icon" href="http://dakerfp.github.io/img/favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="http://dakerfp.github.io/post/opengl-lesson-02-drawing-with-opengl/">
+
+    <title>OpenGL Lesson 02 - Drawing with OpenGL | Daker Pinheiro</title>
+
+</head>
+<body id="top">
+
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+    <div class="container">
+
+        
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://dakerfp.github.io/">Daker Pinheiro</a>
+        </div>
+
+        
+        <div class="collapse navbar-collapse" id="#navbar-collapse-1">
+
+            
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#top">Home</a></li>
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#publications">Publications</a></li>
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#posts">Posts</a></li>
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#projects">Projects</a></li>
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#experience">Experience</a></li>
+                
+                <li class="nav-item"><a href="http://dakerfp.github.io/#contact">Contact</a></li>
+                
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <article class="article" itemscope itemtype="http://schema.org/Article">
+
+        
+
+        <h1 itemprop="name">OpenGL Lesson 02 - Drawing with OpenGL</h1>
+
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2012-12-12 00:00:00 &#43;0000 UTC" itemprop="datePublished">Wed, Dec 12, 2012</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="http://dakerfp.github.io/tags/opengl">opengl</a>, 
+        
+        <a class="article-tag-link" href="http://dakerfp.github.io/tags/opengles">opengles</a>, 
+        
+        <a class="article-tag-link" href="http://dakerfp.github.io/tags/c">c</a>
+        
+    </span>
+    
+    
+
+    
+        
+<div class="share-box">
+    <ul class="share">
+        <li>
+            <a class="facebook" href="https://www.facebook.com/sharer.php?u=http%3a%2f%2fdakerfp.github.io%2fpost%2fopengl-lesson-02-drawing-with-opengl%2f" target="_blank">
+                <i class="fa fa-facebook"></i>
+            </a>
+        </li>
+        <li>
+            <a class="twitter" href="https://twitter.com/intent/tweet?text=OpenGL%20Lesson%2002%20-%20Drawing%20with%20OpenGL&amp;url=http%3a%2f%2fdakerfp.github.io%2fpost%2fopengl-lesson-02-drawing-with-opengl%2f" target="_blank">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        <li>
+            <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fdakerfp.github.io%2fpost%2fopengl-lesson-02-drawing-with-opengl%2f&amp;title=OpenGL%20Lesson%2002%20-%20Drawing%20with%20OpenGL" target="_blank">
+                <i class="fa fa-linkedin"></i>
+            </a>
+        </li>
+        <li>
+            <a class="weibo" href="http://service.weibo.com/share/share.php?url=http%3a%2f%2fdakerfp.github.io%2fpost%2fopengl-lesson-02-drawing-with-opengl%2f&amp;title=OpenGL%20Lesson%2002%20-%20Drawing%20with%20OpenGL" target="_blank">
+                <i class="fa fa-weibo"></i>
+            </a>
+        </li>
+        <li>
+            <a class="email" href="mailto:?subject=OpenGL%20Lesson%2002%20-%20Drawing%20with%20OpenGL&amp;body=http%3a%2f%2fdakerfp.github.io%2fpost%2fopengl-lesson-02-drawing-with-opengl%2f">
+                <i class="fa fa-envelope"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+    
+
+</div>
+
+
+        <div class="article-style" itemprop="articleBody">
+            
+
+<p>OpenGL is a primarily an C API, for drawing graphics. Implementations
+and bindings exists for several languages such as Java, Python, Ruby and
+Objective C. OpenGL became the standard drawing API supported by most
+modern device with graphics, independent from vendor, operational
+system, or if it is desktop or embedded. Of course the platform matters,
+but we can split the platform dependent code from pure OpenGL.</p>
+
+<p>OpenGL became a standard mainly due to its rendering pipeline, which is
+trivially parallelized. This allowed the creation of specialized
+hardware, the well known graphics cards. These cards became very small
+and started to be practical shipping embedded devices with them. Now
+high performance graphics in these devices are a reality.</p>
+
+<p>On traditional desktop platforms, the usual layout of graphics card
+stand as pictured below. In this scenario, moving data to and from the
+card can mean a huge cost. On others platforms, such as the mobile, its
+common that GPUs uses the same memory as the CPU. However, the
+programmer still needs to handle this memory efficiently.</p>
+
+<p><img src="/img/arch.png" alt="" /></p>
+
+<p>For this new range of devices, the Khronos (group responsible for
+standardizing OpenGL API) released an OpengGL specification focused on
+embedded systems, the OpenGL ES.</p>
+
+<p>In this post I would like to explain some key concepts about the OpenGL
+API:</p>
+
+<ul>
+<li>What are the best practices for it.</li>
+<li>Differences between the &ldquo;Desktop&rdquo; version versus the ES version.</li>
+</ul>
+
+<p>I want not to go deep in the API or its functionalities. You have other
+sources that covers them better. I recommend the ones used as reference
+for this post:</p>
+
+<ul>
+<li><a href="http://www.glprogramming.com/red/index.html">GL Programming</a></li>
+<li><a href="http://www.songho.ca/opengl/">Song Ho Ahn&rsquo;s Tutorials and Notes</a></li>
+<li>OpenGL Programming Guide, 7th edition. (a.k.a. The Red Book) or a newer edition</li>
+</ul>
+
+<h2 id="hello-triangle">Hello Triangle!</h2>
+
+<p><img src="/img/hello.png" alt="" /></p>
+
+<p>Enough talking, show me the code! I wrote the following code using GLUT
+and OpenGL 1. GLUT is a simple toolkit to create simple OpenGL
+applications. It basically opens an window with a GL context, and
+handles primitive mouse and keyboard events.</p>
+
+<pre><code class="language-c">
+#include &lt;GL/gl.h&gt;
+#include &lt;GL/glut.h&gt;
+
+void display()
+{
+    glClear(GL_COLOR_BUFFER_BIT); // Clean up the canvas
+
+    glBegin(GL_TRIANGLES);
+    glVertex2f(-1.0f, -1.0f);
+    glVertex2f( 0.0f,  1.0f);
+    glVertex2f( 1.0f, -1.0f);
+    glEnd();
+
+    glFlush(); // Forces previous GL commands to be send to the GPU
+}
+
+int main(int argc, char **argv)
+{
+    glutInit(&amp;argc, argv);
+    glutInitWindowSize(480, 480);
+    glutCreateWindow(&quot;Hello World&quot;);
+
+    glutDisplayFunc(display);
+
+    glutMainLoop();
+
+    return 0;
+}
+</code></pre>
+
+<h2 id="drawing-the-triagle">Drawing the triagle</h2>
+
+<p>In OpenGL 1 and 2, the easiest way for you to draw a triangle, is using
+some form of <code>glVertex*</code>. These call must be enclosed between <code>glBegin</code>
+and <code>glEnd</code>.</p>
+
+<p>OpengGL uses a coordinate system where the origin is the center of the
+viewport, the X axis has left to right orientation and Y axis is bottom
+to top, as pictured below. By default everything between (-1, -1) and
+(1, 1) is what youll be shown in the viewport. Check this
+<a href="http://www.songho.ca/opengl/gl_transform.html">tutorial</a> for
+understanding OpengGL coordinate system and camera deeper.</p>
+
+<p><img src="/img/gles-cam.png" alt="" /></p>
+
+<p>You also need to assert what kind of primitive you are passing to
+OpenGL. It accepts the primitives illustrated below with their
+correspondent constants. OpenGL ES does not support polygon or quads,
+you will need to assemble them yourself.</p>
+
+<p><img src="/img/primitives.gif" alt="" /></p>
+
+<p>Interleaved with the vertex position, you can add other information such
+as colors, texture coordinates, normal direction. You can define other
+vertex attributes for richer shaders. Shader is a piece of code that
+defines how your primitives will be rendered. With them is possible to
+make a lot of effects such as normal mapping, adding shadows, particles
+and many more. When we choose a shading model we are using OpengGL
+default shaders. Standard OpengGL defines a large set of inputs and
+outputs a shader must have. OpenGL ES 2 and above does not defines what
+you must enter as input for the shaders. Is up to the programmer what
+will be the inputs vertex shader will have. The contract assumes that
+the vertex shader will return at least a position (search for
+gl_Position) and the fragment shader a color (gl_FragColor). Do not
+worry. This will be further detailed in a following post.</p>
+
+<h2 id="vertex-arrays">Vertex Arrays</h2>
+
+<p>Drawing with <code>glVertex*</code> was deprecated from OpenGL 3 and beyond. In
+OpenGL ES we do not have them either. This drawing method overheads of
+one function call for each information entered in the pipeline. The
+OpengGL comittee also wanted to disencourage the usage of this kind of
+input mode. The interfere of this overhead is small for small objects,
+but is not true for large ones. Another reason, for removing them
+(specially on ES version), was the make OpenGL implementation lighter,
+by reducing the number of internal states.</p>
+
+<p>Prefere to draw using vertex arrays. Vertex arrays are arrays that each
+element contains all the vertex information. The command to draw them is
+<code>glDrawArrays</code>. Indexes can be specified to reuse the vertex
+definition by using <code>glDrawElements</code>. A good reference for this subject
+is <a href="http://www.songho.ca/opengl/gl_vertexarray.html">this one</a>. As this
+is the standard way when using OpenGL ES 2, I will give an example.</p>
+
+<h2 id="example-of-vertex-arrays">Example of Vertex Arrays</h2>
+
+<p>To draw a square you must first define the schema of each vertex. Here,
+each vertex has a position (3 floats) and a color (3 floats for R, G and
+B color channels). In C I like to define a struct to improve
+readability:</p>
+
+<pre><code class="language-c">struct vertex_t {
+    GLfloat position[3];
+    GLfloat color[3];
+};
+
+void display()
+{
+    struct vertex_t vertex_data[] = {
+         {{-1.0f, -1.0f, 0.0f}, {1.0f, 0.0f, 0.0f}}, // red bottom left
+         {{-1.0f,  1.0f, 0.0f}, {0.0f, 1.0f, 0.0f}}, // green top left 
+         {{ 1.0f, -1.0f, 0.0f}, {0.0f, 0.0f, 1.0f}}, // blue bottom right
+         {{ 1.0f,  1.0f, 0.0f}, {1.0f, 1.0f, 1.0f}}, // white top right
+    };
+    
+    // ...
+}
+</code></pre>
+
+<p>It is possible to have different arrays for color and position, but for
+speeding up the shader execution is recommended to keep information
+about the same vertex contiguous to use memory locality.</p>
+
+<pre><code class="language-c">glVertexAttribPointer(
+    position_attribute_location, // attribute description (depends on the shader)
+    3, // size of the information (3 coordinates in this case)
+    GL_FLOAT, // type of the information
+    GL_FALSE, // if the value will be normalized (for vectors)
+    sizeof(struct vertex_t), // stride of the memory vector
+    &amp;vertex_data[0].position // initial address
+);
+// asserting that position will be used by the shader
+glEnableVertexAttribArray(position_attribute_location); 
+
+glVertexAttribPointer(
+    color_attribute_location,
+    3,
+    GL_FLOAT,
+    GL_FALSE,
+    sizeof(struct vertex_t),
+    &amp;vertex_data[0].color
+);
+// asserting that color will be used by the shader
+glEnableVertexAttribArray(color_attribute_location);
+
+// Draw a triangle strip vertex from the current attribute pointers
+// starting on index 0 and using 4 elements
+glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+</code></pre>
+
+<p>This gives us the following result:</p>
+
+<p><img src="/img/hello2.png" alt="" /></p>
+
+<p>Notice that the colors for each vertex stands as the ones we gave, but
+all the region in between has the color calculated as the interpolation
+of the vertex colors. The rasterizer is the responsible for doing this.</p>
+
+<p>You could also use indexes to access the vertex. For bigger elements it
+may be a better solution, specially for 3D objects, because you can
+share vertex that appears in multiple polygons of an object. Using index
+would speed up the memory transfer and usage for these objects.</p>
+
+<pre><code class="language-c">GLubyte indices[] = {
+    0, 1, 2, // first triangle
+    1, 2, 3  // second triangle
+};
+
+glDrawElements(
+    GL_TRIANGLES, // not a strip in this case
+    6, // number of indexes
+    GL_UNSIGNED_BYTE, // type of the indexes
+    indices // a pointer to indexes themselves
+);
+</code></pre>
+
+<p>The previous code does it for a trivial shader set (called a program). I
+will not explain how to use it here because is out of the scope for this
+lesson. On regular OpenGL versions you could use <code>glVertexPointer</code> and
+<code>glColorPointer</code>. I will left it as an exercise for you.</p>
+
+<h2 id="vertex-buffer-objects">Vertex Buffer Objects</h2>
+
+<p>Buffers are objects that stores vertex information in GPU memory. It is
+a must for improving the performance when drawing large objects. In
+heavy application such as games or CADs, is good to remove the overhead
+of from sending vertex data from regular memory to graphics card memory
+by pre loading the vertex data in a buffer. The code below show how can
+you upload the vertex data to a buffer.</p>
+
+<pre><code class="language-c">GLuint bufferId;
+
+// here you get handlers for GPU buffers, in this case, only one
+glGenBuffers(1, &amp;bufferId);
+
+// asserts that you are using the buffer represented by bufferId
+// as the current ARRAY_BUFFER
+glBindBuffer(GL_ARRAY_BUFFER, bufferId);
+
+glBufferData(
+    GL_ARRAY_BUFFER, // the data is uploaded to current array buffer
+    sizeof(vertex_data), // number of bytes of the total array
+    vertex_data, // the pointer to the data
+    GL_STATIC_DRAW, // hint of how the buffer will be used, in this case, data will not change
+)
+</code></pre>
+
+<p>To draw the buffer content, you must use <code>glVertexAttribPointer</code> passing
+the buffer offset instead of the <code>vertex_data</code> address. OpenGL will
+notice that a buffer is bound and will use it.</p>
+
+<pre><code class="language-c">glBindBuffer(GL_ARRAY_BUFFER, bufferId); // Bind whenever you will use it
+
+glVertexAttribPointer(
+    position_attribute_location, // attribute description (depends on the shader)
+    3, // size of the information (3 coordinates in this case)
+    GL_FLOAT, // type of the information
+    GL_FALSE, // if the value will be normalized (for vectors)
+    sizeof(struct vertex_t), // stride of the vertex buffer data
+    0 // offset at buffer
+);
+// asserting that position will be used by the shader
+glEnableVertexAttribArray(position_attribute_location); 
+
+glVertexAttribPointer(
+    color_attribute_location,
+    3,
+    GL_FLOAT,
+    GL_FALSE,
+    sizeof(struct vertex_t),
+    3 // offset at buffer
+);
+// asserting that color will be used by the shader
+glEnableVertexAttribArray(color_attribute_location);
+
+// Draw a triangle strip vertex from the current attribute pointers
+// starting on index 0 and using 4 elements
+glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+
+// Unbinds the buffer
+glBindBuffer(GL_ARRAY_BUFFER, 0);
+</code></pre>
+
+<h2 id="remarks-about-openggl-es-2">Remarks about OpengGL ES 2</h2>
+
+<p>OpenGL ES 2 does not have the model-view matrix, responsible for setting
+the camera view, nor the matrix stack. All you have is the X axis [-1.0,
+-1.0] to Y axis [1.0, 1.0] region which will be mapped to the viewport.
+If you need those features (you will for most 3d applications) you will
+have to handle them inside your application code. You will have to do it
+yourself by exporting a model-view in the vertex shader as an uniform
+variable. For a theorical background on it, check my <a href="http://codecereal.blogspot.com.br/2012/11/opengl-lesson-01-pre-opengl.html">previous
+lesson</a>.
+A great tutorial on how to play with the camera, transformations and
+model coordinates is
+<a href="http://www.songho.ca/opengl/gl_transform.html">this</a>. It explains a bit
+how it works under the hood for regular OpenGL. Its worthy to take a
+look.</p>
+
+<p>While hacking some examples I have come to some weird behaviour in
+OpenGL ES 2.0 for the Raspberry Pi. It might be bugs or mine
+misinterpretation.</p>
+
+<ul>
+<li><code>glUniformMatrix4fv</code> translate parameter <em>must</em> be false. It simply
+does not work otherwise.</li>
+<li><code>glDrawElements</code> did not worked with unsigned int.</li>
+</ul>
+
+        </div>
+
+    </article>
+
+    <nav>
+    <ul class="pager">
+        
+        <li class="previous"><a href="http://dakerfp.github.io/post/raspberry-python-at-python-brasil-8/"><span aria-hidden="true">&larr;</span> Raspberry &#43; Python at Python Brasil [8]</a></li>
+        
+
+        
+        <li class="next"><a href="http://dakerfp.github.io/post/why-is-python-slow-python-nordeste-2013/">Why is Python slow? Python Nordeste 2013 <span aria-hidden="true">&rarr;</span></a></li>
+        
+    </ul>
+</nav>
+
+    
+<section id="comments">
+    <div id="disqus_thread">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'dakerfp';
+    var disqus_identifier = 'http:\/\/dakerfp.github.io\/post\/opengl-lesson-02-drawing-with-opengl\/';
+    var disqus_title = 'OpenGL Lesson 02 - Drawing with OpenGL';
+    var disqus_url = 'http:\/\/dakerfp.github.io\/post\/opengl-lesson-02-drawing-with-opengl\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+</section>
+
+
+
+</div>
+<footer class="site-footer">
+    <div class="container">
+        <p class="powered-by">
+
+            &copy; 2016 Daker Fernandes Pinheiro &middot; 
+
+            Powered by the <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+            <span class="pull-right"><a href="#" id="back_to_top"><span class="button_icon"><i class="fa fa-chevron-up fa-2x" aria-hidden="true"></i></span></a></span>
+
+        </p>
+    </div>
+</footer>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+        <script src="http://dakerfp.github.io/js/jquery-1.12.3.min.js"></script>
+        <script src="http://dakerfp.github.io/js/bootstrap.min.js"></script>
+        <script src="http://dakerfp.github.io/js/hugo-academic.js"></script>
+        
+
+        
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-80351639-1', 'auto');
+            ga('send', 'pageview');
+
+             
+            var links = document.querySelectorAll('a');
+            Array.prototype.map.call(links, function(item) {
+                if (item.host != document.location.host) {
+                    item.addEventListener('click', function() {
+                        var action = item.getAttribute('data-action') || 'follow';
+                        ga('send', 'event', 'outbound', action, item.href);
+                    });
+                }
+            });
+        </script>
+        
+
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
+        
+        
+
+    </body>
+</html>
+

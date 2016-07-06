@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Citi on Daker Pinheiro</title>
+    <link>http://dakerfp.github.io/tags/citi/</link>
+    <description>Recent content in Citi on Daker Pinheiro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
+    <lastBuildDate>Fri, 15 Jul 2011 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://dakerfp.github.io/tags/citi/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>PySide at CITi</title>
+      <link>http://dakerfp.github.io/post/pyside_at_citi/</link>
+      <pubDate>Fri, 15 Jul 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://dakerfp.github.io/post/pyside_at_citi/</guid>
+      <description>&lt;p&gt;Here is the &lt;a href=&#34;http://www.pyside.org/&#34;&gt;PySide&lt;/a&gt; slides from the python
+course at &lt;a href=&#34;http://www.citi.org.br/&#34;&gt;CITi&lt;/a&gt;. Have fun!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://www.slideshare.net/dakerfp/citi-pyside&#34; title=&#34;CITi - PySide&#34;&gt;CITi - PySide&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
