@@ -1,8 +1,9 @@
-baseurl = "https://dakerfp.github.io/"
+baseurl = "http://dakerfp.github.io/"
 title = "Daker Pinheiro"
 copyright = "&copy; 2016 Daker Fernandes Pinheiro"
 languageCode = "en-us"
 theme = "academic"
+canonifyurls = true
 
 # Enable comments by entering your Disqus shortname
 disqusShortname = "dakerfp"

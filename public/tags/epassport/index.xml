@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Epassport on Daker Pinheiro</title>
-    <link>https://dakerfp.github.io/tags/epassport/</link>
+    <link>http://dakerfp.github.io/tags/epassport/</link>
     <description>Recent content in Epassport on Daker Pinheiro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
     <lastBuildDate>Thu, 30 May 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://dakerfp.github.io/tags/epassport/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://dakerfp.github.io/tags/epassport/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>The ePassport Standard and it&#39;s Cryptographic Scheme</title>
-      <link>https://dakerfp.github.io/post/the-epassport-standard-and-its-cryptographic-scheme/</link>
+      <link>http://dakerfp.github.io/post/the-epassport-standard-and-its-cryptographic-scheme/</link>
       <pubDate>Thu, 30 May 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/the-epassport-standard-and-its-cryptographic-scheme/</guid>
+      <guid>http://dakerfp.github.io/post/the-epassport-standard-and-its-cryptographic-scheme/</guid>
       <description>&lt;p&gt;ePassport is the name given for the new passport specification
 standardized by the &lt;a href=&#34;http://www.icao.int/&#34;&gt;International Civil Aviation Organization&lt;/a&gt; (ICAO).
 It was created to speed up and standardize the immigration procedures.
@@ -27,7 +27,7 @@ and iris information. To keep this important data protected, an
 interesting cryptographic layer was added in addition to the usual
 document falsification mechanisms such as watermarks.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/passaporte-br.jpg&#34; alt=&#34;Brazilian ePassport. One of few which has full compatibility with the ICAO specification.&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/passaporte-br.jpg&#34; alt=&#34;Brazilian ePassport. One of few which has full compatibility with the ICAO specification.&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The name, nationality, birth date and other personal information as well
 as the biometric informations are held on a contactless chip inside the
@@ -38,7 +38,7 @@ process. As the embedded chip has low processing power, the biometric
 data is transmitted to a reader so it can be checked against the porter
 of the passport.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/epass.jpg&#34; alt=&#34;Anatomy of an ePassport&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/epass.jpg&#34; alt=&#34;Anatomy of an ePassport&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;As the physical communication layer of the ePassport broadcasts the
 messages, even with the low range (less than a meter) RFID
@@ -75,7 +75,7 @@ note that the BAC security entirely relies on the physical access to the
 passport. The BAC is inside the ICAO standard but doesn&amp;rsquo;t obligates it&amp;rsquo;s
 support.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/bac.png&#34; alt=&#34;BAC happy path&#39;s sequence diagram&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/bac.png&#34; alt=&#34;BAC happy path&#39;s sequence diagram&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The ICAO also standardizes a authentication for readers called
 &lt;strong&gt;Extended Access Control (EAC)&lt;/strong&gt;. It consists of sets of signatures of
@@ -85,7 +85,7 @@ avoid keys stolen from equipments being used for much time. Some MRZ
 sensitive data, such as iris and fingerprint, are just transmitted to
 readers if it is EAC authenticated. Other informations are optional.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/eac.png&#34; alt=&#34;EAC happy path&#39;s sequence diagram&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/eac.png&#34; alt=&#34;EAC happy path&#39;s sequence diagram&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The &lt;strong&gt;Passive Authentication (PA)&lt;/strong&gt; is a cryptographic mechanism  to
 ensure the data in the passport is valid by the authority emitting the
@@ -109,7 +109,7 @@ digital data a really hard computational problem, and ensures with
 negligible chance of failure that the data is valid. All the MRZ data is
 signed using such process. Using PA is mandatory by ICAO standards.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/pa.png&#34; alt=&#34;PA happy path&#39;s sequence diagram&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/pa.png&#34; alt=&#34;PA happy path&#39;s sequence diagram&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The &lt;strong&gt;Active Authentication (AA)&lt;/strong&gt; is a kind of
 &lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Challenge-response_authentication&#34;&gt;challenge response authentication&lt;/a&gt;
@@ -126,7 +126,7 @@ concept of challenge is the same concept behind
 &lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/CAPTCHA&#34;&gt;CAPTCHAs&lt;/a&gt; and
 the &lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Turing_test&#34;&gt;Turing Test&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/aa.png&#34; alt=&#34;AA hapy path&#39;s sequence diagram&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/aa.png&#34; alt=&#34;AA hapy path&#39;s sequence diagram&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     

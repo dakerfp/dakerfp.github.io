@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>C&#43;&#43;11 on Daker Pinheiro</title>
-    <link>https://dakerfp.github.io/tags/c&#43;&#43;11/</link>
+    <link>http://dakerfp.github.io/tags/c&#43;&#43;11/</link>
     <description>Recent content in C&#43;&#43;11 on Daker Pinheiro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
     <lastBuildDate>Thu, 07 Jul 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://dakerfp.github.io/tags/c&#43;&#43;11/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://dakerfp.github.io/tags/c&#43;&#43;11/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Singletons using std::weak_ptr</title>
-      <link>https://dakerfp.github.io/post/weak_ptr_singleton/</link>
+      <link>http://dakerfp.github.io/post/weak_ptr_singleton/</link>
       <pubDate>Thu, 07 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/weak_ptr_singleton/</guid>
+      <guid>http://dakerfp.github.io/post/weak_ptr_singleton/</guid>
       <description>&lt;p&gt;A common issue is how a resource and initialize it only when needed.
 A common C++ pattern to solve this is using the Resource Acquisition Is Initialization aka RAII.
 That&amp;rsquo;s what smart pointers do when created and get out of scope.

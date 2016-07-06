@@ -2,28 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Plasma on Daker Pinheiro</title>
-    <link>https://dakerfp.github.io/tags/plasma/</link>
+    <link>http://dakerfp.github.io/tags/plasma/</link>
     <description>Recent content in Plasma on Daker Pinheiro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
     <lastBuildDate>Mon, 13 Aug 2012 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://dakerfp.github.io/tags/plasma/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://dakerfp.github.io/tags/plasma/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Qt &amp; KDE in FISL 13</title>
-      <link>https://dakerfp.github.io/post/qt-kde-in-fisl-13/</link>
+      <link>http://dakerfp.github.io/post/qt-kde-in-fisl-13/</link>
       <pubDate>Mon, 13 Aug 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/qt-kde-in-fisl-13/</guid>
+      <guid>http://dakerfp.github.io/post/qt-kde-in-fisl-13/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/fisl.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/fisl.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;It was a great to see again some friends from KDE Brazil and met some
 new ones. The Konqui&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/kdenofisl.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/kdenofisl.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I also gave some talks and workshop about Qt, KDE and game development.&lt;/p&gt;
 
@@ -76,10 +76,10 @@ be my last.&lt;/p&gt;
     
     <item>
       <title>Qt, KDE &amp; Akademy 2012 Event Guide Application</title>
-      <link>https://dakerfp.github.io/post/qt-kde-akademy-2012-event-guide/</link>
+      <link>http://dakerfp.github.io/post/qt-kde-akademy-2012-event-guide/</link>
       <pubDate>Thu, 08 Mar 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/qt-kde-akademy-2012-event-guide/</guid>
+      <guid>http://dakerfp.github.io/post/qt-kde-akademy-2012-event-guide/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve been away from KDE activities from a time, because I was organizing
 a lot of stuff in my life. Happily I&amp;rsquo;ve finally arranged some time to
 hack more on the weekends. I&amp;rsquo;ll try to keep up the work with the Plasma
@@ -103,7 +103,7 @@ great experience to share ideas with him!&lt;/p&gt;
 
 &lt;p&gt;Here are some snapshots of the app:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/akademy-app.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/akademy-app.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;If you want to check it yourself, just clone the git repo:
 git@git.kde.org:scratch/pinheiro/akademy2012&lt;/p&gt;
@@ -112,10 +112,10 @@ git@git.kde.org:scratch/pinheiro/akademy2012&lt;/p&gt;
     
     <item>
       <title>Back to Plasma Components</title>
-      <link>https://dakerfp.github.io/post/back_to_plasma_components/</link>
+      <link>http://dakerfp.github.io/post/back_to_plasma_components/</link>
       <pubDate>Mon, 18 Jul 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/back_to_plasma_components/</guid>
+      <guid>http://dakerfp.github.io/post/back_to_plasma_components/</guid>
       <description>
 
 &lt;p&gt;This last month I&amp;rsquo;ve been working slowly on my GSoC project due to the
@@ -178,10 +178,10 @@ report.&lt;/p&gt;
     
     <item>
       <title>Plasma Components</title>
-      <link>https://dakerfp.github.io/post/plasma-components/</link>
+      <link>http://dakerfp.github.io/post/plasma-components/</link>
       <pubDate>Thu, 19 May 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/plasma-components/</guid>
+      <guid>http://dakerfp.github.io/post/plasma-components/</guid>
       <description>&lt;p&gt;Hi,&lt;/p&gt;
 
 &lt;p&gt;I will talk about my GSoC project (\m/), the plasma components.
@@ -240,7 +240,7 @@ wanted in plasma:&lt;/p&gt;
 (plasma/declarativeimports/test/Gallery.qml) that you may view it with
 qmlviewer (after installing the components).&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/gallery.png&#34; alt=&#34;Gallery screenshot&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/gallery.png&#34; alt=&#34;Gallery screenshot&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Feedback is highly appreciated. ;-)&lt;/p&gt;
 </description>

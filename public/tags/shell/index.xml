@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Shell on Daker Pinheiro</title>
-    <link>https://dakerfp.github.io/tags/shell/</link>
+    <link>http://dakerfp.github.io/tags/shell/</link>
     <description>Recent content in Shell on Daker Pinheiro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
     <lastBuildDate>Sun, 11 Apr 2010 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://dakerfp.github.io/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://dakerfp.github.io/tags/shell/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>DiagnostiCar (2) - Knowledge Representation Language</title>
-      <link>https://dakerfp.github.io/post/diagnosticar-2-knowledge-representation-language/</link>
+      <link>http://dakerfp.github.io/post/diagnosticar-2-knowledge-representation-language/</link>
       <pubDate>Sun, 11 Apr 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/diagnosticar-2-knowledge-representation-language/</guid>
+      <guid>http://dakerfp.github.io/post/diagnosticar-2-knowledge-representation-language/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m giving sequence to the last post about the DiagnostiCar expert
 system. Today I&amp;rsquo;m going to specify the predicates to represent some
 domain specific knowledge.&lt;/p&gt;

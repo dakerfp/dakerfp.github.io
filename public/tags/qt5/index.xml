@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Qt5 on Daker Pinheiro</title>
-    <link>https://dakerfp.github.io/tags/qt5/</link>
+    <link>http://dakerfp.github.io/tags/qt5/</link>
     <description>Recent content in Qt5 on Daker Pinheiro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
     <lastBuildDate>Mon, 14 May 2012 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://dakerfp.github.io/tags/qt5/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://dakerfp.github.io/tags/qt5/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>QML Theming/Styling (Update)</title>
-      <link>https://dakerfp.github.io/post/qml-themingstyling-update/</link>
+      <link>http://dakerfp.github.io/post/qml-themingstyling-update/</link>
       <pubDate>Mon, 14 May 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/qml-themingstyling-update/</guid>
+      <guid>http://dakerfp.github.io/post/qml-themingstyling-update/</guid>
       <description>
 
 &lt;p&gt;This post is an update about the research project from my team,
@@ -115,7 +115,7 @@ next steps.&lt;/p&gt;
 
 &lt;p&gt;While creating the ComboBox, we decided to divide it in 4 other subcomponents:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/combo-th.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/combo-th.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;ArrowStyle&lt;/li&gt;

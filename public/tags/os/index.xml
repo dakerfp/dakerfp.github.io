@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Os on Daker Pinheiro</title>
-    <link>https://dakerfp.github.io/tags/os/</link>
+    <link>http://dakerfp.github.io/tags/os/</link>
     <description>Recent content in Os on Daker Pinheiro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
     <lastBuildDate>Thu, 09 Jan 2014 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://dakerfp.github.io/tags/os/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://dakerfp.github.io/tags/os/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Python cookbook: get the file dir path</title>
-      <link>https://dakerfp.github.io/post/python-cookbook-get-file-dir-path/</link>
+      <link>http://dakerfp.github.io/post/python-cookbook-get-file-dir-path/</link>
       <pubDate>Thu, 09 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/python-cookbook-get-file-dir-path/</guid>
+      <guid>http://dakerfp.github.io/post/python-cookbook-get-file-dir-path/</guid>
       <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import os
 os.path.dirname(os.path.abspath(__file__))
 &lt;/code&gt;&lt;/pre&gt;

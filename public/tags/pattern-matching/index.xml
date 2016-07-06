@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pattern Matching on Daker Pinheiro</title>
-    <link>https://dakerfp.github.io/tags/pattern-matching/</link>
+    <link>http://dakerfp.github.io/tags/pattern-matching/</link>
     <description>Recent content in Pattern Matching on Daker Pinheiro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
     <lastBuildDate>Thu, 03 Oct 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://dakerfp.github.io/tags/pattern-matching/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://dakerfp.github.io/tags/pattern-matching/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Functional Pattern Matching with Python</title>
-      <link>https://dakerfp.github.io/post/functional-pattern-matching-with-python/</link>
+      <link>http://dakerfp.github.io/post/functional-pattern-matching-with-python/</link>
       <pubDate>Thu, 03 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/functional-pattern-matching-with-python/</guid>
+      <guid>http://dakerfp.github.io/post/functional-pattern-matching-with-python/</guid>
       <description>&lt;p&gt;This talk as given at Python Brasil 2013, at Brasília.&lt;/p&gt;
 
 &lt;p&gt;&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/Ivn9fHPiXO31Kc&#34; width=&#34;595&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; &lt;div style=&#34;margin-bottom:5px&#34;&gt; &lt;strong&gt; &lt;a href=&#34;//www.slideshare.net/dakerfp/functional-pattern-matching&#34; title=&#34;Functional Pattern Matching on Python&#34; target=&#34;_blank&#34;&gt;Functional Pattern Matching on Python&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href=&#34;//www.slideshare.net/dakerfp&#34; target=&#34;_blank&#34;&gt;Daker Fernandes&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;&lt;/p&gt;

@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Module on Daker Pinheiro</title>
-    <link>https://dakerfp.github.io/tags/module/</link>
+    <link>http://dakerfp.github.io/tags/module/</link>
     <description>Recent content in Module on Daker Pinheiro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
     <lastBuildDate>Mon, 13 Jan 2014 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://dakerfp.github.io/tags/module/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://dakerfp.github.io/tags/module/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Reload and unload modules in Python</title>
-      <link>https://dakerfp.github.io/post/reload-and-unload-modules-in-python/</link>
+      <link>http://dakerfp.github.io/post/reload-and-unload-modules-in-python/</link>
       <pubDate>Mon, 13 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/reload-and-unload-modules-in-python/</guid>
+      <guid>http://dakerfp.github.io/post/reload-and-unload-modules-in-python/</guid>
       <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# python 2.7
 import math
 

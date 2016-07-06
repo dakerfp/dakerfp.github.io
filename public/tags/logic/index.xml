@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Logic on Daker Pinheiro</title>
-    <link>https://dakerfp.github.io/tags/logic/</link>
+    <link>http://dakerfp.github.io/tags/logic/</link>
     <description>Recent content in Logic on Daker Pinheiro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
     <lastBuildDate>Tue, 07 Jan 2014 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://dakerfp.github.io/tags/logic/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://dakerfp.github.io/tags/logic/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Regex like operators for DCG</title>
-      <link>https://dakerfp.github.io/post/regex-like-operators-for-dcg/</link>
+      <link>http://dakerfp.github.io/post/regex-like-operators-for-dcg/</link>
       <pubDate>Tue, 07 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/regex-like-operators-for-dcg/</guid>
+      <guid>http://dakerfp.github.io/post/regex-like-operators-for-dcg/</guid>
       <description>&lt;p&gt;Today I was trying to create a simple parser to count syllables in latin
 words with Prolog. I usually use DCGs in Prolog for parsing. Their
 semantic is very similar to
@@ -108,10 +108,10 @@ definition through a library):&lt;/p&gt;
     
     <item>
       <title>DiagnostiCar (4) - Abductive Reasoning</title>
-      <link>https://dakerfp.github.io/post/diagnosticar-4-abductive-reasoning/</link>
+      <link>http://dakerfp.github.io/post/diagnosticar-4-abductive-reasoning/</link>
       <pubDate>Thu, 29 Jul 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/diagnosticar-4-abductive-reasoning/</guid>
+      <guid>http://dakerfp.github.io/post/diagnosticar-4-abductive-reasoning/</guid>
       <description>&lt;p&gt;Finally I had some time to write about abductive reasoning, the core of
 the DiagnostiCar expert system. As you may know from my &lt;a href=&#34;http://codecereal.blogspot.com/2010/04/diagnosticar-introduction.html&#34;&gt;previous posts&lt;/a&gt;
 (means you&amp;rsquo;re tough and reached this point), the abductive reasoning
@@ -261,10 +261,10 @@ a lot of memory but it helps to execute faster.&lt;/p&gt;
     
     <item>
       <title>DiagnostiCar (2) - Knowledge Representation Language</title>
-      <link>https://dakerfp.github.io/post/diagnosticar-2-knowledge-representation-language/</link>
+      <link>http://dakerfp.github.io/post/diagnosticar-2-knowledge-representation-language/</link>
       <pubDate>Sun, 11 Apr 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/diagnosticar-2-knowledge-representation-language/</guid>
+      <guid>http://dakerfp.github.io/post/diagnosticar-2-knowledge-representation-language/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m giving sequence to the last post about the DiagnostiCar expert
 system. Today I&amp;rsquo;m going to specify the predicates to represent some
 domain specific knowledge.&lt;/p&gt;
@@ -372,14 +372,14 @@ answer interface using the dynamic Prolog predicates.&lt;/p&gt;
     
     <item>
       <title>DiagnostiCar (1) - Introduction</title>
-      <link>https://dakerfp.github.io/post/diagnosticar-1/</link>
+      <link>http://dakerfp.github.io/post/diagnosticar-1/</link>
       <pubDate>Wed, 07 Apr 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/diagnosticar-1/</guid>
+      <guid>http://dakerfp.github.io/post/diagnosticar-1/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m here to tell my expirience with logic programming in a grad
 project: DiagnostiCar, an web expert system for car diagnosis.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/diagnosticar.jpg&#34; alt=&#34;DiagnostiCar&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/diagnosticar.jpg&#34; alt=&#34;DiagnostiCar&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The DiagnostiCar core feature was an expert system for giving hints to
 laypeople about their cars symptoms and their causes and consequences to

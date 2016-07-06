@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Setuptools on Daker Pinheiro</title>
-    <link>https://dakerfp.github.io/tags/setuptools/</link>
+    <link>http://dakerfp.github.io/tags/setuptools/</link>
     <description>Recent content in Setuptools on Daker Pinheiro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
     <lastBuildDate>Thu, 16 Jan 2014 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://dakerfp.github.io/tags/setuptools/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://dakerfp.github.io/tags/setuptools/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>PIL -&gt; Pillow</title>
-      <link>https://dakerfp.github.io/post/pil-pillow/</link>
+      <link>http://dakerfp.github.io/post/pil-pillow/</link>
       <pubDate>Thu, 16 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/pil-pillow/</guid>
+      <guid>http://dakerfp.github.io/post/pil-pillow/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://pillow.readthedocs.org/en/latest/index.html&#34;&gt;Pillow&lt;/a&gt; is a
 &lt;a href=&#34;http://pythonware.com/products/pil/&#34;&gt;PIL&lt;/a&gt; fork created to add new
 features. setuptools support was also added. A more frequent release

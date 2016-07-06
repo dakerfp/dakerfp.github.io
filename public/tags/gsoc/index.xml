@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gsoc on Daker Pinheiro</title>
-    <link>https://dakerfp.github.io/tags/gsoc/</link>
+    <link>http://dakerfp.github.io/tags/gsoc/</link>
     <description>Recent content in Gsoc on Daker Pinheiro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
     <lastBuildDate>Mon, 18 Jul 2011 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://dakerfp.github.io/tags/gsoc/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://dakerfp.github.io/tags/gsoc/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Back to Plasma Components</title>
-      <link>https://dakerfp.github.io/post/back_to_plasma_components/</link>
+      <link>http://dakerfp.github.io/post/back_to_plasma_components/</link>
       <pubDate>Mon, 18 Jul 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/back_to_plasma_components/</guid>
+      <guid>http://dakerfp.github.io/post/back_to_plasma_components/</guid>
       <description>
 
 &lt;p&gt;This last month I&amp;rsquo;ve been working slowly on my GSoC project due to the
@@ -78,10 +78,10 @@ report.&lt;/p&gt;
     
     <item>
       <title>Plasma Components</title>
-      <link>https://dakerfp.github.io/post/plasma-components/</link>
+      <link>http://dakerfp.github.io/post/plasma-components/</link>
       <pubDate>Thu, 19 May 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/plasma-components/</guid>
+      <guid>http://dakerfp.github.io/post/plasma-components/</guid>
       <description>&lt;p&gt;Hi,&lt;/p&gt;
 
 &lt;p&gt;I will talk about my GSoC project (\m/), the plasma components.
@@ -140,7 +140,7 @@ wanted in plasma:&lt;/p&gt;
 (plasma/declarativeimports/test/Gallery.qml) that you may view it with
 qmlviewer (after installing the components).&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/gallery.png&#34; alt=&#34;Gallery screenshot&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/gallery.png&#34; alt=&#34;Gallery screenshot&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Feedback is highly appreciated. ;-)&lt;/p&gt;
 </description>

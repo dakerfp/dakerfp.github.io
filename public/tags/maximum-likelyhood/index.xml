@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Maximum Likelyhood on Daker Pinheiro</title>
-    <link>https://dakerfp.github.io/tags/maximum-likelyhood/</link>
+    <link>http://dakerfp.github.io/tags/maximum-likelyhood/</link>
     <description>Recent content in Maximum Likelyhood on Daker Pinheiro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
     <lastBuildDate>Sun, 05 Jun 2011 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://dakerfp.github.io/tags/maximum-likelyhood/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://dakerfp.github.io/tags/maximum-likelyhood/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>CpG Islands (3) - Model Evaluation</title>
-      <link>https://dakerfp.github.io/post/cpg-islands-model-evaluation-3/</link>
+      <link>http://dakerfp.github.io/post/cpg-islands-model-evaluation-3/</link>
       <pubDate>Sun, 05 Jun 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/cpg-islands-model-evaluation-3/</guid>
+      <guid>http://dakerfp.github.io/post/cpg-islands-model-evaluation-3/</guid>
       <description>&lt;p&gt;Following the &lt;a href=&#34;http://codecereal.blogspot.com/2011/06/cpg-islands-2.html&#34;&gt;post&lt;/a&gt;
 we&amp;rsquo;ve built a Hidden Markov Model (HMM) for the &lt;a href=&#34;http://codecereal.blogspot.com/2011/05/cpg-islands-1.html&#34;&gt;CpG islands problem&lt;/a&gt;, using the training set.
 Now we should evaluate if our model is adequate to predict things about CpG islands.
@@ -77,7 +77,7 @@ confusion matrix for this HMM:&lt;/p&gt;
 +------------+------------+------------+
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/cpgs_labels.png&#34; alt=&#34;Matching of Real Sequence, Viterbi and Posterior results&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/cpgs_labels.png&#34; alt=&#34;Matching of Real Sequence, Viterbi and Posterior results&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The result obtained was not very accurate. It may happened because we
 had few data to train and to evaluate our model. We could also build a

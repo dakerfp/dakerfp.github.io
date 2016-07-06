@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Debug on Daker Pinheiro</title>
-    <link>https://dakerfp.github.io/tags/debug/</link>
+    <link>http://dakerfp.github.io/tags/debug/</link>
     <description>Recent content in Debug on Daker Pinheiro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
     <lastBuildDate>Fri, 27 Dec 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://dakerfp.github.io/tags/debug/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://dakerfp.github.io/tags/debug/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Improve your lazy debugging in C&#43;&#43;</title>
-      <link>https://dakerfp.github.io/post/improve-your-lazy-debugging-in-c/</link>
+      <link>http://dakerfp.github.io/post/improve-your-lazy-debugging-in-c/</link>
       <pubDate>Fri, 27 Dec 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/improve-your-lazy-debugging-in-c/</guid>
+      <guid>http://dakerfp.github.io/post/improve-your-lazy-debugging-in-c/</guid>
       <description>&lt;p&gt;Are you too lazy to learn your debugger? When debugging, I usually want
 to know if some code section is reached.&lt;/p&gt;
 

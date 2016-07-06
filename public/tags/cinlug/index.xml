@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cinlug on Daker Pinheiro</title>
-    <link>https://dakerfp.github.io/tags/cinlug/</link>
+    <link>http://dakerfp.github.io/tags/cinlug/</link>
     <description>Recent content in Cinlug on Daker Pinheiro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
     <lastBuildDate>Tue, 24 Aug 2010 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://dakerfp.github.io/tags/cinlug/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://dakerfp.github.io/tags/cinlug/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>MongoDB Presentation</title>
-      <link>https://dakerfp.github.io/post/mongodb-presentation/</link>
+      <link>http://dakerfp.github.io/post/mongodb-presentation/</link>
       <pubDate>Tue, 24 Aug 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/mongodb-presentation/</guid>
+      <guid>http://dakerfp.github.io/post/mongodb-presentation/</guid>
       <description>&lt;p&gt;Today I had the honor to make a presentation with Brunno Gommes
 (&lt;a href=&#34;http://twitter.com/brunnogomes&#34;&gt;@brunnogomes&lt;/a&gt;) about MongoDB on a
 Workshop (actually the second) of Free Software at CIn-UFPE. The

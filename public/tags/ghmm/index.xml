@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ghmm on Daker Pinheiro</title>
-    <link>https://dakerfp.github.io/tags/ghmm/</link>
+    <link>http://dakerfp.github.io/tags/ghmm/</link>
     <description>Recent content in Ghmm on Daker Pinheiro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
     <lastBuildDate>Thu, 07 Jul 2011 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://dakerfp.github.io/tags/ghmm/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://dakerfp.github.io/tags/ghmm/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Protein Profile with HMM</title>
-      <link>https://dakerfp.github.io/post/protein_profile_with_hmm/</link>
+      <link>http://dakerfp.github.io/post/protein_profile_with_hmm/</link>
       <pubDate>Thu, 07 Jul 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/protein_profile_with_hmm/</guid>
+      <guid>http://dakerfp.github.io/post/protein_profile_with_hmm/</guid>
       <description>&lt;p&gt;Profinling is the action of summarizing a set of data in a smaller mathematical
 model. One of the practical usages of profiling techniques is the
 classification of sequences. With a data set profile, you may calculate
@@ -53,7 +53,7 @@ between the matching states. And the deletion states always replaces
 some matching. One possible HMM template for building the model is
 presented in the following picture:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/profile_hmm.png&#34; alt=&#34;HMM protein profile model&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/profile_hmm.png&#34; alt=&#34;HMM protein profile model&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Each matching state (M~j~) is related to the matching on the j^th^ core
 alignment. The same applies for deletion state (D~j~). The insertion is
@@ -120,7 +120,7 @@ emissions probability, we should use the background distribution,
 because this is related to the general amino acid distribution. At the
 end, the model should be like this:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/null_model.png&#34; alt=&#34;Null Model&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/null_model.png&#34; alt=&#34;Null Model&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;For testing the proposed model, I used a set of 100
 &lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Globin&#34;&gt;globin&lt;/a&gt; proteins
@@ -149,10 +149,10 @@ model is very precise for this problem.&lt;/p&gt;
     
     <item>
       <title>CpG Islands (3) - Model Evaluation</title>
-      <link>https://dakerfp.github.io/post/cpg-islands-model-evaluation-3/</link>
+      <link>http://dakerfp.github.io/post/cpg-islands-model-evaluation-3/</link>
       <pubDate>Sun, 05 Jun 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/cpg-islands-model-evaluation-3/</guid>
+      <guid>http://dakerfp.github.io/post/cpg-islands-model-evaluation-3/</guid>
       <description>&lt;p&gt;Following the &lt;a href=&#34;http://codecereal.blogspot.com/2011/06/cpg-islands-2.html&#34;&gt;post&lt;/a&gt;
 we&amp;rsquo;ve built a Hidden Markov Model (HMM) for the &lt;a href=&#34;http://codecereal.blogspot.com/2011/05/cpg-islands-1.html&#34;&gt;CpG islands problem&lt;/a&gt;, using the training set.
 Now we should evaluate if our model is adequate to predict things about CpG islands.
@@ -214,7 +214,7 @@ confusion matrix for this HMM:&lt;/p&gt;
 +------------+------------+------------+
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/cpgs_labels.png&#34; alt=&#34;Matching of Real Sequence, Viterbi and Posterior results&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/cpgs_labels.png&#34; alt=&#34;Matching of Real Sequence, Viterbi and Posterior results&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The result obtained was not very accurate. It may happened because we
 had few data to train and to evaluate our model. We could also build a
@@ -230,10 +230,10 @@ But I keep this as future work.&lt;/p&gt;
     
     <item>
       <title>CpG Islands (2) - Building a Hidden Markov Model</title>
-      <link>https://dakerfp.github.io/post/cpg-islands-model-evaluation-2/</link>
+      <link>http://dakerfp.github.io/post/cpg-islands-model-evaluation-2/</link>
       <pubDate>Thu, 02 Jun 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/cpg-islands-model-evaluation-2/</guid>
+      <guid>http://dakerfp.github.io/post/cpg-islands-model-evaluation-2/</guid>
       <description>&lt;p&gt;By the definition of the CpG islands in the
 &lt;a href=&#34;http://codecereal.blogspot.com/2011/05/cpg-islands-1.html&#34;&gt;previous post&lt;/a&gt;
 and the &lt;a href=&#34;http://codecereal.blogspot.com/2011/05/hidden-markov-models.html&#34;&gt;Hidden Markov Models&lt;/a&gt;
@@ -247,7 +247,7 @@ S1) or do not (S0). If you analyse a sibling nucleotide it can stay in
 the same state or to change with complementary probabilities. We can
 view it as this Markov chain:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/cpg.png&#34; alt=&#34;CpG states Markov chain&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/cpg.png&#34; alt=&#34;CpG states Markov chain&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;As the emissions of the states S0 and S1, we may have the associated
 probabilities of the emissions of ACGT symbols. However we can&amp;rsquo;t know
@@ -268,7 +268,7 @@ to build the HMM.&lt;/p&gt;
 probabilities, I count each char frequency in the dataset and divide by
 the total amount of nucleotides in the same state:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/cpgemissions.png&#34; alt=&#34;Emissions probability diagram&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/cpgemissions.png&#34; alt=&#34;Emissions probability diagram&#34; /&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;P(A|S0) = a / (a+c+g+t) P(C|S0) = c / (a+c+g+t)
 P(G|S0) = g / (a+c+g+t) P(T|S0) = t / (a+c+g+t)
@@ -338,10 +338,10 @@ in the CpG island.&lt;/p&gt;
     
     <item>
       <title>Hidden Markov Models</title>
-      <link>https://dakerfp.github.io/post/hidden-markov-models/</link>
+      <link>http://dakerfp.github.io/post/hidden-markov-models/</link>
       <pubDate>Mon, 30 May 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/hidden-markov-models/</guid>
+      <guid>http://dakerfp.github.io/post/hidden-markov-models/</guid>
       <description>&lt;p&gt;Nowadays, many applications use
 &lt;a href=&#34;http://en.wikipedia.org/wiki/Hidden_Markov_model&#34;&gt;Hidden Markov Models&lt;/a&gt;
 (HMMs) to solve crucial issues such as bioinformatics, speech recognition,
@@ -383,7 +383,7 @@ tosses as a sequence of events we can say:&lt;/p&gt;
 
 &lt;p&gt;We can model it using a graph to illustrate the process:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/fairbet.png&#34; alt=&#34;HMM for &amp;quot;The Fair Bet Casino&amp;quot; problem&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/fairbet.png&#34; alt=&#34;HMM for &amp;quot;The Fair Bet Casino&amp;quot; problem&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;That&amp;rsquo;s a HMM! It isn&amp;rsquo;t any rocket science. Is just important to add a
 few remarks. We call the set of all possible emissions of the Markov
@@ -485,7 +485,7 @@ We also can plot a graph to show the behaviour of the curve of
 the probability of the dealer being using the fair coin
 (I used matplotlib for the graphs).&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/viterbi.png&#34; alt=&#34;Probability of being a fair coin over time&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/viterbi.png&#34; alt=&#34;Probability of being a fair coin over time&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This is only a superficial example of what can HMMs do. It&amp;rsquo;s worthy give
 a look at it if you want do some sequence or time series analysis in any
