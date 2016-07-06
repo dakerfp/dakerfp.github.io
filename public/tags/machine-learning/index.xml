@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Machine Learning on Daker Pinheiro</title>
-    <link>http://dakerfp.github.io/tags/machine-learning/</link>
+    <link>https://dakerfp.github.io/tags/machine-learning/</link>
     <description>Recent content in Machine Learning on Daker Pinheiro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
     <lastBuildDate>Thu, 07 Jul 2011 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://dakerfp.github.io/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://dakerfp.github.io/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Protein Profile with HMM</title>
-      <link>http://dakerfp.github.io/post/protein_profile_with_hmm/</link>
+      <link>https://dakerfp.github.io/post/protein_profile_with_hmm/</link>
       <pubDate>Thu, 07 Jul 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://dakerfp.github.io/post/protein_profile_with_hmm/</guid>
+      <guid>https://dakerfp.github.io/post/protein_profile_with_hmm/</guid>
       <description>&lt;p&gt;Profinling is the action of summarizing a set of data in a smaller mathematical
 model. One of the practical usages of profiling techniques is the
 classification of sequences. With a data set profile, you may calculate
@@ -53,7 +53,7 @@ between the matching states. And the deletion states always replaces
 some matching. One possible HMM template for building the model is
 presented in the following picture:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/profile_hmm.png&#34; alt=&#34;HMM protein profile model&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/profile_hmm.png&#34; alt=&#34;HMM protein profile model&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Each matching state (M~j~) is related to the matching on the j^th^ core
 alignment. The same applies for deletion state (D~j~). The insertion is
@@ -120,7 +120,7 @@ emissions probability, we should use the background distribution,
 because this is related to the general amino acid distribution. At the
 end, the model should be like this:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/null_model.png&#34; alt=&#34;Null Model&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/null_model.png&#34; alt=&#34;Null Model&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;For testing the proposed model, I used a set of 100
 &lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Globin&#34;&gt;globin&lt;/a&gt; proteins

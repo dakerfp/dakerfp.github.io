@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Maximum Likeliyhood on Daker Pinheiro</title>
-    <link>http://dakerfp.github.io/tags/maximum-likeliyhood/</link>
+    <link>https://dakerfp.github.io/tags/maximum-likeliyhood/</link>
     <description>Recent content in Maximum Likeliyhood on Daker Pinheiro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
     <lastBuildDate>Thu, 02 Jun 2011 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://dakerfp.github.io/tags/maximum-likeliyhood/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://dakerfp.github.io/tags/maximum-likeliyhood/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>CpG Islands (2) - Building a Hidden Markov Model</title>
-      <link>http://dakerfp.github.io/post/cpg-islands-model-evaluation-2/</link>
+      <link>https://dakerfp.github.io/post/cpg-islands-model-evaluation-2/</link>
       <pubDate>Thu, 02 Jun 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://dakerfp.github.io/post/cpg-islands-model-evaluation-2/</guid>
+      <guid>https://dakerfp.github.io/post/cpg-islands-model-evaluation-2/</guid>
       <description>&lt;p&gt;By the definition of the CpG islands in the
 &lt;a href=&#34;http://codecereal.blogspot.com/2011/05/cpg-islands-1.html&#34;&gt;previous post&lt;/a&gt;
 and the &lt;a href=&#34;http://codecereal.blogspot.com/2011/05/hidden-markov-models.html&#34;&gt;Hidden Markov Models&lt;/a&gt;
@@ -29,7 +29,7 @@ S1) or do not (S0). If you analyse a sibling nucleotide it can stay in
 the same state or to change with complementary probabilities. We can
 view it as this Markov chain:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/cpg.png&#34; alt=&#34;CpG states Markov chain&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/cpg.png&#34; alt=&#34;CpG states Markov chain&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;As the emissions of the states S0 and S1, we may have the associated
 probabilities of the emissions of ACGT symbols. However we can&amp;rsquo;t know
@@ -50,7 +50,7 @@ to build the HMM.&lt;/p&gt;
 probabilities, I count each char frequency in the dataset and divide by
 the total amount of nucleotides in the same state:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/cpgemissions.png&#34; alt=&#34;Emissions probability diagram&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/cpgemissions.png&#34; alt=&#34;Emissions probability diagram&#34; /&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;P(A|S0) = a / (a+c+g+t) P(C|S0) = c / (a+c+g+t)
 P(G|S0) = g / (a+c+g+t) P(T|S0) = t / (a+c+g+t)

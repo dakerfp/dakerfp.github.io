@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Python on Daker Pinheiro</title>
-    <link>http://dakerfp.github.io/tags/python/</link>
+    <link>https://dakerfp.github.io/tags/python/</link>
     <description>Recent content in Python on Daker Pinheiro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
     <lastBuildDate>Tue, 01 Dec 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://dakerfp.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://dakerfp.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Python cookbook: argmin &amp; argmax</title>
-      <link>http://dakerfp.github.io/post/python-argmin-argmax/</link>
+      <link>https://dakerfp.github.io/post/python-argmin-argmax/</link>
       <pubDate>Tue, 01 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://dakerfp.github.io/post/python-argmin-argmax/</guid>
+      <guid>https://dakerfp.github.io/post/python-argmin-argmax/</guid>
       <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def argmin(iter, function):
     return min((f(x), x) for x in iter)[1]
 
@@ -35,10 +35,10 @@ def argmax(iter, function):
     
     <item>
       <title>PIL -&gt; Pillow</title>
-      <link>http://dakerfp.github.io/post/pil-pillow/</link>
+      <link>https://dakerfp.github.io/post/pil-pillow/</link>
       <pubDate>Thu, 16 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://dakerfp.github.io/post/pil-pillow/</guid>
+      <guid>https://dakerfp.github.io/post/pil-pillow/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://pillow.readthedocs.org/en/latest/index.html&#34;&gt;Pillow&lt;/a&gt; is a
 &lt;a href=&#34;http://pythonware.com/products/pil/&#34;&gt;PIL&lt;/a&gt; fork created to add new
 features. setuptools support was also added. A more frequent release
@@ -57,10 +57,10 @@ to change your current PIL related code. 0 migration overhead.&lt;/p&gt;
     
     <item>
       <title>Reload and unload modules in Python</title>
-      <link>http://dakerfp.github.io/post/reload-and-unload-modules-in-python/</link>
+      <link>https://dakerfp.github.io/post/reload-and-unload-modules-in-python/</link>
       <pubDate>Mon, 13 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://dakerfp.github.io/post/reload-and-unload-modules-in-python/</guid>
+      <guid>https://dakerfp.github.io/post/reload-and-unload-modules-in-python/</guid>
       <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# python 2.7
 import math
 
@@ -80,10 +80,10 @@ del(math) # remove module
     
     <item>
       <title>Python cookbook: get the file dir path</title>
-      <link>http://dakerfp.github.io/post/python-cookbook-get-file-dir-path/</link>
+      <link>https://dakerfp.github.io/post/python-cookbook-get-file-dir-path/</link>
       <pubDate>Thu, 09 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://dakerfp.github.io/post/python-cookbook-get-file-dir-path/</guid>
+      <guid>https://dakerfp.github.io/post/python-cookbook-get-file-dir-path/</guid>
       <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import os
 os.path.dirname(os.path.abspath(__file__))
 &lt;/code&gt;&lt;/pre&gt;
@@ -92,10 +92,10 @@ os.path.dirname(os.path.abspath(__file__))
     
     <item>
       <title>Functional Pattern Matching with Python</title>
-      <link>http://dakerfp.github.io/post/functional-pattern-matching-with-python/</link>
+      <link>https://dakerfp.github.io/post/functional-pattern-matching-with-python/</link>
       <pubDate>Thu, 03 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://dakerfp.github.io/post/functional-pattern-matching-with-python/</guid>
+      <guid>https://dakerfp.github.io/post/functional-pattern-matching-with-python/</guid>
       <description>&lt;p&gt;This talk as given at Python Brasil 2013, at Brasília.&lt;/p&gt;
 
 &lt;p&gt;&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/Ivn9fHPiXO31Kc&#34; width=&#34;595&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; &lt;div style=&#34;margin-bottom:5px&#34;&gt; &lt;strong&gt; &lt;a href=&#34;//www.slideshare.net/dakerfp/functional-pattern-matching&#34; title=&#34;Functional Pattern Matching on Python&#34; target=&#34;_blank&#34;&gt;Functional Pattern Matching on Python&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href=&#34;//www.slideshare.net/dakerfp&#34; target=&#34;_blank&#34;&gt;Daker Fernandes&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;&lt;/p&gt;
@@ -104,10 +104,10 @@ os.path.dirname(os.path.abspath(__file__))
     
     <item>
       <title>Why is Python slow? Python Nordeste 2013</title>
-      <link>http://dakerfp.github.io/post/why-is-python-slow-python-nordeste-2013/</link>
+      <link>https://dakerfp.github.io/post/why-is-python-slow-python-nordeste-2013/</link>
       <pubDate>Thu, 30 May 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://dakerfp.github.io/post/why-is-python-slow-python-nordeste-2013/</guid>
+      <guid>https://dakerfp.github.io/post/why-is-python-slow-python-nordeste-2013/</guid>
       <description>&lt;p&gt;&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/2fMR2uzmpqvax7&#34; width=&#34;595&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; &lt;div style=&#34;margin-bottom:5px&#34;&gt; &lt;strong&gt; &lt;a href=&#34;//www.slideshare.net/dakerfp/pyne-whypythonisslow&#34; title=&#34;Why is Python slow? Python Nordeste 2013&#34; target=&#34;_blank&#34;&gt;Why is Python slow? Python Nordeste 2013&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href=&#34;//www.slideshare.net/dakerfp&#34; target=&#34;_blank&#34;&gt;Daker Fernandes&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;&lt;/p&gt;
 
 &lt;p&gt;It was a great event! Thanks to everyone who made it happen.&lt;/p&gt;
@@ -116,10 +116,10 @@ os.path.dirname(os.path.abspath(__file__))
     
     <item>
       <title>Raspberry &#43; Python at Python Brasil [8]</title>
-      <link>http://dakerfp.github.io/post/raspberry-python-at-python-brasil-8/</link>
+      <link>https://dakerfp.github.io/post/raspberry-python-at-python-brasil-8/</link>
       <pubDate>Fri, 23 Nov 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://dakerfp.github.io/post/raspberry-python-at-python-brasil-8/</guid>
+      <guid>https://dakerfp.github.io/post/raspberry-python-at-python-brasil-8/</guid>
       <description>&lt;p&gt;This is the presentation given at Python Brasil [8], in Rio de Janeiro.
 I hope you like it.&lt;/p&gt;
 
@@ -129,10 +129,10 @@ I hope you like it.&lt;/p&gt;
     
     <item>
       <title>Protein Profile with HMM</title>
-      <link>http://dakerfp.github.io/post/protein_profile_with_hmm/</link>
+      <link>https://dakerfp.github.io/post/protein_profile_with_hmm/</link>
       <pubDate>Thu, 07 Jul 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://dakerfp.github.io/post/protein_profile_with_hmm/</guid>
+      <guid>https://dakerfp.github.io/post/protein_profile_with_hmm/</guid>
       <description>&lt;p&gt;Profinling is the action of summarizing a set of data in a smaller mathematical
 model. One of the practical usages of profiling techniques is the
 classification of sequences. With a data set profile, you may calculate
@@ -170,7 +170,7 @@ between the matching states. And the deletion states always replaces
 some matching. One possible HMM template for building the model is
 presented in the following picture:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/profile_hmm.png&#34; alt=&#34;HMM protein profile model&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/profile_hmm.png&#34; alt=&#34;HMM protein profile model&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Each matching state (M~j~) is related to the matching on the j^th^ core
 alignment. The same applies for deletion state (D~j~). The insertion is
@@ -237,7 +237,7 @@ emissions probability, we should use the background distribution,
 because this is related to the general amino acid distribution. At the
 end, the model should be like this:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/null_model.png&#34; alt=&#34;Null Model&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/null_model.png&#34; alt=&#34;Null Model&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;For testing the proposed model, I used a set of 100
 &lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Globin&#34;&gt;globin&lt;/a&gt; proteins
@@ -266,10 +266,10 @@ model is very precise for this problem.&lt;/p&gt;
     
     <item>
       <title>Optimizing Functions with Python Caching Decorators</title>
-      <link>http://dakerfp.github.io/post/optimizing-functions-with-python-caching-decorators/</link>
+      <link>https://dakerfp.github.io/post/optimizing-functions-with-python-caching-decorators/</link>
       <pubDate>Sat, 11 Jun 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://dakerfp.github.io/post/optimizing-functions-with-python-caching-decorators/</guid>
+      <guid>https://dakerfp.github.io/post/optimizing-functions-with-python-caching-decorators/</guid>
       <description>&lt;p&gt;On these last months I&amp;rsquo;ve been solving some problems (such as some
 &lt;a href=&#34;http://en.wikipedia.org/wiki/Hidden_Markov_model&#34;&gt;HMMs&lt;/a&gt; algorithms)
 which the best solutions involves some kind of &lt;a href=&#34;http://en.wikipedia.org/wiki/Dynamic_programming&#34;&gt;dynamic
@@ -464,10 +464,10 @@ straightforward way.&lt;/p&gt;
     
     <item>
       <title>CpG Islands (3) - Model Evaluation</title>
-      <link>http://dakerfp.github.io/post/cpg-islands-model-evaluation-3/</link>
+      <link>https://dakerfp.github.io/post/cpg-islands-model-evaluation-3/</link>
       <pubDate>Sun, 05 Jun 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://dakerfp.github.io/post/cpg-islands-model-evaluation-3/</guid>
+      <guid>https://dakerfp.github.io/post/cpg-islands-model-evaluation-3/</guid>
       <description>&lt;p&gt;Following the &lt;a href=&#34;http://codecereal.blogspot.com/2011/06/cpg-islands-2.html&#34;&gt;post&lt;/a&gt;
 we&amp;rsquo;ve built a Hidden Markov Model (HMM) for the &lt;a href=&#34;http://codecereal.blogspot.com/2011/05/cpg-islands-1.html&#34;&gt;CpG islands problem&lt;/a&gt;, using the training set.
 Now we should evaluate if our model is adequate to predict things about CpG islands.
@@ -529,7 +529,7 @@ confusion matrix for this HMM:&lt;/p&gt;
 +------------+------------+------------+
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/cpgs_labels.png&#34; alt=&#34;Matching of Real Sequence, Viterbi and Posterior results&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/cpgs_labels.png&#34; alt=&#34;Matching of Real Sequence, Viterbi and Posterior results&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The result obtained was not very accurate. It may happened because we
 had few data to train and to evaluate our model. We could also build a
@@ -545,10 +545,10 @@ But I keep this as future work.&lt;/p&gt;
     
     <item>
       <title>CpG Islands (2) - Building a Hidden Markov Model</title>
-      <link>http://dakerfp.github.io/post/cpg-islands-model-evaluation-2/</link>
+      <link>https://dakerfp.github.io/post/cpg-islands-model-evaluation-2/</link>
       <pubDate>Thu, 02 Jun 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://dakerfp.github.io/post/cpg-islands-model-evaluation-2/</guid>
+      <guid>https://dakerfp.github.io/post/cpg-islands-model-evaluation-2/</guid>
       <description>&lt;p&gt;By the definition of the CpG islands in the
 &lt;a href=&#34;http://codecereal.blogspot.com/2011/05/cpg-islands-1.html&#34;&gt;previous post&lt;/a&gt;
 and the &lt;a href=&#34;http://codecereal.blogspot.com/2011/05/hidden-markov-models.html&#34;&gt;Hidden Markov Models&lt;/a&gt;
@@ -562,7 +562,7 @@ S1) or do not (S0). If you analyse a sibling nucleotide it can stay in
 the same state or to change with complementary probabilities. We can
 view it as this Markov chain:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/cpg.png&#34; alt=&#34;CpG states Markov chain&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/cpg.png&#34; alt=&#34;CpG states Markov chain&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;As the emissions of the states S0 and S1, we may have the associated
 probabilities of the emissions of ACGT symbols. However we can&amp;rsquo;t know
@@ -583,7 +583,7 @@ to build the HMM.&lt;/p&gt;
 probabilities, I count each char frequency in the dataset and divide by
 the total amount of nucleotides in the same state:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/cpgemissions.png&#34; alt=&#34;Emissions probability diagram&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/cpgemissions.png&#34; alt=&#34;Emissions probability diagram&#34; /&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;P(A|S0) = a / (a+c+g+t) P(C|S0) = c / (a+c+g+t)
 P(G|S0) = g / (a+c+g+t) P(T|S0) = t / (a+c+g+t)
@@ -653,10 +653,10 @@ in the CpG island.&lt;/p&gt;
     
     <item>
       <title>Hidden Markov Models</title>
-      <link>http://dakerfp.github.io/post/hidden-markov-models/</link>
+      <link>https://dakerfp.github.io/post/hidden-markov-models/</link>
       <pubDate>Mon, 30 May 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://dakerfp.github.io/post/hidden-markov-models/</guid>
+      <guid>https://dakerfp.github.io/post/hidden-markov-models/</guid>
       <description>&lt;p&gt;Nowadays, many applications use
 &lt;a href=&#34;http://en.wikipedia.org/wiki/Hidden_Markov_model&#34;&gt;Hidden Markov Models&lt;/a&gt;
 (HMMs) to solve crucial issues such as bioinformatics, speech recognition,
@@ -698,7 +698,7 @@ tosses as a sequence of events we can say:&lt;/p&gt;
 
 &lt;p&gt;We can model it using a graph to illustrate the process:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/fairbet.png&#34; alt=&#34;HMM for &amp;quot;The Fair Bet Casino&amp;quot; problem&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/fairbet.png&#34; alt=&#34;HMM for &amp;quot;The Fair Bet Casino&amp;quot; problem&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;That&amp;rsquo;s a HMM! It isn&amp;rsquo;t any rocket science. Is just important to add a
 few remarks. We call the set of all possible emissions of the Markov
@@ -800,7 +800,7 @@ We also can plot a graph to show the behaviour of the curve of
 the probability of the dealer being using the fair coin
 (I used matplotlib for the graphs).&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/viterbi.png&#34; alt=&#34;Probability of being a fair coin over time&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/viterbi.png&#34; alt=&#34;Probability of being a fair coin over time&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This is only a superficial example of what can HMMs do. It&amp;rsquo;s worthy give
 a look at it if you want do some sequence or time series analysis in any

@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hash on Daker Pinheiro</title>
-    <link>http://dakerfp.github.io/tags/hash/</link>
+    <link>https://dakerfp.github.io/tags/hash/</link>
     <description>Recent content in Hash on Daker Pinheiro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
     <lastBuildDate>Wed, 22 Jun 2011 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://dakerfp.github.io/tags/hash/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://dakerfp.github.io/tags/hash/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Encrypted Tweets</title>
-      <link>http://dakerfp.github.io/post/encrypted-tweets/</link>
+      <link>https://dakerfp.github.io/post/encrypted-tweets/</link>
       <pubDate>Wed, 22 Jun 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://dakerfp.github.io/post/encrypted-tweets/</guid>
+      <guid>https://dakerfp.github.io/post/encrypted-tweets/</guid>
       <description>
 
 &lt;p&gt;As a cryptography course project, me and
@@ -30,7 +30,7 @@ Another concerns emerges when we consider other attacks or ways of
 extracting informations from the cyphertext, as an example the
 &lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Known-plaintext_attack&#34;&gt;Known-Plaintext Attack&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/scheme.png&#34; alt=&#34;Configuration of the Encrypted Tweets problem - Alice securely broadcasting messages to a 
+&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/scheme.png&#34; alt=&#34;Configuration of the Encrypted Tweets problem - Alice securely broadcasting messages to a 
 specific group&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;In this project we should also consider other security issues such as
@@ -53,7 +53,7 @@ secure. We assumed that the script couldn&amp;rsquo;t be cracked, the focus wher
 we were concerned was about the information safety outside the script
 execution memory.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/tweet.png&#34; alt=&#34;Encrypt button and Group selection close to Tweet button&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/tweet.png&#34; alt=&#34;Encrypt button and Group selection close to Tweet button&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;encryption-specification&#34;&gt;Encryption Specification&lt;/h2&gt;
 
@@ -109,7 +109,7 @@ random. To handle this, the script stub creates a seed using the mouse
 positions at the first seconds of running (an entropy test is also used
 to check the randomness of the seed).&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/crt_encryption&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/crt_encryption&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;When someone receives an &amp;ldquo;aes:&amp;rdquo; tagged message, the script checks the
 author of the message and get the key provided by him. To decrypt, we
@@ -125,7 +125,7 @@ in the hard drive. To avoid the stealth of this information from other
 users, virus or worm we added an encryption layer over it. The stored
 data representation developed was this one:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://dakerfp.github.io/img/twitter2.png&#34; alt=&#34;Keys management screen&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/twitter2.png&#34; alt=&#34;Keys management screen&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;safe-storaging-specification&#34;&gt;Safe Storaging Specification&lt;/h2&gt;
 
