@@ -2,349 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Diagnosticar on Daker Pinheiro</title>
-    <link>https://dakerfp.github.io/tags/diagnosticar/</link>
+    <link>https://dakerfp.com/tags/diagnosticar/</link>
     <description>Recent content in Diagnosticar on Daker Pinheiro</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
+    <copyright>Ⓒ 2017 Daker Fernandes Pinheiro</copyright>
     <lastBuildDate>Thu, 29 Jul 2010 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://dakerfp.github.io/tags/diagnosticar/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://dakerfp.com/tags/diagnosticar/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>DiagnostiCar (4) - Abductive Reasoning</title>
-      <link>https://dakerfp.github.io/post/diagnosticar-4-abductive-reasoning/</link>
+      <link>https://dakerfp.com/post/diagnosticar-4-abductive-reasoning/</link>
       <pubDate>Thu, 29 Jul 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/diagnosticar-4-abductive-reasoning/</guid>
-      <description>&lt;p&gt;Finally I had some time to write about abductive reasoning, the core of
-the DiagnostiCar expert system. As you may know from my &lt;a href=&#34;http://codecereal.blogspot.com/2010/04/diagnosticar-introduction.html&#34;&gt;previous posts&lt;/a&gt;
-(means you&amp;rsquo;re tough and reached this point), the abductive reasoning
-tries to infer what facts implies a given situation.&lt;/p&gt;
-
-&lt;p&gt;To build such a reasoning we must start with the conclusion and try to
-prove it. Let&amp;rsquo;s say that we have the following scenario:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-prolog&#34;&gt;known mortal(X) &amp;lt;- human(X).
-known human(socrates).
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;How abductive reasoning behaves when tries to find out what things are
-mortal?&lt;/p&gt;
-
-&lt;p&gt;The first step is to check if &lt;strong&gt;mortal(X)&lt;/strong&gt; is a tautology such as:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-prolog&#34;&gt;known mortal(xerxes).
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;As in our example there isn&amp;rsquo;t such tautology the reasoning agent must
-try to find a rule which implies that something is mortal. In our case
-proceeds that &lt;code&gt;mortal(X) &amp;lt;- human(X)&lt;/code&gt; so to prove that something is
-mortal we have to prove that it is human. The first step is then
-repeated and we reach the tautology &lt;code&gt;human(socrates)&lt;/code&gt; which asserts
-that Socrates is mortal.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt; that we have no difference with we try to use Prolog directly:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-prolog&#34;&gt;mortal(X) :-
-    human(X).
-
-human(socrates).
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now consider a non trivial example. Imagine that we want to prove that
-&lt;code&gt;mortal(aristoteles)&lt;/code&gt; but we may let the reasoner conclude that such
-affirmation is only possible if Aristoteles is a human. Pretty smart
-huh? That&amp;rsquo;s what abductive reasoning is capable of. To build such a
-predicate we will need to know not only what are proving but also the
-user id (to ask questions when possible) and a list to yield what is
-being assumed.&lt;/p&gt;
-
-&lt;p&gt;Lets try to prove a goal using the following rules (together with
-the Prolog code):&lt;/p&gt;
-
-&lt;p&gt;1 - Check if the goal is a tautology:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-prolog&#34;&gt;abduction(_, Goal, _) :-
-    known(Goal).
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;2 - Check equalities:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-prolog&#34;&gt;abduction(_, Value == Value, _) :-
-    Value = Value.
-
-abduction(_, Value \= Value, _) :-
-    Value \= Value.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;3 - Check if the goal is implied by something else:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-prolog&#34;&gt;abduction(Uid, Goal, Assuming) :-
-    known(Goal &amp;lt;- Cause),
-    abduction(Uid, Cause, Assuming).
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;4 - If the goal is an or or an and conjunction:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-prolog&#34;&gt;abduction(Uid, Left &amp;amp; Right, Assuming) :-
-    abduction(Uid, Left, Assuming),
-    abduction(Uid, Right, Assuming).
-
-abduction(Uid, Left v _, Assuming) :-
-    abduction(Uid, Left, Assuming).
-
-abduction(Uid,_ v Right,Assuming) :-
-    abduction(Uid, Right, Assuming).
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;5 - Ask the user:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-prolog&#34;&gt;abduction(Uid, Goal, _) :-
-    functor(Goal,Question,1), 
-    askable(Question),
-    arg(1,Goal,Answer),
-    ask(Uid,Question,Answer). % Defined in a previous post
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;6 - Make an assumption:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-prolog&#34;&gt;abduction(_, Goal, Assuming) :-
-    assumable(Goal),
-    member(Goal, Assuming).
-    % Says that the goal must be assumed to reach the goal.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This does it&amp;rsquo;s task but we still have some problems. The first one is
-the lack of constraints. This reasoning doesn&amp;rsquo;t consider if you assume
-something that implies in a contradiction. e.g.: &lt;code&gt;known false &amp;lt;-
-mortal(X) &amp;amp; immortal(X)&lt;/code&gt;. Another problem we can observe is that the
-system doesn&amp;rsquo;t follow the Occam&amp;rsquo;s razor principle, which affirms that
-between two valid explanation the simplest tends to be true. Finally we
-have a crucial problem is a infinite loop occurence when you try to
-prove the negation of something and the goal is a tautology.&lt;/p&gt;
-
-&lt;p&gt;Let&amp;rsquo;s solve those problems by parts. The first can be solved with a
-predicate which proves the goal and doesn&amp;rsquo;t reach a contradiction at the
-same time:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-prolog&#34;&gt;reason(Uid, Goal, Assuming) :-
-    abductive_reasoning(Uid, Goal, Assuming),
-    not(abductive_reasoning(Uid, false, Assuming)).
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;But that predicate falls directly to the third problem. To solve this
-problem, the must intuitive solution is do a search starting with a
-empty list of assumptions and try incrementing the list size until it
-reachs a cutoff that you may assume that there is no explanation bigger
-than that. A simple and clear implementation of that would be:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-prolog&#34;&gt;max_assumptions(5).
-abductive_reasoning(Uid, Goal, Assuming) :-
-    max_assumptions(Max),
-    abduction(Uid, Goal, Assuming, Max).
-
-abduction(Uid, Goal, Assuming, Depth) :-
-    Depth &amp;gt;= 0,
-    max_assumptions(Max),
-    Len is Max - Depth,
-    length(Assuming, Len),
-    abduction(Uid, Goal, Assuming).
-
-abduction(Uid, Goal, Assuming, Depth) :-
-    NextStep is Depth - 1,
-    NextStep &amp;gt;= 0,
-    abduction(Uid, Goal, Assuming, NextStep).
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;It is not the most efficient code to handle code but works fine. You
-can avoid process a search path again by creating a dynamic predicate
-and asserting when a branch of the search is truth or false. It may use
-a lot of memory but it helps to execute faster.&lt;/p&gt;
-</description>
+      <guid>https://dakerfp.com/post/diagnosticar-4-abductive-reasoning/</guid>
+      <description>Finally I had some time to write about abductive reasoning, the core of the DiagnostiCar expert system. As you may know from my previous posts (means you&amp;rsquo;re tough and reached this point), the abductive reasoning tries to infer what facts implies a given situation.
+To build such a reasoning we must start with the conclusion and try to prove it. Let&amp;rsquo;s say that we have the following scenario:
+known mortal(X) &amp;lt;- human(X).</description>
     </item>
     
     <item>
       <title>DiagnostiCar (2) - Knowledge Representation Language</title>
-      <link>https://dakerfp.github.io/post/diagnosticar-2-knowledge-representation-language/</link>
+      <link>https://dakerfp.com/post/diagnosticar-2-knowledge-representation-language/</link>
       <pubDate>Sun, 11 Apr 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/diagnosticar-2-knowledge-representation-language/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;m giving sequence to the last post about the DiagnostiCar expert
-system. Today I&amp;rsquo;m going to specify the predicates to represent some
-domain specific knowledge.&lt;/p&gt;
-
-&lt;p&gt;Prolog has a helpful and clean &lt;a href=&#34;http://www.csci.csusb.edu/dick/samples/prolog.syntax.html&#34;&gt;syntax&lt;/a&gt;, at least when you&amp;rsquo;re used to, and it&amp;rsquo;s easy to define new &lt;a href=&#34;http://www.swi-prolog.org/pldoc/man?section=operators&#34;&gt;operators&lt;/a&gt; syntax in SWI.
-Such feature improves the readability of the knowledge base or other DSL you want to create.&lt;/p&gt;
-
-&lt;p&gt;To make an abductive reasoning we will need at least the logic operators
-&amp;lsquo;and&amp;rsquo;,&amp;lsquo;or&amp;rsquo; and &amp;lsquo;implies&amp;rsquo; to represent knowledge and chain it.&lt;/p&gt;
-
-&lt;p&gt;Our simple language will have the following syntax:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;known X&lt;/code&gt;: Says that the sentence X must be true;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;X \&amp;lt;- Y - X&lt;/code&gt;: X is caused by Y;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;X &amp;amp; Y&lt;/code&gt;: Is true if X and Y are true;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;X v Y&lt;/code&gt;: Is true if X or Y are true (&amp;lsquo;|&amp;rsquo; is already used by
-Prolog);&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;assumable X&lt;/code&gt;: X can be assumed to prove something;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;askable X&lt;/code&gt;: X can be asked to the user;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Note that I&amp;rsquo;m not using the negation, because some dangerous
-particularities of Prolog negation as failure.&lt;/p&gt;
-
-&lt;p&gt;It&amp;rsquo;s interesting to stress the difference if we represented
-the knowledge base with the regular prefixed notation of
-Prolog predicades:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-prolog&#34;&gt;- known(X)
-- &amp;lt;-(X,Y)
-- &amp;amp;(X,Y)
-- v(X,Y)
-- assumable(X)
-- askable(X)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Defining opertors increases the readabilty of the knowledge
-representation significantly. To redefine operators we will use the SWI
-predicate &lt;code&gt;op/3&lt;/code&gt;.
-We can define this predicate this way:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-prolog&#34;&gt;:- op(910, xfy, &amp;amp;).
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The &lt;code&gt;op/3&lt;/code&gt; predicate has three fields &lt;code&gt;op(+Precedence, +Type, :Name)&lt;/code&gt;.
-The first one says the precendence of the operator (a number between 0
-and 1200). The second is how the functor will be placed within it&amp;rsquo;s
-&amp;ldquo;children nodes&amp;rdquo;, for example: &lt;code&gt;xfy&lt;/code&gt; let the functor between the
-arguments while &lt;code&gt;xf&lt;/code&gt; let the functor after it&amp;rsquo;s argument (remembering
-that you can only create unary or binary operators). For our
-representation language we have:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-prolog&#34;&gt;:- discontiguous(     known/1 ). % The discontiguous predicate tells Prolog
-:- discontiguous( assumable/1 ). % that the given predicate can be declared
-:- discontiguous(   askable/1 ). % unsorted.
-
-:- op(910, xfy,      &amp;amp;    ). % a higher priority with an infix notation
-:- op(920, xfy,      v    ). % infix notation and lower priority than &amp;amp;
-:- op(930, xfy,     &amp;lt;-    ). % infix notation
-:- op(940,  fx,   known   ). % prefixed notation and lowest priority
-:- op(940,  fx, assumable ). % prefixed notation and lowest priority
-:- op(940,  fx,   askable ). % prefixed notation and lowest priority
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now let&amp;rsquo;s model the car problems knowledge into our language (remember
-that Upper names are variables):&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-prolog&#34;&gt;%
-% DiagnostiCar - Knowledge Base
-%
-
-% Observe that implication is seen as the real sense of consequence &amp;lt;- cause.
-known problem(crank_case_damaged) &amp;lt;- crank_case_damaged.
-known problem(hydraulic_res_damaged) &amp;lt;- hydraulic_res_damaged.
-known problem(brakes_res_damaged) &amp;lt;- brakes_res_damaged.
-known problem(old_engine_oil) &amp;lt;- old_engine_oil &amp;amp; leak_color(black).
-
-known leak(engine_oil) &amp;lt;- crank_case_damaged.
-known leak(hydraulic_oil) &amp;lt;- hydraulic_res_damaged.
-known leak(brakes_oil) &amp;lt;- brakes_res_damaged.
-
-% Implications in false can be seen as constraints.
-known oil(Oil) &amp;lt;- exists_leak(true) &amp;amp; leak(Oil).
-known false &amp;lt;- oil(brakes_oil) &amp;amp; leak_color(Color) &amp;amp; Color \= green. 
-known false &amp;lt;- oil(engine_oil) &amp;amp; leak_color(Color) &amp;amp; Color \= brown &amp;amp; Color \= black.
-known false &amp;lt;- oil(hydraulic_oil) &amp;amp; leak_color(Color) &amp;amp; Color \= red.
-
-% The assumable predicate asserts what will be can be suposed 
-assumable crank_case_damaged.
-assumable hydraulic_res_damaged. % to prove something e else.
-assumable brakes_res_damaged.
-assumable old_engine_oil.
-
-askable leak_color(Color). % Askable predicate asserts which information will be asked for the user.
-askable exists_leak(TrueOrFalse). % The argument of the predicate will be unified with the answer.
-
-known goal(X) &amp;lt;- problem(X). % The goal predicate is what we want to prove with the expert system.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;That&amp;rsquo;s all for now. On the next post I will explain the question and
-answer interface using the dynamic Prolog predicates.&lt;/p&gt;
-</description>
+      <guid>https://dakerfp.com/post/diagnosticar-2-knowledge-representation-language/</guid>
+      <description>I&amp;rsquo;m giving sequence to the last post about the DiagnostiCar expert system. Today I&amp;rsquo;m going to specify the predicates to represent some domain specific knowledge.
+Prolog has a helpful and clean syntax, at least when you&amp;rsquo;re used to, and it&amp;rsquo;s easy to define new operators syntax in SWI. Such feature improves the readability of the knowledge base or other DSL you want to create.
+To make an abductive reasoning we will need at least the logic operators &amp;lsquo;and&amp;rsquo;,&amp;lsquo;or&amp;rsquo; and &amp;lsquo;implies&amp;rsquo; to represent knowledge and chain it.</description>
     </item>
     
     <item>
       <title>DiagnostiCar (1) - Introduction</title>
-      <link>https://dakerfp.github.io/post/diagnosticar-1/</link>
+      <link>https://dakerfp.com/post/diagnosticar-1/</link>
       <pubDate>Wed, 07 Apr 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/diagnosticar-1/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;m here to tell my expirience with logic programming in a grad
-project: DiagnostiCar, an web expert system for car diagnosis.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/diagnosticar.jpg&#34; alt=&#34;DiagnostiCar&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The DiagnostiCar core feature was an expert system for giving hints to
-laypeople about their cars symptoms and their causes and consequences to
-avoid being deceived by mechanics (an habit of the job). Communication
-between the system and the users was conceived to happen with multiple
-choice questions forms and at the end the system gives the possible
-causes for the observed car characteristics.&lt;/p&gt;
-
-&lt;p&gt;This is a video of the DiagnostiCar expert system interface working:&lt;/p&gt;
-
-&lt;iframe width=&#34;640&#34; height=&#34;360&#34; src=&#34;https://www.youtube.com/embed/OxsAWwmGL88?feature=player_embedded&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;Although there are many other interesting aspects about the
-DiagnostiCar, let&amp;rsquo;s focus on the shell system. The expert system
-reasoning system used was abductive reasoning which is a kind of
-reasoning that tries to find a plausible cause (or a set of them) for a
-given fact occurrence [1][2]. Find the causes for a given observation is
-exactly what we need for diagnose car problems (the cause of the
-observable symptoms).&lt;/p&gt;
-
-&lt;p&gt;I choose to use Prolog not only because it&amp;rsquo;s default support to
-first-order logic (although some logic limitations on negation [3]), but
-it has a nice support for pattern matching and syntax operator
-definition (most of the Prolog implementations). From the Prolog
-implementations I&amp;rsquo;ve picked SWI Prolog due to it&amp;rsquo;s multi-thread support
-(necessary for a system running on a multiple user environment),
-stability and speed (not as fast as the YAP) [4].&lt;/p&gt;
-
-&lt;p&gt;To illustrate the process of development of the expert system we will
-restrict our diagnosis to the problems consisting of some oil leaks
-problem. Here are some of the knowledge about car diagnosis I will use
-as example in the next sections:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;A crank case, hydraulic oil reservoir and brakes fluid reservoir
-damaged are problems;&lt;/li&gt;
-&lt;li&gt;The crank case damaged provokes leak of engine oil;&lt;/li&gt;
-&lt;li&gt;The hydraulic reservoir damaged provokes leak of hydraulic system
-oil;&lt;/li&gt;
-&lt;li&gt;The brakes fluid reservoir damaged provokes leak of engine oil; &lt;/li&gt;
-&lt;li&gt;If an oil is leaking it dirts the garage&amp;rsquo;s floor.&lt;/li&gt;
-&lt;li&gt;The brakes fluid is green.&lt;/li&gt;
-&lt;li&gt;The hydraulic oil is red.&lt;/li&gt;
-&lt;li&gt;The engine oil is black or brown.&lt;/li&gt;
-&lt;li&gt;If the engine oil is black, then it needs to be changed.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;For the next parts, it&amp;rsquo;s good to know the basic about Prolog. A VERY
-good material about Prolog, it&amp;rsquo;s a the book &amp;ldquo;Building Expert Systems in
-Prolog&amp;rdquo;[5] which guided through the realms of logic programming and the
-nasty api&amp;rsquo;s documentations. It is also very pratical and full of
-examples to follow. It&amp;rsquo;s also good see the SWI reference to check some
-SWI particularities [6].&lt;/p&gt;
-
-&lt;p&gt;[1] &lt;a href=&#34;http://en.wikipedia.org/wiki/Abductive_logic_programming&#34;&gt;Abductive Logic Programming&lt;/a&gt;
-[2] &lt;a href=&#34;http://en.wikipedia.org/wiki/Abductive_reasoning&#34;&gt;Abducive Reasoning&lt;/a&gt;
-[3] &lt;a href=&#34;http://en.wikipedia.org/wiki/Negation_as_failure&#34;&gt;Prolog Negation as Failure&lt;/a&gt;
-[4] &lt;a href=&#34;http://www.david-reitter.com/compling/prolog/compare.html&#34;&gt;Prologs Implementation Comparisons&lt;/a&gt;
-[5] &lt;a href=&#34;http://www.amzi.com/ExpertSystemsInProlog/xsipfrtop.htm&#34;&gt;&amp;ldquo;Building Expert Systems in Prolog&amp;rdquo;&lt;/a&gt;
-[6] &lt;a href=&#34;http://www.swi-prolog.org/pldoc/refman/&#34;&gt;SWI Manual&lt;/a&gt;&lt;/p&gt;
-</description>
+      <guid>https://dakerfp.com/post/diagnosticar-1/</guid>
+      <description>I&amp;rsquo;m here to tell my expirience with logic programming in a grad project: DiagnostiCar, an web expert system for car diagnosis.
+The DiagnostiCar core feature was an expert system for giving hints to laypeople about their cars symptoms and their causes and consequences to avoid being deceived by mechanics (an habit of the job). Communication between the system and the users was conceived to happen with multiple choice questions forms and at the end the system gives the possible causes for the observed car characteristics.</description>
     </item>
     
   </channel>

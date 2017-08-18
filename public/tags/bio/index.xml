@@ -2,338 +2,43 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bio on Daker Pinheiro</title>
-    <link>https://dakerfp.github.io/tags/bio/</link>
+    <link>https://dakerfp.com/tags/bio/</link>
     <description>Recent content in Bio on Daker Pinheiro</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
+    <copyright>Ⓒ 2017 Daker Fernandes Pinheiro</copyright>
     <lastBuildDate>Thu, 07 Jul 2011 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://dakerfp.github.io/tags/bio/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://dakerfp.com/tags/bio/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Protein Profile with HMM</title>
-      <link>https://dakerfp.github.io/post/protein_profile_with_hmm/</link>
+      <link>https://dakerfp.com/post/protein_profile_with_hmm/</link>
       <pubDate>Thu, 07 Jul 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/protein_profile_with_hmm/</guid>
-      <description>&lt;p&gt;Profinling is the action of summarizing a set of data in a smaller mathematical
-model. One of the practical usages of profiling techniques is the
-classification of sequences. With a data set profile, you may calculate
-the distance of an instance to the model, and classify the instance
-trough this value.&lt;/p&gt;
-
-&lt;p&gt;Profiling proteins is a more specific case of profiling sequences. As we
-know from the previous post about &lt;a href=&#34;http://codecereal.blogspot.com/2011/05/hidden-markov-models.html&#34;&gt;Hidden Markov
-Models&lt;/a&gt;
-(HMMs) is a very robust mathematical model to represent
-probabilistically sequences. This post will detail how to profile sets
-of proteins with a HMM model.&lt;/p&gt;
-
-&lt;p&gt;The HMM model for this problem must be a HMM which when we calculate a
-probability of generation of a protein by the model, must give higher
-probabilities for proteins similar for the ones used to create the
-profile against the others.&lt;/p&gt;
-
-&lt;p&gt;To build the model, I&amp;rsquo;ve started with a &lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Multiple_sequence_alignment&#34;&gt;multiple sequence
-alignment&lt;/a&gt;
-to see how is the structure of the sequences. That means that our HMM
-will be a probabilistic representation of a multiple alignment. With the
-alignment we see that some columns are complete and some are almost, and
-the others have few data. These most common matches can be used as a
-common matches for our model and the deletions and insertions can be
-modelled as other states. Here is an example of a few sequences aligned
-and the core columns of the alignment (marked with an *):&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;AC----ATGTCAACTATCACAC--AGCAGA---ATCACCG--ATC&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;With this sample of alignment we have examples of insertions and
-deletions between the core alignments, which may have a state on the HMM
-to represent them. Note that insertions may occur on arbitrary times
-between the matching states. And the deletion states always replaces
-some matching. One possible HMM template for building the model is
-presented in the following picture:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/profile_hmm.png&#34; alt=&#34;HMM protein profile model&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Each matching state (M~j~) is related to the matching on the j^th^ core
-alignment. The same applies for deletion state (D~j~). The insertion is
-slightly different, because it represents the insertions between the
-core alignments, that&amp;rsquo;s why it has one extra state, and this enable to
-represent states before the first and after the last alignment.&lt;/p&gt;
-
-&lt;p&gt;Our model will be like the one in the picture with the same length as
-the core alignments of a multiple alignment for a given set of
-sequences. However we should use &lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Maximum_likelihood&#34;&gt;maximum likelihood&lt;/a&gt;
-to estimate the transitions and emission for each state. The easiest way
-to count the total emissions/transitions, is to thread each sequence to
-be profiled in the model. For each symbol in the aligned sequence you
-must check if the symbol is in the core alignment. If it is, then
-increment the count of that state to the next match state, otherwise,
-you go to the insertion state. If it is a deletion, go to the deletion
-state and increment the transition. Finally, to calculate the
-probability for the transitions, just divide the count of each
-transition and divide it by all the states leaving the same state. It&amp;rsquo;s
-important to notice that we have a stopping state, and this is a special
-state that has no transitions.&lt;/p&gt;
-
-&lt;p&gt;Note that is important to initialize the model with pseudo counts at
-each possible transitions. Adding this pseudo count, we let our model
-less rigid and avoid overfitting to the train set. Otherwise we could
-have some zero probabilities for some sequences.&lt;/p&gt;
-
-&lt;p&gt;To create the emissions probabilities, at each match state, you also
-have to count which symbol was emitted and then increment them. To
-calculate the probability, just divide it by the total symbols matched
-in the threading process. &lt;/p&gt;
-
-&lt;p&gt;The similar process could be done with the insertion. However, the
-insertion states are characterized by having a low occurrence rate and
-this may lead us directly to a overfitting problem because the number of
-emissions must be too small. To avoid this we should use the background
-distribution as the emissions probabilities of each insertion state. The
-background distribution is the probability of the occurrence of a given
-amino acid in the entire protein set. To calculate this, count each
-amino acid type for all the train set sequence and then divided by the
-total count.&lt;/p&gt;
-
-&lt;p&gt;For the deletion states, it&amp;rsquo;s important to notice that it is a silent
-state. It doesn&amp;rsquo;t emit any symbol at all. To signalize it in ghmm, just
-let all the emissions probabilities with 0. Note that the end state is
-also a silent state once we have no emission associated to it.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;ALERT&lt;/strong&gt;: the loglikelihood is the only function in the ghmm library which
-handles silent states correctly.&lt;/p&gt;
-
-&lt;p&gt;At this point, the model is ready for use. However we have a problem of
-how to classify a new protein sequence. A threshold could be used to
-divide the two classes. However, the most common alternative is to use a
-null model to compare with it. The null model is a model which aims
-represents any protein with similar probability as any other. With this
-two models we could take a sequence and compare if it is more similar to
-a general definition of a protein or to a specific family. This model
-should model a sequence with average size equal to the aligned sequences
-being handled, and should emit any kind of symbol at each position. A
-common alternative for creating the null model, is using a single
-insertion state, which goes to a stopping state with probability of 1
-divided by the average length of  sequences in the train set. For the
-emissions probability, we should use the background distribution,
-because this is related to the general amino acid distribution. At the
-end, the model should be like this:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/null_model.png&#34; alt=&#34;Null Model&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;For testing the proposed model, I used a set of 100
-&lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Globin&#34;&gt;globin&lt;/a&gt; proteins
-from the &lt;a href=&#34;http://www.ncbi.nlm.nih.gov/&#34;&gt;NCBI&lt;/a&gt; protein repository as a
-train set to build a profile model, and used
-&lt;a href=&#34;http://ghmm.sourceforge.net/&#34;&gt;ghmm&lt;/a&gt; to build and test the model.&lt;/p&gt;
-
-&lt;p&gt;To test if our model corresponds to our expectations, 100 globins
-different from the ones in the trains set were used with 1800 other
-random proteins with similar length. The loglikelihood function from the
-ghmm library to calculate the similarity index. The classification of
-the globins versus non globins, was a comparison between the likelihood
-of the protein with the globins profile hmm, and the null model. This
-test gave us 100% of accuracy! To display this result graph, each
-sequence was pointed out in a graph where the horizontal axis displays
-the length of the sequence and the vertical the log of globins / null
-models likelihood (or globins - null model loglikelihood). The globins
-are plotted in red an the others in blue. Proteins over the zero line
-are classified as globins, and below means they aren&amp;rsquo;t globins. The
-graphs show us a clear distinction between the classes, and that our
-model is very precise for this problem.&lt;/p&gt;
-
-&lt;p&gt;![Length x log(Globin&amp;rsquo;s Profile Model Likelihood/Null Model Likelihood)&lt;/p&gt;
-</description>
+      <guid>https://dakerfp.com/post/protein_profile_with_hmm/</guid>
+      <description>Profinling is the action of summarizing a set of data in a smaller mathematical model. One of the practical usages of profiling techniques is the classification of sequences. With a data set profile, you may calculate the distance of an instance to the model, and classify the instance trough this value.
+Profiling proteins is a more specific case of profiling sequences. As we know from the previous post about Hidden Markov Models (HMMs) is a very robust mathematical model to represent probabilistically sequences.</description>
     </item>
     
     <item>
       <title>CpG Islands (3) - Model Evaluation</title>
-      <link>https://dakerfp.github.io/post/cpg-islands-model-evaluation-3/</link>
+      <link>https://dakerfp.com/post/cpg-islands-model-evaluation-3/</link>
       <pubDate>Sun, 05 Jun 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/cpg-islands-model-evaluation-3/</guid>
-      <description>&lt;p&gt;Following the &lt;a href=&#34;http://codecereal.blogspot.com/2011/06/cpg-islands-2.html&#34;&gt;post&lt;/a&gt;
-we&amp;rsquo;ve built a Hidden Markov Model (HMM) for the &lt;a href=&#34;http://codecereal.blogspot.com/2011/05/cpg-islands-1.html&#34;&gt;CpG islands problem&lt;/a&gt;, using the training set.
-Now we should evaluate if our model is adequate to predict things about CpG islands.
-For evaluate we may use a tagged
-sequence and see if the HMM we built can predict the islands and what is
-it&amp;rsquo;s accuracy.&lt;/p&gt;
-
-&lt;p&gt;Using the viterbi path and a tagged sequence (out ouf the training set),
-enable us to compare if the estimative given by the model is coherent
-with the real data. Using the HMM and the training and test sets of the
-last post, we can compare the results using a &lt;a href=&#34;http://en.wikipedia.org/wiki/Confusion_matrix&#34;&gt;confusion
-matrix&lt;/a&gt;. For example, at
-the following snippet of the viterbi path paired with the tagged
-sequence:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;[ ... 0,0,0,0,0,1,1,1,1,1, ... ]
-[ ... a t t g t c C G A C  ... ]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;We may calculate the following confusion matrix:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;+--------------------------------------+ 
-|            |  Island    | Non Island |
-+------------+------------+------------+
-| Island     |     4      |      0     |
-+------------+------------+------------+
-| Non Island |     1      |      5     |
-+------------+------------+------------+
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Note that the bigger are the main diagonal values, the more accurate our
-model is. Making this matrix with the experiment made (using
-&lt;a href=&#34;http://codecereal.blogspot.com/2011/06/cpg-islands-2.html&#34;&gt;HMM with maximum likelihood&lt;/a&gt;)
-I got the following matrix:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;+--------------------------------------+ 
-|            |  Island    | Non Island |
-+------------+------------+------------+
-| Island     |   328815   |    61411   |
-+------------+------------+------------+
-| Non Island |  1381515   |   1889819  |
-+------------+------------+------------+
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;We may see that a good amount of islands was correctly predicted (84,26%
-of the islands), but 57,76% of the non islands regions was classified as
-islands, which is a bad indicator. A experiment with the HMM after
-running the Baum Welch was also evaluated. The results was better from
-the obtained by the maximum likelihood when predicting islands (96,56%
-of accuracy). But also obtained a higher miss rate (70,70%). Here is the
-confusion matrix for this HMM:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;+--------------------------------------+ 
-|            |  Island    | Non Island |
-+------------+------------+------------+
-| Island     |   376839   |    13387   |
-+------------+------------+------------+
-| Non Island |  2313138   |   958196   |
-+------------+------------+------------+
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/cpgs_labels.png&#34; alt=&#34;Matching of Real Sequence, Viterbi and Posterior results&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The result obtained was not very accurate. It may happened because we
-had few data to train and to evaluate our model. We could also build a
-HMM with other indicators that identify the CpG islands for model it
-better. Remember we simplified the CpG problem to the frequencies of
-occurring Cs and Gs, but a better model could also use the CG pairs.
-Using a more complicate HMM we could have more than 2 states and then
-associate a set of states to the CpG and non CpG islands sites. This
-would allow to use better the posterior result to classify the sequence.
-But I keep this as future work.&lt;/p&gt;
-</description>
+      <guid>https://dakerfp.com/post/cpg-islands-model-evaluation-3/</guid>
+      <description>Following the post we&amp;rsquo;ve built a Hidden Markov Model (HMM) for the CpG islands problem, using the training set. Now we should evaluate if our model is adequate to predict things about CpG islands. For evaluate we may use a tagged sequence and see if the HMM we built can predict the islands and what is it&amp;rsquo;s accuracy.
+Using the viterbi path and a tagged sequence (out ouf the training set), enable us to compare if the estimative given by the model is coherent with the real data.</description>
     </item>
     
     <item>
       <title>CpG Islands (2) - Building a Hidden Markov Model</title>
-      <link>https://dakerfp.github.io/post/cpg-islands-model-evaluation-2/</link>
+      <link>https://dakerfp.com/post/cpg-islands-model-evaluation-2/</link>
       <pubDate>Thu, 02 Jun 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/cpg-islands-model-evaluation-2/</guid>
-      <description>&lt;p&gt;By the definition of the CpG islands in the
-&lt;a href=&#34;http://codecereal.blogspot.com/2011/05/cpg-islands-1.html&#34;&gt;previous post&lt;/a&gt;
-and the &lt;a href=&#34;http://codecereal.blogspot.com/2011/05/hidden-markov-models.html&#34;&gt;Hidden Markov Models&lt;/a&gt;
-(HMMs) short introduction, we now can model a HMM for finding CpG
-islands. We can create a model very similar to the &amp;ldquo;Fair Bet Casino&amp;rdquo;
-problem.&lt;/p&gt;
-
-&lt;p&gt;When we are in a nucleotide of given DNA sequence there are two
-possibilities, that nucleotide belongs to CpG island (lets denote state
-S1) or do not (S0). If you analyse a sibling nucleotide it can stay in
-the same state or to change with complementary probabilities. We can
-view it as this Markov chain:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/cpg.png&#34; alt=&#34;CpG states Markov chain&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;As the emissions of the states S0 and S1, we may have the associated
-probabilities of the emissions of ACGT symbols. However we can&amp;rsquo;t know
-for now how much are these probabilities. However if we have a dataset
-of sequences with the attached information of where the CpG islands
-occurs, we can estimate those parameters. I used these DNA
-&lt;a href=&#34;http://www.cin.ufpe.br/%7Eigcf&#34;&gt;sequences&lt;/a&gt; tagged by biologists (used
-&lt;a href=&#34;http://biopython.org/wiki/Main_Page&#34;&gt;biopython&lt;/a&gt; library to parse the
-&lt;a href=&#34;http://en.wikipedia.org/wiki/FASTA_format&#34;&gt;.fasta&lt;/a&gt; files) as the
-training and test sets to build the model and evaluate the technique.
-This dataset consists of nucleotides in upper and lower cases. When we
-have a given nucleotide in upper case, it denotes that it is a CpG site
-and the lower case nucleotides means they are not. I used a statistical
-technique called &lt;a href=&#34;http://en.wikipedia.org/wiki/Maximum_likelihood&#34;&gt;maximum likelihood&lt;/a&gt;
-to build the HMM.&lt;/p&gt;
-
-&lt;p&gt;Using the maximum likelihood to calculate the HMM emissions
-probabilities, I count each char frequency in the dataset and divide by
-the total amount of nucleotides in the same state:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/cpgemissions.png&#34; alt=&#34;Emissions probability diagram&#34; /&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;P(A|S0) = a / (a+c+g+t) P(C|S0) = c / (a+c+g+t)
-P(G|S0) = g / (a+c+g+t) P(T|S0) = t / (a+c+g+t)
-P(A|S1) = A / (A+C+G+T) P(C|S1) = C / (A+C+G+T)
-P(G|S1) = G / (A+C+G+T) P(T|S1) = T / (A+C+G+T)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;And to calculate the transition probabilities of each state, count the
-number of transitions between a CpG to a non CpG site ``(out_of) and
-the reversal transitions (into). Then divide each of them by the state
-frequency which they&amp;rsquo;re coming from. Note that the permanence
-probability of each state is the complement of the probability of
-transiting between states since there is no other state to go:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;P(S0|S1) = out_of / (A+C+G+T)
-P(S1|S0) = into / (a+c+g+t)
-P(S0|S0) = 1 - P(S1|S0)
-P(S1|S1) = 1 - P(S0|S1)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Our model is almost done, it just lacks of the initial transitions which
-can be supposed to be the frequency of each state over all nucleotides:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;P(S0) = a + c + g + t / (a + c + g + t + A + C + G + T)
-P(S1) = A + C + G + T / (a + c + g + t + A + C + G + T)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I used the &lt;a href=&#34;http://ghmm.org/&#34;&gt;ghmm&lt;/a&gt; to create my HMM with the given
-dataset and it generated this model:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;DiscreteEmissionHMM(N=2, M=4)
-	state 0 (initial=0.97)
-       Emissions: 0.30, 0.21, 0.20, 0.29
-       Transitions: -&amp;gt;0 (0.00), -&amp;gt;1 (1.00)
-   state 1 (initial=0.03)
-       Emissions: 0.22, 0.29, 0.29, 0.20
-       Transitions: -&amp;gt;0 (1.00), -&amp;gt;1 (0.00)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;It&amp;rsquo;s important to notice that when we print the HMM it says that has the
-probability of 1 to stay in the same state. This occurs due to float
-formatted print. The reality is that in that value is very close to 1
-but still has a chance to hop between states. It&amp;rsquo;s also interesting to
-see the probability of emission of C and G when we contrast the states.
-In S1 the probability of getting a C or a G is significantly higher than
-in S0.&lt;/p&gt;
-
-&lt;p&gt;Another manner of creating the HMM, is by initializing a model with the
-same structure we modelled the problem and then apply some unsupervised
-learning algorithms, such as the
-&lt;a href=&#34;http://en.wikipedia.org/wiki/Baum%E2%80%93Welch_algorithm&#34;&gt;Baum Welch&lt;/a&gt;
-algorithm. The Baum Welch uses randomized initial weights in the HMM and
-once you feed untagged sequences, it tries to infer a model. However,
-usually is far better initialize your HMM with biased data about the
-problem (for example using the model we created) and let the Baum Welch
-calibrate the probabilities. With ghmm do the following:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sigma = ghmm.IntegerRange(0,4) # our emission alphabet
-emission_seq = ghmm.EmissionSequence(sigma, [0, 4, 5, ... ]) # create a emission sequence hmm.
-baumWelch(sigma, emission_seq) # use a template hmm to calibrate the probablities
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;In the next post I will show how is the evaluation process of the HMM
-in the CpG island.&lt;/p&gt;
-</description>
+      <guid>https://dakerfp.com/post/cpg-islands-model-evaluation-2/</guid>
+      <description>By the definition of the CpG islands in the previous post and the Hidden Markov Models (HMMs) short introduction, we now can model a HMM for finding CpG islands. We can create a model very similar to the &amp;ldquo;Fair Bet Casino&amp;rdquo; problem.
+When we are in a nucleotide of given DNA sequence there are two possibilities, that nucleotide belongs to CpG island (lets denote state S1) or do not (S0). If you analyse a sibling nucleotide it can stay in the same state or to change with complementary probabilities.</description>
     </item>
     
   </channel>

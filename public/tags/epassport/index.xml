@@ -2,132 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Epassport on Daker Pinheiro</title>
-    <link>https://dakerfp.github.io/tags/epassport/</link>
+    <link>https://dakerfp.com/tags/epassport/</link>
     <description>Recent content in Epassport on Daker Pinheiro</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
+    <copyright>Ⓒ 2017 Daker Fernandes Pinheiro</copyright>
     <lastBuildDate>Thu, 30 May 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://dakerfp.github.io/tags/epassport/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://dakerfp.com/tags/epassport/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>The ePassport Standard and it&#39;s Cryptographic Scheme</title>
-      <link>https://dakerfp.github.io/post/the-epassport-standard-and-its-cryptographic-scheme/</link>
+      <link>https://dakerfp.com/post/the-epassport-standard-and-its-cryptographic-scheme/</link>
       <pubDate>Thu, 30 May 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/the-epassport-standard-and-its-cryptographic-scheme/</guid>
-      <description>&lt;p&gt;ePassport is the name given for the new passport specification
-standardized by the &lt;a href=&#34;http://www.icao.int/&#34;&gt;International Civil Aviation Organization&lt;/a&gt; (ICAO).
-It was created to speed up and standardize the immigration procedures.
-This standard specifies &lt;a href=&#34;http://en.wikipedia.org/wiki/Radio-frequency_identification&#34;&gt;RFID&lt;/a&gt;
-as the communication channel between the passport and the reader. The main
-feature present on it is the insertion of biometric data into the
-passport for biometric checks, including facial recognition, fingerprint
-and iris information. To keep this important data protected, an
-interesting cryptographic layer was added in addition to the usual
-document falsification mechanisms such as watermarks.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/passaporte-br.jpg&#34; alt=&#34;Brazilian ePassport. One of few which has full compatibility with the ICAO specification.&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The name, nationality, birth date and other personal information as well
-as the biometric informations are held on a contactless chip inside the
-passport. This set of information are securely handled and is called the
-&lt;strong&gt;Machine Readable Zone&lt;/strong&gt; (MRZ) and the chip asserts their security.
-These informations are transmitted to a ePassport reader at immigration
-process. As the embedded chip has low processing power, the biometric
-data is transmitted to a reader so it can be checked against the porter
-of the passport.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/epass.jpg&#34; alt=&#34;Anatomy of an ePassport&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;As the physical communication layer of the ePassport broadcasts the
-messages, even with the low range (less than a meter) RFID
-communication. But as we know an eavesdropper can be very determined to
-listen the communication ;-). I also has an electromagnetic shield on
-the passport cover, however it doesn&amp;rsquo;t assure to block the communication
-between the chip and the outside world when it&amp;rsquo;s closed, however it&amp;rsquo;s an
-extra obstacle. Another issue to prevent is the passport and digital
-data forgery. Otherwise a falsary could get someone else passport and
-insert it&amp;rsquo;s biometrics information and easily bypass the immigration. As
-we may see, the ePassport is a complete meal for cryptography
-specialists.&lt;/p&gt;
-
-&lt;p&gt;Starring at this cryptographic layer we have: &lt;/p&gt;
-
-&lt;p&gt;A &lt;strong&gt;unique id&lt;/strong&gt; used as a private key. This key is hardcoded in the chip
-manufacturing process and it&amp;rsquo;s non traceable. Doing
-&lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Reverse_engineering#Reverse_engineering_of_integrated_circuits/smart_cards&#34;&gt;reverse engineering&lt;/a&gt;
-on this kind of chip it&amp;rsquo;s really difficult because the equipment to do
-it is extremely expensive and hard to obtain, it is only available to
-large chip manufacturers.&lt;/p&gt;
-
-&lt;p&gt;An access control to prevent an attacker to force the ePassport to send
-information in the MRZ to readers unless the passport owner authorizes
-it. Otherwise an attacker could use a reader and simply request the
-biometric information to the passport. It uses a protocol called &lt;strong&gt;Basic
-Access Control (BAC)&lt;/strong&gt; to give access for the reader. It consists on a
-&lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Optical_character_recognition&#34;&gt;OCR&lt;/a&gt;
-readable code inside the passport. With this code, the reader can say to
-the passport it is an authorized reader, and then transmit data to it.
-The BAC code is also used as key for the encrypted transmission of the
-data, making an eavesdropping attack more difficult. It&amp;rsquo;s important to
-note that the BAC security entirely relies on the physical access to the
-passport. The BAC is inside the ICAO standard but doesn&amp;rsquo;t obligates it&amp;rsquo;s
-support.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/bac.png&#34; alt=&#34;BAC happy path&#39;s sequence diagram&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The ICAO also standardizes a authentication for readers called
-&lt;strong&gt;Extended Access Control (EAC)&lt;/strong&gt;. It consists of sets of signatures of
-terminals stored in the passport&amp;rsquo;s chip. These signatures are changed
-periodically by the countries (which signs them) on the terminals to
-avoid keys stolen from equipments being used for much time. Some MRZ
-sensitive data, such as iris and fingerprint, are just transmitted to
-readers if it is EAC authenticated. Other informations are optional.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/eac.png&#34; alt=&#34;EAC happy path&#39;s sequence diagram&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The &lt;strong&gt;Passive Authentication (PA)&lt;/strong&gt; is a cryptographic mechanism  to
-ensure the data in the passport is valid by the authority emitting the
-passports. The PA is a kind of digital signature where the country who
-emits passports ensures the veracity of the data with a asymmetric
-Country Verification Certificate Authority (CVCA), a kind of
-&lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Message_authentication_code&#34;&gt;message authentication code&lt;/a&gt;
-(MAC). This process is known as
-&lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Asymmetric_cryptography&#34;&gt;asymmetric cryptographic&lt;/a&gt;
-hashing or &lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Digital_signature&#34;&gt;digital signing&lt;/a&gt;.
-The PA MAC is created by the country when emits a passport, which must
-keep a signing key safe, which is used to create the MAC code. Then it
-publish the public key (all readers must know the countries public keys)
-which can be used to check if the MAC is valid and it was really
-generated by the organization which possess the signing key. The PA
-scheme relies on mathematical functions which are easy to encrypt a MAC
-with the private key, but computationally hard without them. The public
-key can easily check if the MAC was generated by the ones who posses the
-private key, and detect forged data. This process makes the forgery of
-digital data a really hard computational problem, and ensures with
-negligible chance of failure that the data is valid. All the MRZ data is
-signed using such process. Using PA is mandatory by ICAO standards.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/pa.png&#34; alt=&#34;PA happy path&#39;s sequence diagram&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The &lt;strong&gt;Active Authentication (AA)&lt;/strong&gt; is a kind of
-&lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Challenge-response_authentication&#34;&gt;challenge response authentication&lt;/a&gt;
-mechanism to prevent the cloning of passports. It relies on the
-untraceable chip key. Cloning the MRZ data is a simple task to be done,
-however you can&amp;rsquo;t get a passport private key due to the difficulty of
-doing reverse engineering to obtain it. The AA works as a challenge to
-the passport, so you can verify if it really is. The reader encrypts a
-random message that only him knows it&amp;rsquo;s content with the passport&amp;rsquo;s
-public key. The message is then sent to the passport and it must decrypt
-and response to the reader what was the original message. This process
-works because of the duality principle of asymmetric cryptography. This
-concept of challenge is the same concept behind
-&lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/CAPTCHA&#34;&gt;CAPTCHAs&lt;/a&gt; and
-the &lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Turing_test&#34;&gt;Turing Test&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/aa.png&#34; alt=&#34;AA hapy path&#39;s sequence diagram&#34; /&gt;&lt;/p&gt;
-</description>
+      <guid>https://dakerfp.com/post/the-epassport-standard-and-its-cryptographic-scheme/</guid>
+      <description>ePassport is the name given for the new passport specification standardized by the International Civil Aviation Organization (ICAO). It was created to speed up and standardize the immigration procedures. This standard specifies RFID as the communication channel between the passport and the reader. The main feature present on it is the insertion of biometric data into the passport for biometric checks, including facial recognition, fingerprint and iris information. To keep this important data protected, an interesting cryptographic layer was added in addition to the usual document falsification mechanisms such as watermarks.</description>
     </item>
     
   </channel>

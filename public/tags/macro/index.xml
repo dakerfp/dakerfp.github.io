@@ -2,68 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Macro on Daker Pinheiro</title>
-    <link>https://dakerfp.github.io/tags/macro/</link>
+    <link>https://dakerfp.com/tags/macro/</link>
     <description>Recent content in Macro on Daker Pinheiro</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
+    <copyright>Ⓒ 2017 Daker Fernandes Pinheiro</copyright>
     <lastBuildDate>Fri, 27 Dec 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://dakerfp.github.io/tags/macro/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://dakerfp.com/tags/macro/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Improve your lazy debugging in C&#43;&#43;</title>
-      <link>https://dakerfp.github.io/post/improve-your-lazy-debugging-in-c/</link>
+      <link>https://dakerfp.com/post/improve-your-lazy-debugging-in-c/</link>
       <pubDate>Fri, 27 Dec 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/improve-your-lazy-debugging-in-c/</guid>
-      <description>&lt;p&gt;Are you too lazy to learn your debugger? When debugging, I usually want
-to know if some code section is reached.&lt;/p&gt;
-
-&lt;p&gt;I can do this:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;void foobar() {
-    printf(&amp;quot;foobar()\n&amp;quot;);
-    // ... do foobar
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;But I should use &lt;a href=&#34;http://stackoverflow.com/questions/2872543/printf-vs-cout-in-c&#34;&gt;&lt;code&gt;cout&lt;/code&gt; instead &lt;code&gt;printf&lt;/code&gt; in C++&lt;/a&gt;.
-&lt;a href=&#34;http://programming-designs.com/2009/02/c-speed-test-part-2-printf-vs-cout/&#34;&gt;&lt;code&gt;printf&lt;/code&gt; is faster&lt;/a&gt;,
-but in this case it should be irrelevant. So I have:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;void foobar() {
-    std::cout &amp;lt;&amp;lt; &amp;quot;foobar()&amp;quot; &amp;lt;&amp;lt; std::endl;
-    // ... do foobar
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I could also use &lt;a href=&#34;http://gcc.gnu.org/onlinedocs/gcc/Function-Names.html&#34;&gt;GCC&amp;rsquo;s function name macro &lt;code&gt;__PRETTY_FUNCTION__&lt;/code&gt;&lt;/a&gt;
-and &lt;a href=&#34;http://gcc.gnu.org/onlinedocs/cpp/Standard-Predefined-Macros.html&#34;&gt;&lt;code&gt;__LINE__&lt;/code&gt; macro&lt;/a&gt;
-to identify the reached code section easier.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;void foobar() {
-    std::cout &amp;lt;&amp;lt;  __PRETTY_FUNCTION__ &amp;lt;&amp;lt; &amp;quot; at line &amp;quot; &amp;lt;&amp;lt;  __LINE__ &amp;lt;&amp;lt; std::endl;
-    // ... do foobar
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Add that on a macro to reuse it:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#if DEBUG
-#include 
-#define REACH std::cout &amp;lt;&amp;lt;  __PRETTY_FUNCTION__ &amp;lt;&amp;lt; &amp;quot; at line &amp;quot; &amp;lt;&amp;lt;  __LINE__ &amp;lt;&amp;lt; std::endl;
-#endif
-
-void foobar() {
-    REACH
-    // ... do foobar
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;And happy debugging!&lt;/p&gt;
-
-&lt;p&gt;Not.&lt;/p&gt;
-</description>
+      <guid>https://dakerfp.com/post/improve-your-lazy-debugging-in-c/</guid>
+      <description>Are you too lazy to learn your debugger? When debugging, I usually want to know if some code section is reached.
+I can do this:
+void foobar() { printf(&amp;quot;foobar()\n&amp;quot;); // ... do foobar }  But I should use cout instead printf in C++. printf is faster, but in this case it should be irrelevant. So I have:
+void foobar() { std::cout &amp;lt;&amp;lt; &amp;quot;foobar()&amp;quot; &amp;lt;&amp;lt; std::endl; // ... do foobar }  I could also use GCC&amp;rsquo;s function name macro __PRETTY_FUNCTION__ and __LINE__ macro to identify the reached code section easier.</description>
     </item>
     
   </channel>

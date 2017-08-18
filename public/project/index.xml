@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on Daker Pinheiro</title>
-    <link>https://dakerfp.github.io/project/</link>
+    <link>https://dakerfp.com/project/</link>
     <description>Recent content in Projects on Daker Pinheiro</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
+    <copyright>Ⓒ 2017 Daker Fernandes Pinheiro</copyright>
     <lastBuildDate>Sun, 03 Jul 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://dakerfp.github.io/project/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://dakerfp.com/project/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>libpong</title>
-      <link>https://dakerfp.github.io/project/libpong/</link>
+      <link>https://dakerfp.com/project/libpong/</link>
       <pubDate>Sun, 03 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/project/libpong/</guid>
-      <description>&lt;p&gt;A minimalistic portable C library to implement Pong game.&lt;/p&gt;
-</description>
+      <guid>https://dakerfp.com/project/libpong/</guid>
+      <description>A minimalistic portable C library to implement Pong game.</description>
     </item>
     
   </channel>

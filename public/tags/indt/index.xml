@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Indt on Daker Pinheiro</title>
-    <link>https://dakerfp.github.io/tags/indt/</link>
+    <link>https://dakerfp.com/tags/indt/</link>
     <description>Recent content in Indt on Daker Pinheiro</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
+    <copyright>Ⓒ 2017 Daker Fernandes Pinheiro</copyright>
     <lastBuildDate>Fri, 23 Aug 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://dakerfp.github.io/tags/indt/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://dakerfp.com/tags/indt/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Yet another day at INDT</title>
-      <link>https://dakerfp.github.io/post/yet-another-day-at-indt/</link>
+      <link>https://dakerfp.com/post/yet-another-day-at-indt/</link>
       <pubDate>Fri, 23 Aug 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/yet-another-day-at-indt/</guid>
-      <description>&lt;iframe width=&#34;640&#34; height=&#34;360&#34; src=&#34;https://www.youtube.com/embed/Z-QcJU5lyJw&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
-</description>
+      <guid>https://dakerfp.com/post/yet-another-day-at-indt/</guid>
+      <description> </description>
     </item>
     
   </channel>

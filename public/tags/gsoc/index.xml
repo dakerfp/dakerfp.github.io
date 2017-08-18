@@ -2,148 +2,34 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gsoc on Daker Pinheiro</title>
-    <link>https://dakerfp.github.io/tags/gsoc/</link>
+    <link>https://dakerfp.com/tags/gsoc/</link>
     <description>Recent content in Gsoc on Daker Pinheiro</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
+    <copyright>Ⓒ 2017 Daker Fernandes Pinheiro</copyright>
     <lastBuildDate>Mon, 18 Jul 2011 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://dakerfp.github.io/tags/gsoc/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://dakerfp.com/tags/gsoc/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Back to Plasma Components</title>
-      <link>https://dakerfp.github.io/post/back_to_plasma_components/</link>
+      <link>https://dakerfp.com/post/back_to_plasma_components/</link>
       <pubDate>Mon, 18 Jul 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/back_to_plasma_components/</guid>
-      <description>
-
-&lt;p&gt;This last month I&amp;rsquo;ve been working slowly on my GSoC project due to the
-university activities (due to Brazilian academic calendar). And my
-thesis, which I shall talk in other post. But at least now I&amp;rsquo;m
-undergraduated!&lt;/p&gt;
-
-&lt;p&gt;As I explained in my last post about [Plasma Components],
-my GSoC project. I&amp;rsquo;m building graphics components for developers to
-build plasmoids in QML using non trivial common components such as
-Sliders, ScrollBars and RadioButtons. After the break I&amp;rsquo;ve done these
-components following the &lt;a href=&#34;http://bugreports.qt.nokia.com/browse/QTCOMPONENTS-200&#34;&gt;Qt Components common
-API&lt;/a&gt;:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Switch&lt;/li&gt;
-&lt;li&gt;ButtonRow&lt;/li&gt;
-&lt;li&gt;ButtonColumn&lt;/li&gt;
-&lt;li&gt;ScrollBar&lt;/li&gt;
-&lt;li&gt;ScrollDecorator&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Keyboard event handling and focus policy for the new and old components
-were added in this sprint. I also spent a lot of time refactoring some
-components. I think their code is much better now.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;m also adding more complex use cases at the components gallery (at
-kde-runtime/plasma/declarativeimports/test/gallery). By the way, this is
-screenshot of the new gallery:&lt;/p&gt;
-
-&lt;p&gt;![](/img/gsoc-gallery.png]&lt;/p&gt;
-
-&lt;h2 id=&#34;plasma-components-gallery&#34;&gt;Plasma Components Gallery&lt;/h2&gt;
-
-&lt;p&gt;Part of the work was just straightforward, but there are some doubts I
-would like to ask which you think is the best, because some of the
-components behaviour are not defined.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Should ScrollDecorator appear only when it&amp;rsquo;s flickableItem is
-flicked, like in the mobile use case?&lt;/li&gt;
-&lt;li&gt;ScrollDecorator must should look like ScrollBar or have it&amp;rsquo;s own
-appearence?&lt;/li&gt;
-&lt;li&gt;There are no SVG graphics for CheckBox, RadioButton and Switch.
-Currently there are placeholders. What can I do?&lt;/li&gt;
-&lt;li&gt;Currently, when you click a component, it gains the focus. This
-logic must be in the components as it is? Or should left it external
-to the button.&lt;/li&gt;
-&lt;li&gt;The Qt Components doesn&amp;rsquo;t define any enabled property, for any
-components. I think it&amp;rsquo;s important to have such a property in all
-interactive components. What do you think about it?&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Any suggestion is highly appreciated.&lt;/p&gt;
-
-&lt;p&gt;I expect to give other update as soon as I have something more to
-report.&lt;/p&gt;
-</description>
+      <guid>https://dakerfp.com/post/back_to_plasma_components/</guid>
+      <description>This last month I&amp;rsquo;ve been working slowly on my GSoC project due to the university activities (due to Brazilian academic calendar). And my thesis, which I shall talk in other post. But at least now I&amp;rsquo;m undergraduated!
+As I explained in my last post about [Plasma Components], my GSoC project. I&amp;rsquo;m building graphics components for developers to build plasmoids in QML using non trivial common components such as Sliders, ScrollBars and RadioButtons.</description>
     </item>
     
     <item>
       <title>Plasma Components</title>
-      <link>https://dakerfp.github.io/post/plasma-components/</link>
+      <link>https://dakerfp.com/post/plasma-components/</link>
       <pubDate>Thu, 19 May 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/plasma-components/</guid>
-      <description>&lt;p&gt;Hi,&lt;/p&gt;
-
-&lt;p&gt;I will talk about my GSoC project (\m/), the plasma components.
-As you may know, QML is a declarative language to build rich interfaces
-introduced in Qt 4.7 by providing simple primitives. As it is a powerful
-way to develop interfaces and it&amp;rsquo;s the future of UI development for Qt
-was necessary to make the plasma support it.&lt;/p&gt;
-
-&lt;p&gt;Create interfaces in QML is really easy and fast but sometimes we need
-common widgets and may be boring to reimplement and replicate them in
-every application we create (e.g. Button, Slider, ScrollBar). For avoid
-this code replication, the Qt Components project was created to unify an
-API for a set of components.&lt;/p&gt;
-
-&lt;p&gt;The current (often updated) defined components and it&amp;rsquo;s API can be
-found at
-&lt;a href=&#34;http://bugreports.qt.nokia.com/browse/QTCOMPONENTS-200&#34;&gt;QTCOMPONENTS-200&lt;/a&gt;.
-The Qt Components intends to be a cross platform, but sometimes we need
-to have a closer integration of the component and the platform. In
-plasma desktop we want to show tooltips or use the theme svg images for
-example. The common API defines a set of properties a component must
-have, but doesn&amp;rsquo;t disallow to have extra properties and functionalities
-(suggestions ?). Creating the plasma components with the theme
-integration and adding plasma behaviour is what my GSoC project is about
-:-).&lt;/p&gt;
-
-&lt;p&gt;I already started working on the plasma components. They can be found
-in the kde-runtime repository at the plasma/declarative branch. And more
-speciffically in the plasma/declarativeimports/plasmacomponents
-directory. The components which already there are not yet done, they
-lack of tooltips, keyboard events handling, focus policy, and some
-(CheckBox and RadioButton) hasn&amp;rsquo;t images yet. However they&amp;rsquo;re fully
-functional and they cover all the properties and behaviours defined in
-the common API. Here is the list of the components in this state
-mentioned above (until this post publication):&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;BusyIndicator&lt;/li&gt;
-&lt;li&gt;Button&lt;/li&gt;
-&lt;li&gt;CheckBox&lt;/li&gt;
-&lt;li&gt;RadioButton&lt;/li&gt;
-&lt;li&gt;Slider&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;These are components not present in the common API but they&amp;rsquo;re highly
-wanted in plasma:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;ScrollBar&lt;/li&gt;
-&lt;li&gt;ListItem&lt;/li&gt;
-&lt;li&gt;ListItemView&lt;/li&gt;
-&lt;li&gt;ListHighlight&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;To test these components, its also kept a components gallery
-(plasma/declarativeimports/test/Gallery.qml) that you may view it with
-qmlviewer (after installing the components).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/gallery.png&#34; alt=&#34;Gallery screenshot&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Feedback is highly appreciated. ;-)&lt;/p&gt;
-</description>
+      <guid>https://dakerfp.com/post/plasma-components/</guid>
+      <description>Hi,
+I will talk about my GSoC project (\m/), the plasma components. As you may know, QML is a declarative language to build rich interfaces introduced in Qt 4.7 by providing simple primitives. As it is a powerful way to develop interfaces and it&amp;rsquo;s the future of UI development for Qt was necessary to make the plasma support it.
+Create interfaces in QML is really easy and fast but sometimes we need common widgets and may be boring to reimplement and replicate them in every application we create (e.</description>
     </item>
     
   </channel>

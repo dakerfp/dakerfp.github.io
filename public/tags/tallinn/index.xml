@@ -2,30 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tallinn on Daker Pinheiro</title>
-    <link>https://dakerfp.github.io/tags/tallinn/</link>
+    <link>https://dakerfp.com/tags/tallinn/</link>
     <description>Recent content in Tallinn on Daker Pinheiro</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
+    <copyright>Ⓒ 2017 Daker Fernandes Pinheiro</copyright>
     <lastBuildDate>Sat, 16 Jun 2012 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://dakerfp.github.io/tags/tallinn/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://dakerfp.com/tags/tallinn/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Akademy 2012</title>
-      <link>https://dakerfp.github.io/post/akademy-2012/</link>
+      <link>https://dakerfp.com/post/akademy-2012/</link>
       <pubDate>Sat, 16 Jun 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/akademy-2012/</guid>
-      <description>&lt;p&gt;Hey folks, I&amp;rsquo;m going to &lt;a href=&#34;http://akademy.kde.org/&#34;&gt;Akademy&lt;/a&gt;!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/akademy.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I and Thiago are going to present &lt;a href=&#34;http://akademy.kde.org/node/38&#34;&gt;Qt Components &amp;amp; Qt Styles in Qt5&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;I hope to see you in Tallinn!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/tallinn.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-</description>
+      <guid>https://dakerfp.com/post/akademy-2012/</guid>
+      <description>Hey folks, I&amp;rsquo;m going to Akademy!
+I and Thiago are going to present Qt Components &amp;amp; Qt Styles in Qt5.
+I hope to see you in Tallinn!</description>
     </item>
     
   </channel>

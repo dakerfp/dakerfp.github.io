@@ -1,601 +1,423 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Daker Pinheiro</title>
-    <link>https://dakerfp.github.io/</link>
-    <description>Recent content on Daker Pinheiro</description>
+    <title>Home on Daker Pinheiro</title>
+    <link>https://dakerfp.com/</link>
+    <description>Recent content in Home on Daker Pinheiro</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
-    <lastBuildDate>Thu, 07 Jul 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://dakerfp.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Ⓒ 2017 Daker Fernandes Pinheiro</copyright>
+    <lastBuildDate>Sun, 17 Sep 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://dakerfp.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Interfacing Keras with tensorflow</title>
+      <link>https://dakerfp.com/post/keras-tensorflow/</link>
+      <pubDate>Sun, 17 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://dakerfp.com/post/keras-tensorflow/</guid>
+      <description>Keras is great for machine learning and describing models! However, sometimes it lacks the flexibility power that Tensorflow has. The great news is that you can interface while using Tensorflow as a backend for Keras.
+You may for instance, pre-process your data before feeding into a Keras learning model, to use GPUs capabilities with little programming costs. The following example normalizes the channels of a image before training, then it uses the transformed tensor as input to the model.</description>
+    </item>
     
     <item>
       <title>Singletons using std::weak_ptr</title>
-      <link>https://dakerfp.github.io/post/weak_ptr_singleton/</link>
+      <link>https://dakerfp.com/post/weak_ptr_singleton/</link>
       <pubDate>Thu, 07 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/weak_ptr_singleton/</guid>
-      <description>&lt;p&gt;A common issue is how a resource and initialize it only when needed.
-A common C++ pattern to solve this is using the Resource Acquisition Is Initialization aka RAII.
-That&amp;rsquo;s what smart pointers do when created and get out of scope.
-But what if these resources must be unique?&lt;/p&gt;
-
-&lt;p&gt;The first thing that comes in mind is a singleton, but the plain singleton
-pattern, which has a static method or function returning a raw pointer usually creates the resource only once.
-It is hardly released, or must explicitly released. The solution is to use smart pointers somehow.&lt;/p&gt;
-
-&lt;p&gt;The following code is the solution I came out with to solve it:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;#include &amp;lt;memory&amp;gt;
-
-class Resource {
-private:
-    // A good API should forbid invalid usage.
-    Resource() {
-        // initialize
-    }
-
-public:
-    ~Resource() {
-        // release
-    }
-
-    static std::shared_ptr&amp;lt;Resource&amp;gt; instance() {
-        static std::weak_ptr&amp;lt;Resource&amp;gt; _instance;
-        if (auto ptr = _instance.lock()) { // .lock() returns a shared_ptr and increments the refcount
-            return ptr;
-        }
-        // Does not support std::make_shared&amp;lt;Resource&amp;gt; because of
-        // the Resource private constructor.
-        auto ptr = std::shared_ptr&amp;lt;Resource&amp;gt;(new Resource());
-        _instance = ptr;
-        return ptr;
-    }
-};
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The most interesting aspect is the static weak_ptr which registers the resource,
-but does not prevents its release, when all returned shared_ptr release the resource.&lt;/p&gt;
-</description>
+      <guid>https://dakerfp.com/post/weak_ptr_singleton/</guid>
+      <description>A common issue is how a resource and initialize it only when needed. A common C++ pattern to solve this is using the Resource Acquisition Is Initialization aka RAII. That&amp;rsquo;s what smart pointers do when created and get out of scope. But what if these resources must be unique?
+The first thing that comes in mind is a singleton, but the plain singleton pattern, which has a static method or function returning a raw pointer usually creates the resource only once.</description>
     </item>
     
     <item>
       <title>libpong</title>
-      <link>https://dakerfp.github.io/project/libpong/</link>
+      <link>https://dakerfp.com/project/libpong/</link>
       <pubDate>Sun, 03 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/project/libpong/</guid>
-      <description>&lt;p&gt;A minimalistic portable C library to implement Pong game.&lt;/p&gt;
-</description>
+      <guid>https://dakerfp.com/project/libpong/</guid>
+      <description>A minimalistic portable C library to implement Pong game.</description>
     </item>
     
     <item>
       <title>libpong bynary size</title>
-      <link>https://dakerfp.github.io/post/binary-size/</link>
+      <link>https://dakerfp.com/post/binary-size/</link>
       <pubDate>Mon, 27 Jun 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/binary-size/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;ve recently created a very small library to
-make hello world in IoT more interesting than
-a simple blinking LED.&lt;/p&gt;
-
-&lt;p&gt;Why not playing pong?&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ve created a simple C library which
-implements a very simple pong game logic.
-Very simple and small to fit in anywhere you
-want.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ size libpong/liblibpong.a 
-   text	   data	    bss	    dec	    hex	filename
-    323	      0	      0	    323	    143	pong.c.o 
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>about</title>
-      <link>https://dakerfp.github.io/home/about/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://dakerfp.github.io/home/about/</guid>
-      <description>
-
-&lt;h1 id=&#34;biography&#34;&gt;Biography&lt;/h1&gt;
-
-&lt;p&gt;Daker Pinheiro is a software engineer that loves graphics, real time &amp;amp; high performance systems. His interests include photo realistic rendering, artificial intelligence and image processing. Also an open source enthusiast. Enjoys board gaming, sailing, boxing and the classics.&lt;/p&gt;
-</description>
+      <guid>https://dakerfp.com/post/binary-size/</guid>
+      <description>I&amp;rsquo;ve recently created a very small library to make hello world in IoT more interesting than a simple blinking LED.
+Why not playing pong?
+I&amp;rsquo;ve created a simple C library which implements a very simple pong game logic. Very simple and small to fit in anywhere you want.
+$ size libpong/liblibpong.a text	data	bss	dec	hex	filename 323	0	0	323	143	pong.c.o  </description>
     </item>
     
     <item>
       <title>Python cookbook: argmin &amp; argmax</title>
-      <link>https://dakerfp.github.io/post/python-argmin-argmax/</link>
+      <link>https://dakerfp.com/post/python-argmin-argmax/</link>
       <pubDate>Tue, 01 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/python-argmin-argmax/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def argmin(iter, function):
-    return min((f(x), x) for x in iter)[1]
-
-def argmax(iter, function):
-    return max((f(x), x) for x in iter)[1]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;&amp;gt;&amp;gt;&amp;gt; argmin(range(-100, 100), lambda x: x * x)
-0
-&amp;gt;&amp;gt;&amp;gt; argmax(range(-100, 100), lambda x: - x * x)
-0
-&amp;gt;&amp;gt;&amp;gt; argmax([[1, 2, 4], [1], [2, 5], []], len)
-[1, 2, 4]
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <guid>https://dakerfp.com/post/python-argmin-argmax/</guid>
+      <description>def argmin(iter, function): return min((f(x), x) for x in iter)[1] def argmax(iter, function): return max((f(x), x) for x in iter)[1]  &amp;gt;&amp;gt;&amp;gt; argmin(range(-100, 100), lambda x: x * x) 0 &amp;gt;&amp;gt;&amp;gt; argmax(range(-100, 100), lambda x: - x * x) 0 &amp;gt;&amp;gt;&amp;gt; argmax([[1, 2, 4], [1], [2, 5], []], len) [1, 2, 4]  </description>
     </item>
     
     <item>
       <title>PIL -&gt; Pillow</title>
-      <link>https://dakerfp.github.io/post/pil-pillow/</link>
+      <link>https://dakerfp.com/post/pil-pillow/</link>
       <pubDate>Thu, 16 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/pil-pillow/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://pillow.readthedocs.org/en/latest/index.html&#34;&gt;Pillow&lt;/a&gt; is a
-&lt;a href=&#34;http://pythonware.com/products/pil/&#34;&gt;PIL&lt;/a&gt; fork created to add new
-features. setuptools support was also added. A more frequent release
-cycle was also promised. With Pillow you can have PIL as a package
-dependency in setuptools and virtualenv. That means less clutter and
-robustness for us.&lt;/p&gt;
-
-&lt;p&gt;Pillow allows you to continue to use &lt;code&gt;import PIL&lt;/code&gt;, so there is no need
-to change your current PIL related code. 0 migration overhead.&lt;/p&gt;
-
-&lt;p&gt;Archlinux already dropped support for PIL in favor of Pillow.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;TL;DR PIL &amp;gt; Pillow&lt;/strong&gt;&lt;/p&gt;
-</description>
+      <guid>https://dakerfp.com/post/pil-pillow/</guid>
+      <description>Pillow is a PIL fork created to add new features. setuptools support was also added. A more frequent release cycle was also promised. With Pillow you can have PIL as a package dependency in setuptools and virtualenv. That means less clutter and robustness for us.
+Pillow allows you to continue to use import PIL, so there is no need to change your current PIL related code. 0 migration overhead.
+Archlinux already dropped support for PIL in favor of Pillow.</description>
     </item>
     
     <item>
       <title>Reload and unload modules in Python</title>
-      <link>https://dakerfp.github.io/post/reload-and-unload-modules-in-python/</link>
+      <link>https://dakerfp.com/post/reload-and-unload-modules-in-python/</link>
       <pubDate>Mon, 13 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/reload-and-unload-modules-in-python/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# python 2.7
-import math
-
-reload(math) # or import math again to reload the module
-del(math) # unload module
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# python 3.x
-import math
-
-# the reload function was eliminated on python 3
-import math # or use exec(&amp;quot;import math&amp;quot;)
-del(math) # remove module
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <guid>https://dakerfp.com/post/reload-and-unload-modules-in-python/</guid>
+      <description># python 2.7 import math reload(math) # or import math again to reload the module del(math) # unload module  # python 3.x import math # the reload function was eliminated on python 3 import math # or use exec(&amp;quot;import math&amp;quot;) del(math) # remove module  </description>
     </item>
     
     <item>
       <title>Python cookbook: get the file dir path</title>
-      <link>https://dakerfp.github.io/post/python-cookbook-get-file-dir-path/</link>
+      <link>https://dakerfp.com/post/python-cookbook-get-file-dir-path/</link>
       <pubDate>Thu, 09 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/python-cookbook-get-file-dir-path/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import os
-os.path.dirname(os.path.abspath(__file__))
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <guid>https://dakerfp.com/post/python-cookbook-get-file-dir-path/</guid>
+      <description>import os os.path.dirname(os.path.abspath(__file__))  </description>
     </item>
     
     <item>
       <title>Regex like operators for DCG</title>
-      <link>https://dakerfp.github.io/post/regex-like-operators-for-dcg/</link>
+      <link>https://dakerfp.com/post/regex-like-operators-for-dcg/</link>
       <pubDate>Tue, 07 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/regex-like-operators-for-dcg/</guid>
-      <description>&lt;p&gt;Today I was trying to create a simple parser to count syllables in latin
-words with Prolog. I usually use DCGs in Prolog for parsing. Their
-semantic is very similar to
-&lt;a href=&#34;https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_Form&#34;&gt;BNF&lt;/a&gt;. I love
-DCGs, but sometimes the verbosity in some cases annoys me. Take the
-following example:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-prolog&#34;&gt;consonant --&amp;gt;
-    &amp;quot;b&amp;quot;; &amp;quot;c&amp;quot;; &amp;quot;d&amp;quot;; &amp;quot;f&amp;quot;; &amp;quot;g&amp;quot;; &amp;quot;h&amp;quot;; &amp;quot;l&amp;quot;; &amp;quot;j&amp;quot;; &amp;quot;k&amp;quot;; &amp;quot;m&amp;quot;;
-    &amp;quot;n&amp;quot;; &amp;quot;p&amp;quot;; &amp;quot;q&amp;quot;; &amp;quot;r&amp;quot;; &amp;quot;s&amp;quot;; &amp;quot;t&amp;quot;; &amp;quot;v&amp;quot;; &amp;quot;x&amp;quot;; &amp;quot;z&amp;quot;.
-consonants --&amp;gt;
-    [].
-consonants --&amp;gt;
-    consonant, consonants.
-
-vowel --&amp;gt;
-    &amp;quot;a&amp;quot;; &amp;quot;e&amp;quot;; &amp;quot;i&amp;quot;; &amp;quot;o&amp;quot;; &amp;quot;u&amp;quot;.
-vowels --&amp;gt;
-    vowel.
-vowels --&amp;gt;
-    vowel, vowels.
-
-syllable --&amp;gt;
-    vowels.
-syllable --&amp;gt;
-    consonants, vowels.
-
-syllables(0) --&amp;gt;
-    [].
-syllables(N) --&amp;gt;
-    syllable, syllables(N_1),
-    { N is N_1 + 1 }.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The vowels and consonant rules were created merely as helpers for the
-syllable predicate. That could be reduced if I had regex operators like
-+, * or ?. Although there are modules for using regex in Prolog (
-swi-regex ), it is not suitable when using within in DCGs. So I wrote
-these regex like operators, with meta DCG predicates, for DCG (like EBNF
-operators):&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-prolog&#34;&gt;% op statements let me use them without parenthesis
-:- op(100, xf, *).
-:- op(100, xf, +).
-:- op(100, xf, ?).
-
-*(_) --&amp;gt;
-    [].
-*(EXPR) --&amp;gt;
-    EXPR, *(EXPR).
-
-+(EXPR) --&amp;gt;
-    EXPR.
-+(EXPR) --&amp;gt;
-    EXPR, +(EXPR).
-
-?(EXPR) --&amp;gt;
-    [].
-?(EXPR) --&amp;gt;
-    EXPR.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;They allow me to modify the times a given rule will be matched. So, I
-can replace this:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-prolog&#34;&gt;consonants --&amp;gt;
-    [].
-consonants --&amp;gt;
-    consonant, consonants.
-
-vowels --&amp;gt;
-    vowel.
-vowels --&amp;gt;
-    vowel, vowels.
-
-syllable --&amp;gt;
-    vowels.
-syllable --&amp;gt;
-    consonants, vowels.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;with a simpler version without intermediate rules (using the operators
-definition through a library):&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-prolog&#34;&gt;syllable --&amp;gt;
-    *consonant, +vowel.
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <guid>https://dakerfp.com/post/regex-like-operators-for-dcg/</guid>
+      <description>Today I was trying to create a simple parser to count syllables in latin words with Prolog. I usually use DCGs in Prolog for parsing. Their semantic is very similar to BNF. I love DCGs, but sometimes the verbosity in some cases annoys me. Take the following example:
+consonant --&amp;gt; &amp;quot;b&amp;quot;; &amp;quot;c&amp;quot;; &amp;quot;d&amp;quot;; &amp;quot;f&amp;quot;; &amp;quot;g&amp;quot;; &amp;quot;h&amp;quot;; &amp;quot;l&amp;quot;; &amp;quot;j&amp;quot;; &amp;quot;k&amp;quot;; &amp;quot;m&amp;quot;; &amp;quot;n&amp;quot;; &amp;quot;p&amp;quot;; &amp;quot;q&amp;quot;; &amp;quot;r&amp;quot;; &amp;quot;s&amp;quot;; &amp;quot;t&amp;quot;; &amp;quot;v&amp;quot;; &amp;quot;x&amp;quot;; &amp;quot;z&amp;quot;. consonants --&amp;gt; [].</description>
     </item>
     
     <item>
       <title>Improve your lazy debugging in C&#43;&#43;</title>
-      <link>https://dakerfp.github.io/post/improve-your-lazy-debugging-in-c/</link>
+      <link>https://dakerfp.com/post/improve-your-lazy-debugging-in-c/</link>
       <pubDate>Fri, 27 Dec 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/improve-your-lazy-debugging-in-c/</guid>
-      <description>&lt;p&gt;Are you too lazy to learn your debugger? When debugging, I usually want
-to know if some code section is reached.&lt;/p&gt;
-
-&lt;p&gt;I can do this:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;void foobar() {
-    printf(&amp;quot;foobar()\n&amp;quot;);
-    // ... do foobar
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;But I should use &lt;a href=&#34;http://stackoverflow.com/questions/2872543/printf-vs-cout-in-c&#34;&gt;&lt;code&gt;cout&lt;/code&gt; instead &lt;code&gt;printf&lt;/code&gt; in C++&lt;/a&gt;.
-&lt;a href=&#34;http://programming-designs.com/2009/02/c-speed-test-part-2-printf-vs-cout/&#34;&gt;&lt;code&gt;printf&lt;/code&gt; is faster&lt;/a&gt;,
-but in this case it should be irrelevant. So I have:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;void foobar() {
-    std::cout &amp;lt;&amp;lt; &amp;quot;foobar()&amp;quot; &amp;lt;&amp;lt; std::endl;
-    // ... do foobar
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I could also use &lt;a href=&#34;http://gcc.gnu.org/onlinedocs/gcc/Function-Names.html&#34;&gt;GCC&amp;rsquo;s function name macro &lt;code&gt;__PRETTY_FUNCTION__&lt;/code&gt;&lt;/a&gt;
-and &lt;a href=&#34;http://gcc.gnu.org/onlinedocs/cpp/Standard-Predefined-Macros.html&#34;&gt;&lt;code&gt;__LINE__&lt;/code&gt; macro&lt;/a&gt;
-to identify the reached code section easier.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;void foobar() {
-    std::cout &amp;lt;&amp;lt;  __PRETTY_FUNCTION__ &amp;lt;&amp;lt; &amp;quot; at line &amp;quot; &amp;lt;&amp;lt;  __LINE__ &amp;lt;&amp;lt; std::endl;
-    // ... do foobar
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Add that on a macro to reuse it:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#if DEBUG
-#include 
-#define REACH std::cout &amp;lt;&amp;lt;  __PRETTY_FUNCTION__ &amp;lt;&amp;lt; &amp;quot; at line &amp;quot; &amp;lt;&amp;lt;  __LINE__ &amp;lt;&amp;lt; std::endl;
-#endif
-
-void foobar() {
-    REACH
-    // ... do foobar
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;And happy debugging!&lt;/p&gt;
-
-&lt;p&gt;Not.&lt;/p&gt;
-</description>
+      <guid>https://dakerfp.com/post/improve-your-lazy-debugging-in-c/</guid>
+      <description>Are you too lazy to learn your debugger? When debugging, I usually want to know if some code section is reached.
+I can do this:
+void foobar() { printf(&amp;quot;foobar()\n&amp;quot;); // ... do foobar }  But I should use cout instead printf in C++. printf is faster, but in this case it should be irrelevant. So I have:
+void foobar() { std::cout &amp;lt;&amp;lt; &amp;quot;foobar()&amp;quot; &amp;lt;&amp;lt; std::endl; // ... do foobar }  I could also use GCC&amp;rsquo;s function name macro __PRETTY_FUNCTION__ and __LINE__ macro to identify the reached code section easier.</description>
     </item>
     
     <item>
       <title>How to set a X window visible or invisible using Xlib</title>
-      <link>https://dakerfp.github.io/post/how-to-set-x-window-visible-or-invisible/</link>
+      <link>https://dakerfp.com/post/how-to-set-x-window-visible-or-invisible/</link>
       <pubDate>Thu, 19 Dec 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/how-to-set-x-window-visible-or-invisible/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;bool m_visible;
-Display* m_display;
-Window m_window;
-
-void setVisible(bool visible)
-{
-    if (visible == m_visible)
-        return;
-
-    if (visible)
-        XMapWindow(m_display, m_window);
-    else
-        XUnmapWindow(m_display, m_window);
-
-    m_visible = visible;
-}
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <guid>https://dakerfp.com/post/how-to-set-x-window-visible-or-invisible/</guid>
+      <description>bool m_visible; Display* m_display; Window m_window; void setVisible(bool visible) { if (visible == m_visible) return; if (visible) XMapWindow(m_display, m_window); else XUnmapWindow(m_display, m_window); m_visible = visible; }  </description>
     </item>
     
     <item>
       <title>Functional Pattern Matching with Python</title>
-      <link>https://dakerfp.github.io/post/functional-pattern-matching-with-python/</link>
+      <link>https://dakerfp.com/post/functional-pattern-matching-with-python/</link>
       <pubDate>Thu, 03 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/functional-pattern-matching-with-python/</guid>
-      <description>&lt;p&gt;This talk as given at Python Brasil 2013, at Brasília.&lt;/p&gt;
-
-&lt;p&gt;&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/Ivn9fHPiXO31Kc&#34; width=&#34;595&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; &lt;div style=&#34;margin-bottom:5px&#34;&gt; &lt;strong&gt; &lt;a href=&#34;//www.slideshare.net/dakerfp/functional-pattern-matching&#34; title=&#34;Functional Pattern Matching on Python&#34; target=&#34;_blank&#34;&gt;Functional Pattern Matching on Python&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href=&#34;//www.slideshare.net/dakerfp&#34; target=&#34;_blank&#34;&gt;Daker Fernandes&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;&lt;/p&gt;
-</description>
+      <guid>https://dakerfp.com/post/functional-pattern-matching-with-python/</guid>
+      <description>This talk as given at Python Brasil 2013, at Brasília.
+  Functional Pattern Matching on Python  from Daker Fernandes</description>
     </item>
     
     <item>
       <title>Yet another day at INDT</title>
-      <link>https://dakerfp.github.io/post/yet-another-day-at-indt/</link>
+      <link>https://dakerfp.com/post/yet-another-day-at-indt/</link>
       <pubDate>Fri, 23 Aug 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/yet-another-day-at-indt/</guid>
-      <description>&lt;iframe width=&#34;640&#34; height=&#34;360&#34; src=&#34;https://www.youtube.com/embed/Z-QcJU5lyJw&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
-</description>
+      <guid>https://dakerfp.com/post/yet-another-day-at-indt/</guid>
+      <description> </description>
     </item>
     
     <item>
       <title>Nix</title>
-      <link>https://dakerfp.github.io/post/nix/</link>
+      <link>https://dakerfp.com/post/nix/</link>
       <pubDate>Tue, 11 Jun 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/nix/</guid>
-      <description>
-
-&lt;p&gt;For the last few months my team (OpenBossa) at INDT (Instituto Nokia de
-Tecnologia) have been working on &lt;a href=&#34;http://nix.openbossa.org&#34;&gt;WebKitNix&lt;/a&gt;
-(Nix for short). WebKitNix is a new WebKit2 port, fully based on POSIX
-and OpenGL. We also use CMake build system (like GTK and Efl), GLib,
-libsoup (networking) and Cairo (2D graphics) as dependencies. It also
-uses Coordinated Graphics and Tiled Backing Store from WebKit2. Many of
-its building blocks are shared with others ports already on trunk.&lt;/p&gt;
-
-&lt;h2 id=&#34;what-is-it&#34;&gt;What is it?&lt;/h2&gt;
-
-&lt;p&gt;The Nix port offers a C API for rendering a WebView within a OpenGL
-context, based on WebKit2 API. You can use Nix to create applications
-such as a web browser or a web runtime. WebKit2 run the context for each
-web page in a different process. This process isolation keeps the UI
-responsive, with smooth animations and scrolling, because it does not
-get blocked by Javascript execution.&lt;/p&gt;
-
-&lt;p&gt;We want to ease the work of Consumer Electronics developers who wants to
-have a web runtime in their platform, without the need to create another
-WebKit port. That is why Nix has less dependencies than Efl, GTK or Qt,
-which should also be ported to the target platform.&lt;/p&gt;
-
-&lt;p&gt;Nix API also enables the application to interact with the Javascript
-context. So it is possible to add new APIs, to handle application
-specific features.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/nix.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;how-did-it-started&#34;&gt;How did it started?&lt;/h2&gt;
-
-&lt;p&gt;The OpenBossa team used to maintain the Qt WebKit port for years,
-helping Nokia/Trolltech. But then, in the last years, from the
-experience gathered with the &lt;a href=&#34;http://snowshoe.openbossa.org/&#34;&gt;Snowshoe&lt;/a&gt;
-browser, handling with dependencies (such as QtNetwork) that were much
-bigger than we really needed. We tried to replace some dependencies of
-QtWebKit and later Efl to see how minimal WebKit could be. So we took
-some steps:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Initial idea: platform/posix or platform/glib (share code)&lt;/li&gt;
-&lt;li&gt;Ivolved problem: we wanted to have different behaviors for
-QQuickWebView -&amp;gt; Qt Raw WebView&lt;/li&gt;
-&lt;li&gt;Network: QtWebKit + Soup experiment&lt;/li&gt;
-&lt;li&gt;Efl Raw WebView experiment&lt;/li&gt;
-&lt;li&gt;Efl Without Efl :-)&lt;/li&gt;
-&lt;li&gt;Nix&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;how-to-use-it&#34;&gt;How to use it?&lt;/h2&gt;
-
-&lt;p&gt;When you compile &lt;a href=&#34;https://github.com/WebKitNix/webkitnix&#34;&gt;Nix source code&lt;/a&gt;
-you can run the MiniBrowser to test it:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;$ $WEBKITOUTPUTDIR/Release/bin/MiniBrowser http://maps.nokia.com&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/nix-map.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/WebKitNix/webkitnix/tree/master/Tools/MiniBrowser/nix&#34;&gt;MiniBrowser code&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;The Nix-Demos repository offers some example code, including a Glut
-based browser and minimal Python bindings for Nix:
-&lt;a href=&#34;https://github.com/WebKitNix/nix-demos&#34;&gt;https://github.com/WebKitNix/nix-demos&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;On Nix-Demos we also have a Nix view, using only a DispmanX and OpenGL
-ES 2 working on the Raspberry Pi. To compile this demo, you will need
-our &lt;a href=&#34;https://github.com/WebKitNix/nix-rpi-sdk&#34;&gt;RaspberryPi SDK&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/nix-rpi2.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;There is even a browser with its UI written in HTML:
-&lt;a href=&#34;https://github.com/WebKitNix/drowser&#34;&gt;Drowser&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Feel free to contact us on &lt;code&gt;#webkitnix&lt;/code&gt; at freenode.&lt;/p&gt;
-
-&lt;h2 id=&#34;roadmap&#34;&gt;Roadmap&lt;/h2&gt;
-
-&lt;p&gt;Our plan is to upstream Nix in WebKit trunk by June/2013. Then, keep the
-maintainence and focus on the web platform, including some new HTML5
-features, such as WebRTC.&lt;/p&gt;
-</description>
+      <guid>https://dakerfp.com/post/nix/</guid>
+      <description>For the last few months my team (OpenBossa) at INDT (Instituto Nokia de Tecnologia) have been working on WebKitNix (Nix for short). WebKitNix is a new WebKit2 port, fully based on POSIX and OpenGL. We also use CMake build system (like GTK and Efl), GLib, libsoup (networking) and Cairo (2D graphics) as dependencies. It also uses Coordinated Graphics and Tiled Backing Store from WebKit2. Many of its building blocks are shared with others ports already on trunk.</description>
     </item>
     
     <item>
       <title>The ePassport Standard and it&#39;s Cryptographic Scheme</title>
-      <link>https://dakerfp.github.io/post/the-epassport-standard-and-its-cryptographic-scheme/</link>
+      <link>https://dakerfp.com/post/the-epassport-standard-and-its-cryptographic-scheme/</link>
       <pubDate>Thu, 30 May 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/the-epassport-standard-and-its-cryptographic-scheme/</guid>
-      <description>&lt;p&gt;ePassport is the name given for the new passport specification
-standardized by the &lt;a href=&#34;http://www.icao.int/&#34;&gt;International Civil Aviation Organization&lt;/a&gt; (ICAO).
-It was created to speed up and standardize the immigration procedures.
-This standard specifies &lt;a href=&#34;http://en.wikipedia.org/wiki/Radio-frequency_identification&#34;&gt;RFID&lt;/a&gt;
-as the communication channel between the passport and the reader. The main
-feature present on it is the insertion of biometric data into the
-passport for biometric checks, including facial recognition, fingerprint
-and iris information. To keep this important data protected, an
-interesting cryptographic layer was added in addition to the usual
-document falsification mechanisms such as watermarks.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/passaporte-br.jpg&#34; alt=&#34;Brazilian ePassport. One of few which has full compatibility with the ICAO specification.&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The name, nationality, birth date and other personal information as well
-as the biometric informations are held on a contactless chip inside the
-passport. This set of information are securely handled and is called the
-&lt;strong&gt;Machine Readable Zone&lt;/strong&gt; (MRZ) and the chip asserts their security.
-These informations are transmitted to a ePassport reader at immigration
-process. As the embedded chip has low processing power, the biometric
-data is transmitted to a reader so it can be checked against the porter
-of the passport.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/epass.jpg&#34; alt=&#34;Anatomy of an ePassport&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;As the physical communication layer of the ePassport broadcasts the
-messages, even with the low range (less than a meter) RFID
-communication. But as we know an eavesdropper can be very determined to
-listen the communication ;-). I also has an electromagnetic shield on
-the passport cover, however it doesn&amp;rsquo;t assure to block the communication
-between the chip and the outside world when it&amp;rsquo;s closed, however it&amp;rsquo;s an
-extra obstacle. Another issue to prevent is the passport and digital
-data forgery. Otherwise a falsary could get someone else passport and
-insert it&amp;rsquo;s biometrics information and easily bypass the immigration. As
-we may see, the ePassport is a complete meal for cryptography
-specialists.&lt;/p&gt;
-
-&lt;p&gt;Starring at this cryptographic layer we have: &lt;/p&gt;
-
-&lt;p&gt;A &lt;strong&gt;unique id&lt;/strong&gt; used as a private key. This key is hardcoded in the chip
-manufacturing process and it&amp;rsquo;s non traceable. Doing
-&lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Reverse_engineering#Reverse_engineering_of_integrated_circuits/smart_cards&#34;&gt;reverse engineering&lt;/a&gt;
-on this kind of chip it&amp;rsquo;s really difficult because the equipment to do
-it is extremely expensive and hard to obtain, it is only available to
-large chip manufacturers.&lt;/p&gt;
-
-&lt;p&gt;An access control to prevent an attacker to force the ePassport to send
-information in the MRZ to readers unless the passport owner authorizes
-it. Otherwise an attacker could use a reader and simply request the
-biometric information to the passport. It uses a protocol called &lt;strong&gt;Basic
-Access Control (BAC)&lt;/strong&gt; to give access for the reader. It consists on a
-&lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Optical_character_recognition&#34;&gt;OCR&lt;/a&gt;
-readable code inside the passport. With this code, the reader can say to
-the passport it is an authorized reader, and then transmit data to it.
-The BAC code is also used as key for the encrypted transmission of the
-data, making an eavesdropping attack more difficult. It&amp;rsquo;s important to
-note that the BAC security entirely relies on the physical access to the
-passport. The BAC is inside the ICAO standard but doesn&amp;rsquo;t obligates it&amp;rsquo;s
-support.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/bac.png&#34; alt=&#34;BAC happy path&#39;s sequence diagram&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The ICAO also standardizes a authentication for readers called
-&lt;strong&gt;Extended Access Control (EAC)&lt;/strong&gt;. It consists of sets of signatures of
-terminals stored in the passport&amp;rsquo;s chip. These signatures are changed
-periodically by the countries (which signs them) on the terminals to
-avoid keys stolen from equipments being used for much time. Some MRZ
-sensitive data, such as iris and fingerprint, are just transmitted to
-readers if it is EAC authenticated. Other informations are optional.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/eac.png&#34; alt=&#34;EAC happy path&#39;s sequence diagram&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The &lt;strong&gt;Passive Authentication (PA)&lt;/strong&gt; is a cryptographic mechanism  to
-ensure the data in the passport is valid by the authority emitting the
-passports. The PA is a kind of digital signature where the country who
-emits passports ensures the veracity of the data with a asymmetric
-Country Verification Certificate Authority (CVCA), a kind of
-&lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Message_authentication_code&#34;&gt;message authentication code&lt;/a&gt;
-(MAC). This process is known as
-&lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Asymmetric_cryptography&#34;&gt;asymmetric cryptographic&lt;/a&gt;
-hashing or &lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Digital_signature&#34;&gt;digital signing&lt;/a&gt;.
-The PA MAC is created by the country when emits a passport, which must
-keep a signing key safe, which is used to create the MAC code. Then it
-publish the public key (all readers must know the countries public keys)
-which can be used to check if the MAC is valid and it was really
-generated by the organization which possess the signing key. The PA
-scheme relies on mathematical functions which are easy to encrypt a MAC
-with the private key, but computationally hard without them. The public
-key can easily check if the MAC was generated by the ones who posses the
-private key, and detect forged data. This process makes the forgery of
-digital data a really hard computational problem, and ensures with
-negligible chance of failure that the data is valid. All the MRZ data is
-signed using such process. Using PA is mandatory by ICAO standards.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/pa.png&#34; alt=&#34;PA happy path&#39;s sequence diagram&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The &lt;strong&gt;Active Authentication (AA)&lt;/strong&gt; is a kind of
-&lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Challenge-response_authentication&#34;&gt;challenge response authentication&lt;/a&gt;
-mechanism to prevent the cloning of passports. It relies on the
-untraceable chip key. Cloning the MRZ data is a simple task to be done,
-however you can&amp;rsquo;t get a passport private key due to the difficulty of
-doing reverse engineering to obtain it. The AA works as a challenge to
-the passport, so you can verify if it really is. The reader encrypts a
-random message that only him knows it&amp;rsquo;s content with the passport&amp;rsquo;s
-public key. The message is then sent to the passport and it must decrypt
-and response to the reader what was the original message. This process
-works because of the duality principle of asymmetric cryptography. This
-concept of challenge is the same concept behind
-&lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/CAPTCHA&#34;&gt;CAPTCHAs&lt;/a&gt; and
-the &lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Turing_test&#34;&gt;Turing Test&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/aa.png&#34; alt=&#34;AA hapy path&#39;s sequence diagram&#34; /&gt;&lt;/p&gt;
-</description>
+      <guid>https://dakerfp.com/post/the-epassport-standard-and-its-cryptographic-scheme/</guid>
+      <description>ePassport is the name given for the new passport specification standardized by the International Civil Aviation Organization (ICAO). It was created to speed up and standardize the immigration procedures. This standard specifies RFID as the communication channel between the passport and the reader. The main feature present on it is the insertion of biometric data into the passport for biometric checks, including facial recognition, fingerprint and iris information. To keep this important data protected, an interesting cryptographic layer was added in addition to the usual document falsification mechanisms such as watermarks.</description>
+    </item>
+    
+    <item>
+      <title>Why is Python slow? Python Nordeste 2013</title>
+      <link>https://dakerfp.com/post/why-is-python-slow-python-nordeste-2013/</link>
+      <pubDate>Thu, 30 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://dakerfp.com/post/why-is-python-slow-python-nordeste-2013/</guid>
+      <description>Why is Python slow? Python Nordeste 2013  from Daker Fernandes 
+It was a great event! Thanks to everyone who made it happen.</description>
+    </item>
+    
+    <item>
+      <title>OpenGL Lesson 02 - Drawing with OpenGL</title>
+      <link>https://dakerfp.com/post/opengl-lesson-02-drawing-with-opengl/</link>
+      <pubDate>Wed, 12 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://dakerfp.com/post/opengl-lesson-02-drawing-with-opengl/</guid>
+      <description>OpenGL is a primarily an C API, for drawing graphics. Implementations and bindings exists for several languages such as Java, Python, Ruby and Objective C. OpenGL became the standard drawing API supported by most modern device with graphics, independent from vendor, operational system, or if it is desktop or embedded. Of course the platform matters, but we can split the platform dependent code from pure OpenGL.
+OpenGL became a standard mainly due to its rendering pipeline, which is trivially parallelized.</description>
+    </item>
+    
+    <item>
+      <title>Raspberry &#43; Python at Python Brasil [8]</title>
+      <link>https://dakerfp.com/post/raspberry-python-at-python-brasil-8/</link>
+      <pubDate>Fri, 23 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://dakerfp.com/post/raspberry-python-at-python-brasil-8/</guid>
+      <description>This is the presentation given at Python Brasil [8], in Rio de Janeiro. I hope you like it.
+  Raspberry Pi + Python  from Daker Fernandes</description>
+    </item>
+    
+    <item>
+      <title>OpenGL Lesson 01 - Pre OpenGL</title>
+      <link>https://dakerfp.com/post/opengl-lesson-01-pre-opengl/</link>
+      <pubDate>Mon, 19 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://dakerfp.com/post/opengl-lesson-01-pre-opengl/</guid>
+      <description>This slides are from a lecture about OpenGL I&amp;rsquo;m giving at INDT. The first lesson was to refresh some important math concepts that will be important to understand how OpenGL works under the hood.
+The slides are simply pictures of the board. Yes, they are in portuguese.
+Feel free to make any question in the comments.
+  Opengl aula-01  from Daker Fernandes</description>
+    </item>
+    
+    <item>
+      <title>Qt &amp; KDE in FISL 13</title>
+      <link>https://dakerfp.com/post/qt-kde-in-fisl-13/</link>
+      <pubDate>Mon, 13 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://dakerfp.com/post/qt-kde-in-fisl-13/</guid>
+      <description>It was a great to see again some friends from KDE Brazil and met some new ones. The Konqui
+I also gave some talks and workshop about Qt, KDE and game development.
+Workshop: Developing applications for multiple devices using Plasma technologies This workshop was idealized and given by Sebas, and I was there to help him. In the workshop, QML was introduced together with KDE libs and what they can add to the applications.</description>
+    </item>
+    
+    <item>
+      <title>Akademy 2012</title>
+      <link>https://dakerfp.com/post/akademy-2012/</link>
+      <pubDate>Sat, 16 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://dakerfp.com/post/akademy-2012/</guid>
+      <description>Hey folks, I&amp;rsquo;m going to Akademy!
+I and Thiago are going to present Qt Components &amp;amp; Qt Styles in Qt5.
+I hope to see you in Tallinn!</description>
+    </item>
+    
+    <item>
+      <title>QML Theming/Styling (Update)</title>
+      <link>https://dakerfp.com/post/qml-themingstyling-update/</link>
+      <pubDate>Mon, 14 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://dakerfp.com/post/qml-themingstyling-update/</guid>
+      <description>This post is an update about the research project from my team, described a few weeks ago.
+From the time we published the last post about QML Styling until now we have worked on this set of issues/features:
+ Get feedback about research project Combo Box Component Combo Box Customizable Style Combo Box Plastique Style SubControl Styling Understand SceneGraph internals Understand other native platform internals  I will detail what was possible to make for each of these topics in sessions below.</description>
+    </item>
+    
+    <item>
+      <title>QML Theming/Styling</title>
+      <link>https://dakerfp.com/post/qml-themingstyling/</link>
+      <pubDate>Sun, 15 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://dakerfp.com/post/qml-themingstyling/</guid>
+      <description>Intro As I mentioned in my last post, I and my team in INdT are researching on how to improve the Styling new way of creating styled QML widgets components (Button, Sliders, ComboBox, etc.). We&amp;rsquo;ve been involved for such a long time in the development of Qt Components for the Harmattan, and me personally worked on the Plasma Components widget set.
+We also did a some big desktop and mobile applications (such as Snowshoe and PagSeguro NFC Payment) which required us to create lots of custom widgets.</description>
+    </item>
+    
+    <item>
+      <title>Qt, KDE &amp; Akademy 2012 Event Guide Application</title>
+      <link>https://dakerfp.com/post/qt-kde-akademy-2012-event-guide/</link>
+      <pubDate>Thu, 08 Mar 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://dakerfp.com/post/qt-kde-akademy-2012-event-guide/</guid>
+      <description>I&amp;rsquo;ve been away from KDE activities from a time, because I was organizing a lot of stuff in my life. Happily I&amp;rsquo;ve finally arranged some time to hack more on the weekends. I&amp;rsquo;ll try to keep up the work with the Plasma Components documentation, because I think it can be improved a lot. I will also try to come up with a few examples inside the documentation, to make easier for plasmoid developers.</description>
+    </item>
+    
+    <item>
+      <title>Cropping mp3 files with FFmpeg</title>
+      <link>https://dakerfp.com/post/cropping-mp3-files-with-ffmpeg/</link>
+      <pubDate>Wed, 04 Jan 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://dakerfp.com/post/cropping-mp3-files-with-ffmpeg/</guid>
+      <description>Today, I was trying to find a free app for cropping a mp3 sound file. And I found a simple one with CLI. The FFmpeg is a multimedia files handler and it is pretty complex. But to do this task we will use the following parameters:
+ -t chop after specified number of seconds -ss chop until specified number of seconds -acodec copy to maintain encoding and sampling rate -i use file as input file  And the final command was something like this:</description>
+    </item>
+    
+    <item>
+      <title>Back to Plasma Components</title>
+      <link>https://dakerfp.com/post/back_to_plasma_components/</link>
+      <pubDate>Mon, 18 Jul 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://dakerfp.com/post/back_to_plasma_components/</guid>
+      <description>This last month I&amp;rsquo;ve been working slowly on my GSoC project due to the university activities (due to Brazilian academic calendar). And my thesis, which I shall talk in other post. But at least now I&amp;rsquo;m undergraduated!
+As I explained in my last post about [Plasma Components], my GSoC project. I&amp;rsquo;m building graphics components for developers to build plasmoids in QML using non trivial common components such as Sliders, ScrollBars and RadioButtons.</description>
+    </item>
+    
+    <item>
+      <title>PySide at CITi</title>
+      <link>https://dakerfp.com/post/pyside_at_citi/</link>
+      <pubDate>Fri, 15 Jul 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://dakerfp.com/post/pyside_at_citi/</guid>
+      <description>Here is the PySide slides from the python course at CITi. Have fun!
+CITi - PySide</description>
+    </item>
+    
+    <item>
+      <title>Protein Profile with HMM</title>
+      <link>https://dakerfp.com/post/protein_profile_with_hmm/</link>
+      <pubDate>Thu, 07 Jul 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://dakerfp.com/post/protein_profile_with_hmm/</guid>
+      <description>Profinling is the action of summarizing a set of data in a smaller mathematical model. One of the practical usages of profiling techniques is the classification of sequences. With a data set profile, you may calculate the distance of an instance to the model, and classify the instance trough this value.
+Profiling proteins is a more specific case of profiling sequences. As we know from the previous post about Hidden Markov Models (HMMs) is a very robust mathematical model to represent probabilistically sequences.</description>
+    </item>
+    
+    <item>
+      <title>Encrypted Tweets</title>
+      <link>https://dakerfp.com/post/encrypted-tweets/</link>
+      <pubDate>Wed, 22 Jun 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://dakerfp.com/post/encrypted-tweets/</guid>
+      <description>As a cryptography course project, me and @laisandrade developed a twitter extension which allows us to tweet in a way that only a group of followers can decrypt and understand my tweet. The goal is to secure broadcasting tweets to a group of followers and avoid anyone else to understand it&amp;rsquo;s content. This definition of security is safe against an eavesdropping attack, which is commonly considered secure for cryptography, what is not true.</description>
+    </item>
+    
+    <item>
+      <title>Optimizing Functions with Python Caching Decorators</title>
+      <link>https://dakerfp.com/post/optimizing-functions-with-python-caching-decorators/</link>
+      <pubDate>Sat, 11 Jun 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://dakerfp.com/post/optimizing-functions-with-python-caching-decorators/</guid>
+      <description>On these last months I&amp;rsquo;ve been solving some problems (such as some HMMs algorithms) which the best solutions involves some kind of dynamic programming. Some of them are quite simple to implement, but their recursive formulation are far more intuitive. The problem is that even in functional languages, the recursive functions aren&amp;rsquo;t well handled unless you some mechanism like tail call, which aren&amp;rsquo;t intuitive as we would like to. The simplest example that comes in my mind is the fibonacci function which is usually defined as:</description>
+    </item>
+    
+    <item>
+      <title>CpG Islands (3) - Model Evaluation</title>
+      <link>https://dakerfp.com/post/cpg-islands-model-evaluation-3/</link>
+      <pubDate>Sun, 05 Jun 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://dakerfp.com/post/cpg-islands-model-evaluation-3/</guid>
+      <description>Following the post we&amp;rsquo;ve built a Hidden Markov Model (HMM) for the CpG islands problem, using the training set. Now we should evaluate if our model is adequate to predict things about CpG islands. For evaluate we may use a tagged sequence and see if the HMM we built can predict the islands and what is it&amp;rsquo;s accuracy.
+Using the viterbi path and a tagged sequence (out ouf the training set), enable us to compare if the estimative given by the model is coherent with the real data.</description>
+    </item>
+    
+    <item>
+      <title>CpG Islands (2) - Building a Hidden Markov Model</title>
+      <link>https://dakerfp.com/post/cpg-islands-model-evaluation-2/</link>
+      <pubDate>Thu, 02 Jun 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://dakerfp.com/post/cpg-islands-model-evaluation-2/</guid>
+      <description>By the definition of the CpG islands in the previous post and the Hidden Markov Models (HMMs) short introduction, we now can model a HMM for finding CpG islands. We can create a model very similar to the &amp;ldquo;Fair Bet Casino&amp;rdquo; problem.
+When we are in a nucleotide of given DNA sequence there are two possibilities, that nucleotide belongs to CpG island (lets denote state S1) or do not (S0). If you analyse a sibling nucleotide it can stay in the same state or to change with complementary probabilities.</description>
+    </item>
+    
+    <item>
+      <title>Hidden Markov Models</title>
+      <link>https://dakerfp.com/post/hidden-markov-models/</link>
+      <pubDate>Mon, 30 May 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://dakerfp.com/post/hidden-markov-models/</guid>
+      <description>Nowadays, many applications use Hidden Markov Models (HMMs) to solve crucial issues such as bioinformatics, speech recognition, musical analysis, digital signal processing, data mining, financial applications, time series analysis and many others. HMMs are probabilistic models which are very useful to model sequence behaviours or discrete time series events. Formally it models Markov processes with hidden states, like an extension for Markov Chains. For computer scientists, is a state machine with probabilistic transitions where each state can emit a value with a given probability.</description>
+    </item>
+    
+    <item>
+      <title>CpG Islands (1) - Problem Motivation &amp; Definitions</title>
+      <link>https://dakerfp.com/post/cpg-islands-model-evaluation-1/</link>
+      <pubDate>Sun, 29 May 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://dakerfp.com/post/cpg-islands-model-evaluation-1/</guid>
+      <description>This semester I&amp;rsquo;m attending the course Processing of Sequences and Methods and Algorithm in Computational Biology (basically DNA and proteins). One of the focus of it is the use of the Hidden Markov Models to solve many of it&amp;rsquo;s problems. One well studied problems is how to find codifying sequences (snippets that can be translated into proteins) in a given sequence of DNA, which has both codifying and non codifying regions.</description>
+    </item>
+    
+    <item>
+      <title>QtQuick - WSL II</title>
+      <link>https://dakerfp.com/post/qtquick-wsl-ii/</link>
+      <pubDate>Fri, 27 May 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://dakerfp.com/post/qtquick-wsl-ii/</guid>
+      <description>QtQuick uses QML, a powerful tool for creating fluid interfaces in a clean, easy and fast way. It uses a declarative language (Javascript based) and it has a really good performance, which makes it suitable to make apps for any kind of platform. It&amp;rsquo;s also really easy to extend QML with Qt/C++, enbling developers to speedup the application logic or something else needed. Is also possible to use OpenGL to render QtQuick without any change in the code, sending the painting job to the video card.</description>
+    </item>
+    
+    <item>
+      <title>Plasma Components</title>
+      <link>https://dakerfp.com/post/plasma-components/</link>
+      <pubDate>Thu, 19 May 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://dakerfp.com/post/plasma-components/</guid>
+      <description>Hi,
+I will talk about my GSoC project (\m/), the plasma components. As you may know, QML is a declarative language to build rich interfaces introduced in Qt 4.7 by providing simple primitives. As it is a powerful way to develop interfaces and it&amp;rsquo;s the future of UI development for Qt was necessary to make the plasma support it.
+Create interfaces in QML is really easy and fast but sometimes we need common widgets and may be boring to reimplement and replicate them in every application we create (e.</description>
+    </item>
+    
+    <item>
+      <title>MongoDB Presentation</title>
+      <link>https://dakerfp.com/post/mongodb-presentation/</link>
+      <pubDate>Tue, 24 Aug 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://dakerfp.com/post/mongodb-presentation/</guid>
+      <description>Today I had the honor to make a presentation with Brunno Gommes (@brunnogomes) about MongoDB on a Workshop (actually the second) of Free Software at CIn-UFPE. The workshop was organized by the University Linux User Group (CIn-LUG).
+The content of the presentation was to introduce people to MongoDB basic operations and give a snapshot of the advanced features. To those who don&amp;rsquo;t know MongoDB I strongly recommend to start to reading the presentation.</description>
+    </item>
+    
+    <item>
+      <title>DiagnostiCar (4) - Abductive Reasoning</title>
+      <link>https://dakerfp.com/post/diagnosticar-4-abductive-reasoning/</link>
+      <pubDate>Thu, 29 Jul 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://dakerfp.com/post/diagnosticar-4-abductive-reasoning/</guid>
+      <description>Finally I had some time to write about abductive reasoning, the core of the DiagnostiCar expert system. As you may know from my previous posts (means you&amp;rsquo;re tough and reached this point), the abductive reasoning tries to infer what facts implies a given situation.
+To build such a reasoning we must start with the conclusion and try to prove it. Let&amp;rsquo;s say that we have the following scenario:
+known mortal(X) &amp;lt;- human(X).</description>
+    </item>
+    
+    <item>
+      <title>DiagnostiCar (2) - Knowledge Representation Language</title>
+      <link>https://dakerfp.com/post/diagnosticar-2-knowledge-representation-language/</link>
+      <pubDate>Sun, 11 Apr 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://dakerfp.com/post/diagnosticar-2-knowledge-representation-language/</guid>
+      <description>I&amp;rsquo;m giving sequence to the last post about the DiagnostiCar expert system. Today I&amp;rsquo;m going to specify the predicates to represent some domain specific knowledge.
+Prolog has a helpful and clean syntax, at least when you&amp;rsquo;re used to, and it&amp;rsquo;s easy to define new operators syntax in SWI. Such feature improves the readability of the knowledge base or other DSL you want to create.
+To make an abductive reasoning we will need at least the logic operators &amp;lsquo;and&amp;rsquo;,&amp;lsquo;or&amp;rsquo; and &amp;lsquo;implies&amp;rsquo; to represent knowledge and chain it.</description>
+    </item>
+    
+    <item>
+      <title>DiagnostiCar (3) - Question &amp; Answer Interface</title>
+      <link>https://dakerfp.com/post/diagnosticar-3-question-and-answer-interface/</link>
+      <pubDate>Sun, 11 Apr 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://dakerfp.com/post/diagnosticar-3-question-and-answer-interface/</guid>
+      <description>This post aims to explain how to create an interactive shell so that users may answer questions when the reasoning system need user information. The reasoning engine will access the ask engine by an predicate (I will call it ask). An naive implementation of the ask predicate could be:
+ask(X) :- write(X), write(&#39; is true?&#39;), nl, read(yes).  It works, but askable predicates will be asked every time the reasoner will need an information, even if it was previously answered.</description>
+    </item>
+    
+    <item>
+      <title>DiagnostiCar (1) - Introduction</title>
+      <link>https://dakerfp.com/post/diagnosticar-1/</link>
+      <pubDate>Wed, 07 Apr 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://dakerfp.com/post/diagnosticar-1/</guid>
+      <description>I&amp;rsquo;m here to tell my expirience with logic programming in a grad project: DiagnostiCar, an web expert system for car diagnosis.
+The DiagnostiCar core feature was an expert system for giving hints to laypeople about their cars symptoms and their causes and consequences to avoid being deceived by mechanics (an habit of the job). Communication between the system and the users was conceived to happen with multiple choice questions forms and at the end the system gives the possible causes for the observed car characteristics.</description>
     </item>
     
   </channel>

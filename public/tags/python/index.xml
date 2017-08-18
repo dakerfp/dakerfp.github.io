@@ -2,811 +2,139 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Python on Daker Pinheiro</title>
-    <link>https://dakerfp.github.io/tags/python/</link>
+    <link>https://dakerfp.com/tags/python/</link>
     <description>Recent content in Python on Daker Pinheiro</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
-    <lastBuildDate>Tue, 01 Dec 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://dakerfp.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Ⓒ 2017 Daker Fernandes Pinheiro</copyright>
+    <lastBuildDate>Sun, 17 Sep 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://dakerfp.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Interfacing Keras with tensorflow</title>
+      <link>https://dakerfp.com/post/keras-tensorflow/</link>
+      <pubDate>Sun, 17 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://dakerfp.com/post/keras-tensorflow/</guid>
+      <description>Keras is great for machine learning and describing models! However, sometimes it lacks the flexibility power that Tensorflow has. The great news is that you can interface while using Tensorflow as a backend for Keras.
+You may for instance, pre-process your data before feeding into a Keras learning model, to use GPUs capabilities with little programming costs. The following example normalizes the channels of a image before training, then it uses the transformed tensor as input to the model.</description>
+    </item>
     
     <item>
       <title>Python cookbook: argmin &amp; argmax</title>
-      <link>https://dakerfp.github.io/post/python-argmin-argmax/</link>
+      <link>https://dakerfp.com/post/python-argmin-argmax/</link>
       <pubDate>Tue, 01 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/python-argmin-argmax/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def argmin(iter, function):
-    return min((f(x), x) for x in iter)[1]
-
-def argmax(iter, function):
-    return max((f(x), x) for x in iter)[1]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;&amp;gt;&amp;gt;&amp;gt; argmin(range(-100, 100), lambda x: x * x)
-0
-&amp;gt;&amp;gt;&amp;gt; argmax(range(-100, 100), lambda x: - x * x)
-0
-&amp;gt;&amp;gt;&amp;gt; argmax([[1, 2, 4], [1], [2, 5], []], len)
-[1, 2, 4]
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <guid>https://dakerfp.com/post/python-argmin-argmax/</guid>
+      <description>def argmin(iter, function): return min((f(x), x) for x in iter)[1] def argmax(iter, function): return max((f(x), x) for x in iter)[1]  &amp;gt;&amp;gt;&amp;gt; argmin(range(-100, 100), lambda x: x * x) 0 &amp;gt;&amp;gt;&amp;gt; argmax(range(-100, 100), lambda x: - x * x) 0 &amp;gt;&amp;gt;&amp;gt; argmax([[1, 2, 4], [1], [2, 5], []], len) [1, 2, 4]  </description>
     </item>
     
     <item>
       <title>PIL -&gt; Pillow</title>
-      <link>https://dakerfp.github.io/post/pil-pillow/</link>
+      <link>https://dakerfp.com/post/pil-pillow/</link>
       <pubDate>Thu, 16 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/pil-pillow/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://pillow.readthedocs.org/en/latest/index.html&#34;&gt;Pillow&lt;/a&gt; is a
-&lt;a href=&#34;http://pythonware.com/products/pil/&#34;&gt;PIL&lt;/a&gt; fork created to add new
-features. setuptools support was also added. A more frequent release
-cycle was also promised. With Pillow you can have PIL as a package
-dependency in setuptools and virtualenv. That means less clutter and
-robustness for us.&lt;/p&gt;
-
-&lt;p&gt;Pillow allows you to continue to use &lt;code&gt;import PIL&lt;/code&gt;, so there is no need
-to change your current PIL related code. 0 migration overhead.&lt;/p&gt;
-
-&lt;p&gt;Archlinux already dropped support for PIL in favor of Pillow.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;TL;DR PIL &amp;gt; Pillow&lt;/strong&gt;&lt;/p&gt;
-</description>
+      <guid>https://dakerfp.com/post/pil-pillow/</guid>
+      <description>Pillow is a PIL fork created to add new features. setuptools support was also added. A more frequent release cycle was also promised. With Pillow you can have PIL as a package dependency in setuptools and virtualenv. That means less clutter and robustness for us.
+Pillow allows you to continue to use import PIL, so there is no need to change your current PIL related code. 0 migration overhead.
+Archlinux already dropped support for PIL in favor of Pillow.</description>
     </item>
     
     <item>
       <title>Reload and unload modules in Python</title>
-      <link>https://dakerfp.github.io/post/reload-and-unload-modules-in-python/</link>
+      <link>https://dakerfp.com/post/reload-and-unload-modules-in-python/</link>
       <pubDate>Mon, 13 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/reload-and-unload-modules-in-python/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# python 2.7
-import math
-
-reload(math) # or import math again to reload the module
-del(math) # unload module
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# python 3.x
-import math
-
-# the reload function was eliminated on python 3
-import math # or use exec(&amp;quot;import math&amp;quot;)
-del(math) # remove module
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <guid>https://dakerfp.com/post/reload-and-unload-modules-in-python/</guid>
+      <description># python 2.7 import math reload(math) # or import math again to reload the module del(math) # unload module  # python 3.x import math # the reload function was eliminated on python 3 import math # or use exec(&amp;quot;import math&amp;quot;) del(math) # remove module  </description>
     </item>
     
     <item>
       <title>Python cookbook: get the file dir path</title>
-      <link>https://dakerfp.github.io/post/python-cookbook-get-file-dir-path/</link>
+      <link>https://dakerfp.com/post/python-cookbook-get-file-dir-path/</link>
       <pubDate>Thu, 09 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/python-cookbook-get-file-dir-path/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import os
-os.path.dirname(os.path.abspath(__file__))
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <guid>https://dakerfp.com/post/python-cookbook-get-file-dir-path/</guid>
+      <description>import os os.path.dirname(os.path.abspath(__file__))  </description>
     </item>
     
     <item>
       <title>Functional Pattern Matching with Python</title>
-      <link>https://dakerfp.github.io/post/functional-pattern-matching-with-python/</link>
+      <link>https://dakerfp.com/post/functional-pattern-matching-with-python/</link>
       <pubDate>Thu, 03 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/functional-pattern-matching-with-python/</guid>
-      <description>&lt;p&gt;This talk as given at Python Brasil 2013, at Brasília.&lt;/p&gt;
-
-&lt;p&gt;&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/Ivn9fHPiXO31Kc&#34; width=&#34;595&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; &lt;div style=&#34;margin-bottom:5px&#34;&gt; &lt;strong&gt; &lt;a href=&#34;//www.slideshare.net/dakerfp/functional-pattern-matching&#34; title=&#34;Functional Pattern Matching on Python&#34; target=&#34;_blank&#34;&gt;Functional Pattern Matching on Python&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href=&#34;//www.slideshare.net/dakerfp&#34; target=&#34;_blank&#34;&gt;Daker Fernandes&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;&lt;/p&gt;
-</description>
+      <guid>https://dakerfp.com/post/functional-pattern-matching-with-python/</guid>
+      <description>This talk as given at Python Brasil 2013, at Brasília.
+  Functional Pattern Matching on Python  from Daker Fernandes</description>
     </item>
     
     <item>
       <title>Why is Python slow? Python Nordeste 2013</title>
-      <link>https://dakerfp.github.io/post/why-is-python-slow-python-nordeste-2013/</link>
+      <link>https://dakerfp.com/post/why-is-python-slow-python-nordeste-2013/</link>
       <pubDate>Thu, 30 May 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/why-is-python-slow-python-nordeste-2013/</guid>
-      <description>&lt;p&gt;&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/2fMR2uzmpqvax7&#34; width=&#34;595&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; &lt;div style=&#34;margin-bottom:5px&#34;&gt; &lt;strong&gt; &lt;a href=&#34;//www.slideshare.net/dakerfp/pyne-whypythonisslow&#34; title=&#34;Why is Python slow? Python Nordeste 2013&#34; target=&#34;_blank&#34;&gt;Why is Python slow? Python Nordeste 2013&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href=&#34;//www.slideshare.net/dakerfp&#34; target=&#34;_blank&#34;&gt;Daker Fernandes&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;&lt;/p&gt;
-
-&lt;p&gt;It was a great event! Thanks to everyone who made it happen.&lt;/p&gt;
-</description>
+      <guid>https://dakerfp.com/post/why-is-python-slow-python-nordeste-2013/</guid>
+      <description>Why is Python slow? Python Nordeste 2013  from Daker Fernandes 
+It was a great event! Thanks to everyone who made it happen.</description>
     </item>
     
     <item>
       <title>Raspberry &#43; Python at Python Brasil [8]</title>
-      <link>https://dakerfp.github.io/post/raspberry-python-at-python-brasil-8/</link>
+      <link>https://dakerfp.com/post/raspberry-python-at-python-brasil-8/</link>
       <pubDate>Fri, 23 Nov 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/raspberry-python-at-python-brasil-8/</guid>
-      <description>&lt;p&gt;This is the presentation given at Python Brasil [8], in Rio de Janeiro.
-I hope you like it.&lt;/p&gt;
-
-&lt;p&gt;&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/zwpaZJ3Fn95LAz&#34; width=&#34;595&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; &lt;div style=&#34;margin-bottom:5px&#34;&gt; &lt;strong&gt; &lt;a href=&#34;//www.slideshare.net/dakerfp/raspberry-pi-python&#34; title=&#34;Raspberry Pi + Python&#34; target=&#34;_blank&#34;&gt;Raspberry Pi + Python&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href=&#34;//www.slideshare.net/dakerfp&#34; target=&#34;_blank&#34;&gt;Daker Fernandes&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;&lt;/p&gt;
-</description>
+      <guid>https://dakerfp.com/post/raspberry-python-at-python-brasil-8/</guid>
+      <description>This is the presentation given at Python Brasil [8], in Rio de Janeiro. I hope you like it.
+  Raspberry Pi + Python  from Daker Fernandes</description>
     </item>
     
     <item>
       <title>Protein Profile with HMM</title>
-      <link>https://dakerfp.github.io/post/protein_profile_with_hmm/</link>
+      <link>https://dakerfp.com/post/protein_profile_with_hmm/</link>
       <pubDate>Thu, 07 Jul 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/protein_profile_with_hmm/</guid>
-      <description>&lt;p&gt;Profinling is the action of summarizing a set of data in a smaller mathematical
-model. One of the practical usages of profiling techniques is the
-classification of sequences. With a data set profile, you may calculate
-the distance of an instance to the model, and classify the instance
-trough this value.&lt;/p&gt;
-
-&lt;p&gt;Profiling proteins is a more specific case of profiling sequences. As we
-know from the previous post about &lt;a href=&#34;http://codecereal.blogspot.com/2011/05/hidden-markov-models.html&#34;&gt;Hidden Markov
-Models&lt;/a&gt;
-(HMMs) is a very robust mathematical model to represent
-probabilistically sequences. This post will detail how to profile sets
-of proteins with a HMM model.&lt;/p&gt;
-
-&lt;p&gt;The HMM model for this problem must be a HMM which when we calculate a
-probability of generation of a protein by the model, must give higher
-probabilities for proteins similar for the ones used to create the
-profile against the others.&lt;/p&gt;
-
-&lt;p&gt;To build the model, I&amp;rsquo;ve started with a &lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Multiple_sequence_alignment&#34;&gt;multiple sequence
-alignment&lt;/a&gt;
-to see how is the structure of the sequences. That means that our HMM
-will be a probabilistic representation of a multiple alignment. With the
-alignment we see that some columns are complete and some are almost, and
-the others have few data. These most common matches can be used as a
-common matches for our model and the deletions and insertions can be
-modelled as other states. Here is an example of a few sequences aligned
-and the core columns of the alignment (marked with an *):&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;AC----ATGTCAACTATCACAC--AGCAGA---ATCACCG--ATC&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;With this sample of alignment we have examples of insertions and
-deletions between the core alignments, which may have a state on the HMM
-to represent them. Note that insertions may occur on arbitrary times
-between the matching states. And the deletion states always replaces
-some matching. One possible HMM template for building the model is
-presented in the following picture:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/profile_hmm.png&#34; alt=&#34;HMM protein profile model&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Each matching state (M~j~) is related to the matching on the j^th^ core
-alignment. The same applies for deletion state (D~j~). The insertion is
-slightly different, because it represents the insertions between the
-core alignments, that&amp;rsquo;s why it has one extra state, and this enable to
-represent states before the first and after the last alignment.&lt;/p&gt;
-
-&lt;p&gt;Our model will be like the one in the picture with the same length as
-the core alignments of a multiple alignment for a given set of
-sequences. However we should use &lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Maximum_likelihood&#34;&gt;maximum likelihood&lt;/a&gt;
-to estimate the transitions and emission for each state. The easiest way
-to count the total emissions/transitions, is to thread each sequence to
-be profiled in the model. For each symbol in the aligned sequence you
-must check if the symbol is in the core alignment. If it is, then
-increment the count of that state to the next match state, otherwise,
-you go to the insertion state. If it is a deletion, go to the deletion
-state and increment the transition. Finally, to calculate the
-probability for the transitions, just divide the count of each
-transition and divide it by all the states leaving the same state. It&amp;rsquo;s
-important to notice that we have a stopping state, and this is a special
-state that has no transitions.&lt;/p&gt;
-
-&lt;p&gt;Note that is important to initialize the model with pseudo counts at
-each possible transitions. Adding this pseudo count, we let our model
-less rigid and avoid overfitting to the train set. Otherwise we could
-have some zero probabilities for some sequences.&lt;/p&gt;
-
-&lt;p&gt;To create the emissions probabilities, at each match state, you also
-have to count which symbol was emitted and then increment them. To
-calculate the probability, just divide it by the total symbols matched
-in the threading process. &lt;/p&gt;
-
-&lt;p&gt;The similar process could be done with the insertion. However, the
-insertion states are characterized by having a low occurrence rate and
-this may lead us directly to a overfitting problem because the number of
-emissions must be too small. To avoid this we should use the background
-distribution as the emissions probabilities of each insertion state. The
-background distribution is the probability of the occurrence of a given
-amino acid in the entire protein set. To calculate this, count each
-amino acid type for all the train set sequence and then divided by the
-total count.&lt;/p&gt;
-
-&lt;p&gt;For the deletion states, it&amp;rsquo;s important to notice that it is a silent
-state. It doesn&amp;rsquo;t emit any symbol at all. To signalize it in ghmm, just
-let all the emissions probabilities with 0. Note that the end state is
-also a silent state once we have no emission associated to it.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;ALERT&lt;/strong&gt;: the loglikelihood is the only function in the ghmm library which
-handles silent states correctly.&lt;/p&gt;
-
-&lt;p&gt;At this point, the model is ready for use. However we have a problem of
-how to classify a new protein sequence. A threshold could be used to
-divide the two classes. However, the most common alternative is to use a
-null model to compare with it. The null model is a model which aims
-represents any protein with similar probability as any other. With this
-two models we could take a sequence and compare if it is more similar to
-a general definition of a protein or to a specific family. This model
-should model a sequence with average size equal to the aligned sequences
-being handled, and should emit any kind of symbol at each position. A
-common alternative for creating the null model, is using a single
-insertion state, which goes to a stopping state with probability of 1
-divided by the average length of  sequences in the train set. For the
-emissions probability, we should use the background distribution,
-because this is related to the general amino acid distribution. At the
-end, the model should be like this:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/null_model.png&#34; alt=&#34;Null Model&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;For testing the proposed model, I used a set of 100
-&lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Globin&#34;&gt;globin&lt;/a&gt; proteins
-from the &lt;a href=&#34;http://www.ncbi.nlm.nih.gov/&#34;&gt;NCBI&lt;/a&gt; protein repository as a
-train set to build a profile model, and used
-&lt;a href=&#34;http://ghmm.sourceforge.net/&#34;&gt;ghmm&lt;/a&gt; to build and test the model.&lt;/p&gt;
-
-&lt;p&gt;To test if our model corresponds to our expectations, 100 globins
-different from the ones in the trains set were used with 1800 other
-random proteins with similar length. The loglikelihood function from the
-ghmm library to calculate the similarity index. The classification of
-the globins versus non globins, was a comparison between the likelihood
-of the protein with the globins profile hmm, and the null model. This
-test gave us 100% of accuracy! To display this result graph, each
-sequence was pointed out in a graph where the horizontal axis displays
-the length of the sequence and the vertical the log of globins / null
-models likelihood (or globins - null model loglikelihood). The globins
-are plotted in red an the others in blue. Proteins over the zero line
-are classified as globins, and below means they aren&amp;rsquo;t globins. The
-graphs show us a clear distinction between the classes, and that our
-model is very precise for this problem.&lt;/p&gt;
-
-&lt;p&gt;![Length x log(Globin&amp;rsquo;s Profile Model Likelihood/Null Model Likelihood)&lt;/p&gt;
-</description>
+      <guid>https://dakerfp.com/post/protein_profile_with_hmm/</guid>
+      <description>Profinling is the action of summarizing a set of data in a smaller mathematical model. One of the practical usages of profiling techniques is the classification of sequences. With a data set profile, you may calculate the distance of an instance to the model, and classify the instance trough this value.
+Profiling proteins is a more specific case of profiling sequences. As we know from the previous post about Hidden Markov Models (HMMs) is a very robust mathematical model to represent probabilistically sequences.</description>
     </item>
     
     <item>
       <title>Optimizing Functions with Python Caching Decorators</title>
-      <link>https://dakerfp.github.io/post/optimizing-functions-with-python-caching-decorators/</link>
+      <link>https://dakerfp.com/post/optimizing-functions-with-python-caching-decorators/</link>
       <pubDate>Sat, 11 Jun 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/optimizing-functions-with-python-caching-decorators/</guid>
-      <description>&lt;p&gt;On these last months I&amp;rsquo;ve been solving some problems (such as some
-&lt;a href=&#34;http://en.wikipedia.org/wiki/Hidden_Markov_model&#34;&gt;HMMs&lt;/a&gt; algorithms)
-which the best solutions involves some kind of &lt;a href=&#34;http://en.wikipedia.org/wiki/Dynamic_programming&#34;&gt;dynamic
-programming&lt;/a&gt;. Some of
-them are quite simple to implement, but their recursive formulation are
-far more intuitive. The problem is that even in functional languages,
-the recursive functions aren&amp;rsquo;t well handled unless you some mechanism
-like &lt;a href=&#34;http://en.wikipedia.org/wiki/Tail_call&#34;&gt;tail call&lt;/a&gt;, which aren&amp;rsquo;t
-intuitive as we would like to. The simplest example that comes in my
-mind is the fibonacci function which is usually defined as:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;fib(0) = 1 fib(1) = 1 fib(n) = fib(n-1) + fib(n-2)&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;As we know, almost all the languages compilers and interpreters use the
-&lt;a href=&#34;http://en.wikipedia.org/wiki/Call_stack&#34;&gt;call stack&lt;/a&gt; to call the
-recursives cases on functions being executed. We can analyze the
-following C fibonacci version:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;int fib(n) {
-	 if (n == 0 || n == 1)
-        return 1;
-    else
-        return fib(n-1) + fib(n-2);
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;It is really simple to understand when contrasted with the definition.
-But, if we make a trace of the the program (even with a small input
-value) we&amp;rsquo;ll have something like the following evaluation order:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;fib(6) = fib(5) + fib(4)
-fib(5) = fib(4) + fib(3)
-fib(4) = fib(3) + fib(2)
-fib(3) = fib(2) + fib(1)
-fib(2) = fib(1) + fib(0)
-fib(3) = fib(2) + fib(1)
-fib(2) = fib(1) + fib(0)
-fib(4) = fib(3) + fib(2)
-fib(3) = fib(2) + fib(1)
-fib(2) = fib(1) + fib(0)
-fib(3) = fib(2) + fib(1)
-fib(2) = fib(1) + fib(0)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;![Call stack for fib(6)&lt;/p&gt;
-
-&lt;p&gt;As we can see, there is a repetition of the calculation of fib 4 to 1,
-many times and is something we can avoid. In fact, the complexity of
-this solution has a exponencial computational complexity because for
-each n from input we branch it in 2 until it reachs 0 or 1 approximately
-n times, leading us into a O($2^n$) complexity. A simple way to avoid it,
-is converting into a interactive form:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;int fib(int n) {
-    int current = 1;
-    int previous = 1;
-    int i;
-    for (i = 1; i &amp;lt; n; i++) {
-        int temp = current; // XXX: nasty
-        current += previous;
-        previous = temp;
-    }
-    return current;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The same result is achieved by using
-&lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Tail_call&#34;&gt;tail call&lt;/a&gt;
-for functional languages.&lt;/p&gt;
-
-&lt;p&gt;As you can see, it obfuscates the intuitive definition given in as the
-recursive formulation. But we still have a problem whenever we calculate
-fib(n), we have to recalculate it&amp;rsquo;s previous results even if they was
-previously calculated. If this function is used many times in our
-program it will take a lot of processing re-computing many of the
-values. We can avoid this by using the dynamic programming, which keeps
-the record of previously calculated results. The drawback of this
-technique is the memory usage, which for large entries can become a
-bottleneck. However, processing usually is a more rare computer
-resource. A C implementation (not the most elegant) for it is:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;// XXX: kids, don&#39;t do this at home
-int fib_results[10000];
-int last_fib;
-int fib(int n) {
-    if (n &amp;lt;= last_fib)
-        return fib_results[n];
-   int current = fib_results[last_fib-1];
-   int previous = fib_results[last_fib-2];
-   for (; last_fib &amp;lt; n; last_fib++) {
-       int temp = current;
-       current += previous;
-       fib_results[last_fib] = current;
-       previous = temp;
-   }
-   return current;
-}
-
-int main()
-{
-    fib_results[0] = 1;
-    fib_results[1] = 1;
-    last_fib = 1;
-
-    // ... other stuff ...
-
-    return 0;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;As we can see, dynamic programming isn&amp;rsquo;t too hard to implement. On the
-other hand, reading a code it&amp;rsquo;s a though task to do unless you are
-already familiar with the algorithm.&lt;/p&gt;
-
-&lt;p&gt;If we extract what is dynamic programming fundamental concept, which is
-&amp;ldquo;store pre-computed results&amp;rdquo;, we find a regularity in every recursive
-function which we can be transformed into a dynamic programming one. One
-of the reasons I love python because it&amp;rsquo;s easy to use meta-programming
-concepts, and that&amp;rsquo;s what I will use to transform recursive functions
-into it&amp;rsquo;s dynamic form in a ridiculous easy way using function
-decorators.&lt;/p&gt;
-
-&lt;p&gt;Function decorators (or annotations in Java) are a form of
-meta-programming for functions. It extends functions with some
-functionalities, such as debugging, tracing, adding meta-data to the
-function, synchronization or
-&lt;a href=&#34;https://secure.wikimedia.org/wikipedia/en/wiki/Memoization&#34;&gt;memoization&lt;/a&gt;
-(not memorization) of values, which is a great way of optimizing
-recursive functions by caching their results (if you have enough memory
-available). One possible implementation of memoitized decorator in
-python is the following:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def cached(function):
-    cache = {}
-    def wrapper(*args):
-        if args in cache:
-            return cache[args]
-        else:
-            result = function(*args)
-            cache[args] = result
-            return result 
-    return wrapper
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Note that I&amp;rsquo;m not using kwargs because they&amp;rsquo;re not hashable, such as the
-tuple args, and will add a few complexity in the example. See also that
-we a have a function that returns another function, which uses a given
-one to calculate results and store them in a cache. To cache our fib
-function we may use the following code:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;@cached
-def fib(n):
-     if n == 0 or n == 1:
-         return 1
-     else:
-         return fib(n-1) + fib(n-2)
-
-# or in a not so clear version:
-def normal_fib(n):
-    if n == 0 or n == 1:
-        return 1
-    else:
-        return fib(n-1) + fib(n-2)
-
-fib = cached(normal_fib)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This technique is really useful to improve your code performance in a
-really easy. On the other hand, it isn&amp;rsquo;t the best solution for almost
-all the cases. Many times code a dynamic programming method (if
-performance is crucial) will be necessary. Is also important to notice
-that I didn&amp;rsquo;t used any cache memory management policy, which is
-important to economize memory. Most appropriate cache data structures
-(such as numpy arrays for integer arguments) also are welcome. The
-python 3.2 version added the lru_cache decorator into the functools
-module to make this cache mechanism. If you are already using this
-version, it&amp;rsquo;s smarter to use it instead of implementing your one. Here
-is how it must be used:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Python &amp;gt; 3.2 import functools
-@functools.lru_cached(max_size=500) # uses a fixed size cache to avoid memory usage explosion
-def fib(n)
-     ...
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This technique is very useful not only for economize the CPU resources
-but also network (such as caching SQL query results), other IO
-operations (such as disk reading) and even user interaction input in a
-straightforward way.&lt;/p&gt;
-</description>
+      <guid>https://dakerfp.com/post/optimizing-functions-with-python-caching-decorators/</guid>
+      <description>On these last months I&amp;rsquo;ve been solving some problems (such as some HMMs algorithms) which the best solutions involves some kind of dynamic programming. Some of them are quite simple to implement, but their recursive formulation are far more intuitive. The problem is that even in functional languages, the recursive functions aren&amp;rsquo;t well handled unless you some mechanism like tail call, which aren&amp;rsquo;t intuitive as we would like to. The simplest example that comes in my mind is the fibonacci function which is usually defined as:</description>
     </item>
     
     <item>
       <title>CpG Islands (3) - Model Evaluation</title>
-      <link>https://dakerfp.github.io/post/cpg-islands-model-evaluation-3/</link>
+      <link>https://dakerfp.com/post/cpg-islands-model-evaluation-3/</link>
       <pubDate>Sun, 05 Jun 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/cpg-islands-model-evaluation-3/</guid>
-      <description>&lt;p&gt;Following the &lt;a href=&#34;http://codecereal.blogspot.com/2011/06/cpg-islands-2.html&#34;&gt;post&lt;/a&gt;
-we&amp;rsquo;ve built a Hidden Markov Model (HMM) for the &lt;a href=&#34;http://codecereal.blogspot.com/2011/05/cpg-islands-1.html&#34;&gt;CpG islands problem&lt;/a&gt;, using the training set.
-Now we should evaluate if our model is adequate to predict things about CpG islands.
-For evaluate we may use a tagged
-sequence and see if the HMM we built can predict the islands and what is
-it&amp;rsquo;s accuracy.&lt;/p&gt;
-
-&lt;p&gt;Using the viterbi path and a tagged sequence (out ouf the training set),
-enable us to compare if the estimative given by the model is coherent
-with the real data. Using the HMM and the training and test sets of the
-last post, we can compare the results using a &lt;a href=&#34;http://en.wikipedia.org/wiki/Confusion_matrix&#34;&gt;confusion
-matrix&lt;/a&gt;. For example, at
-the following snippet of the viterbi path paired with the tagged
-sequence:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;[ ... 0,0,0,0,0,1,1,1,1,1, ... ]
-[ ... a t t g t c C G A C  ... ]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;We may calculate the following confusion matrix:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;+--------------------------------------+ 
-|            |  Island    | Non Island |
-+------------+------------+------------+
-| Island     |     4      |      0     |
-+------------+------------+------------+
-| Non Island |     1      |      5     |
-+------------+------------+------------+
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Note that the bigger are the main diagonal values, the more accurate our
-model is. Making this matrix with the experiment made (using
-&lt;a href=&#34;http://codecereal.blogspot.com/2011/06/cpg-islands-2.html&#34;&gt;HMM with maximum likelihood&lt;/a&gt;)
-I got the following matrix:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;+--------------------------------------+ 
-|            |  Island    | Non Island |
-+------------+------------+------------+
-| Island     |   328815   |    61411   |
-+------------+------------+------------+
-| Non Island |  1381515   |   1889819  |
-+------------+------------+------------+
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;We may see that a good amount of islands was correctly predicted (84,26%
-of the islands), but 57,76% of the non islands regions was classified as
-islands, which is a bad indicator. A experiment with the HMM after
-running the Baum Welch was also evaluated. The results was better from
-the obtained by the maximum likelihood when predicting islands (96,56%
-of accuracy). But also obtained a higher miss rate (70,70%). Here is the
-confusion matrix for this HMM:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;+--------------------------------------+ 
-|            |  Island    | Non Island |
-+------------+------------+------------+
-| Island     |   376839   |    13387   |
-+------------+------------+------------+
-| Non Island |  2313138   |   958196   |
-+------------+------------+------------+
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/cpgs_labels.png&#34; alt=&#34;Matching of Real Sequence, Viterbi and Posterior results&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The result obtained was not very accurate. It may happened because we
-had few data to train and to evaluate our model. We could also build a
-HMM with other indicators that identify the CpG islands for model it
-better. Remember we simplified the CpG problem to the frequencies of
-occurring Cs and Gs, but a better model could also use the CG pairs.
-Using a more complicate HMM we could have more than 2 states and then
-associate a set of states to the CpG and non CpG islands sites. This
-would allow to use better the posterior result to classify the sequence.
-But I keep this as future work.&lt;/p&gt;
-</description>
+      <guid>https://dakerfp.com/post/cpg-islands-model-evaluation-3/</guid>
+      <description>Following the post we&amp;rsquo;ve built a Hidden Markov Model (HMM) for the CpG islands problem, using the training set. Now we should evaluate if our model is adequate to predict things about CpG islands. For evaluate we may use a tagged sequence and see if the HMM we built can predict the islands and what is it&amp;rsquo;s accuracy.
+Using the viterbi path and a tagged sequence (out ouf the training set), enable us to compare if the estimative given by the model is coherent with the real data.</description>
     </item>
     
     <item>
       <title>CpG Islands (2) - Building a Hidden Markov Model</title>
-      <link>https://dakerfp.github.io/post/cpg-islands-model-evaluation-2/</link>
+      <link>https://dakerfp.com/post/cpg-islands-model-evaluation-2/</link>
       <pubDate>Thu, 02 Jun 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/cpg-islands-model-evaluation-2/</guid>
-      <description>&lt;p&gt;By the definition of the CpG islands in the
-&lt;a href=&#34;http://codecereal.blogspot.com/2011/05/cpg-islands-1.html&#34;&gt;previous post&lt;/a&gt;
-and the &lt;a href=&#34;http://codecereal.blogspot.com/2011/05/hidden-markov-models.html&#34;&gt;Hidden Markov Models&lt;/a&gt;
-(HMMs) short introduction, we now can model a HMM for finding CpG
-islands. We can create a model very similar to the &amp;ldquo;Fair Bet Casino&amp;rdquo;
-problem.&lt;/p&gt;
-
-&lt;p&gt;When we are in a nucleotide of given DNA sequence there are two
-possibilities, that nucleotide belongs to CpG island (lets denote state
-S1) or do not (S0). If you analyse a sibling nucleotide it can stay in
-the same state or to change with complementary probabilities. We can
-view it as this Markov chain:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/cpg.png&#34; alt=&#34;CpG states Markov chain&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;As the emissions of the states S0 and S1, we may have the associated
-probabilities of the emissions of ACGT symbols. However we can&amp;rsquo;t know
-for now how much are these probabilities. However if we have a dataset
-of sequences with the attached information of where the CpG islands
-occurs, we can estimate those parameters. I used these DNA
-&lt;a href=&#34;http://www.cin.ufpe.br/%7Eigcf&#34;&gt;sequences&lt;/a&gt; tagged by biologists (used
-&lt;a href=&#34;http://biopython.org/wiki/Main_Page&#34;&gt;biopython&lt;/a&gt; library to parse the
-&lt;a href=&#34;http://en.wikipedia.org/wiki/FASTA_format&#34;&gt;.fasta&lt;/a&gt; files) as the
-training and test sets to build the model and evaluate the technique.
-This dataset consists of nucleotides in upper and lower cases. When we
-have a given nucleotide in upper case, it denotes that it is a CpG site
-and the lower case nucleotides means they are not. I used a statistical
-technique called &lt;a href=&#34;http://en.wikipedia.org/wiki/Maximum_likelihood&#34;&gt;maximum likelihood&lt;/a&gt;
-to build the HMM.&lt;/p&gt;
-
-&lt;p&gt;Using the maximum likelihood to calculate the HMM emissions
-probabilities, I count each char frequency in the dataset and divide by
-the total amount of nucleotides in the same state:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/cpgemissions.png&#34; alt=&#34;Emissions probability diagram&#34; /&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;P(A|S0) = a / (a+c+g+t) P(C|S0) = c / (a+c+g+t)
-P(G|S0) = g / (a+c+g+t) P(T|S0) = t / (a+c+g+t)
-P(A|S1) = A / (A+C+G+T) P(C|S1) = C / (A+C+G+T)
-P(G|S1) = G / (A+C+G+T) P(T|S1) = T / (A+C+G+T)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;And to calculate the transition probabilities of each state, count the
-number of transitions between a CpG to a non CpG site ``(out_of) and
-the reversal transitions (into). Then divide each of them by the state
-frequency which they&amp;rsquo;re coming from. Note that the permanence
-probability of each state is the complement of the probability of
-transiting between states since there is no other state to go:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;P(S0|S1) = out_of / (A+C+G+T)
-P(S1|S0) = into / (a+c+g+t)
-P(S0|S0) = 1 - P(S1|S0)
-P(S1|S1) = 1 - P(S0|S1)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Our model is almost done, it just lacks of the initial transitions which
-can be supposed to be the frequency of each state over all nucleotides:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;P(S0) = a + c + g + t / (a + c + g + t + A + C + G + T)
-P(S1) = A + C + G + T / (a + c + g + t + A + C + G + T)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I used the &lt;a href=&#34;http://ghmm.org/&#34;&gt;ghmm&lt;/a&gt; to create my HMM with the given
-dataset and it generated this model:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;DiscreteEmissionHMM(N=2, M=4)
-	state 0 (initial=0.97)
-       Emissions: 0.30, 0.21, 0.20, 0.29
-       Transitions: -&amp;gt;0 (0.00), -&amp;gt;1 (1.00)
-   state 1 (initial=0.03)
-       Emissions: 0.22, 0.29, 0.29, 0.20
-       Transitions: -&amp;gt;0 (1.00), -&amp;gt;1 (0.00)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;It&amp;rsquo;s important to notice that when we print the HMM it says that has the
-probability of 1 to stay in the same state. This occurs due to float
-formatted print. The reality is that in that value is very close to 1
-but still has a chance to hop between states. It&amp;rsquo;s also interesting to
-see the probability of emission of C and G when we contrast the states.
-In S1 the probability of getting a C or a G is significantly higher than
-in S0.&lt;/p&gt;
-
-&lt;p&gt;Another manner of creating the HMM, is by initializing a model with the
-same structure we modelled the problem and then apply some unsupervised
-learning algorithms, such as the
-&lt;a href=&#34;http://en.wikipedia.org/wiki/Baum%E2%80%93Welch_algorithm&#34;&gt;Baum Welch&lt;/a&gt;
-algorithm. The Baum Welch uses randomized initial weights in the HMM and
-once you feed untagged sequences, it tries to infer a model. However,
-usually is far better initialize your HMM with biased data about the
-problem (for example using the model we created) and let the Baum Welch
-calibrate the probabilities. With ghmm do the following:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sigma = ghmm.IntegerRange(0,4) # our emission alphabet
-emission_seq = ghmm.EmissionSequence(sigma, [0, 4, 5, ... ]) # create a emission sequence hmm.
-baumWelch(sigma, emission_seq) # use a template hmm to calibrate the probablities
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;In the next post I will show how is the evaluation process of the HMM
-in the CpG island.&lt;/p&gt;
-</description>
+      <guid>https://dakerfp.com/post/cpg-islands-model-evaluation-2/</guid>
+      <description>By the definition of the CpG islands in the previous post and the Hidden Markov Models (HMMs) short introduction, we now can model a HMM for finding CpG islands. We can create a model very similar to the &amp;ldquo;Fair Bet Casino&amp;rdquo; problem.
+When we are in a nucleotide of given DNA sequence there are two possibilities, that nucleotide belongs to CpG island (lets denote state S1) or do not (S0). If you analyse a sibling nucleotide it can stay in the same state or to change with complementary probabilities.</description>
     </item>
     
     <item>
       <title>Hidden Markov Models</title>
-      <link>https://dakerfp.github.io/post/hidden-markov-models/</link>
+      <link>https://dakerfp.com/post/hidden-markov-models/</link>
       <pubDate>Mon, 30 May 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/hidden-markov-models/</guid>
-      <description>&lt;p&gt;Nowadays, many applications use
-&lt;a href=&#34;http://en.wikipedia.org/wiki/Hidden_Markov_model&#34;&gt;Hidden Markov Models&lt;/a&gt;
-(HMMs) to solve crucial issues such as bioinformatics, speech recognition,
-musical analysis, digital signal processing, data mining, financial
-applications, time series analysis and many others. HMMs are
-probabilistic models which are very useful to model sequence behaviours
-or discrete time series events. Formally it models
-&lt;a href=&#34;http://en.wikipedia.org/wiki/Markov_process&#34;&gt;Markov processes&lt;/a&gt;
-with hidden states, like an extension for
-&lt;a href=&#34;http://en.wikipedia.org/wiki/Markov_chain&#34;&gt;Markov Chains&lt;/a&gt;.
-For computer scientists, is a state machine with probabilistic transitions
-where each state can emit a value with a given probability.&lt;/p&gt;
-
-&lt;p&gt;For better understanding HMMs, I will illustrate how it works with &amp;ldquo;The
-Fair Bet Casino&amp;rdquo; problem. Imagine you are in a casino where you can bet
-on coins tosses, tossed by a dealer. A coin toss can have two outcomes:
-head (H) or tail (T). Now suppose that the coin dealer has two coins, a
-fair (F) which outputs both H and T with &lt;code&gt;1/2&lt;/code&gt; probabilities and a biased
-coin (B) which outputs H with probability &lt;code&gt;3/4&lt;/code&gt; and T with &lt;code&gt;1/4&lt;/code&gt;. Using
-probability language we say:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;P(H~i+1~|F~i~) = 1/2&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;P(T~i+1~|F~i~) = 1/2&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;P(H~i+1~|B~i~) = 3/4&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;P(T~i+1~|B~i~) = 1/4&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Now imagine that the dealer changes the coin in a way you can&amp;rsquo;t see, but
-you know that he does it with a &lt;code&gt;1/10&lt;/code&gt; probability. So thinking the coin
-tosses as a sequence of events we can say:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;P(F~i+1~|F~i~) = 9/10&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;P(B~i+1~|F~i~) = 1/10&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;P(B~i+1~|B~i~) = 9/10&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;P(F~i+1~|B~i~) = 1/10&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;We can model it using a graph to illustrate the process:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/fairbet.png&#34; alt=&#34;HMM for &amp;quot;The Fair Bet Casino&amp;quot; problem&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;That&amp;rsquo;s a HMM! It isn&amp;rsquo;t any rocket science. Is just important to add a
-few remarks. We call the set of all possible emissions of the Markov
-process as the alphabet Σ ({H, T} in our problem). For many of
-computational method involving HMMs you will also need a initial state
-distribution π. For our problem we may assume that the we have equal
-probability for each coin.&lt;/p&gt;
-
-&lt;p&gt;Now comes in our mind what we can do with the model in our hands. There
-are lot&amp;rsquo;s of stuff to do with it, such as: given a sequence of results,
-when the dealer used the biased coin or even generate a random sequence
-with a coherent behaviour when compared to the model.&lt;/p&gt;
-
-&lt;p&gt;There is a nice library called &lt;a href=&#34;http://ghmm.org/&#34;&gt;ghmm&lt;/a&gt;
-(available for C and Python) which handles HMMs and already gives us
-the most famous and important HMM algorithms.
-Unfortunately the python wrapper is not pythonic.
-Let&amp;rsquo;s model our problem in python to have some fun:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;import ghmm 
-
-# setting 0 for Heads and 1 for Tails as our Alphabet
-sigma = ghmm.IntegerRange(0, 2)
-
-# transition matrix: rows and columns means origin and destiny states
-transitions_probabilities = [
-    [0.9, 0.1], # 0: fair state
-     [0.1, 0.9], # 1: biased state
-]  
-
-# emission matrix: rows and columns means states and symbols respectively 
-emissions_probabilities = [
-    [0.5, 0.5], # 0: fair state emissions probabilities
-    [0.75, 0.25], # 1: biased state emissions probabilities
-]
-
-# probability of initial states
-pi = [0.5, 0.5]
-
-# equal probabilities for 0 and 1
-hmm = ghmm.HMMFromMatrices(
-    sigma,
-    # you can model HMMs with others emission probability distributions
-    ghmm.DiscreteDistribution(sigma),
-    transitions_probabilities,
-    emissions_probabilities,
-    pi )
-
-
-&amp;gt;&amp;gt;&amp;gt; print(hmm)`\
-  DiscreteEmissionHMM(N=2, M=2)
-      state 0 (initial=0.50)
-          Emissions: 0.50, 0.50
-          Transitions: -&amp;gt;0 (0.90), -&amp;gt;1 (0.10)
-      state 1 (initial=0.50)
-          Emissions: 0.75, 0.25
-          Transitions: -&amp;gt;0 (0.10), -&amp;gt;1 (0.90)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now that we have our HMM object on the hand we can play with it. Suppose
-you have the given sequence of coin tosses and you would like to
-distinguish which coin was being used at a given state:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;tosses = [1, 1, 1, 0, 1, 0, 0, 1,
-          1, 0, 0, 1, 0, 1, 0, 0,
-          0, 0, 1, 1, 0, 1, 0, 1,
-          0, 0, 0, 1, 0, 0, 0, 0,
-          0, 1, 0, 0, 1, 0, 0, 0,
-          1, 0, 1]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The &lt;a href=&#34;http://en.wikipedia.org/wiki/Viterbi_algorithm&#34;&gt;viterbi algorithm&lt;/a&gt;
-can be used to trace the most probable states at each coin toss
-according to the HMM distribution:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;# not as pythonic is could be :-/
-sequence = ghmm.EmissionSequence(sigma, tosses)
-viterbi_path, _ = hmm.viterbi(sequence)
-&amp;gt;&amp;gt;&amp;gt; print(viterbi_path)
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, , 1, 1, 1, 1, 1]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Nice! But sometimes is interesting to have the probability of each state
-on the point instead of only the most probable one. To have that, you
-must use the &lt;a href=&#34;http://en.wikipedia.org/wiki/Posterior_mode&#34;&gt;posterior&lt;/a&gt; or
-&lt;a href=&#34;http://en.wikipedia.org/wiki/Forward_algorithm&#34;&gt;forward&lt;/a&gt; algorithms to
-have more detailed information.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;states_probabilities = hmm.posterior(sequence)
-&amp;gt;&amp;gt;&amp;gt; print(states_probabilities)
- [[0.8407944139086141, 0.1592055860913865], [0.860787703168127, 0.13921229683187356], ... ]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The posterior method result, returns the list of probabilities at each
-state, for example, in the first index we have &lt;code&gt;[0.8407944139086141, 0.1592055860913865]&lt;/code&gt;.
-That means that we have ~0.84 probability of chance that the dealer is
-using the fair coin and ~0.16 for the biased coin.
-We also can plot a graph to show the behaviour of the curve of
-the probability of the dealer being using the fair coin
-(I used matplotlib for the graphs).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://dakerfp.github.io/img/viterbi.png&#34; alt=&#34;Probability of being a fair coin over time&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;This is only a superficial example of what can HMMs do. It&amp;rsquo;s worthy give
-a look at it if you want do some sequence or time series analysis in any
-domain. I hope this post presented and cleared what are HMM and how they
-can be used to analyse data.&lt;/p&gt;
-</description>
+      <guid>https://dakerfp.com/post/hidden-markov-models/</guid>
+      <description>Nowadays, many applications use Hidden Markov Models (HMMs) to solve crucial issues such as bioinformatics, speech recognition, musical analysis, digital signal processing, data mining, financial applications, time series analysis and many others. HMMs are probabilistic models which are very useful to model sequence behaviours or discrete time series events. Formally it models Markov processes with hidden states, like an extension for Markov Chains. For computer scientists, is a state machine with probabilistic transitions where each state can emit a value with a given probability.</description>
     </item>
     
   </channel>

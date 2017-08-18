@@ -2,62 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Stl on Daker Pinheiro</title>
-    <link>https://dakerfp.github.io/tags/stl/</link>
+    <link>https://dakerfp.com/tags/stl/</link>
     <description>Recent content in Stl on Daker Pinheiro</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
+    <copyright>Ⓒ 2017 Daker Fernandes Pinheiro</copyright>
     <lastBuildDate>Thu, 07 Jul 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://dakerfp.github.io/tags/stl/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://dakerfp.com/tags/stl/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Singletons using std::weak_ptr</title>
-      <link>https://dakerfp.github.io/post/weak_ptr_singleton/</link>
+      <link>https://dakerfp.com/post/weak_ptr_singleton/</link>
       <pubDate>Thu, 07 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/weak_ptr_singleton/</guid>
-      <description>&lt;p&gt;A common issue is how a resource and initialize it only when needed.
-A common C++ pattern to solve this is using the Resource Acquisition Is Initialization aka RAII.
-That&amp;rsquo;s what smart pointers do when created and get out of scope.
-But what if these resources must be unique?&lt;/p&gt;
-
-&lt;p&gt;The first thing that comes in mind is a singleton, but the plain singleton
-pattern, which has a static method or function returning a raw pointer usually creates the resource only once.
-It is hardly released, or must explicitly released. The solution is to use smart pointers somehow.&lt;/p&gt;
-
-&lt;p&gt;The following code is the solution I came out with to solve it:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;#include &amp;lt;memory&amp;gt;
-
-class Resource {
-private:
-    // A good API should forbid invalid usage.
-    Resource() {
-        // initialize
-    }
-
-public:
-    ~Resource() {
-        // release
-    }
-
-    static std::shared_ptr&amp;lt;Resource&amp;gt; instance() {
-        static std::weak_ptr&amp;lt;Resource&amp;gt; _instance;
-        if (auto ptr = _instance.lock()) { // .lock() returns a shared_ptr and increments the refcount
-            return ptr;
-        }
-        // Does not support std::make_shared&amp;lt;Resource&amp;gt; because of
-        // the Resource private constructor.
-        auto ptr = std::shared_ptr&amp;lt;Resource&amp;gt;(new Resource());
-        _instance = ptr;
-        return ptr;
-    }
-};
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The most interesting aspect is the static weak_ptr which registers the resource,
-but does not prevents its release, when all returned shared_ptr release the resource.&lt;/p&gt;
-</description>
+      <guid>https://dakerfp.com/post/weak_ptr_singleton/</guid>
+      <description>A common issue is how a resource and initialize it only when needed. A common C++ pattern to solve this is using the Resource Acquisition Is Initialization aka RAII. That&amp;rsquo;s what smart pointers do when created and get out of scope. But what if these resources must be unique?
+The first thing that comes in mind is a singleton, but the plain singleton pattern, which has a static method or function returning a raw pointer usually creates the resource only once.</description>
     </item>
     
   </channel>

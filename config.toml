@@ -1,144 +1,61 @@
-baseurl = "https://dakerfp.github.io/"
+baseURL = "https://dakerfp.com"
 title = "Daker Pinheiro"
-copyright = "&copy; 2016 Daker Fernandes Pinheiro"
-languageCode = "en-us"
-theme = "academic"
-canonifyurls = true
+copyright = "Ⓒ 2017 Daker Fernandes Pinheiro"
 
-# Enable comments by entering your Disqus shortname
+theme = "minimo"
+
 disqusShortname = "dakerfp"
-
-# Enable analytics by entering your Google Analytics tracking ID
 googleAnalytics = "UA-80351639-1"
+Paginate = 30
+
+preserveTaxonomyNames = true
 
 [params]
-  name = "Daker Fernandes Pinheiro"
-  role = "Software Engineer & MS Candidate for Computer Graphics"
-  organization = "Intel & Universidade Federal de Pernambuco"
-  avatar = "portrait.jpg"
-  email = "dfp@cin.ufpe.br"
+  description = "My home page & blog"
+  dateFormat = "2006, Jan 2"
+  copyrightOwner = "Daker Fernandes Pinheiro"
+  copyrightStartYear = "2017"
+  favicon = "favicon.ico"
+  hideEntryNavigation = false
+  customCSS = ["css/custom.css"]
+  customJS = ["js/custom.js"]
+  hideSocialMenu = false
+  showReadTime = true
+  showAuthor = true
 
-  # Date format (refer to Go's date format: http://flippinggodateformat.com )
-  #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
-  date_format = "Mon, Jan 2, 2006"
+[params.seo]
+  # Title Separator: - – — · • * ⋆ | ~ « » < >
+  titleSeparator = "•"
 
-  # Enable global LaTeX math rendering? If false, you can enable it locally on a per page basis.
-  math = false
+[params.opengraph]
+  [params.opengraph.facebook]
+    admins = ""
+    appid = ""
 
-  # Enable native social sharing buttons?
-  sharing = true
+[taxonomies]
+  category = "categories"
+  tag = "tags"
 
-  # Link custom CSS and JS assets (relative to /static/css and /static/js respectively)
-  custom_css = []
-  custom_js  = []
+[social]
+  facebook = "dakerfp"
 
-  # Biography section.
-  # Section will only be displayed if `content/home/about.md` exists.
-  [params.about]
-    interests = ["Computer Graphics", "Machine Learning", "High Performance Computing", "Real Time Systems"]
-    str_interests = "Interests"
-    str_education = "Education"
+[author]
+  name = "Daker"
 
+[author.social]
+  facebook = "dakerfp"
+  github = "http://github.com/dakerfp"
+  twitter = "dakerfp"
 
-  # Selected Publications section.
-  # Section will only be displayed if there are publications with `selected = true` in their `+++` preamble.
-  [params.publications_selected]
-    detailed_list = true
-    title = "Selected Publications"
-    subtitle = ""
+[permalinks]
+  page = "/:slug/"
 
-  # Publications section.
-  # Section will only be displayed if there are publications in `content/publication/`.
-  [params.publications]
-    count = 10
-    detailed_list = false
-    title = "Recent Publications"
-    subtitle = ""
-    str_all = "More Publications"
+# Language Configuration
+defaultContentLanguage = "en"
 
-  # Posts section.
-  # Section will only be displayed if there are posts in `content/post/`.
-  [params.posts]
-    count = 5
-    title = "Recent Posts"
-    subtitle = ""
-    str_all = "More Posts"
-    str_read_more = "Read more"
-
-  # Projects section.
-  # Section will only be displayed if there are projects in `content/project/`.
-  [params.project]
-    title = "Projects"
-    subtitle = ""
-
-  # Contact section.
-  [params.contact]
-    enable = true
-    title = "Contact"
-    subtitle = ""
-    autolink = true  # Automatically link email and phone?
-
-  # Social/Academic Networking
-  #
-  # Icon pack "fa" includes the following social network icons:
-  #   twitter, weibo, linkedin, github, facebook, pinterest, google-plus, youtube, instagram, soundcloud
-  #   For email icon, use "fa" icon pack, "envelope" icon, and "mailto:your@email.com" as the link.
-  #   Full list: https://fortawesome.github.io/Font-Awesome/icons/
-  #
-  # Icon pack "ai" includes the following academic network icons:
-  #   google-scholar, arxiv, orcid, researchgate, mendeley
-  #   Full list: https://jpswalsh.github.io/academicons/
-
-  [[params.social]]
-    icon = "envelope"
-    icon_pack = "fa"
-    link = "mailto:dfp@cin.ufpe.br"
-
-  [[params.social]]
-    icon = "twitter"
-    icon_pack = "fa"
-    link = "//twitter.com/dakerfp"
-
-#  [[params.social]]
-#    icon = "google-scholar"
-#    icon_pack = "ai"
-#    link = "https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ"
-
-  [[params.social]]
-    icon = "github"
-    icon_pack = "fa"
-    link = "//github.com/dakerfp"
-
-
-# Navigation Links
-#   The weight parameter defines the order that the links will appear in.
-
-[[menu.main]]
-  name = "Home"
-  url = "#top"
-  weight = 1
-
-[[menu.main]]
-  name = "Publications"
-  url = "#publications"
-  weight = 2
-
-[[menu.main]]
-  name = "Posts"
-  url = "#posts"
-  weight = 3
-
-[[menu.main]]
-  name = "Projects"
-  url = "#projects"
-  weight = 4
-
-[[menu.main]]
-  name = "Experience"
-  url = "#experience"
-  weight = 5
-
-[[menu.main]]
-  name = "Contact"
-  url = "#contact"
-  weight = 6
+[languages]
+  # edit this block for your own language
+  [languages.en]
+    lang = "en"
+    languageName = "English"
+    weight = 1

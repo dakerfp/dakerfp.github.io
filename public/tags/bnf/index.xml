@@ -2,108 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bnf on Daker Pinheiro</title>
-    <link>https://dakerfp.github.io/tags/bnf/</link>
+    <link>https://dakerfp.com/tags/bnf/</link>
     <description>Recent content in Bnf on Daker Pinheiro</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2016 Daker Fernandes Pinheiro</copyright>
+    <copyright>Ⓒ 2017 Daker Fernandes Pinheiro</copyright>
     <lastBuildDate>Tue, 07 Jan 2014 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://dakerfp.github.io/tags/bnf/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://dakerfp.com/tags/bnf/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Regex like operators for DCG</title>
-      <link>https://dakerfp.github.io/post/regex-like-operators-for-dcg/</link>
+      <link>https://dakerfp.com/post/regex-like-operators-for-dcg/</link>
       <pubDate>Tue, 07 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://dakerfp.github.io/post/regex-like-operators-for-dcg/</guid>
-      <description>&lt;p&gt;Today I was trying to create a simple parser to count syllables in latin
-words with Prolog. I usually use DCGs in Prolog for parsing. Their
-semantic is very similar to
-&lt;a href=&#34;https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_Form&#34;&gt;BNF&lt;/a&gt;. I love
-DCGs, but sometimes the verbosity in some cases annoys me. Take the
-following example:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-prolog&#34;&gt;consonant --&amp;gt;
-    &amp;quot;b&amp;quot;; &amp;quot;c&amp;quot;; &amp;quot;d&amp;quot;; &amp;quot;f&amp;quot;; &amp;quot;g&amp;quot;; &amp;quot;h&amp;quot;; &amp;quot;l&amp;quot;; &amp;quot;j&amp;quot;; &amp;quot;k&amp;quot;; &amp;quot;m&amp;quot;;
-    &amp;quot;n&amp;quot;; &amp;quot;p&amp;quot;; &amp;quot;q&amp;quot;; &amp;quot;r&amp;quot;; &amp;quot;s&amp;quot;; &amp;quot;t&amp;quot;; &amp;quot;v&amp;quot;; &amp;quot;x&amp;quot;; &amp;quot;z&amp;quot;.
-consonants --&amp;gt;
-    [].
-consonants --&amp;gt;
-    consonant, consonants.
-
-vowel --&amp;gt;
-    &amp;quot;a&amp;quot;; &amp;quot;e&amp;quot;; &amp;quot;i&amp;quot;; &amp;quot;o&amp;quot;; &amp;quot;u&amp;quot;.
-vowels --&amp;gt;
-    vowel.
-vowels --&amp;gt;
-    vowel, vowels.
-
-syllable --&amp;gt;
-    vowels.
-syllable --&amp;gt;
-    consonants, vowels.
-
-syllables(0) --&amp;gt;
-    [].
-syllables(N) --&amp;gt;
-    syllable, syllables(N_1),
-    { N is N_1 + 1 }.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The vowels and consonant rules were created merely as helpers for the
-syllable predicate. That could be reduced if I had regex operators like
-+, * or ?. Although there are modules for using regex in Prolog (
-swi-regex ), it is not suitable when using within in DCGs. So I wrote
-these regex like operators, with meta DCG predicates, for DCG (like EBNF
-operators):&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-prolog&#34;&gt;% op statements let me use them without parenthesis
-:- op(100, xf, *).
-:- op(100, xf, +).
-:- op(100, xf, ?).
-
-*(_) --&amp;gt;
-    [].
-*(EXPR) --&amp;gt;
-    EXPR, *(EXPR).
-
-+(EXPR) --&amp;gt;
-    EXPR.
-+(EXPR) --&amp;gt;
-    EXPR, +(EXPR).
-
-?(EXPR) --&amp;gt;
-    [].
-?(EXPR) --&amp;gt;
-    EXPR.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;They allow me to modify the times a given rule will be matched. So, I
-can replace this:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-prolog&#34;&gt;consonants --&amp;gt;
-    [].
-consonants --&amp;gt;
-    consonant, consonants.
-
-vowels --&amp;gt;
-    vowel.
-vowels --&amp;gt;
-    vowel, vowels.
-
-syllable --&amp;gt;
-    vowels.
-syllable --&amp;gt;
-    consonants, vowels.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;with a simpler version without intermediate rules (using the operators
-definition through a library):&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-prolog&#34;&gt;syllable --&amp;gt;
-    *consonant, +vowel.
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <guid>https://dakerfp.com/post/regex-like-operators-for-dcg/</guid>
+      <description>Today I was trying to create a simple parser to count syllables in latin words with Prolog. I usually use DCGs in Prolog for parsing. Their semantic is very similar to BNF. I love DCGs, but sometimes the verbosity in some cases annoys me. Take the following example:
+consonant --&amp;gt; &amp;quot;b&amp;quot;; &amp;quot;c&amp;quot;; &amp;quot;d&amp;quot;; &amp;quot;f&amp;quot;; &amp;quot;g&amp;quot;; &amp;quot;h&amp;quot;; &amp;quot;l&amp;quot;; &amp;quot;j&amp;quot;; &amp;quot;k&amp;quot;; &amp;quot;m&amp;quot;; &amp;quot;n&amp;quot;; &amp;quot;p&amp;quot;; &amp;quot;q&amp;quot;; &amp;quot;r&amp;quot;; &amp;quot;s&amp;quot;; &amp;quot;t&amp;quot;; &amp;quot;v&amp;quot;; &amp;quot;x&amp;quot;; &amp;quot;z&amp;quot;. consonants --&amp;gt; [].</description>
     </item>
     
   </channel>

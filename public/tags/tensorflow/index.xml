@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tensorflow on Daker Pinheiro</title>
+    <link>https://dakerfp.com/tags/tensorflow/</link>
+    <description>Recent content in Tensorflow on Daker Pinheiro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Ⓒ 2017 Daker Fernandes Pinheiro</copyright>
+    <lastBuildDate>Sun, 17 Sep 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://dakerfp.com/tags/tensorflow/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Interfacing Keras with tensorflow</title>
+      <link>https://dakerfp.com/post/keras-tensorflow/</link>
+      <pubDate>Sun, 17 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://dakerfp.com/post/keras-tensorflow/</guid>
+      <description>Keras is great for machine learning and describing models! However, sometimes it lacks the flexibility power that Tensorflow has. The great news is that you can interface while using Tensorflow as a backend for Keras.
+You may for instance, pre-process your data before feeding into a Keras learning model, to use GPUs capabilities with little programming costs. The following example normalizes the channels of a image before training, then it uses the transformed tensor as input to the model.</description>
+    </item>
+    
+  </channel>
+</rss>
