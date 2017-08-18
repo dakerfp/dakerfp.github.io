@@ -17,4 +17,4 @@ git commit -m "$msg"
 
 # Push source and build repos.
 git push origin edit
-git subtree push --prefix=public origin master
+git subtree -f push --prefix=public origin master
