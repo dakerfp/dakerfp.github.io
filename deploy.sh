@@ -17,4 +17,4 @@ git commit -m "$msg"
 
 # Push source and build repos.
 git push origin edit
-git subtree push -f --prefix=public git@github.com:dakerfp/dakerfp.github.io.git master
+git subtree push -f --prefix=public origin master
